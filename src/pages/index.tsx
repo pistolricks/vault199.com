@@ -1,14 +1,26 @@
-import { createSignal } from 'solid-js';
-import ImageGallery from "../components/gallery/image-gallery";
+import {Component, createSignal} from 'solid-js';
+import TerminalLayout from "~/components/layouts/terminal-layout";
+import {RouteSectionProps} from "@solidjs/router";
 
-export default function Home() {
-  const [count, setCount] = createSignal(0);
+const Home: Component<RouteSectionProps> = (props) => {
+    const [count, setCount] = createSignal(0);
 
-  return (
-    <section class="bg-gray-100 text-gray-700 p-8">
-        <div style="position: relative; padding-top: 73.125%;">
+    return (
+        <TerminalLayout {...props} >
 
-        </div>
-    </section>
-  );
+            <p>System Administrator Integrated Message System (SAIMS)</p>
+            <p>System Administrator (SYSADM) - Mack Richardson</p>
+
+            <p class="clear"><br/></p>
+
+            <p>Welcome to the System Administrator Integrated Message System (SAIMS). Fill out the fields below and
+                press the SUBMIT button. The system administrator (SYSADM) will respond to your query after an
+                appropriate amount of quiet contemplation. Thank you for contacting the System Administrator's
+                Office.</p><br/>
+
+
+        </TerminalLayout>
+    );
 }
+
+export default Home;

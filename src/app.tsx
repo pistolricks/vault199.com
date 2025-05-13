@@ -1,6 +1,6 @@
 import { Suspense, type Component } from 'solid-js';
 import { A, useLocation } from '@solidjs/router';
-import Navigation from "./components/navigation";
+
 import BaseDock from "~/components/base-dock";
 
 const App: Component = (props: { children: Element }) => {
@@ -11,7 +11,6 @@ const App: Component = (props: { children: Element }) => {
       <div class="min-h-dvh h-dvh flex flex-col">
 
 
-       <Navigation/>
 
 
         <div class={'flex-1 flex flex-row overflow-y-hidden'}>

@@ -59,42 +59,48 @@ export default defineConfig({
         ]
       },
       manifest: {
-        name: 'Solid App PWA',
-        short_name: 'SolidPWA',
-        description: 'My Awesome SolidJS PWA',
-        theme_color: '#000000',
-        background_color: '#ffffff',
-        display: 'standalone',
-        orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
-        icons: [
+        "name": "Vault-Tec Vault 199",
+        "short_name": "Vault 199",
+        "description": "The Last Line of Defense",
+        "theme_color": "#000000",
+        "background_color": "#ffffff",
+        "display": "standalone",
+        "orientation": "portrait",
+        "scope": "/",
+        "start_url": "/",
+        "icons": [
           {
-            src: 'img/icons/favicon.ico',
-            sizes: '64x64',
-            type: 'image/x-icon'
+            "src": "img/icons/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
           },
           {
-            src: 'img/icons/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
+            "src": "img/icons/apple-touch-icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
           },
           {
-            src: 'img/icons/pwa-512x512.svg',
-            sizes: '512x512',
-            type: 'image/svg+xml'
+            "src": "img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
           },
           {
-            src: 'img/icons/apple-touch-icon-180x180.png',
-            sizes: '180x180',
-            type: 'image/png',
-            purpose: 'any'
+            "src": "img/icons/apple-touch-icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
           },
           {
-            src: 'img/icons/pwa-512x512.svg',
-            sizes: '512x512',
-            type: 'image/svg+xml',
-            purpose: 'maskable'
+            "src": "img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
           }
         ],
       },
