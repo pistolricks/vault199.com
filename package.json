@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.15.1",
+    "@zag-js/presence": "^1.12.2",
+    "@zag-js/solid": "^1.12.2",
     "clsx": "^2.1.1",
     "solid-js": "^1.9.5",
     "tailwind-merge": "^3.2.0",

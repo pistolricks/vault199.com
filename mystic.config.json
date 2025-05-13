@@ -1,7 +1,7 @@
 {
   "framework": "tailwind",
   "configPath": "src/index.css",
-  "outputPath": "../src/components",
+  "outputPath": "../src/components/ui",
   "tailwind": {
     "aliases": {
       "utils": "~/lib/utils"

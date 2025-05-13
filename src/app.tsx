@@ -6,14 +6,30 @@ import BaseDock from "~/components/base-dock";
 const App: Component = (props: { children: Element }) => {
   const location = useLocation();
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const main = document.querySelector('main');
+
+            if (targetElement) {
+                main.scrollTo({
+                    top: targetElement.offsetTop - main.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
   return (
     <>
-      <div class="min-h-dvh h-dvh flex flex-col">
+      <div class="min-h-dvh h-dvh flex flex-col w-screen">
 
-          <main class={'scrollbar-hide flex-1 text-xs overflow-y-auto'}>
+          <main class={'scrollbar-hide'}>
             <Suspense>{props.children}</Suspense>
           </main>
-          <BaseDock />
+          
       </div>
 
 

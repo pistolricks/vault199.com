@@ -1,4 +1,4 @@
-import {Dock, DockIcon} from "~/components/dock";
+import {Dock, DockIcon} from "~/components/ui/dock";
 import {A} from "@solidjs/router";
 import home from "~/static/images/building.png"
 export default function BaseDock() {

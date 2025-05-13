@@ -1,0 +1,46 @@
+
+@keyframes enterCrt {
+    from {
+        scale: 0.9;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes exitCrt {
+    to {
+        opacity: 0;
+        scale: 0.9;
+    }
+}
+
+
+
+@keyframes crtAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 10000%;
+    }
+}
+
+.old-crt-monitor {
+    box-shadow: inset 0px 0px 2rem;
+    background-image: linear-gradient(0deg, #0000 10%, #fff1 90%, #0000 100%);
+    animation: crtAnimation 100s linear infinite;
+    background-size: 100% 80%;
+}
+
+[data-state="open"] {
+    animation: enter 0.15s ease-out;
+}
+
+[data-state="closed"] {
+    animation: exit 0.1s ease-in;
+}
