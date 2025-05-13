@@ -1,5 +1,5 @@
 import {Component, createSignal} from 'solid-js';
-import TerminalLayout from "~/components/layouts/terminal-layout";
+import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
 import {RouteSectionProps} from "@solidjs/router";
 
 const Home: Component<RouteSectionProps> = (props) => {
