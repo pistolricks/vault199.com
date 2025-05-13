@@ -5,8 +5,6 @@ import PleaseStandBy from "~/static/images/please-stand-by.jpg";
 import {loginUserHandler} from "~/lib/users";
 
 const Home: Component<RouteSectionProps> = (props) => {
-    const [count, setCount] = createSignal(0);
-
     const submission = useSubmission(loginUserHandler);
 
     const errors = createMemo(() => {

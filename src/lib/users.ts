@@ -1,10 +1,11 @@
 import {action, query, redirect} from "@solidjs/router";
 import {activateUser, getUserDetails, getUserToken, login, logout, register, resendActivateEmail,} from "~/lib/server";
-
+import {getSessionUser, SessionUser} from "~/lib/session";
 import {capitalizeFirstLetter} from "~/lib/utils";
 
 export const getUser = query(async () => {
- //   let userData = (await getSessionUser()) as SessionUser;
+    "use server";
+    let userData = (await getSessionUser()) as unknown as SessionUser;
     console.log("getUser", userData)
 
     return userData;
