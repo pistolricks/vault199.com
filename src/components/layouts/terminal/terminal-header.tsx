@@ -9,11 +9,17 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
 
     return (
 
-            <header class={`site ${styles.clearfix}`}>
+        <header class={`site ${styles.clearfix}`}>
 
-                <div class={styles["col-one"]}>
-                    <img src={Logo} alt="Vault-Tec" width="740" height="729" class={styles["logo-v"]}/>
-                </div>
+            <div class="sm:hidden flex justify-center items-center">
+                <img src={Logo} alt="Vault-Tec" width="740" height="729" class={styles["logo-v"]}/>
+            </div>
+            <div class="hidden sm:block">
+            <div class={styles["col-one"]}>
+                <img src={Logo} alt="Vault-Tec" width="740" height="729" class={styles["logo-v"]}/>
+            </div>
+            </div>
+            <div class={"hidden sm:block"}>
                 <div class={styles["col-two"]}>
                     <h4>ROBCO INDUSTRIES (tm) <br/> <b>U</b>nified <b>O</b>perating <b>S</b>ystem</h4>
                     <p>----------------------------------------</p>
@@ -21,7 +27,8 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
                     <p>(c)2075 - 2077 ROBCO INDUSTRIES</p>
                     <p>- Server 199 -</p>
                 </div>
-            </header>
+            </div>
+        </header>
 
     );
 };

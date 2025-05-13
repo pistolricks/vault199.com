@@ -15,7 +15,7 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
             <div class={styles["overlay"]}></div>
             <div class={styles["scanline"]}></div>
             <div class={styles["wrapper"]}>
-                <div class={`${styles.content} ${styles.clearfix}`}>
+                <div class={`${styles.content} ${styles.clearfix} w-full`}>
 
 
 
@@ -31,6 +31,7 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
                         when={!isRouting()}>
                         <TerminalHeader {...props}/>
                         <TerminalNavigation {...props}/>
+
 
                             {props.children}
 

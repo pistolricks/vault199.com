@@ -107,7 +107,7 @@ nav.site ul {
 nav.site ul li {
   display: inline-block;
   padding: 0 10px;
-  min-width: 250px;
+
   width: auto;
 }
 
@@ -148,7 +148,6 @@ a.button:focus {
 }
 
 input[type=submit],
-button,
 a.button {
   background: transparent;
   border: 1px solid #00dd00;
@@ -160,7 +159,7 @@ a.button {
   font-size: 1em;
   margin-bottom: 20px;
   opacity: 0.25;
-  padding: 10px 100px;
+  padding: 10px 25px;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -168,7 +167,6 @@ a.button {
 }
 
 input[type=submit]:hover,
-button:hover,
 a.button:hover {
   background: #00dd00;
   color: #383838;
