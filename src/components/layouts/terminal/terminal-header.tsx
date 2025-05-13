@@ -19,15 +19,7 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
                 <img src={Logo} alt="Vault-Tec" width="740" height="729" class={styles["logo-v"]}/>
             </div>
             </div>
-            <div class={"hidden sm:block"}>
-                <div class={styles["col-two"]}>
-                    <h4>ROBCO INDUSTRIES (tm) <br/> <b>U</b>nified <b>O</b>perating <b>S</b>ystem</h4>
-                    <p>----------------------------------------</p>
-                    <p>v 1.0.0</p>
-                    <p>(c)2075 - 2077 ROBCO INDUSTRIES</p>
-                    <p>- Server 199 -</p>
-                </div>
-            </div>
+
         </header>
 
     );

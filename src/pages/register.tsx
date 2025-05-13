@@ -9,19 +9,32 @@ const Home: Component<RouteSectionProps> = (props) => {
 
     const submission = useSubmission(loginUserHandler);
 
+    const errors = createMemo(() => {
+        return submission.error
+    })
 
+    const results = createMemo(() => {
+        return submission.result
+    })
 
+    createEffect(() => {
 
+    })
 
     return (
         <TerminalLayout {...props}>
-            <form class={'flex flex-col gap-6'} action={loginUserHandler} method={'post'}>
+            <form class={'flex flex-col gap-6'}>
                 <div class={" flex flex-col sm:justify-start w-full"}>
-                    <label>EMAIL </label>
-                    <input class="bg-gray-300/20 w-full sm:w-full" type="email"/>
+                    <input class={'px-1 bg-gray-300/20 w-full'} type="text" required name="firstName" placeholder="First Name"/>
                 </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
-                    <label>PASSWORD </label><input class="bg-gray-300/20 w-full sm:w-full" type="password"/>
+                    <input class={'px-1 bg-gray-300/20 w-full '} type="text" required name="lastName" placeholder="Last Name"/>
+                </div>
+                <div class={" flex flex-col sm:justify-start w-full"}>
+                    <input class="px-1 bg-gray-300/20 w-full" required type="email" name="email" placeholder="Email"/>
+                </div>
+                <div class={" flex flex-col sm:justify-start w-full"}>
+                    <input class="px-1 bg-gray-300/20 w-full" required type="password" name="password" placeholder="Password"/>
                 </div>
 
                 <div class={"w-full flex justify-end"}>

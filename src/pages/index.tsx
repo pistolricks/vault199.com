@@ -4,13 +4,18 @@ import {RouteSectionProps} from "@solidjs/router";
 import PleaseStandBy from "~/static/images/please-stand-by.jpg";
 
 const Home: Component<RouteSectionProps> = (props) => {
-    const [count, setCount] = createSignal(0);
+
 
     return (
         <TerminalLayout {...props} >
 
-            <p>System Administrator Integrated Message System (SAIMS)</p>
-            <p>System Administrator (SYSADM) - Mack Richardson</p>
+            <div class={"p-2"}>
+                <h4>ROBCO INDUSTRIES (tm) <br/> <b>U</b>nified <b>O</b>perating <b>S</b>ystem</h4>
+                <p>----------------------------------------</p>
+                <p>v 1.0.0</p>
+                <p>(c)2075 - 2077 ROBCO INDUSTRIES</p>
+                <p>- Server 199 -</p>
+            </div>
 
             <p class="clear"><br/></p>
 
