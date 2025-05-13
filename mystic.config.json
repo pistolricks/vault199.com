@@ -1,0 +1,10 @@
+{
+  "framework": "tailwind",
+  "configPath": "src/index.css",
+  "outputPath": "../src/components",
+  "tailwind": {
+    "aliases": {
+      "utils": "~/lib/utils"
+    }
+  }
+}

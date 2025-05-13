@@ -1,0 +1,34 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "generate-pwa-assets": "pwa-assets-generator"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.6",
+    "@vite-pwa/assets-generator": "^1.0.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.1.6",
+    "timeago.js": "^4.0.2",
+    "vite": "^6.0.0",
+    "vite-plugin-pages": "^0.32.4",
+    "vite-plugin-pwa": "^1.0.0",
+    "vite-plugin-solid": "^2.11.6",
+    "workbox-window": "^7.3.0"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.15.1",
+    "clsx": "^2.1.1",
+    "solid-js": "^1.9.5",
+    "tailwind-merge": "^3.2.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+}

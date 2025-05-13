@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <rect width="180" height="180" fill="#FFFFFF"/>
+  <circle cx="90" cy="90" r="70" fill="#4F46E5"/>
+  <text x="90" y="100" font-family="Arial" font-size="36" text-anchor="middle" fill="white">PWA</text>
+</svg>
