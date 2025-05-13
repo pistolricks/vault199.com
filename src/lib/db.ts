@@ -11,13 +11,8 @@ export type USER = {
 
 /*USER*/
 const fetchRegister = async (userInput: { name: string, email: string, password: string }) =>
-    (await fetch(`http://localhost:4040/api/v1/users`, {
+    (await fetch(`${baseApi}/users`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-
-},
             body: JSON.stringify(userInput),
         })
     ).json()
@@ -54,6 +49,7 @@ const fetchUser = async (userInput: { email: string, token: string }) =>
             headers: {
                 Authorization: `Bearer ${userInput.token}`
             },
+            credentials: "include",
             method: "POST",
             body: JSON.stringify(userInput),
         })
@@ -74,6 +70,7 @@ export const db = {
             return await fetchResendActivateEmail(resendInput);
         },
         async login({where: {userInput}}: { where: { userInput: { email: string; password: string } } }) {
+            console.log("login", userInput)
             return await fetchLogin(userInput);
         },
         async logout() {

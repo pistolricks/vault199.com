@@ -1,6 +1,7 @@
 import {Component, Show} from "solid-js";
 import {A, RouteSectionProps, useLocation} from "@solidjs/router";
 import styles from "./style.module.css"
+import {currentUser} from "~/app";
 
 
 const TerminalNavigation: Component<RouteSectionProps> = props => {
@@ -14,7 +15,9 @@ const TerminalNavigation: Component<RouteSectionProps> = props => {
                 <Show when={location.pathname !== "/"}>
                     <li><A href="/" title="">HOME</A></li>
                 </Show>
+                <Show when={!currentUser}>
                 <li><A activeClass={"selected"} href="/login" title="">LOGIN</A></li>
+                </Show>
             </ul>
         </nav>
     );

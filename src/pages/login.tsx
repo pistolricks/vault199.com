@@ -10,6 +10,17 @@ const Login: Component<RouteSectionProps> = (props) => {
     const submission = useSubmission(loginUserHandler);
 
 
+    const errors = createMemo(() => {
+        return submission.error
+    })
+
+    const results = createMemo(() => {
+        return submission.result
+    })
+
+    createEffect(() => {
+        console.log(results(),"results")
+    })
 
 
 
@@ -18,10 +29,10 @@ const Login: Component<RouteSectionProps> = (props) => {
             <form class={'flex flex-col gap-6'} action={loginUserHandler} method={'post'}>
                 <div class={" flex flex-col sm:justify-start w-full"}>
                     <label>EMAIL </label>
-                    <input class="bg-gray-300/20 w-full sm:w-full" type="email"/>
+                    <input class="bg-gray-300/20 w-full sm:w-full" name="email" type="email"/>
                 </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
-                    <label>PASSWORD </label><input class="bg-gray-300/20 w-full sm:w-full" type="password"/>
+                    <label>PASSWORD </label><input class="bg-gray-300/20 w-full sm:w-full" name="password" type="password"/>
                 </div>
 
                 <div class={"w-full flex justify-end"}>

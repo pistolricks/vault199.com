@@ -66,6 +66,8 @@ export const loginUserHandler = action(async (data: FormData) => {
         email: String(data.get("email")),
         password: String(data.get("password")),
     }
+
+    console.log(userInput)
     return await login(userInput)
 })
 

@@ -2,6 +2,10 @@ import { Suspense, type Component } from 'solid-js';
 import { A, useLocation } from '@solidjs/router';
 
 import BaseDock from "~/components/base-dock";
+import Cookies from "cookies-ts";
+const cookies = new Cookies()
+
+export const currentUser = cookies.get("user");
 
 const App: Component = (props: { children: Element }) => {
   const location = useLocation();

@@ -4,7 +4,7 @@ import {A, RouteSectionProps, useNavigate, useSubmission} from "@solidjs/router"
 import PleaseStandBy from "~/static/images/please-stand-by.jpg";
 import {activateUserHandler, loginUserHandler} from "~/lib/users";
 
-const Home: Component<RouteSectionProps> = (props) => {
+const Activate: Component<RouteSectionProps> = (props) => {
     const [getToken, setToken] = createSignal("")
 
     const [getResponse, setResponse] = createSignal<any>()
@@ -28,12 +28,9 @@ const Home: Component<RouteSectionProps> = (props) => {
 
         console.log("activate-response", getResponse())
         if (getResponse()?.user?.activated) {
-            alert({
-                variant: "success",
-                title: "Success",
-                description: "You are activated successfully!",
-            })
             navigate("/login")
+
+
         }
 
         if (getResponse()?.error?.token) {
@@ -67,4 +64,4 @@ const Home: Component<RouteSectionProps> = (props) => {
     );
 }
 
-export default Home;
+export default Activate;

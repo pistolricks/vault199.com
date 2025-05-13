@@ -24,6 +24,7 @@ export function getSession() {
 }
 
 export async function updateSessionUser(user: USER, authentication_token: AUTHENTICATION_TOKEN, folder: string) {
+    console.log('updateSessionUser', user, authentication_token)
     const update_user = {
         id: user?.id,
         name: user?.name,
@@ -37,6 +38,7 @@ export async function updateSessionUser(user: USER, authentication_token: AUTHEN
     try {
         cookies.set('user', update_user);
         cookies.set('token', authentication_token.token);
+        console.log(cookies.get('user'))
 
     } catch (err) {
         return err as Error;
