@@ -1,11 +1,30 @@
-import {Component} from "solid-js";
-import {logoutUserHandler} from "~/lib/users";
+import {Component, createEffect, createMemo} from "solid-js";
+import {loginUserHandler, logoutUserHandler} from "~/lib/users";
+import {useNavigate, useSubmission} from "@solidjs/router";
 
 type PROPS = {
 
 }
 
 const Logout: Component<PROPS> = props => {
+    const submission = useSubmission(logoutUserHandler);
+
+    const navigate = useNavigate();
+
+    const errors = createMemo(() => {
+        return submission.error
+    })
+
+    const results = createMemo(() => {
+        return submission.result
+    })
+
+    createEffect(() => {
+        console.log(results(),"results")
+        if (results() === true) {
+            navigate("/login")
+        }
+    })
 
     return (
         <form class={''} action={logoutUserHandler} method={'post'}>

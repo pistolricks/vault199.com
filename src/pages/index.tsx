@@ -7,10 +7,6 @@ import {currentUser} from "~/app";
 const Home: Component<RouteSectionProps> = (props) => {
 
 
-    createEffect(() => {
-        console.log(props)
-    })
-
     return (
         <TerminalLayout {...props} >
 
@@ -24,9 +20,9 @@ const Home: Component<RouteSectionProps> = (props) => {
                         <p>- Server 199 -</p>
                     </div>
                 }
-                when={currentUser}>
+                when={currentUser()}>
                 <div class={"w-full flex justify-center items-center"}>
-                    <h4>Welcome back, {currentUser?.["name"]}</h4>
+                    <h4>Welcome back, {currentUser()?.["name"]}</h4>
                 </div>
             </Show>
 

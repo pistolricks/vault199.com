@@ -11,11 +11,11 @@ const Login: Component<RouteSectionProps> = (props) => {
 
 
     const errors = createMemo(() => {
-        return submission.error
+        return submission?.error
     })
 
     const results = createMemo(() => {
-        return submission.result
+        return submission?.result
     })
 
     createEffect(() => {

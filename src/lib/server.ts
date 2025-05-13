@@ -35,7 +35,8 @@ export async function login(userInput: { email: string, password: string }) {
 
 export async function logout() {
     await clearSessionUser();
-    return await db.user.logout();
+    // return await db.user.logout();
+    return true;
 
 }
 

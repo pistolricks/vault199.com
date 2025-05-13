@@ -1,4 +1,4 @@
-import {Component, Show} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, Show} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import Logo from "~/static/images/vault-tec.png"
@@ -8,11 +8,10 @@ import Logout from "~/components/logout";
 
 const TerminalHeader: Component<RouteSectionProps> = props => {
 
-
     return (
 
         <header class={`site ${styles.clearfix}`}>
-            <Show when={currentUser}>
+            <Show when={currentUser()?.["name"]}>
                 <div class={"absolute top-0 right-0"}>
                 <Logout/>
                 </div>

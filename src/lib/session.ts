@@ -43,6 +43,8 @@ export async function updateSessionUser(user: USER, authentication_token: AUTHEN
     } catch (err) {
         return err as Error;
     }
+
+    return cookies.get('user');
 }
 
 
