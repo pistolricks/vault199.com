@@ -143,11 +143,13 @@ textarea {
 input[type=text]:focus,
 textarea:focus,
 input[type=submit]:focus,
+button:focus,
 a.button:focus {
   outline: 0;
 }
 
 input[type=submit],
+button,
 a.button {
   background: transparent;
   border: 1px solid #00dd00;
@@ -167,6 +169,7 @@ a.button {
 }
 
 input[type=submit]:hover,
+button:hover,
 a.button:hover {
   background: #00dd00;
   color: #383838;

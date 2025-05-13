@@ -32,7 +32,7 @@ const Home: Component<RouteSectionProps> = (props) => {
 
                 <div class={"w-full flex justify-end"}>
                     <A class="button" href="/">Cancel</A>
-                    <input type="submit" value="Submit"/>
+                    <button class="button" type="button">SUBMIT</button>
                 </div>
             </div>
 
