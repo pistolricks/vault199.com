@@ -6,13 +6,18 @@ export type USER = {
     email: string;
     activated: boolean;
     created_at: string;
-    folder?: string;
+    token: string;
 }
 
 /*USER*/
 const fetchRegister = async (userInput: { name: string, email: string, password: string }) =>
-    (await fetch(`${baseApi}/users`, {
+    (await fetch(`http://localhost:4040/api/v1/users`, {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+
+},
             body: JSON.stringify(userInput),
         })
     ).json()

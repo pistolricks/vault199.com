@@ -4,7 +4,7 @@ import {A, RouteSectionProps, useSubmission} from "@solidjs/router";
 import PleaseStandBy from "~/static/images/please-stand-by.jpg";
 import {loginUserHandler} from "~/lib/users";
 
-const Home: Component<RouteSectionProps> = (props) => {
+const Login: Component<RouteSectionProps> = (props) => {
 
 
     const submission = useSubmission(loginUserHandler);
@@ -37,4 +37,4 @@ const Home: Component<RouteSectionProps> = (props) => {
     );
 }
 
-export default Home;
+export default Login;

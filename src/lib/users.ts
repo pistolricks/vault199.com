@@ -4,7 +4,6 @@ import {getSessionUser, SessionUser} from "~/lib/session";
 import {capitalizeFirstLetter} from "~/lib/utils";
 
 export const getUser = query(async () => {
-    "use server";
     let userData = (await getSessionUser()) as unknown as SessionUser;
     console.log("getUser", userData)
 
@@ -13,7 +12,6 @@ export const getUser = query(async () => {
 
 
 export const getUserDetailsHandler = action(async (data: FormData) => {
-    "use server";
     let token = await getUserToken();
     if (!token) throw redirect("/")
 
@@ -28,8 +26,6 @@ export const getUserDetailsHandler = action(async (data: FormData) => {
 
 
 export const registerUserHandler = action(async (data: FormData) => {
-    "use server";
-
     let fName = String(data.get("firstName"));
     let lName = String(data.get("lastName"));
 
@@ -44,13 +40,14 @@ export const registerUserHandler = action(async (data: FormData) => {
         email: email.toLowerCase(),
         password: String(data.get("password")),
     }
+
     let res = await register(userInput)
+    console.log("registerUserHandler", res)
     if (res.user?.id) throw redirect("/activate")
     else return res;
 })
 
 export const activateUserHandler = async (token: string) => {
-    "use server";
     const activateInput = {
         token: token,
     }
@@ -58,7 +55,6 @@ export const activateUserHandler = async (token: string) => {
 }
 
 export const resendActivateEmailHandler = action(async (data: FormData) => {
-    "use server";
     const resendInput = {
         email: String(data.get("email")),
     }
@@ -66,7 +62,6 @@ export const resendActivateEmailHandler = action(async (data: FormData) => {
 })
 
 export const loginUserHandler = action(async (data: FormData) => {
-    "use server";
     const userInput = {
         email: String(data.get("email")),
         password: String(data.get("password")),
@@ -75,6 +70,5 @@ export const loginUserHandler = action(async (data: FormData) => {
 })
 
 export const logoutUserHandler = action(async () => {
-    "use server";
     return await logout()
 })

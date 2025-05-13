@@ -3,7 +3,7 @@ import {clearSessionUser, getSessionToken, updateSessionUser} from "~/lib/sessio
 import {query, redirect} from "@solidjs/router";
 import {AUTHENTICATION_TOKEN} from "~/lib/index";
 
-export const baseApi = (`http://localhost:${import.meta.env.VITE_SERVER_PORT}/${import.meta.env.VITE_API_VERSION}`)
+export const baseApi = (`http://localhost:${import.meta.env.VITE_SERVER_PORT}/api/${import.meta.env.VITE_API_VERSION}`)
 
 export async function register(userInput: { name: string, email: string, password: string }) {
     const res = await db.user.register({where: {userInput}});
