@@ -1,17 +1,13 @@
 import {Dock, DockIcon} from "~/components/dock";
 import {A} from "@solidjs/router";
-
+import home from "~/static/images/building.png"
 export default function BaseDock() {
     return (
         <div class={"w-full flex justify-center items-center"}>
             <Dock class="my-2 bg-gray-50">
                 <DockIcon>
                     <A href={'/'}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5}
-                             stroke="currentColor" class="text-gray-400 fill-gray-100 size-full">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
-                        </svg>
+                        <img src={home} class="text-gray-400 fill-gray-100 size-full" alt={"home"}/>
                     </A>
                 </DockIcon>
             </Dock>
