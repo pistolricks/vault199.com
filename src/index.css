@@ -8,6 +8,18 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
+:root {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  --primary-color: #ffd52c;
+  --secondary-color: #ff5c00;
+  --tertiary-color: #c72d04;
+  --background-color: #111;
+  scrollbar-color: var(--primary-color) var(--secondary-color);
+  font-size: clamp(18px, 3vw, 30px);
+}
+
 @layer base {
   *,
   ::after,
@@ -76,49 +88,9 @@ ul {
   list-style: none;
 }
 
-ul a:before,
-p a:before {
-  color: #00dd00;
-  content: ' [ ';
-}
-
-ul a:after,
-p a:after {
-  color: #00dd00;
-  content: ' ] ';
-}
-
-header.site {
-  margin: 0 0 40px 0;
-  text-transform: uppercase;
-}
-
-nav.site {
-  margin: 0 0 40px 0;
-  position: relative;
-  width: 100%;
-  z-index: 10;
-}
-
-nav.site ul {
-  padding: 0;
-}
-
-nav.site ul li {
-  display: inline-block;
-  padding: 0 10px;
-
-  width: auto;
-}
 
 
-label {
-  clear: left;
-  display: block;
-  float: left;
-  margin-right: 10px;
-  padding-top: 5px;
-}
+
 
 
 textarea {
@@ -140,56 +112,9 @@ textarea {
   resize: none;
 }
 
-input[type=text]:focus,
-textarea:focus,
-input[type=submit]:focus,
-button:focus,
-a.button:focus {
-  outline: 0;
-}
-
-input[type=submit],
-button,
-a.button {
-  background: transparent;
-  border: 1px solid #00dd00;
-  clear: both;
-  color: #00dd00;
-  cursor: hand;
-  display: inline-block;
-  font-family: 'VT323', Courier;
-  font-size: 1em;
-  margin-bottom: 20px;
-  opacity: 0.25;
-  padding: 10px 25px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  z-index: 10;
-}
-
-input[type=submit]:hover,
-button:hover,
-a.button:hover {
-  background: #00dd00;
-  color: #383838;
-  opacity: 0.8;
-}
-
-form {}
-
-:root {
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  --primary-color: #ffd52c;
-  --secondary-color: #ff5c00;
-  --tertiary-color: #c72d04;
-  --background-color: #111;
-  scrollbar-color: var(--primary-color) var(--secondary-color);
-  font-size: clamp(18px, 3vw, 30px);
 
 
-}
+
 
 
 @theme {

@@ -59,24 +59,31 @@ const PerkComponent: Component<PROPS> = props => {
             <BaseDrawer open={getOpen()} setOpen={setOpen} contextId={"perks-1"} side={"right"}>
 
                 <div class="grid grid-cols-2 gap-1">
-                    <button class="text-2xl" onClick={[handleComponent, "strength"]}>Strength</button>
-                    <button class="text-2xl" onClick={[handleComponent, "perception"]}>Perception</button>
-                    <button class="text-2xl" onClick={[handleComponent, "endurance"]}>Endurance</button>
-                    <button class="text-2xl" onClick={[handleComponent, "charisma"]}>Charisma</button>
-                    <button class="text-2xl" onClick={[handleComponent, "intelligence"]}>Intelligence</button>
-                    <button class="text-2xl" onClick={[handleComponent, "agility"]}>Agility</button>
-                    <button class="text-2xl" onClick={[handleComponent, "luck"]}>Luck</button>
+                    <button class={`${styles.button} text-2xl`} onClick={[handleComponent, "strength"]}>Strength
+                    </button>
+                    <button class={`${styles.button} text-2xl`} onClick={[handleComponent, "perception"]}>Perception
+                    </button>
+                    <button class={`${styles.button} text-2xl`} onClick={[handleComponent, "endurance"]}>Endurance
+                    </button>
+                    <button class={`${styles.button} text-2xl`} onClick={[handleComponent, "charisma"]}>Charisma
+                    </button>
+                    <button class={`${styles.button} text-2xl`}
+                            onClick={[handleComponent, "intelligence"]}>Intelligence
+                    </button>
+                    <button class={`${styles.button} text-2xl`} onClick={[handleComponent, "agility"]}>Agility</button>
+                    <button class={`${styles.button} text-2xl`} onClick={[handleComponent, "luck"]}>Luck</button>
                 </div>
 
-                <DrawerContent class={"relative h-screen w-full overflow-y-auto overflow-x-hidden"} contextId={"perks-1"} side={"right"}>
+                <DrawerContent class={"relative h-screen w-full overflow-y-auto overflow-x-hidden"}
+                               contextId={"perks-1"} side={"right"}>
                     <div class={styles["terminal-body"]}>
 
                         <div class={styles["scanline"]}></div>
-                        <div class={styles["wrapper"]}>
-                    <div class={"sm:absolute bottom-4 inset-x-0 w-full flex justify-center"}>
-                        <Dynamic component={component()}/>
-                    </div>
+
+                        <div class={"sm:absolute bottom-4 inset-x-0 w-full flex justify-center"}>
+                            <Dynamic component={component()}/>
                         </div>
+
                     </div>
                 </DrawerContent>
 

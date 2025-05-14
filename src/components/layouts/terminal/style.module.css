@@ -124,6 +124,51 @@
     -ms-overflow-style: none;
 }
 
+
+header.site {
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+}
+
+nav.site {
+    margin: 0 0 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+nav.site ul {
+    padding: 0;
+}
+
+nav.site ul li {
+    display: inline-block;
+    padding: 0 10px;
+
+    width: auto;
+}
+
+ul a:before,
+p a:before {
+    color: #00dd00;
+    content: ' [ ';
+}
+
+ul a:after,
+p a:after {
+    color: #00dd00;
+    content: ' ] ';
+}
+
+label {
+    clear: left;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+
 .content {
     animation: scroll 3s 1;
     overflow: hidden;
@@ -146,6 +191,38 @@
     width: 120px;
 }
 
+input[type=text]:focus,
+textarea:focus,
+input[type=submit]:focus,
+.button:focus {
+    outline: 0;
+}
+
+input[type=submit],
+.button {
+    background: transparent;
+    border: 1px solid #00dd00;
+    clear: both;
+    color: #00dd00;
+    cursor: hand;
+    display: inline-block;
+    font-family: 'VT323', Courier;
+    font-size: 1em;
+    margin-bottom: 0;
+    opacity: 0.25;
+    padding: 10px 10px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+input[type=submit]:hover,
+.button:hover {
+    background: #00dd00;
+    color: #383838;
+    opacity: 0.8;
+}
 
 
 .expandingArea { position: relative }

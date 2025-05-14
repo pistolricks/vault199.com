@@ -11,7 +11,7 @@ const TerminalNavigation: Component<RouteSectionProps> = props => {
 
 
     return (
-        <nav class={`site ${styles.clear}`}>
+        <nav class={`${styles.site} ${styles.clear}`}>
             <ul>
                 <Show when={location.pathname !== "/"}>
                     <li><A href="/" title="">HOME</A></li>

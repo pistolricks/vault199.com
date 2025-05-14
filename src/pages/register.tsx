@@ -2,6 +2,7 @@ import {Component, createEffect, createMemo, createSignal} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
 import {A, RouteSectionProps, useSubmission} from "@solidjs/router";
 import PleaseStandBy from "~/static/images/please-stand-by.jpg";
+import styles from "~/components/layouts/terminal/style.module.css"
 import {registerUserHandler} from "~/lib/users";
 
 const Register: Component<RouteSectionProps> = (props) => {
@@ -22,7 +23,7 @@ const Register: Component<RouteSectionProps> = (props) => {
     return (
         <TerminalLayout {...props}>
             <form action={registerUserHandler} method={"post"} class={'flex flex-col gap-6'}>
-                <div class={" flex flex-col sm:justify-start w-full"}>
+                <div class={"flex flex-col sm:justify-start w-full"}>
                     <input class={'px-1 bg-gray-300/20 w-full'} type="text" required name="firstName"
                            placeholder="First Name"/>
                 </div>
@@ -39,8 +40,8 @@ const Register: Component<RouteSectionProps> = (props) => {
                 </div>
 
                 <div class={"w-full flex justify-end"}>
-                    <A class="button" href="/">Cancel</A>
-                    <button class="button" type="submit">Submit</button>
+                    <A class={styles.button} href="/">Cancel</A>
+                    <button class={styles.button} type="submit">Submit</button>
                 </div>
             </form>
 
