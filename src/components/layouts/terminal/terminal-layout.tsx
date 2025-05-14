@@ -4,6 +4,7 @@ import TerminalHeader from "~/components/layouts/terminal/terminal-header";
 import TerminalNavigation from "~/components/layouts/terminal/terminal-navigation";
 import styles from "./style.module.css"
 import PleaseStandBy from "~/static/images/please-stand-by.jpg"
+import AiCompanion from "~/components/ai-companion";
 
 const TerminalLayout: Component<RouteSectionProps> = props => {
 
@@ -21,23 +22,24 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
 
                     <Show
                         fallback={
-                        <div class={""}>
+                            <div class={""}>
 
-                            <img src={PleaseStandBy} class="absolute inset-0 w-full h-full object-cover" alt="Please stand by"/>
+                                <img src={PleaseStandBy} class="absolute inset-0 w-full h-full object-cover"
+                                     alt="Please stand by"/>
 
 
-                        </div>
+                            </div>
                         }
                         when={!isRouting()}>
                         <TerminalHeader {...props}/>
                         <TerminalNavigation {...props}/>
 
 
-                            {props.children}
+                        {props.children}
 
 
                     </Show>
-
+                    <AiCompanion/>
                 </div>
             </div>
         </div>
