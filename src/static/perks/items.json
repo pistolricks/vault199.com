@@ -1,0 +1,2264 @@
+[
+  {
+    "name": "Armorer",
+    "img": "Img/Core - Perks/Armorer.webp",
+    "description": "<p><span class=\"fontstyle0\">Możesz modyfikować pancerz za pomocą modów pancerza.<br /></span></p>\n<p><span class=\"fontstyle0\">Każda ranga tego profitu odblokowuje dodatkową rangę modów: ranga 1 odblokowuje mody rangi 1, ranga 2 odblokowuje mody rangi 2 itd. Za każdym razem, gdy korzystasz z tego profitu, wymagany poziom wzrasta o 4. </span><br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 4,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 5,
+      "INT": 6
+    }
+  },
+  {
+    "name": "Blitz",
+    "img": "Img/Core - Perks/Blitz.webp",
+    "description": "<p><span class=\"fontstyle0\">When you move into reach of an opponent and make a melee attack against them in one turn, you may re-roll one d20 on your attack.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, you also inflict +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">damage with that attack. Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 9,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Nerd Rage!",
+    "img": "Img/Core - Perks/Nerd Rage.webp",
+    "description": "<p><span class=\"fontstyle0\">While your health is reduced to less than ¼ of your maximum, you add +1 to your physical DR, +1 to your energy DR, and +1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">to the damage of all your attacks.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, this increases to +2 DR, and +2 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">damage. At rank 3, this increases to +3 DR and +3 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">damage. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 8,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Fast Metabolism",
+    "img": "Img/Core - Perks/Fast Metabolism.webp",
+    "description": "<p><span class=\"fontstyle0\">When you regain one or more HP from any source other than rest, increase the total HP regained by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "1",
+      "robot": true
+    }
+  },
+  {
+    "name": "Steady Aim",
+    "img": "Img/Core - Perks/Stead Aim.webp",
+    "description": "<p><span class=\"fontstyle0\">When you take the Aim minor action, you may either re-roll 2d20 on the first attack you make this turn, or re-roll 1d20 on all attacks you make this turn.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 8,
+      "AGI": 7
+    }
+  },
+  {
+    "name": "Bloody Mess",
+    "img": "Img/Core - Perks/Bloody Mess.webp",
+    "description": "<p><span class=\"fontstyle0\">When you inflict a critical hit, roll 1</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">; if you roll an Effect, you inflict one additional injury to a random location.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 6
+    }
+  },
+  {
+    "name": "Snakeater",
+    "img": "Img/Core - Perks/Snakeater.webp",
+    "description": "<p><span class=\"fontstyle0\">Your poison Damage Resistance increases by +2.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7
+    }
+  },
+  {
+    "name": "Aderenalin Rush",
+    "img": "Img/Core - Perks/Adrenalin Rush.webp",
+    "description": "<p><span class=\"fontstyle0\">When your health is below its maximum value, you count your <strong>STR </strong>score as 10 for all purposes when attempting a <strong>STR</strong>-based skill test or melee attack.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 7
+    }
+  },
+  {
+    "name": "Cautious Nature",
+    "img": "Img/Core - Perks/Cautious Nature.webp",
+    "description": "<p><span class=\"fontstyle0\">Whenever you attempt a skill test, and you buy one or more d20s by spending Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Daring Nature.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 7
+    }
+  },
+  {
+    "name": "Night Person",
+    "img": "Img/Core - Perks/Night Person.webp",
+    "description": "<p><span class=\"fontstyle0\">You reduce any difficulty increases due to darkness by 1.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 7
+    }
+  },
+  {
+    "name": "Smooth Talker",
+    "img": "Img/Core - Perks/Smooth Talker.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a Barter or Speech test as part of an opposed test, you may re-roll 1d20.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6
+    }
+  },
+  {
+    "name": "Pickpocket",
+    "img": "Img/Core - Perks/Pickpocket.webp",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, you can ignore the first complication you roll when you make an </span><span class=\"fontstyle2\">AGI + Sneak </span><span class=\"fontstyle0\">test to steal an object from someone else’s person or to plant something on them.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, you can re-roll 1d20 in your dice pool when attempting to pick someone’s pocket.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 3, you reduce the difficulty of attempts to pick someone’s pocket by 1.<br /></span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "AGI": 8,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Gunslinger",
+    "img": "Img/Core - Perks/Gunslinger.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack with a onehanded ranged weapon with a Fire Rate of 2 or lower, you increase the weapon’s damage by +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">per rank. In addition, you may re-roll the hit location die. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Sniper",
+    "img": "Img/Core - Perks/Sniper.webp",
+    "description": "<p><span class=\"fontstyle0\">When you take the Aim minor action, and then make a ranged attack with a two-handed weapon with the Accurate quality, you can specify a hit location to target without increasing the difficulty of the attack.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "AGI": 6
+    }
+  },
+  {
+    "name": "Demoilition Expert",
+    "img": "Img/Core - Perks/Demolition Expert.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack using a weapon with the Blast quality, the attack gains the Vicious damage effect. In addition, you unlock explosives recipes which have this perk as a requirement.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 6,
+      "LCK": 8
+    }
+  },
+  {
+    "name": "Inspirational",
+    "img": "Img/Core - Perks/Inspirational.webp",
+    "description": "<p><span class=\"fontstyle0\">Because you lead by example, the maximum number of AP the group may save is increased by 1.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 8
+    }
+  },
+  {
+    "name": "Pain Train",
+    "img": "Img/Core - Perks/Pain Train.webp",
+    "description": "<p><span class=\"fontstyle0\">You may Charge as a major action if you are wearing Power Armor or are a super mutant. This is a movement action, and you may not </span><span class=\"fontstyle2\">Move </span><span class=\"fontstyle0\">or </span><span class=\"fontstyle2\">Sprint </span><span class=\"fontstyle0\">in the same turn. When you take this action, you move into reach of an enemy within Medium range (1 zone) and make a </span><span class=\"fontstyle3\">STR + Athletics </span><span class=\"fontstyle0\">test with a difficulty of 2. If you succeed, the enemy suffers damage equal to your normal unarmed damage, and is knocked prone.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, you add +1</span><span class=\"fontstyle4\">D</span><span class=\"fontstyle4\" style=\"color:#fde635\">C</span><span class=\"fontstyle4\">D </span><span class=\"fontstyle0\">and the Stun damage effect to the damage inflicted. At the GM’s discretion, especially large or sturdy creatures cannot be knocked prone by this action. Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 9,
+      "END": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Cap Collector",
+    "img": "Img/Core - Perks/Cap Collector.webp",
+    "description": "<p><span class=\"fontstyle0\">When you buy or sell items, you may increase or decrease the price of the goods being traded by 10%.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 5
+    }
+  },
+  {
+    "name": "Barbarian",
+    "img": "Img/Core - Perks/Barbarian.webp",
+    "description": "<p><span class=\"fontstyle0\">Your physical Damage Resistance increases on all hit locations based on your STR.<br /></span></p>\n<p><span class=\"fontstyle0\">You do not gain this benefit while wearing Power Armor.<br /></span></p>\n<ul>\n<li><span class=\"fontstyle2\"> </span><span class=\"fontstyle3\">STR 7–8: </span><span class=\"fontstyle0\">+1 physical DR<br /></span></li>\n<li><span class=\"fontstyle2\"> </span><span class=\"fontstyle3\">STR 9–10: </span><span class=\"fontstyle0\">+2 physical DR</span></li>\n<li><span class=\"fontstyle2\"> </span><span class=\"fontstyle3\">STR 11+: </span><span class=\"fontstyle0\">+3 physical DR</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></li>\n</ul>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 7,
+      "Level": "4",
+      "robot": true
+    }
+  },
+  {
+    "name": "Rifleman",
+    "img": "Img/Core - Perks/Rifleman.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with any two-handed weapon with a Fire Rate of 2 or lower (except heavy weapons), you add +1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">to the weapon’s damage per rank.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, you also add the Piercing 1 damage effect, or add +1 to the rating of any Piercing X damage effect the weapon already had. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Moving Target",
+    "img": "Img/Core - Perks/Moving Target.webp",
+    "description": "<p><span class=\"fontstyle0\">When you take the Sprint action, your Defense increases by +1 until the start of your next turn.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 6
+    }
+  },
+  {
+    "name": "Toughness",
+    "img": "Img/Core - Perks/Toughness.webp",
+    "description": "<p><span class=\"fontstyle0\">Your physical Damage Resistance to all hit locations increases by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "LCK": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Daring Nature",
+    "img": "Img/Core - Perks/Daring Nature.webp",
+    "description": "<p><span class=\"fontstyle0\">Whenever you attempt a skill test, and you buy one or more d20s by giving the gamemaster Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Cautious Nature.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 7
+    }
+  },
+  {
+    "name": "Medic",
+    "img": "Img/Core - Perks/Medic.webp",
+    "description": "<p><span class=\"fontstyle0\">When you use the First Aid action to try to treat an injury, you can re-roll 1d20.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 8
+    }
+  },
+  {
+    "name": "Hunter",
+    "img": "Img/Core - Perks/Hunter.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack against an NPC with one of the Mammal, Lizard, or Insect keywords and the Mutated keyword, your attack gains the Vicious damage effect, if it did not already have that effect.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6
+    }
+  },
+  {
+    "name": "Junktown Jerky Vendor",
+    "img": "Img/Core - Perks/Junktown Jerky Vendor.webp",
+    "description": "<p><span class=\"fontstyle0\">The difficulty of any </span><span class=\"fontstyle2\">CHA + Barter </span><span class=\"fontstyle0\">test you attempt to buy or sell goods is reduced by 1, to a minimum of 0.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 8
+    }
+  },
+  {
+    "name": "Size Matters",
+    "img": "Img/Core - Perks/Size Matters.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with any heavy weapon, you add +1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">to the weapon’s damage, per rank. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "AGI": 6
+    }
+  },
+  {
+    "name": "Tag",
+    "img": "Img/Core - Perks/Tag.webp",
+    "description": "<p><span class=\"fontstyle0\">You may select one additional Tag skill. Increase the skill’s rank by 2, to a maximum of 6, and mark it as a Tag skill, allowing you to roll a critical success with a d20 result equal or under the skill’s rank.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Meltdown",
+    "img": "Img/Core - Perks/Meltdown.webp",
+    "description": "<p><span class=\"fontstyle0\">When you kill an enemy with an energy weapon, they explode. Roll a number of </span><span class=\"fontstyle2\">DD</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">equal to half the weapon’s damage rating (round down). For each Effect<br />rolled, one creature within Close range of the exploding enemy (starting with the closest) suffers energy damage equal to the total rolled on the </span><span class=\"fontstyle2\">DD</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 10
+    }
+  },
+  {
+    "name": "Shotgun Surgeon",
+    "img": "Img/Core - Perks/Shotgun Surgeon.webp",
+    "description": "<p><span class=\"fontstyle0\">Your ranged attacks using shotguns gain the Piercing 1 damage effect, or add +1 to any Piercing X damage effect the weapon already had.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 5,
+      "AGI": 7
+    }
+  },
+  {
+    "name": "Hacker",
+    "img": "Img/Core - Perks/Hacker.webp",
+    "description": "<p><span class=\"fontstyle0\">The difficulty of skill tests to hack computers is decreased by 1, to a minimum of 0.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 8
+    }
+  },
+  {
+    "name": "Ninja",
+    "img": "Img/Core - Perks/Ninja.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a sneak attack with a melee weapon or unarmed attack, the damage is increased by +2 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D</span><span class=\"fontstyle0\">. You cannot gain this benefit while in Power Armor.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 8
+    }
+  },
+  {
+    "name": "Pyromaniac",
+    "img": "Img/Core - Perks/Pyromaniac.webp",
+    "description": "<p><span class=\"fontstyle0\">The damage you deal using firebased weapons increases by +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">per rank. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Action Boy/Girl",
+    "img": "Img/Core - Perks/Actionboygirl.webp",
+    "description": "<p><span class=\"fontstyle0\">When you spend AP to take an additional major action, you do not suffer the increased skill test difficulty during your second action.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {}
+  },
+  {
+    "name": "Can Do!",
+    "img": "Img/Core - Perks/Can do.webp",
+    "description": "<p><span class=\"fontstyle0\">When you are scavenging a location that contains food, you gain 1 additional random food item, without spending AP.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 5
+    }
+  },
+  {
+    "name": "Adamantium Skeleton",
+    "img": "Img/Core - Perks/Adamatium Skeleton.webp",
+    "description": "<p><span class=\"fontstyle0\">When you suffer damage, the amount of damage needed to inflict a critical hit on you increases by your rank in this perk. For example, if you have one rank in this perk, you suffer a critical hit from 6 or more damage, rather than 5 or more. Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Scrounger",
+    "img": "Img/Core - Perks/Scrounger.webp",
+    "description": "<p><span class=\"fontstyle0\">Whenever you roll to determine how much ammunition you find, you find more. </span></p>\n<p><span class=\"fontstyle0\">At rank 1, you find +3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">additional shots. At rank 2, you find +6</span><span class=\"fontstyle2\">CC</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">additional shots. At rank 3, you find +10 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">additional shots. The additional ammo you find is the same as initially found, for example, if you find 10mm ammunition, this perk increases how much 10mm ammo you find. If you find multiple types of ammunition, Scrounger applies to the ammunition with the lowest rarity (GM’s choice if there is a tie).<br /></span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirementincreases by 5.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Jury Rigging",
+    "img": "Img/Core - Perks/Jury Rigging.webp",
+    "description": "<p><span class=\"fontstyle0\">You can repair an item without needing to expend any components. However, the repair is temporary, and the item will break again on the next complication you suffer while using it. The complication range of all skill tests to use the item increases by 1, to the roll of a 19–20.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {}
+  },
+  {
+    "name": "Life Giver",
+    "img": "Img/Core - Perks/Life Giver.webp",
+    "description": "<p><span class=\"fontstyle0\">Increase your maximum health points by your Endurance rank. Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 5,
+      "levelStart": 1
+    },
+    "requirements": {
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Science!",
+    "img": "Img/Core - Perks/Science!.webp",
+    "description": "<p>You can modify energy weapons with weapon mods, and you can also craft certain advanced armor mods. Each rank in this perk unlocks an additional rank of mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc.</p>\n<p>Each time you take this perk, the level requirement increases by 4.</p>",
+    "rank": {
+      "max": 4,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 6,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Chem Resistant",
+    "img": "Img/Core - Perks/Chem Resistant.webp",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, roll one fewer </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">when determining if you become addicted to chems, to a minimum of 0.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, you cannot become addicted to chems. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Healer",
+    "img": "Img/Core - Perks/Healer.webp",
+    "description": "<p><span class=\"fontstyle0\">When you heal a patient’s HP using the First Aid action, increase the amount of HP healed by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Rad Resistance",
+    "img": "Img/Core - Perks/Rad Resistance.webp",
+    "description": "<p><span class=\"fontstyle0\">Your radiation Damage Resistance, to all hit locations, increases by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 8,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Better Criticals",
+    "img": "Img/Core - Perks/Better Criticals.webp",
+    "description": "<p><span class=\"fontstyle0\">When you inflict one or more points of damage to an enemy, you may spend 1 Luck Point to automatically inflict a critical hit, causing an injury.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 9
+    }
+  },
+  {
+    "name": "Entomologist",
+    "img": "Img/Core - Perks/Entomologist.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack against an NPC with the Insect keyword, your attack gains the Piercing 1 damage effect, or improves the rating of any Piercing X effect the weapon has by +1.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 7
+    }
+  },
+  {
+    "name": "Strong Back",
+    "img": "Img/Core - Perks/Strong Back.webp",
+    "description": "<p><span class=\"fontstyle0\">Your maximum carry weight is increased by +25 lbs., per rank. Each time you take this perk, the level requirement increases by 2.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 5,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Grim Reaper's Spirit",
+    "img": "Img/Core - Perks/Grim Reapers Spirit.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack which kills one or more enemies, roll 1</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. If you roll an Effect, add 2 AP to the group’s pool.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 8
+    }
+  },
+  {
+    "name": "Slayer",
+    "img": "Img/Core - Perks/Slayer.webp",
+    "description": "<p><span class=\"fontstyle0\">When you inflict any damage with an unarmed attack or melee weapon, you may spend 1 Luck point to immediately inflict a critical hit—and therefore an injury—on the location hit.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 8
+    }
+  },
+  {
+    "name": "Pathfinder",
+    "img": "Img/Core - Perks/Pathfinder.webp",
+    "description": "<p><span class=\"fontstyle0\">When travelling over long distances through the wilderness, a successful </span><span class=\"fontstyle2\">PER + Survival </span><span class=\"fontstyle0\">test (with a difficulty determined by the GM, based on the terrain) reduces the travel time by half.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 6,
+      "END": 6
+    }
+  },
+  {
+    "name": "Scrapper",
+    "img": "Img/Core - Perks/Scrapper.webp",
+    "description": "<p><span class=\"fontstyle0\">When you scrap an item, you can salvage uncommon component materials as well as common ones. At rank 2, you can also salvage rare materials. Each time you take this perk, the level requirement increases by 5.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Master Thief",
+    "img": "Img/Core - Perks/Master Thief.webp",
+    "description": "<p><span class=\"fontstyle0\">When you are attempting to pick a lock or pickpocket somebody, the difficulty of the opponent’s skill test to detect you increases by +1.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "AGI": 9
+    }
+  },
+  {
+    "name": "Black Widow/ Lady Killer",
+    "img": "Img/Core - Perks/Blackwidow Lady killer.webp",
+    "description": "<p><span class=\"fontstyle0\">The Black Widow perk affects men and masculine characters, while the Lady Killer perk affects women and feminine characters—they are otherwise identical. When you attempt a </span><strong><span class=\"fontstyle2\">CHA </span></strong><span class=\"fontstyle0\">based skill test to influence a character of the chosen gender, you may re-roll 1d20. In addition, your attacks inflict +1</span><span class=\"fontstyle3\">D</span><span class=\"fontstyle3\" style=\"color:#fde635\">C</span><span class=\"fontstyle3\">D </span><span class=\"fontstyle0\">additional damage against characters of the chosen gender.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6
+    }
+  },
+  {
+    "name": "Awareness",
+    "img": "Img/Core - Perks/Awareness.webp",
+    "description": "<p><span class=\"fontstyle0\">When you take the Aim minor action at a target within Close range, you spot their weaknesses and can attack more efficiently.<br /></span></p>\n<p><span class=\"fontstyle0\">The next attack you make against that target gains the Piercing 1 damage effect, or improves the rating of any existing Piercing X damage effect by 1</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 7
+    }
+  },
+  {
+    "name": "Ricochet",
+    "img": "Img/Core - Perks/Ricochet.webp",
+    "description": "<p>If an enemy makes a ranged attack against you and rolls a complication, you may spend one Luck point to have their ricochet hit them. Resolve the damage roll against the attacking enemy instead.</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 10,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Intense Training",
+    "img": "Img/Core - Perks/Intense Training.webp",
+    "description": "<p><span class=\"fontstyle0\">Increase any one S.P.E.C.I.A.L attribute by 1 rank. As usual, your S.P.E.C.I.A.L attributes cannot be increased beyond 10 using this method. Each time you take this perk, the level requirement increases by 2.</span></p>",
+    "rank": {
+      "max": 10,
+      "levelStart": 1
+    },
+    "requirements": {
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Paralyzing Palm",
+    "img": "Img/Core - Perks/Paralyzing Palm.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an unarmed attack, and choose to strike a specific location, your attack gains the Stun damage effect.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 8
+    }
+  },
+  {
+    "name": "Skilled",
+    "img": "Img/Core - Perks/Skilled.webp",
+    "description": "<p><span class=\"fontstyle0\">Add +1 rank to two skills or add +2 ranks to one skill. No skill may have more than 6 ranks. Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 10,
+      "levelStart": 1
+    },
+    "requirements": {
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Mysterious Stranger",
+    "img": "Img/Core - Perks/Mysterious Stranger.webp",
+    "description": "<p><span class=\"fontstyle0\">From time to time, a Mysterious Stranger comes to your aid, with lethal results. At the start of a combat encounter, you may spend 1 Luck point. If you do so, then at any point during the scene, the GM may have the Mysterious Stranger appear, make a single ranged attack against an enemy you attacked, or who just attacked you, and then vanish. If you spend a Luck point and the Mysterious Stranger does not appear, the GM must refund the Luck point you spent.<br /></span></p>\n<p><span class=\"fontstyle0\">The stranger has an AGI of 10, a Small Guns skill of 6, and counts Small Guns as a Tag skill. They always roll 3d20 for attacks, rather than 2d20, and their attack—using a custom .44 Magnum revolver—inflicts 8</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">Piercing 1, Vicious physical damage. They always appear within their weapon’s ideal range. Any attempt to find where the Stranger went after their attack fails.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 7
+    }
+  },
+  {
+    "name": "Blacksmith",
+    "img": "Img/Core - Perks/Blacksmith.webp",
+    "description": "<p><span class=\"fontstyle0\">You can modify melee weapons with weapon mods. </span><span class=\"fontstyle0\">Each rank in this perk unlocks an additional rank of melee weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, and rank 3 unlocks rank 3 mods. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Lead Belly",
+    "img": "Img/Core - Perks/Lead Belly.webp",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, you may re-roll the </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">to determine if you suffer radiation damage from irradiated food or drink. At rank 2, you are immune to radiation damage from consuming irradiated food or drink. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Quick Hands",
+    "img": "Img/Core - Perks/Quick Hands.webp",
+    "description": "<p><span class=\"fontstyle0\">You can reload firearms faster. When you make a ranged attack, you may spend 2 AP to double the Fire Rate of your gun for that attack.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 8
+    }
+  },
+  {
+    "name": "Aquaboy/ Aquagirl",
+    "img": "Img/Core - Perks/Aquaboygirl.webp",
+    "description": "<p><span class=\"fontstyle0\">Water is your ally. At rank 1, you no longer take radiation damage from swimming in irradiated water, and you can hold your breath for twice as long as normal.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, enemies add +2 to the difficulty to tests to detect you while you are submerged underwater. Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 5,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Piercing Strike",
+    "img": "Img/Core - Perks/Piercing Strike.webp",
+    "description": "<p><span class=\"fontstyle0\">Your attacks using unarmed attacks and bladed melee weapons gain the Piercing 1 damage effect, or add +1 to the rating of any Piercing X damage effect they already had.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 7
+    }
+  },
+  {
+    "name": "Iron Fist",
+    "img": "Img/Core - Perks/Iron Fist.webp",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, your unarmed attacks inflict +1</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">damage. At rank 2, your unarmed attacks also gain the Vicious damage effect. Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Chemist",
+    "img": "Img/Core - Perks/Chemist.webp",
+    "description": "<p><span class=\"fontstyle0\">Chems you create last twice as long as normal. In addition, you unlock chems recipes that have this perk as a requirement.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 7
+    }
+  },
+  {
+    "name": "Dogmeat",
+    "img": "Img/Core - Perks/Dogmeat.webp",
+    "description": "<p><span class=\"fontstyle0\">You aren’t alone in the wilderness. You have a pet dog that serves as a friend and ally in dangerous times. The dog is treated as an allied NPC creature under your command</span><span class=\"fontstyle0\">. If you need to forage for food and water, your dog looks after themselves. If your dog is slain, then you either find a new dog before the next adventure, or you may trade this perk for a different one after this adventure.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 5
+    }
+  },
+  {
+    "name": "Basher",
+    "img": "Img/Core - Perks/Basher.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a melee attack by bashing with your gun, your attack gains the Vicious damage effect.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6
+    }
+  },
+  {
+    "name": "Solar Powered",
+    "img": "Img/Core - Perks/Solar Powered.webp",
+    "description": "<p><span class=\"fontstyle0\">For every hour you spend in direct sunlight, you heal 1 radiation damage.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7
+    }
+  },
+  {
+    "name": "Finesse",
+    "img": "Img/Core - Perks/Finesse.webp",
+    "description": "<p><span class=\"fontstyle0\">Once per combat encounter, you may re-roll all the </span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">on a single damage roll without spending any Luck points.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 9
+    }
+  },
+  {
+    "name": "Gun Fu",
+    "img": "Img/Core - Perks/Gun Fu.webp",
+    "description": "<p>When you succeed at a ranged attack, you may spend 1 AP and 1 ammo to hit a second target <span class=\"fontstyle0\">within Close range of your initial target. The second target takes the same damage as the initial target. </span><span class=\"fontstyle0\">At rank 2, you may spend 2 AP and 2 ammo to hit two additional targets. At rank 3, you may spend 3 AP and 3 ammo to hit three additional targets. Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 10,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Quick Draw",
+    "img": "Img/Core - Perks/Quickdraw.webp",
+    "description": "<p><span class=\"fontstyle0\">Each turn, you may draw a single weapon or item carried on your person without using a minor action.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 6
+    }
+  },
+  {
+    "name": "Commando",
+    "img": "Img/Core - Perks/Commando.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with any weapon with a Fire Rate of 3 or higher (except heavy weapons), you add +1</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">per rank to the weapon’s damage. Each time you take this perk, the level requirement increases by 3.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 8,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Gun Nut",
+    "img": "Img/Core - Perks/Gun nut.webp",
+    "description": "<p><span class=\"fontstyle0\">You can modify small guns and heavy weapons with weapon mods. Each rank in this perk unlocks an additional rank of weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 4,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 6,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Comprehension",
+    "img": "Img/Core - Perks/Comprehension.webp",
+    "description": "<p><span class=\"fontstyle0\">After you use the bonus gained from reading a magazine, roll 1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D</span><span class=\"fontstyle0\">. If you roll an Effect, you may use that bonus one additional time.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 6
+    }
+  },
+  {
+    "name": "Animal Friend",
+    "img": "Img/Core - Perks/Animal Friend.webp",
+    "description": "<p><span class=\"fontstyle0\"><strong>At rank 1, whenever a creature NPC with the Mammal, Lizard, or Insect keyword would attack you, roll 1</strong></span><strong>CD</strong><span class=\"fontstyle0\"><strong><span class=\"fontstyle0\">:</span></strong></span>&nbsp;<span class=\"fontstyle0\">on any result other than an Effect, the creature chooses not to attack you, although it may still attack another character it can target.</span></p>\n<p><span class=\"fontstyle0\"><span class=\"fontstyle0\">At rank 2, you can attempt a </span><span class=\"fontstyle2\"><strong>CHA + Survival</strong> </span><span class=\"fontstyle0\">test with a difficulty of 2 as a major action. If you succeed, the animal treats you as friendly and will attack anyone who attacks you. Mighty and Legendary animals are unaffected by this perk. Each time you take this perk, the level requirement increases by 5.</span> <br style=\"font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;\"></span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Light Step",
+    "img": "Img/Core - Perks/Light Step.webp",
+    "description": "<p><span class=\"fontstyle0\">When you roll to generate any complications on an Agility-based skill test, you may ignore one complication for every 1 AP spent. In addition, you may re-roll 1d20 on any </span><span class=\"fontstyle2\">AGI + Athletics </span><span class=\"fontstyle0\">test to avoid traps triggered by pressure plates or similar mechanisms.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {}
+  },
+  {
+    "name": "Concentrated Fire",
+    "img": "Img/Core - Perks/Concentrated Fire.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack and spend ammunition to increase the damage, you may re-roll up to 3 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D </span><span class=\"fontstyle0\">for your damage roll.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "AGI": 6
+    }
+  },
+  {
+    "name": "Center Mass",
+    "img": "Img/Core - Perks/Center Mass.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack, you may choose to strike your target’s Torso location (or equivalent, for creatures that use a different location table) without increasing the difficulty of the attack. In addition, you may re-roll 1d20 when making the test for your attack.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7
+    }
+  },
+  {
+    "name": "Mister Sandman",
+    "img": "Img/Core - Perks/Mister Sandman.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a sneak attack with a silenced or suppressed weapon, the<br />damage is increased by +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\" style=\"color:#1d4596\">D</span><span class=\"fontstyle0\">. You cannot gain this benefit while in Power Armor.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 9
+    }
+  },
+  {
+    "name": "Dodger",
+    "img": "Img/Core - Perks/Dodger.webp",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, when you take the Defend major action, you reduce the difficulty of the skill test by 1. At rank 2, the AP cost to further increase your Defense is reduced to 1 AP. Each time you take this perk, the level requirement increases by 6.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 6,
+      "Level": 4
+    }
+  },
+  {
+    "name": "Infiltrator",
+    "img": "Img/Core - Perks/Infiltrator.webp",
+    "description": "<p><span class=\"fontstyle0\">When you attempt a Lockpick skill test to unlock a door or container, you may re-roll 1d20.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8
+    }
+  },
+  {
+    "name": "Refractor",
+    "img": "Img/Core - Perks/Refractor.webp",
+    "description": "<p><span class=\"fontstyle0\">Your energy Damage Resistance to all hit locations increases by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 4.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 6,
+      "LCK": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Ghost",
+    "img": "Img/Core - Perks/Ghost.webp",
+    "description": "<p><span class=\"fontstyle0\">Whenever you attempt an </span><span class=\"fontstyle2\"><strong>AGI + Sneak</strong> </span><span class=\"fontstyle0\">test in shadows or darkness, the first additional d20 you buy is free. The normal maximum of 5d20 still applies.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 5,
+      "AGI": 6
+    }
+  },
+  {
+    "name": "Party Boy/ Party Girl",
+    "img": "Img/Core - Perks/Partyboygirl.webp",
+    "description": "<p><span class=\"fontstyle0\">You cannot become addicted to alcoholic drinks, and whenever you drink an alcoholic drink, you heal +2 HP.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "CHA": 7
+    }
+  },
+  {
+    "name": "Big Leagues",
+    "img": "Img/Core - Perks/Big Leagues.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a melee attack with a two-handed melee weapon, the weapon gains the Vicious damage effect.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 9
+    }
+  },
+  {
+    "name": "Fortune Finder",
+    "img": "Img/Core - Perks/Fortune Finder.webp",
+    "description": "<p><span class=\"fontstyle0\">Whenever you roll to determine how much money you find, you find more. At rank 1, you find +3</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">additional caps. At rank 2, you find +6</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">additional caps. At rank 3, you find +10</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">additional caps. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 5,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Parma Farma",
+    "img": "Img/Core - Perks/Pharma Farma.webp",
+    "description": "<p><span class=\"fontstyle0\">When you are scavenging a location that contains medicine or chems, you find one additional item, randomly determined, without spending AP.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 6
+    }
+  },
+  {
+    "name": "Laser Commander",
+    "img": "Img/Core - Perks/Laser Commander.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack with a ranged energy weapon, the damage is increased by +1</span><span class=\"fontstyle2\">DD</span><span class=\"fontstyle2\" style=\"color:#fde635\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">per rank in this perk. Each time you take this perk, the level requirement increases by 4.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Nuclear Physicist",
+    "img": "Img/Core - Perks/Nuclear Physicist.webp",
+    "description": "<p><span class=\"fontstyle0\">Whenever you use a weapon that inflicts radiation damage, or has the Radioactive damage effect, each Effect you roll inflicts one additional point of radiation damage.<br /></span></p>\n<p><span class=\"fontstyle0\">In addition, fusion cores you use have 3 additional charges.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 9
+    }
+  },
+  {
+    "name": "Scoundrel",
+    "img": "Img/Core - Perks/Scoundrel.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a </span><span class=\"fontstyle2\"><strong>CHA + Speech</strong> </span><span class=\"fontstyle0\">test to convince someone of a lie, you may ignore the first complication you roll.</span></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7
+    }
+  },
+  {
+    "name": "Robotics Expert",
+    "img": "Img/Core - Perks/Robotics Expert.webp",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, you can modify robot armor, weapon mounts, and modules with rank 1 mods. </span></p>\n<p><span class=\"fontstyle0\">At rank 2 you gain access to rank 2 mods, and the difficulty of tests to repair robots is permanently reduced by 1. </span></p>\n<p><span class=\"fontstyle0\">At rank 3 you gain </span><span class=\"fontstyle0\">access to rank 3 mods, and you can reprogram robots to fulfil a different function or alter their behavior at the discretion of the GM.<br /></span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 4.</span> <br style=\"font-variant-numeric:normal;font-variant-east-asian:normal;line-height:normal;text-align:-webkit-auto;text-size-adjust:auto\" /><br /></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 8,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Heave Ho!",
+    "img": "Img/Core - Perks/Heave Ho.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a thrown weapon attack, you may spend 1 AP to increase the Range of the weapon by one step—from Close to Medium, or from Medium to Long.</span><br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 8
+    }
+  },
+  {
+    "name": "Terrifying Presence",
+    "img": "Img/Core - Perks/Terrifying Presence.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make a Speech test to threaten or scare someone, you may re-roll 1d20.<br /></span></p>\n<p><span class=\"fontstyle0\">At rank 2, you may use a major action in combat to threaten an enemy within Medium range, using a </span><span class=\"fontstyle2\"><strong>STR + Speech</strong> </span><span class=\"fontstyle0\">test with a difficulty of 2. If you succeed, that enemy must move away from you during their next turn (though they can take any other actions they wish). Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "CHA": 8,
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Faster Healing",
+    "img": "Img/Core - Perks/Faster Healing.webp",
+    "description": "<p><span class=\"fontstyle0\">When you make an </span><span class=\"fontstyle2\"><strong>END + Survival</strong> </span><span class=\"fontstyle0\">test to heal your own injuries, the first additional d20 you buy is free. The normal maximum of 5d20 still applies.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "robot": true
+    }
+  },
+  {
+    "name": "Lock and Load",
+    "img": "Img/SS - Perks/Lock and Load.png",
+    "description": "<p><span class=\"fontstyle0\">When you make attacks with a big gun with a fire rate greater than 0, its fire rate increases by 1 per rank in this perk.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 4.</span> <br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 7,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "All Night Long",
+    "img": "Img/SS - Perks/All Night Long.png",
+    "description": "<p><span class=\"fontstyle0\">During nighttime hours&mdash;after sunset </span><span class=\"fontstyle0\">and before sunrise&mdash;your hunger and thirst states do not reduce. When calculating the hours of time to become more hungry or thirsty, ignore the hours of progress to moving down the&nbsp;</span><span class=\"fontstyle2\">Hunger States </span><span class=\"fontstyle0\">and </span><span class=\"fontstyle2\">Thirst States </span><span class=\"fontstyle0\">tables (</span><strong><span class=\"fontstyle3\">Fallout: The Roleplaying Game Core Rulebook</span></strong><span class=\"fontstyle0\">, p.191). Every </span><span class=\"fontstyle4\">two </span><span class=\"fontstyle0\">days you are starving, you gain 1 Fatigue, instead of every day</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "Level": 16,
+      "robot": true
+    }
+  },
+  {
+    "name": "Pannapictagraphist",
+    "img": "Img/SS - Perks/Pannapictagrqaphist.png",
+    "description": "<p><span class=\"fontstyle0\">Whenever you roll randomly to obtain a magazine from the </span><span class=\"fontstyle2\">Random Publication&nbsp;</span><span class=\"fontstyle0\">or </span><span class=\"fontstyle0\">the Issues tables (</span><strong><span class=\"fontstyle3\">Fallout: The Roleplaying Game Core Rulebook</span></strong><span class=\"fontstyle0\">, p.172&ndash;180), you may re-roll the result if your original result is a magazine or issue you have already found.</span> <br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 5
+    }
+  },
+  {
+    "name": "Enforcer",
+    "img": "Img/SS - Perks/Enforcer.png",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with a shotgun and target a specific location, your attack gains the Debilitating quality.</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 9,
+      "Level": 12
+    }
+  },
+  {
+    "name": "Contractor",
+    "img": "Img/SS - Perks/Contractor.png",
+    "description": "<p><span class=\"fontstyle0\">When building structures for your settlement, you </span><span class=\"fontstyle0\">know how to make the process faster, cheaper, and overall more efficient. At rank 1, when you start constructing something, you can reduce the number of </span><span class=\"fontstyle0\">materials required to construct something by half (to a minimum of 1 unit of each material type), decreasing the overall Happiness by 2. You can double the amount of construction time required to ignore the reduction in Happiness.</span></p>\n<p><span class=\"fontstyle0\">At rank 2, you can have a person take a settlement action to construct an object even if they do not have the required skill. Doing so reduces the settlement&rsquo;s overall Happiness by 1. If you have at least one person working on the construction object that has the skill, then you can ignore the reduction in Happiness.</span></p>\n<p><span class=\"fontstyle0\">At rank 3, you can have a person take a settlement action to construct an object even if they do not have the required perk, but at least one person working on the object still must have the perk.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 4.</span> </p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 5,
+      "INT": 5,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Rejuvinated",
+    "img": "Img/SS - Perks/Rejuvinated.png",
+    "description": "<p><span class=\"fontstyle0\">When you are </span><span class=\"fontstyle2\"><strong>full</strong> </span><span class=\"fontstyle0\">(the highest hunger state), your maximum HP increases </span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">by +2, you may re-roll 1d20 on all STR-based skill tests, and being&nbsp;</span><span class=\"fontstyle2\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\"><strong>full</strong> </span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">lasts for twice as long. When you are </span><span class=\"fontstyle2\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\"><strong>quenched</strong> </span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">(the highest thirst state), you may re-roll 1d20 on all END-based skill tests, you generate one free AP at the start of each of your turns in combat, and being </span><span class=\"fontstyle2\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\"><strong>quenched</strong> </span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">lasts twice as long.</span></p>\n<p>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "12",
+      "robot": true
+    }
+  },
+  {
+    "name": "Homebody",
+    "img": "Img/SS - Perks/Homebody.png",
+    "description": "<p><span class=\"fontstyle0\">You do not need to sleep while in a settlement you belong to recuperate.</span></p>\n<p><span class=\"fontstyle0\">At rank 1, when you spend </span><span class=\"fontstyle0\">an hour in a settlement you belong to or manage, roll a number of&nbsp;</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">equal to your Endurance rank, and regain its result in HP.</span></p>\n<p><span class=\"fontstyle0\">At rank 2, you regain an additional hit point per Effect rolled. Whenever you make an </span><span class=\"fontstyle3\">END + Survival </span><span class=\"fontstyle0\">test to recover from an injury, the difficulty is reduced to a maximum of 2 (light activity on the </span><span class=\"fontstyle4\">Injury Recovery Difficulty </span><span class=\"fontstyle0\">table, </span><strong><span class=\"fontstyle5\">Fallout: The Roleplaying Game Core Rulebook</span></strong><span class=\"fontstyle0\">, p.35).</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span> <br><br></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Robot Wrangler",
+    "img": "Img/SS - Perks/Robot Wrangler.png",
+    "description": "<p><span class=\"fontstyle0\">You choose to travel the wilderness with robotic company. You have a robot companion that serves as a friend and ally in the hazards of the wasteland. You gain an allied NPC </span><span class=\"fontstyle0\">creature that follows your commands (</span><strong><span class=\"fontstyle2\">Fallout: The Roleplaying Game Core Rulebook</span></strong><span class=\"fontstyle0\">, p.338). They cannot recover from injuries or heal health points without </span><span class=\"fontstyle0\">receiving repairs (see&nbsp;</span><strong><span class=\"fontstyle2\">Fallout: The Roleplaying Game Core Rulebook</span></strong><span class=\"fontstyle0\">, </span><span class=\"fontstyle3\">Chapter Two: <em>Combat, Healing Robots</em>, </span><span class=\"fontstyle0\">p.34), but do not require food or beverages nor can they gain benefit from consuming them or using chems. </span></p>\n<p><span class=\"fontstyle0\">Options for robot companions for this perk can be&nbsp;</span><span class=\"fontstyle0\">found in&nbsp;</span><span class=\"fontstyle3\">Chapter 3: <em>Companions and Automatrons</em>, </span><span class=\"fontstyle0\">p.62. If </span><span class=\"fontstyle0\">your robot is destroyed, you either attempt to repair it, find or purchase a new one before the next adventure, or you may trade this perk for a different one after this quest.</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 5
+    }
+  },
+  {
+    "name": "Retribution",
+    "img": "Img/SS - Perks/Retribution.png",
+    "description": "<p><span class=\"fontstyle0\">If you do not take damage from an attack due to your Damage Reduction (DR), recover +1 HP and add 1 AP to the group pool. This effect can only trigger once per round of combat per rank you have in this perk. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span> </p>\n<p>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 8,
+      "LCK": 8,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Nocturnal Fortitude",
+    "img": "Img/SS - Perks/Nocturnal Fortitude.png",
+    "description": "<p><span class=\"fontstyle0\">At night, your maximum HP is increased by an amount equal to your END. When you increase your maximum HP, you gain the same amount of additional current HP.When the effect ends, your maximum HP is reduced back to normal, but your current HP remains unchanged unless it is above your maximum (in which case, it is reduced to your maximum).</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": 12,
+      "robot": true
+    }
+  },
+  {
+    "name": "Squad Maneuvers",
+    "img": "Img/SS - Perks/Squad Maneuvers.png",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, whenever you travel across the </span><span class=\"fontstyle0\">wastes at a hurried pace, you can maintain that pace for one additional hour by passing a&nbsp;</span><span class=\"fontstyle2\">CHA + Survival </span><span class=\"fontstyle0\">test with a difficulty of 1, and one further additional hour by spending 2 AP (for a maximum of 3 hours at a hurried pace).</span></p>\n<p><span class=\"fontstyle0\">At rank 2, you can coordinate your allies to join you in combat. When you spend 1 AP to take an additional Move minor action, you can move an ally in the zone you end your movement in to within reach of you by spending another 1 AP.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7
+    }
+  },
+  {
+    "name": "Community Organizer",
+    "img": "Img/SS - Perks/Community Organizer.png",
+    "description": "<p><span class=\"fontstyle0\">Even in the worst of days, you find a way to bring people&rsquo;s spirits up and maintain a thriving settlement. For each rank of this perk, your community gains +1 Food and +1 Defense per day so long as the resource is maintained by at least one person. Additionally add +1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">for the settlement actions Hunting and Gathering as well as Scavenging.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 3.</span> <br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 5,
+      "CHA": 5,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Super Duper",
+    "img": "Img/SS - Perks/Super Duper.png",
+    "description": "<p><span class=\"fontstyle0\">Whenever you craft an item, roll 1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. If you roll any Effects, you regain half the components you spent </span><span class=\"fontstyle0\">rounding down.4 Check each rarity of the components separately and regain half of each, rounding down. At rank 2, you roll 2 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, you roll 3 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 4.</span> <br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 6,
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Bodyguards",
+    "img": "Img/SS - Perks/Bodyguards.png",
+    "description": "<p><span class=\"fontstyle0\">Each player character and companion (other than you) within Close range of you increases your Damage Resistance and Energy Resistance by +1.</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 8,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Hired Help",
+    "img": "Img/SS - Perks/Hire Help.png",
+    "description": "<p><span class=\"fontstyle0\">Some wastelanders are lone wanderers&mdash;not you! You gain the ability to recruit a humanoid</span></p>\n<p><span class=\"fontstyle0\">companion. You gain an allied NPC creature that follows your commands (</span><strong><span class=\"fontstyle2\">Fallout: The Roleplaying Game Core Rulebook</span></strong><span class=\"fontstyle0\"><strong>,</strong> </span><span class=\"fontstyle3\">p.338</span><span class=\"fontstyle0\">). Your companion can care for their own food and beverages, and they recover from injuries as a player character would and can benefit from healing.</span></p>\n<p><span class=\"fontstyle0\">Options for companions for this perk can be found later in </span><span class=\"fontstyle4\">Chapter 3: Companions and Automatrons</span><span class=\"fontstyle0\">, p.62. If your companion is slain, you can recruit a new companion before the next quest, or you may trade this perk for a different one after this quest.</span> <br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7
+    }
+  },
+  {
+    "name": "Photosynthetic",
+    "img": "Img/SS - Perks/Photosynthetic.png",
+    "description": "<p><span class=\"fontstyle0\">When you are in direct sunlight you regenerate </span><span class=\"fontstyle0\">1 HP every hour. At rank 2 you regenerate 2 HP every hour in direct sunlight.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 10.</span> <br><br></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Tinkerer",
+    "img": "Img/SS - Perks/Tinkerer.png",
+    "description": "<p><span class=\"fontstyle0\">You reduce the difficulty of repairing a robot through the first aid action to the number of injuries that it has sustained, increasing the difficulty of the test by +1 if you are attempting to repair yourself.</span></p>\n<p><span class=\"fontstyle0\">Additionally, you can tinker and clean a robot for up to an hour, increasing the maximum HP of the robot by +2 for 24 hours or until the robot sustains an injury.</span> <br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "CHA": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Happy Camper",
+    "img": "Img/SS - Perks/Happy Camper.png",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, if your hunger state is&nbsp;</span><span class=\"fontstyle2\"><strong>full</strong> </span><span class=\"fontstyle0\">or </span><strong><span class=\"fontstyle2\">sated</span></strong><span class=\"fontstyle0\">, and you have set up a camp with a source of heat like a campfire, your hunger does not deteriorate. </span></p>\n<p><span class=\"fontstyle0\">At rank 2, if your thirst state is&nbsp;</span><strong><span class=\"fontstyle2\">quenched </span></strong><span class=\"fontstyle0\">or </span><strong><span class=\"fontstyle2\">hydrated</span></strong><span class=\"fontstyle0\">, and you have set up a camp with a source of heat like a campfire, your thirst does not deteriorate. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 4.</span> </p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "CHA": 7,
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Mehcanical Menace/ Class Freak",
+    "img": "Img/SS - Perks/Mehcanical Menace Class Freak.png",
+    "description": "<p><span class=\"fontstyle0\">The Mechanical Menace perk affects robots, while the Class Freak perk affects mutated humans&mdash;they are otherwise identical. Whenever a creature NPC with the chosen keyword would attack you, roll 1 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. On any result other than an effect, the creature chooses not to attack you. However, it may still attack another character it can target. In addition, when you attempt a CHA based skill to </span><span class=\"fontstyle0\">influence a character with the applicable keyword, you may re-roll 1d20.</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6,
+      "INT": 5
+    }
+  },
+  {
+    "name": "Pharmacist",
+    "img": "Img/SS - Perks/Pharmacist.png",
+    "description": "<p><span class=\"fontstyle0\">RadAway you administer now heals 2 additional Radiation damage. At rank 2, it heals an additional 3 Radiation damage, and at rank 3 it heals an additional 4 Radiation damage.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 6.</span> <br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 8,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Gun Runner",
+    "img": "Img/SS - Perks/Gun Runner.png",
+    "description": "<p><span class=\"fontstyle0\">When you take the Sprint action when you have a onehanded ranged weapon in hand, you may spend 1 AP to move one additional zone.</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 6,
+      "Level": 4
+    }
+  },
+  {
+    "name": "Taking One for the Team",
+    "img": "Img/SS - Perks/Taking One for the Team.png",
+    "description": "<p><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">At rank 1, whenever a creature NPC would roll to damage an ally in the same zone as you, roll 1 </span><span class=\"fontstyle2\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">C</span><span class=\"fontstyle2\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">D</span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">. On any result other than Effect, you take the damage from the attack instead. This effect can only trigger once per round of combat per rank you have in this perk.</span></p>\n<p><span class=\"fontstyle0\">At rank 2, if you take damage from the attack after calculating damage reduction, add 1 AP to the pool for each rank you have in this perk.</span></p>\n<p><span class=\"fontstyle0\">At rank 3, after you have taken the damage you and the ally can reroll 1d20 on the next attack you make against the target that attacked for each rank you have in this perk.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 4.</span> <br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "CHA": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Local Leader",
+    "img": "Img/SS - Perks/Local Leader.png",
+    "description": "<p><span class=\"fontstyle0\">You are the person that </span><span class=\"fontstyle0\">people turn to, and with that have a certain amount of influence on the development </span><span class=\"fontstyle0\">of settlements and communities. At rank 1, you can establish a supply line between two settlements you have a reputation rank of at least Friendly (3) with (see&nbsp;</span><em><span class=\"fontstyle2\">Chapter 2: Settlements, All of the Comforts of Home</span></em><span class=\"fontstyle0\">, p.52).</span></p>\n<p><span class=\"fontstyle0\">To establish a supply line, you must have at least one available settler in either settlement to make the shipments. Once established, any available supplies or resources in one settlement can be made available in another settlement so long as that settlement&rsquo;s Happiness is greater than the number of people in the settlement.</span></p>\n<p><span class=\"fontstyle0\">At rank 2, you can request the construction of various stores and crafting tables in a settlement. This rank is required for a settlement to add Trading Stores, Clothing Stores, Armor Stores, Weapon Stores, Drinking Establishments, and Medical Establishments, as well as an Armor Workbench, Chemistry Station, Cooking Station, Power Armor Station, Weapons Workbench, and a Robot Workbench.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6
+    }
+  },
+  {
+    "name": "Green Thumb",
+    "img": "Img/SS - Perks/Green Thumb.png",
+    "description": "<p><span class=\"fontstyle0\">When you spend time foraging and roll on the Foraging table (</span><strong><span class=\"fontstyle2\">Fallout: The Roleplaying Game Core </span><span class=\"fontstyle2\">Rulebook</span></strong><span class=\"fontstyle3\">, </span><span class=\"fontstyle0\">p.202), you gather 2 items, plus an additional </span><span class=\"fontstyle0\">2 for every AP&nbsp;</span><span class=\"fontstyle0\">spent.</span> <br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 4,
+      "Level": 4
+    }
+  },
+  {
+    "name": "Quack Surgeon",
+    "img": "Img/SS - Perks/Quack Surgeon.png",
+    "description": "<p><span class=\"fontstyle0\">When you attempt a </span><span class=\"fontstyle0\">First Aid action on&nbsp;</span><span class=\"fontstyle0\">an ally, you may use an alcoholic beverage on your patient as part of </span><span class=\"fontstyle0\">the action. The patient heals additional HP equal to the amount the beverage normally heals, if any, and allows you to heal 2 HP per AP spent. The ally also receives the benefits (and drawbacks) of consuming the beverage.</span> <br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7,
+      "Level": "12"
+    }
+  },
+  {
+    "name": "Covert Operator",
+    "img": "Img/SS - Perks/Covert Operator.png",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged sneak attack with a small gun or energy weapon, the damage is increased by +2 </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. You cannot gain this benefit while in Power Armor.</span> </p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 8
+    }
+  },
+  {
+    "name": "True Friends",
+    "img": "Img/SS - Perks/True Friends.png",
+    "description": "<p><span class=\"fontstyle0\">Making friends is second nature for you, and more importantly the friendships that you form are stronger than most. At rank 1, when a reputation test results in decreasing </span><span class=\"fontstyle0\">your reputation with a faction or settlement, you can roll a number of&nbsp;</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">equal to your current reputation. If you roll at least one Effect your reputation does not change. You must increase your reputation by 1 before you can use this perk with the same faction or settlement again.</span></p>\n<p><span class=\"fontstyle0\">At rank 2, when you perform an action that would increase the affinity with an individual, faction, or settlement you can roll a CHA + Speech test with a difficulty of 3. With a success, you can instead increase the infinity by 2. With a failure on the test, the affinity does not change. You must increase the affinity by 1 before you can use this perk with the same target.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 6,
+      "CHA": 6
+    }
+  },
+  {
+    "name": "Ammosmith",
+    "img": "Img/SS - Perks/Ammosmith.png",
+    "description": "<p><span class=\"fontstyle0\">Sometimes you have the wrong bullets for the right gun, and somehow you make it work with the materials that you have. You can craft a single piece of ammunition using materials at a weapons workbench treating its rarity as its complexity.</span></p>\n<p><span class=\"fontstyle0\">(</span><span class=\"fontstyle2\"><strong>Fallout: The Roleplaying Game Core Rulebook</strong>, </span><span class=\"fontstyle0\">p.211). At rank 1, you can craft ammunition up to rarity 1. At rank 2, you can craft ammunition up to a rarity of 3. Additionally, you can now dismantle ammunition gaining half of the materials normally required to craft the ammunition (rounded down to a minimum of 1). At rank 3, you can craft ammunition up to a rarity of 5. When crafting ammunition, you can roll a number of </span><span class=\"fontstyle3\">C</span><span class=\"fontstyle3\">D </span><span class=\"fontstyle0\">equal to 6 reduced by the rarity of the ammunition being crafted. Every hit rolled increases the amount of ammunition crafted by +1. For every effect rolled, double the amount of ammunition crafted. Each time you take this perk, the level requirement increases by 4.</span> <br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 7,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Home Defense",
+    "img": "Img/SS - Perks/Home Defense.png",
+    "description": "<p><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">You can set traps to protect your property from intruders! At rank 1, you can craft traps from&nbsp;</span><span class=\"fontstyle2\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">the Traps </span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">section, p.189. Traps have a complexity of 2 and require the components for a complexity 2 item. If you fail the </span><span class=\"fontstyle3\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">INT + Repair </span><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">test, your trap misfires&mdash; resolve the trap&rsquo;s effect against yourself.</span></p>\n<p><span class=\"fontstyle0\">At rank 2, when you fail the </span><span class=\"fontstyle3\">INT + Repair </span><span class=\"fontstyle0\">test to set the trap it does not misfire. Instead you </span><span class=\"fontstyle3\">succeed at cost, </span><span class=\"fontstyle0\">and the gamemaster creates a complication related to the trap (i.e., it is easier to spot, deals less damage, or otherwise doesn&rsquo;t work as intended).</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span> </p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 6,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Lock and Load",
+    "img": "Img/WS - Perks/Lock and Load.png",
+    "description": "<p><span class=\"fontstyle0\">When you are wielding a big gun with a Fire Rate of 2 or higher, the weapon&rsquo;s Fire Rate is increased by +1. At rank 2, the weapon&rsquo;s Fire Rate is increased by +2 instead.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 7,
+      "Level": "7"
+    }
+  },
+  {
+    "name": "Suppressor",
+    "img": "Img/WS - Perks/Suppressor.png",
+    "description": "<p><span class=\"fontstyle0\">When you successfully attack an enemy, you may spend 1 AP to suppress them until the end of their next turn. A suppressed enemy reduces the damage they inflict with their attacks by 1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 2, a suppressed enemy reduces the damage they inflict by 2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, a suppressed enemy reduces the damage they inflict by 3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +10.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6,
+      "Level": "10"
+    }
+  },
+  {
+    "name": "Spiritual Healer",
+    "img": "Img/WS - Perks/Spiritual Healer.png",
+    "description": "<p><span class=\"fontstyle0\">When you succeed at a First Aid action to stabilize a dying ally, you regain 1 HP. </span><span class=\"fontstyle0\">At rank 2, you regain 2 HP, and a further 2 HP at the start of your next turn. At rank 3, you regain 3 HP, and you regain 3 HP at the start of your next two turns.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +9.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7,
+      "Level": "6"
+    }
+  },
+  {
+    "name": "Power Patcher",
+    "img": "Img/WS - Perks/Power Patcher.png",
+    "description": "<p><span class=\"fontstyle0\">When you repair the HP of a piece of Power Armor, repair an additional 2 HP. At rank 2, this increases to 3 HP. At rank 3, this increases to 4 HP. </span></p>\n<p><span class=\"fontstyle0\">E</span><span class=\"fontstyle0\">ach time you take this perk, the level requirement increases by +7</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 6,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Fire in the Hole",
+    "img": "Img/WS - Perks/Fire in the Hole.png",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with a thrown weapon with the Blast quality, the base difficulty of the attack is 1, rather than 2.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "Level": "8"
+    }
+  },
+  {
+    "name": "Bullet Shield",
+    "img": "Img/WS - Perks/Bullet Shield.png",
+    "description": "<p><span class=\"fontstyle0\">When you are wielding a big gun, increase your damage resistance by +2. At rank 2, this increases to +3. At rank 3, this increases to +4.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 6.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 8,
+      "Level": "8"
+    }
+  },
+  {
+    "name": "Pack Rat",
+    "img": "Img/WS - Perks/Pack Rat.png",
+    "description": "<p><span class=\"fontstyle0\">Junk items you carry count as half of their listed weight..</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": "4"
+    }
+  },
+  {
+    "name": "Ironclad",
+    "img": "Img/WS - Perks/Ironclad.png",
+    "description": "<p><span class=\"fontstyle0\">While wearing armor (except Power Armor), add +1 to your Physical damage resistance and Energy damage resistance. At rank 2, this increases to +2. At rank 3, this increases to +3. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +5.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Serendipity",
+    "img": "Img/WS - Perks/Serendipity.png",
+    "description": "<p><span class=\"fontstyle0\">When your current HP is below one-third of your maximum HP, whenever you are attacked, you may spend 1 Luck point before any dice are rolled to have the attack miss. You may do this a number of times per scene equal to your rank in this perk. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 6.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 7,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Thirst Quencher",
+    "img": "Img/WS - Perks/Thirst Quencher.png",
+    "description": "<p><span class=\"fontstyle0\">Drinking dirty water no longer poses a risk for you to catch a disease.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "6"
+    }
+  },
+  {
+    "name": "Natural Resistance",
+    "img": "Img/WS - Perks/Natural Resistance.png",
+    "description": "<p><span class=\"fontstyle0\">Breathing in toxic fumes and sleeping rough on the ground no longer poses </span><span class=\"fontstyle0\">a risk for you to catch a disease.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "10"
+    }
+  },
+  {
+    "name": "Cola Nut",
+    "img": "Img/WS - Perks/Cola Nut.png",
+    "description": "<p><span class=\"fontstyle0\">When you drink a Nuka-Cola beverage, you regain twice as many HP as normal.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "14",
+      "robot": true
+    }
+  },
+  {
+    "name": "Bow Before Me",
+    "img": "Img/WS - Perks/Bow Before Me.png",
+    "description": "<p><span class=\"fontstyle0\">When you are wielding a bow or crossbow, the weapon gains the Piercing 1 damage effect, or adds +1 to the rating of any Piercing X damage effect the weapon already had.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "Level": "4"
+    }
+  },
+  {
+    "name": "Evasive",
+    "img": "Img/WS - Perks/Evasive.png",
+    "description": "<p><span class=\"fontstyle0\">Your Physical damage resistance and Energy damage resistance on all hit locations increase based on your Agility. You do not gain this benefit while wearing Power Armor or while encumbered. </span></p>\n<p><span class=\"fontstyle2\"><strong>AGI 7-8</strong>:&nbsp;</span><span class=\"fontstyle0\">+1 Physical damage resistance and Energy damage resistance </span></p>\n<p><span class=\"fontstyle2\"><strong>AGI 9-10</strong>:&nbsp;</span><span class=\"fontstyle0\">+2 Physical damage resistance and Energy damage resistance </span></p>\n<p><span class=\"fontstyle2\"><strong>AGI 11+</strong>:&nbsp;</span><span class=\"fontstyle0\">+3 Physical damage resistance and Energy damage resistanc</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7,
+      "Level": "7"
+    }
+  },
+  {
+    "name": "Healing Hands",
+    "img": "Img/WS - Perks/Healing Hands.png",
+    "description": "<p><span class=\"fontstyle0\">When you succeed at </span><span class=\"fontstyle0\">a First Aid action in combat to stabilize a dying ally, that ally also removes Radiation damage equal to your Medicine skill rank.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 8,
+      "INT": 7,
+      "Level": "18"
+    }
+  },
+  {
+    "name": "Psychopath",
+    "img": "Img/WS - Perks/Psychopath.png",
+    "description": "<p><span class=\"fontstyle0\">When you kill an enemy, roll a number of </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">equal to your rank in this perk. For each Effect rolled, regain 1 Luck point, up to your maximum Luck points.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 6.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 8,
+      "Level": "11"
+    }
+  },
+  {
+    "name": "Junk Shield",
+    "img": "Img/WS - Perks/Junk Shield.png",
+    "description": "<p><span class=\"fontstyle0\">For every 5 items of Junk you are carrying, add +1 to your Physical damage resistance and Energy damage resistance. The maximum bonus to your Physical damage resistance and Energy damage resistance is equal to your rank in this perk. You do not gain this additional Physical damage resistance or Energy damage resistance while wearing Power Armor. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 8.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Archer",
+    "img": "Img/WS - Perks/Archer.png",
+    "description": "<p><span class=\"fontstyle0\">When you are wielding a bow or crossbow, increase the weapon&rsquo;s damage by +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 2, this increases to +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, this increases to +3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 7.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Vaccinated",
+    "img": "Img/WS - Perks/Vaccinated.png",
+    "description": "<p><span class=\"fontstyle0\">Taking damage from the claws or bite of a mammal, lizard, or insect no longer poses a risk for you to catch a disease.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "16"
+    }
+  },
+  {
+    "name": "Bloodsucker",
+    "img": "Img/WS - Perks/Bloodsucker.png",
+    "description": "<p><span class=\"fontstyle0\">Consuming a Blood Pack (including Glowing Blood Packs and Irradiated Blood) now heals twice as many HP and moves your Thirst state back up towards quenched by one step. When consuming Irradiated Blood, you now only roll 1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">to determine Radiation damage.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 6,
+      "Level": "11"
+    }
+  },
+  {
+    "name": "Revenant",
+    "img": "Img/WS - Perks/Revenant.png",
+    "description": "<p><span class=\"fontstyle0\">When you are revived, increase the damage of all your attacks by +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">for the remainder of the scene, or until you are reduced to 0 HP again.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 8,
+      "Level": "12"
+    }
+  },
+  {
+    "name": "Escape Artist",
+    "img": "Img/WS - Perks/Escape Artist.png",
+    "description": "<p><span class=\"fontstyle0\">During combat, if no enemy can see you when you start your turn, you may </span><span class=\"fontstyle0\">attempt an&nbsp;</span><span class=\"fontstyle2\">AGI + Sneak </span><span class=\"fontstyle0\">test to hide: the difficulty is the number of enemies within Medium range of you. Once hidden, the enemy no longer knows where you are; they may continue to search for you. In addition, enemies do not receive any bonuses to detect you if you take the Sprint action.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 8,
+      "Level": 15
+    }
+  },
+  {
+    "name": "Licensed Plumber",
+    "img": "Img/WS - Perks/Licensed Plumber.png",
+    "description": "<p><span class=\"fontstyle0\">Pipe weapons you use do not have the Unreliable quality.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 6,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Fireproof",
+    "img": "Img/WS - Perks/Fireporoof.png",
+    "description": "<p><span class=\"fontstyle0\">You gain +1 Energy damage resistance against Flamers, Molotov Cocktails, and other fire-based weapons, as well as any weapons with the Blast quality. At rank 2, this increases to +2. At rank 3, this increases to +3. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +7.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "7"
+    }
+  },
+  {
+    "name": "Secret Agent",
+    "img": "Img/WS - Perks/Secret Agent.png",
+    "description": "<p><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\"><span class=\"fontstyle0\">When you use a Stealth Boy, it lasts for one additional turn. At rank 2, this increases to 2 additional turns. At rank 3, this increases to 3 additional turns.</span></span></p>\n<p><span class=\"fontstyle0\" style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\"><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5</span>.</span><span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">&nbsp;</span></p>\n<p>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 9,
+      "Level": 7
+    }
+  },
+  {
+    "name": "Incisor",
+    "img": "Img/WS - Perks/Incisor.png",
+    "description": "<p><span class=\"fontstyle0\">When you are wielding a melee weapon, the weapon gains the Piercing 1 damage effect, or adds +1 to the rating of any Piercing X damage effect the weapon already had. At rank 2, this increases to Piercing 2, or adding +2 to any Piercing X damage effect the weapon already had.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 9.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": "2"
+    }
+  },
+  {
+    "name": "Night Eyes",
+    "img": "Img/WS - Perks/Night Eyes.png",
+    "description": "<p><span class=\"fontstyle0\">When you are trying to avoid attention or hide from an enemy, you may ignore difficulty increases to tests caused by poor lighting or darkness.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "Level": "7"
+    }
+  },
+  {
+    "name": "Power User",
+    "img": "Img/WS - Perks/Power User.png",
+    "description": "<p><span class=\"fontstyle0\">Fusion Cores you use now contain 3 additional charges. At rank 2, this increases to 6 additional charges. At rank 3, this increases to 10 additional charges. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 10.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 9,
+      "Level": "10"
+    }
+  },
+  {
+    "name": "Crack Shot",
+    "img": "Img/WS - Perks/Crack Shot.png",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with a one-handed ranged </span><span class=\"fontstyle0\">weapon, and you aimed before&nbsp;</span><span class=\"fontstyle0\">the attack, the weapon&rsquo;s range increases by one step (i.e., from Close to Medium, or from Medium to Long). At rank 2, the weapon also gains the Accurate quality if it didn&rsquo;t possess it already.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +7.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 7,
+      "Level": "7"
+    }
+  },
+  {
+    "name": "Happy Go Lucky",
+    "img": "Img/WS - Perks/Happy Go Lucky.png",
+    "description": "<p><span class=\"fontstyle0\">The first time in a scene when you consume an alcoholic beverage, regain 1 Luck point, up to your normal maximum number of Luck points. Each time you take this perk, the level requirement increases by +6.</span>&nbsp;</p>",
+    "rank": {
+      "max": 2,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 9,
+      "Level": "17"
+    }
+  },
+  {
+    "name": "Cannibalism",
+    "img": "Img/WS - Perks/Cannibalism.png",
+    "description": "<p><span class=\"fontstyle0\">You may attempt to butcher a dead human, requiring an </span><span class=\"fontstyle2\"><strong>END + Survival</strong> </span><span class=\"fontstyle0\">test with a difficulty of 0. Success yields one portion of human flesh, which you may immediately consume. To you, human flesh counts as a food item which restores 4 HP and is Irradiated (roll 1</span><span class=\"fontstyle3\">C</span><span class=\"fontstyle3\">D </span><span class=\"fontstyle0\">and suffer 1 Radiation damage if an Effect is rolled). Consuming human flesh is regarded as abhorrent by most people and is a crime in most settlements. At rank 2, you may also butcher ghouls in this way. At rank 3, you may also butcher super mutants in this way.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +9. Super mutants may ignore the level requirement for the first rank only.</span>&nbsp;</p>\n<p><span class=\"fontstyle0\">Cannibalism can be addictive: after consuming human flesh, roll </span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">equal to the number of times you&rsquo;ve eaten human flesh this session. If two or more Effects are rolled, you are addicted. Gain the Addiction &nbsp;@UUID[Compendium.world.ws-addiction.Item.BXQXv82210tbodw1]{Dark Cravings}</span></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 8,
+      "Level": "10",
+      "robot": true
+    }
+  },
+  {
+    "name": "Blocker",
+    "img": "Img/WS - Perks/Blocker.png",
+    "description": "<p><span class=\"fontstyle0\">At rank 1, when you are struck by a melee attack, count your Physical damage resistance or Energy damage resistance (according to the attack&rsquo;s damage) as +1 higher. At rank 2, this extra resistance increases to +2. At rank 3, it increases to +3.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Mysterious Savior",
+    "img": "Img/WS - Perks/Mysterious Savior.png",
+    "description": "<p><span class=\"fontstyle0\">From time to time, a Mysterious Savior comes to your aid, with lethal results. At the start of a combat encounter, you may spend 1 Luck point. If you do so, then the first time during the scene you start dying, the GM may have the Mysterious Savior appear, revive you, and then vanish. If you spend a Luck point and the Mysterious Savior does not appear, the GM must refund the Luck point you spent.</span>&nbsp;</p>\n<p><span class=\"fontstyle0\">When the stranger revives you, they immediately stabilize you as if they had succeeded at a First Aid action. You are restored to consciousness, regain 4 HP, as if a Stimpak had been used on you, and are able to act again during the scene.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 7,
+      "Level": "1"
+    }
+  },
+  {
+    "name": "Scattershot",
+    "img": "Img/WS - Perks/Scattershot.png",
+    "description": "<p><span class=\"fontstyle0\">When you make a ranged attack with a shotgun, you may take an additional major action by spending 1 AP rather than 2 AP, so long as this additional action is </span><span class=\"fontstyle2\">also </span><span class=\"fontstyle0\">a ranged attack with the same shotgun.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 7,
+      "Level": "10"
+    }
+  },
+  {
+    "name": "Born Survivor",
+    "img": "Img/WS - Perks/Born Survivor.png",
+    "description": "<p><span class=\"fontstyle0\">When you suffer damage that would reduce your HP to below one-quarter of your maximum HP, you may automatically use a Stimpak (including a Diluted Stimpak or Super Stimpak). You may do this once per scene. At rank 2, you may do this 2 times per scene. At rank 3, you may do this 3 times per scene. </span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 8.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 8,
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Modern Renegade",
+    "img": "Img/WS - Perks/Modern Renegade.png",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack with a one-handed ranged weapon and </span><span class=\"fontstyle2\">don&rsquo;t </span><span class=\"fontstyle0\">aim, a successful attack scores one additional AP, which may not be saved. At rank 2, this increases to 2 additional AP. At rank 3, this increases to 3 additional AP.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7,
+      "Level": 8
+    }
+  },
+  {
+    "name": "Dromedary",
+    "img": "Img/WS - Perks/Dromedary.png",
+    "description": "<p><span class=\"fontstyle0\">When you drink a beverage, it moves your Thirst state back up towards quenched by one more step than normal (i.e., by two steps, or by three if you drink purified water).</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "3",
+      "robot": true
+    }
+  },
+  {
+    "name": "Storm Chaser",
+    "img": "Img/WS - Perks/Storm Chaser.png",
+    "description": "<p><span class=\"fontstyle0\">When it is raining, or during a rad storm, you regain 1 HP at the start of each of your turns in combat. Out of combat, you regain HP equal to half your Luck score (rounded up) every hour of rain.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 6,
+      "Level": "15"
+    }
+  },
+  {
+    "name": "Ghoulish",
+    "img": "Img/WS - Perks/Ghoulish.png",
+    "description": "<p><span class=\"fontstyle0\">Like a ghoul, </span><span class=\"fontstyle0\">your body heals when you&rsquo;re exposed to radiation. You regain 1 HP for every 4 Radiation damage you suffer. At rank 2, you instead regain 1 HP for every 3 Radiation damage you suffer. At rank 3, you instead heal 1 HP for every 2 Radiation damage you suffer. Your maximum HP is still reduced by Radiation damage.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +8.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 9,
+      "Level": "7",
+      "robot": true
+    }
+  },
+  {
+    "name": "Stabilized",
+    "img": "Img/WS - Perks/Stabilized.png",
+    "description": "<p><span class=\"fontstyle0\">When you&rsquo;re wearing Power Armor, you may re-roll 1d20 on any attack made with the Big Guns skill, and any big gun you wield gains Piercing 1, or add +1 to any Piercing X damage effect the weapon already had.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "INT": 7,
+      "Level": "16"
+    }
+  },
+  {
+    "name": "Dry Nurse",
+    "img": "Img/WS - Perks/Dry Nurse.png",
+    "description": "<p><span class=\"fontstyle0\">When you succeed at the First Aid action in combat to stabilize a dying ally and you used a Stimpak as part of that action, roll 1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. If you roll an Effect, the Stimpak is not used up by the action, and can be used again.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "LCK": 8,
+      "Level": "13"
+    }
+  },
+  {
+    "name": "Goat Legs",
+    "img": "Img/WS - Perks/Goat Legs.png",
+    "description": "<p><span class=\"fontstyle0\">You have +2 Physical damage resistance against falling damage. At rank 2, this increases to +4. At rank 3, this increases to +6.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7,
+      "Level": "7"
+    }
+  },
+  {
+    "name": "Radicool",
+    "img": "Img/WS - Perks/Radicool.png",
+    "description": "<p><span class=\"fontstyle0\">When you have Radiation damage equal to one-quarter or more of your maximum HP, you may re-roll 1d20 on all STR-based tests and add +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">to the damage of your melee attacks. If you have Radiation damage that equals half or more of your maximum HP, these bonuses increase to re-rolling up to 2d20 on STR-based tests and adding +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">to melee attack damage. If you have Radiation damage equal to three-quarters of your maximum HP, you may re-roll up to 3d20 on STR-based tests and add +3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">to melee attack damage.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 6,
+      "Level": "12"
+    }
+  },
+  {
+    "name": "Field Surgeon",
+    "img": "Img/WS - Perks/Field Surgeon.png",
+    "description": "<p><span class=\"fontstyle0\">When you succeed at a First Aid action in combat to stabilize a dying ally, you no longer need to spend 1 AP to wake them from unconsciousness. In addition, the patient heals 2 HP at the start of their next turn. At rank 2, they heal 4 HP at the start of their next two turns. At rank 3, they heal 6 HP at the start of their next three turns.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +7.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 8,
+      "INT": 7,
+      "Level": "9"
+    }
+  },
+  {
+    "name": "Martial Artist",
+    "img": "Img/WS - Perks/Martial Artist.png",
+    "description": "<p><span class=\"fontstyle0\">When you make a melee attack, you </span><span class=\"fontstyle0\">may take an additional major action by spending 1 AP rather than 2 AP, so long as this additional action is&nbsp;</span><span class=\"fontstyle2\">also </span><span class=\"fontstyle0\">a melee attack with the same weapon or another currently equipped weapon.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": "8"
+    }
+  },
+  {
+    "name": "Gladiator",
+    "img": "Img/WS - Perks/Gladiator.png",
+    "description": "<p><span class=\"fontstyle0\">When you are wielding a one-handed melee weapon, increase the weapon&rsquo;s damage by +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 2, this increases to +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, this increases to +3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by 5.</span>&nbsp;<br><br></p>\n<p>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 6,
+      "Level": 2
+    }
+  },
+  {
+    "name": "Dead Man Sprinting",
+    "img": "Img/WS - Perks/Dead Man Sprinting.png",
+    "description": "<p><span class=\"fontstyle0\">When you take the Sprint action, if your current HP is below half of your maximum HP, you may spend 1 AP to move one additional zone.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "AGI": 7,
+      "Level": "8"
+    }
+  },
+  {
+    "name": "Glow Sight",
+    "img": "Img/WS - Perks/Glow Sight.png",
+    "description": "<p><span class=\"fontstyle0\">When you make an attack against a Glowing enemy, you inflict +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D </span><span class=\"fontstyle0\">damage. At rank 2, this increases to +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, this increases to +3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +8.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Overly Generous",
+    "img": "Img/WS - Perks/Overly Generous.png",
+    "description": "<p><span class=\"fontstyle0\">When you have Radiation damage equal to or greater than one-quarter your maximum HP, your melee attacks gain the Radioactive damage effect.</span>&nbsp;</p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7,
+      "Level": "12"
+    }
+  },
+  {
+    "name": "Butcher's Bounty",
+    "img": "Img/WS - Perks/Butcher%27s Bounty.png",
+    "description": "<p><span class=\"fontstyle0\">When you successfully butcher a dead animal, you may roll +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">, and find additional portions of meat (as noted in the creature&rsquo;s stat block) equal to the total rolled. At rank 2, this increases to +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, this increases to 3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +5.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "PER": 8,
+      "Level": "3"
+    }
+  },
+  {
+    "name": "Slow Metabolism",
+    "img": "Img/WS - Perks/Slow Metabolism.png",
+    "description": "<p><span class=\"fontstyle0\">When you eat a food </span><span class=\"fontstyle0\">item, it moves your Hunger state back up towards full by one more step than normal (i.e., by two steps for uncooked food, or by three for cooked food).</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 1,
+      "levelStart": 1
+    },
+    "requirements": {
+      "END": 7,
+      "Level": "5",
+      "robot": true
+    }
+  },
+  {
+    "name": "Tenderizer",
+    "img": "Img/WS - Perks/Tenderizer.png",
+    "description": "<p><span class=\"fontstyle0\">When you hit an enemy with a melee or ranged attack, you may spend 1 AP to make them vulnerable until the end of their next turn. While vulnerable, any attack made against that enemy is increased by +1</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 2, a vulnerable enemy increases damage they receive by +2</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">. At rank 3, a vulnerable enemy increases damage they receive by +3</span><span class=\"fontstyle2\">C</span><span class=\"fontstyle2\">D</span><span class=\"fontstyle0\">.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this Perk, the level requirement increases by +10.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 7,
+      "Level": "8"
+    }
+  },
+  {
+    "name": "Sturdy Frame",
+    "img": "Img/WS - Perks/Sturdy Frame.png",
+    "description": "<p><span class=\"fontstyle0\">Armor you are wearing&mdash;except for Power Armor&mdash;counts as three-quarters of its listed weight. At rank 2, armor worn counts as half its listed weight. At rank 3, armor worn counts as one-quarter its listed weight. Each time you take this perk, the level requirement increases by 8.</span>&nbsp;</p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "STR": 8,
+      "Level": "5"
+    }
+  },
+  {
+    "name": "Responder",
+    "img": "Img/WS - Perks/Responder.png",
+    "description": "<p><span class=\"fontstyle0\">When you succeed at a First Aid action in combat to stabilize a dying ally, you no longer need to spend 1 AP to wake them from unconsciousness. In addition, the patient heals 2 HP at the start of their next turn. At rank 2, they heal 4 HP at the start of their next two turns. At rank 3, they heal 6 HP at the start of their next three turns.</span></p>\n<p><span class=\"fontstyle0\">Each time you take this perk, the level requirement increases by +7.</span>&nbsp;<br><br></p>",
+    "rank": {
+      "max": 3,
+      "levelStart": 1
+    },
+    "requirements": {
+      "CHA": 8,
+      "INT": 7,
+      "Level": "9"
+    }
+  }
+]

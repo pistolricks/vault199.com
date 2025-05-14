@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+}
+
+:root{
+    --bg-color: rgb(33, 117, 161);
+    --header-color: rgb(255, 255, 0);
+    --dark-bg-color: rgb(8, 41, 59);
+    --dark-header-color: rgba(255, 255, 0, 0.692);
+}
+
+body{
+    background: var(--dark-bg-color);
+}
+
+.header{
+    /* background:rgb(72, 141, 180); */
+    /* border-bottom: 2px solid blue; */
+    padding: 10px 8px 0 8px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    max-width: 70px;
+    filter: drop-shadow(0px 0px 15px rgb(0, 240, 248));
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.perk{
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    width: 50vw;
+    border-radius: 10px;
+    text-decoration: none;
+    background: var(--dark-header-color);
+    box-shadow: 0 0 8px 1px rgba(8, 223, 194, 0.781);
+}
+
+.perk:first-child{
+    margin-top: 20px;
+}
+
+.perk:link, .perk:visited{
+    color: rgb(65, 65, 65);
+}
+
+.back{
+    margin: 10px 0 0 20px;
+    background:rgb(72, 141, 180);
+    border-radius: 10px;
+    padding: 8px;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+.back:link, .back:visited{
+    color: rgb(0, 0, 0);
+}
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin: 10px 5px 10px 5px;
+}
+
+.cardItem{
+    display: flex;
+    flex-direction: column;
+    background:rgb(72, 141, 180);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    width: 145px;
+    height: 163px;
+}
+
+.cardItem ul{
+    display: none;
+}
+
+.closeHelp{
+    font-style: italic;
+    color: rgba(255, 255, 0, 0.603);
+}
+
+/* Fixes the issue where taller images push the perk's text below the card*/
+.button img{
+    max-height: 85%;
+}
+
+.selected{
+    position: fixed;
+    background:rgb(72, 141, 180);
+    width: 75vw;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 40vw;
+    z-index: 1000;
+    box-shadow: 1px 1px yellow;
+    cursor: pointer;
+}
+
+.selected img{
+    width: 40vw;
+}
+
+.selected li{
+    list-style: none;
+    text-align: center;
+    padding: 1px;
+}
+
+.selected ul{
+    padding: 8px;
+}
+.selected p{
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.levelReq{
+    margin: 8px 0 0 0;
+    padding: 4px 0 0 0;
+}
+
+.selected li:last-child{
+    padding: 0 0 8px 0;
+}
+
+.perk-description{
+    font-style: italic;
+}
+
+.levelGlow{
+    text-shadow: 0 0 5px #d35f56;
+}
+
+.perkGlow{
+    text-shadow: 0 0 5px #edfa31;
+}
+
+/* Some images don't align correctly due to weird aspect ratio. This is a temporary fix. */
+.imgFix{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.selected .zac{
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.darkMode{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.darkMode button{
+    padding: 10px;
+    background: black;
+    color: red;
+    border: 1px solid rgba(255, 0, 0, 0.37);
+}
+
+.selected button{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 0px 8px;
+    padding-bottom: 1px;
+    background-color:rgb(251, 255, 0);
+    border-radius: 2px;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: rgb(75, 75, 75);
+    border: none;
+    cursor: pointer;
+}
+
+.selected button:active{
+    background: rgb(22, 58, 92);
+    color: white;
+}
+
+.closeContainer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.close{
+    display: none;
+}
+
+

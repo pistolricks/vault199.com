@@ -1,0 +1,114 @@
+import {Component} from "solid-js";
+
+type PROPS = {
+
+}
+
+const Agility: Component<PROPS> = props => {
+
+    return (
+        <div>
+            <header class="header">
+                <img src="images/logo.png"/>
+            </header>
+
+            <a class="back" href="index.html">Categories</a>
+
+            <div class="cardContainer">
+                <div class="cardItem button">
+                    <div class="closeContainer">
+                        <button class="close">x</button>
+                    </div>
+                    <img src="images/dodger.webp"/>
+                    <p>Dodger</p>
+                    <ul>
+                        <li class="perk-description">Reduce difficulty of Defend major action by 1</li>
+                        <li class="levelReq">Level Req:</li>
+                        <li><span class="levelGlow">Level 4 (rank 1)</span></li>
+                        <li><span class="levelGlow">Level 10 (rank 2)</span></li>
+                        <li>Other Req: <span class="perkGlow">Agility 6</span></li>
+                        <li>Ranks: 2</li>
+                    </ul>
+                </div>
+
+                <div class="cardItem button">
+                    <div class="closeContainer">
+                        <button class="close">x</button>
+                    </div>
+                    <img src="images/moving-target.webp"/>
+                    <p>Moving Target</p>
+                    <ul>
+                        <li class="perk-description">When sprinting, Defense increase +1 until next turn</li>
+                        <li class="levelReq">Level Req: None</li>
+                        <li>Other Req: <span class="perkGlow">Agility 6</span></li>
+                        <li>Ranks: 1</li>
+                    </ul>
+                </div>
+
+                <div class="cardItem button">
+                    <div class="closeContainer">
+                        <button class="close">x</button>
+                    </div>
+                    <img src="images/quick-hands.webp"/>
+                    <p>Quick Draw</p>
+                    <ul>
+                        <li class="perk-description">Draw an item or weapon for free</li>
+                        <li class="levelReq">Level Req: None</li>
+                        <li>Other Req: <span class="perkGlow">Agility 6</span></li>
+                        <li>Ranks: 1</li>
+                    </ul>
+                </div>
+
+                <div class="cardItem button">
+                    <div class="closeContainer">
+                        <button class="close">x</button>
+                    </div>
+                    <img src="images/center-of-mass.webp"/>
+                    <p>Center of Mass</p>
+                    <ul>
+                        <li class="perk-description">Choose to aim at the torso of an enemy without an increase in
+                            difficulty when making a ranged attack.
+                        </li>
+                        <li class="levelReq">Level Req: None</li>
+                        <li>Other Req: <span class="perkGlow">Agility 7</span></li>
+                        <li>Ranks: 1</li>
+                    </ul>
+                </div>
+
+                <div class="cardItem button">
+                    <div class="closeContainer">
+                        <button class="close">x</button>
+                    </div>
+                    <img src="images/rifleman.webp"/>
+                    <p>Rifleman</p>
+                    <ul>
+                        <li class="perk-description"> Increased damage for non-heavy twohanded weapons</li>
+                        <li class="levelReq">Level Req: None</li>
+                        <li>Other Req: <span class="perkGlow">Agility 7</span></li>
+                        <li>Ranks: 3</li>
+                    </ul>
+                </div>
+
+                <div class="cardItem button">
+                    <div class="closeContainer">
+                        <button class="close">x</button>
+                    </div>
+                    <img src="images/dodger.webp"/>
+                    <p>Dodger</p>
+                    <ul>
+                        <li class="perk-description">Reduce difficulty of Defend major action by 1</li>
+                        <li class="levelReq">Level Req:</li>
+                        <li><span class="levelGlow">Level 4 (rank 1)</span></li>
+                        <li><span class="levelGlow">Level 10 (rank 2)</span></li>
+                        <li>Other Req: <span class="perkGlow">Agility 6</span></li>
+                        <li>Ranks: 2</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    );
+};
+
+export default Agility;
