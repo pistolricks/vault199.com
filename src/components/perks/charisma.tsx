@@ -9,7 +9,7 @@ const Charisma: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
             </header>
 
             <a class="back" href="index.html">Categories</a>
@@ -19,7 +19,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/cap-collector.png" class="imgFix"/>
+                    <img src="/src/static/perks/images/ui/cap-collector.png" class="imgFix"/>
                     <p>Cap Collector</p>
                     <ul>
                         <li class="perk-description">Decreased buying and increased selling prices by 10%</li>
@@ -33,7 +33,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/zac.jpg" class="zac"/>
+                    <img src="/src/static/perks/images/ui/zac.jpg" class="zac"/>
                     <p>Dogmeat</p>
                     <ul>
                         <li class="perk-description">The faithful canine companion Dogmeat</li>
@@ -49,7 +49,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/animal-friend.webp" class="zac"/>
+                    <img src="/src/static/perks/images/ui/animal-friend.webp" class="zac"/>
                     <p>Animal Friend</p>
                     <ul>
                         <li class="perk-description">Rank 1: Hostile animals may roll to not attack you</li>
@@ -70,7 +70,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/black-widow.webp" class="zac"/>
+                    <img src="/src/static/perks/images/ui/black-widow.webp" class="zac"/>
                     <p>Black Widow/Lady Killer</p>
                     <ul>
                         <li class="perk-description">Re-roll 1d20 on Charisma checks to influence NPCs.
@@ -86,7 +86,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/smooth-talker.webp" class="zac"/>
+                    <img src="/src/static/perks/images/ui/smooth-talker.webp" class="zac"/>
                     <p>Smooth Talker</p>
                     <ul>
                         <li class="perk-description">Re-roll 1d20 on opposed tests involving Barter or Speech</li>
@@ -100,7 +100,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/scoundrel.webp" class="zac"/>
+                    <img src="/src/static/perks/images/ui/scoundrel.webp" class="zac"/>
                     <p>Scoundrel</p>
                     <ul>
                         <li class="perk-description">Ignore the first complication rolled in Charisma + Speech checks
@@ -115,7 +115,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/inspirational.webp" class="zac"/>
+                    <img src="/src/static/perks/images/ui/inspirational.webp" class="zac"/>
                     <p>Inspirational</p>
                     <ul>
                         <li class="perk-description">Increase maximum group AP pool by 1</li>
@@ -129,7 +129,7 @@ const Charisma: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/junktown-vendor.webp" class="zac"/>
+                    <img src="/src/static/perks/images/ui/junktown-vendor.webp" class="zac"/>
                     <p>Junktown Vendor</p>
                     <ul>
                         <li class="perk-description">Charisma + Barter test attempts to buy or sell goods is reduced by

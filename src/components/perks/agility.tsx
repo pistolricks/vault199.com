@@ -9,7 +9,7 @@ const Agility: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
             </header>
 
             <a class="back" href="index.html">Categories</a>
@@ -19,7 +19,7 @@ const Agility: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/dodger.webp"/>
+                    <img src="/src/static/perks/images/ui/dodger.webp"/>
                     <p>Dodger</p>
                     <ul>
                         <li class="perk-description">Reduce difficulty of Defend major action by 1</li>
@@ -35,7 +35,7 @@ const Agility: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/moving-target.webp"/>
+                    <img src="/src/static/perks/images/ui/moving-target.webp"/>
                     <p>Moving Target</p>
                     <ul>
                         <li class="perk-description">When sprinting, Defense increase +1 until next turn</li>
@@ -49,7 +49,7 @@ const Agility: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/quick-hands.webp"/>
+                    <img src="/src/static/perks/images/ui/quick-hands.webp"/>
                     <p>Quick Draw</p>
                     <ul>
                         <li class="perk-description">Draw an item or weapon for free</li>
@@ -63,7 +63,7 @@ const Agility: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/center-of-mass.webp"/>
+                    <img src="/src/static/perks/images/ui/center-of-mass.webp"/>
                     <p>Center of Mass</p>
                     <ul>
                         <li class="perk-description">Choose to aim at the torso of an enemy without an increase in
@@ -79,7 +79,7 @@ const Agility: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/rifleman.webp"/>
+                    <img src="/src/static/perks/images/ui/rifleman.webp"/>
                     <p>Rifleman</p>
                     <ul>
                         <li class="perk-description"> Increased damage for non-heavy twohanded weapons</li>
@@ -93,7 +93,7 @@ const Agility: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/dodger.webp"/>
+                    <img src="/src/static/perks/images/ui/dodger.webp"/>
                     <p>Dodger</p>
                     <ul>
                         <li class="perk-description">Reduce difficulty of Defend major action by 1</li>

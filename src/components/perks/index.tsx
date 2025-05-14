@@ -7,7 +7,7 @@ const Perks: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png"/>
             </header>
 
             <div class="wrapper">

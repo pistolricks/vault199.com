@@ -9,7 +9,7 @@ const Intelligence: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
             </header>
 
             <a class="back" href="index.html">Categories</a>
@@ -19,7 +19,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/comprehension.png"/>
+                    <img src="/src/static/perks/images/ui/comprehension.png"/>
                     <p>Comprehension</p>
                     <ul>
                         <li class="perk-description">Roll 1d6 after using the effect of a magazine to retain it for an
@@ -35,7 +35,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/gun-nut.webp"/>
+                    <img src="/src/static/perks/images/ui/gun-nut.webp"/>
                     <p>Gun Nut</p>
                     <ul>
                         <li class="perk-description">Able to create higher-level weapon mods</li>
@@ -49,7 +49,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/science.webp"/>
+                    <img src="/src/static/perks/images/ui/science.webp"/>
                     <p>Science</p>
                     <ul>
                         <li class="perk-description">Able to create higher-level weapon and armor mods involving rare
@@ -65,7 +65,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/chemist.webp"/>
+                    <img src="/src/static/perks/images/ui/chemist.webp"/>
                     <p>Chemist</p>
                     <ul>
                         <li class="perk-description">Roll 1d6 after using the effect of a magazine to retain it for an
@@ -81,7 +81,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/entomologist.webp"/>
+                    <img src="/src/static/perks/images/ui/entomologist.webp"/>
                     <p>Entomologist</p>
                     <ul>
                         <li class="perk-description">Gain the 1 Piercing damage effect against all creatures with insect
@@ -97,7 +97,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/healer.png"/>
+                    <img src="/src/static/perks/images/ui/healer.png"/>
                     <p>Healer</p>
                     <ul>
                         <li class="perk-description">Heal an additional hit point per rank with first aid action</li>
@@ -114,7 +114,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/hacker.webp"/>
+                    <img src="/src/static/perks/images/ui/hacker.webp"/>
                     <p>Hacker</p>
                     <ul>
                         <li class="perk-description">Decrease difficulty to hack computers by 1</li>
@@ -128,7 +128,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/medic.webp"/>
+                    <img src="/src/static/perks/images/ui/medic.webp"/>
                     <p>Medic</p>
                     <ul>
                         <li class="perk-description">Re-roll 1d20 on First Aid actions</li>
@@ -142,7 +142,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/nerd-rage.webp"/>
+                    <img src="/src/static/perks/images/ui/nerd-rage.webp"/>
                     <p>Nerd Rage</p>
                     <ul>
                         <li class="perk-description">When quarter Health, gain more Physical and Energy DR to all limbs
@@ -158,7 +158,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/robotics-expert.webp"/>
+                    <img src="/src/static/perks/images/ui/robotics-expert.webp"/>
                     <p>Robotics Expert</p>
                     <ul>
                         <li class="perk-description">Rank 1: Modify armor with rank 1 robot mods</li>
@@ -174,7 +174,7 @@ const Intelligence: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/nuclear-physicist.png"/>
+                    <img src="/src/static/perks/images/ui/nuclear-physicist.png"/>
                     <p>Nuclear Physicist</p>
                     <ul>
                         <li class="perk-description">Increased damage of radiation weapons and fusion cores have 3

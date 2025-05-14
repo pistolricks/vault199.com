@@ -9,7 +9,7 @@ const Strength: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
             </header>
 
             <a class="back" href="index.html">Categories</a>
@@ -19,7 +19,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/strong-back.webp"/>
+                    <img src="/src/static/perks/images/ui/strong-back.webp"/>
                     <p>Strong Back</p>
                     <ul>
                         <li class="perk-description">Increased carry capacity</li>
@@ -32,7 +32,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/shotgun-surgeon.webp"/>
+                    <img src="/src/static/perks/images/ui/shotgun-surgeon.webp"/>
                     <p>Shotgun Surgeon</p>
                     <ul>
                         <li class="perk-description">Gain +1 Piercing when using shotguns</li>
@@ -45,7 +45,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/armorer.webp"/>
+                    <img src="/src/static/perks/images/ui/armorer.webp"/>
                     <p>Armorer</p>
                     <ul>
                         <li class="perk-description">Can modify armor with additional mods</li>
@@ -62,7 +62,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/basher.webp"/>
+                    <img src="/src/static/perks/images/ui/basher.webp"/>
                     <p>Basher</p>
                     <ul>
                         <li class="perk-description">Increased gun bashing damage</li>
@@ -75,7 +75,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/blacksmith.webp"/>
+                    <img src="/src/static/perks/images/ui/blacksmith.webp"/>
                     <p>Blacksmith</p>
                     <ul>
                         <li class="perk-description">Can modify melee weapons with additional mods</li>
@@ -92,7 +92,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/iron-fist.webp"/>
+                    <img src="/src/static/perks/images/ui/iron-fist.webp"/>
                     <p>Iron Fist</p>
                     <ul>
                         <li class="perk-description">+1d6 to unarmed damage</li>
@@ -107,7 +107,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/terrifying-presence.webp"/>
+                    <img src="/src/static/perks/images/ui/terrifying-presence.webp"/>
                     <p>Terrifying Presence</p>
                     <ul>
                         <li class="perk-description">Rank 1: Re-roll a single d20 when threatening or scaring another
@@ -123,7 +123,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/adrenalin-rush.webp"/>
+                    <img src="/src/static/perks/images/ui/adrenalin-rush.webp"/>
                     <p>Adrenalin Rush</p>
                     <ul>
                         <li class="perk-description">When below max HP, count your strength as 10 for skills and weapon
@@ -138,7 +138,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/piercing-strike.webp"/>
+                    <img src="/src/static/perks/images/ui/piercing-strike.webp"/>
                     <p>Piercing Strike</p>
                     <ul>
                         <li class="perk-description">+1 Piercing to Unarmed and bladed melee weapon attacks</li>
@@ -151,7 +151,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/barbarian.webp"/>
+                    <img src="/src/static/perks/images/ui/barbarian.webp"/>
                     <p>Barbarian</p>
                     <ul>
                         <li class="perk-description">Physical DR on all hit locations is increased based on your
@@ -166,7 +166,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/big-leagues.webp"/>
+                    <img src="/src/static/perks/images/ui/big-leagues.webp"/>
                     <p>Big Leagues</p>
                     <ul>
                         <li class="perk-description">Gain the Vicious damage effect on all two-handed melee weapons</li>
@@ -180,7 +180,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/heave-ho.webp"/>
+                    <img src="/src/static/perks/images/ui/heave-ho.webp"/>
                     <p>Heave Ho!</p>
                     <ul>
                         <li class="perk-description">Increase range of throwing weapons by one zone by spending 1 AP
@@ -194,7 +194,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/paralyzing-palm.webp"/>
+                    <img src="/src/static/perks/images/ui/paralyzing-palm.webp"/>
                     <p>Paralyzing Palm</p>
                     <ul>
                         <li class="perk-description">Aimed unarmed strikes gain the stun effect</li>
@@ -207,7 +207,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/slayer.webp"/>
+                    <img src="/src/static/perks/images/ui/slayer.webp"/>
                     <p>Slayer</p>
                     <ul>
                         <li class="perk-description">Damage with a melee or unarmed attack can be turned into a critical
@@ -222,7 +222,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/pain-train.webp"/>
+                    <img src="/src/static/perks/images/ui/pain-train.webp"/>
                     <p>Pain Train</p>
                     <ul>
                         <li class="perk-description">Rank 1: Gain Charge major action to damage and knock prone enemies
@@ -238,7 +238,7 @@ const Strength: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/steady-aim.webp"/>
+                    <img src="/src/static/perks/images/ui/steady-aim.webp"/>
                     <p>Steady Aim</p>
                     <ul>
                         <li class="perk-description">When taking the aim minor action, re-roll 1 or 2 d20s depending

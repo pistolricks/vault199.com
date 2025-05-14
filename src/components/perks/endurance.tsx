@@ -9,7 +9,7 @@ const Endurance: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
             </header>
 
             <a class="back" href="index.html">Categories</a>
@@ -19,7 +19,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/aquaboy.webp"/>
+                    <img src="/src/static/perks/images/ui/aquaboy.webp"/>
                     <p>Aquaboy/Aquagirl</p>
                     <ul>
                         <li class="perk-description">Immune to radiation from water and can hold breath twice as long
@@ -36,7 +36,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/fast-metabolism.webp"/>
+                    <img src="/src/static/perks/images/ui/fast-metabolism.webp"/>
                     <p>Fast Metabolism</p>
                     <ul>
                         <li class="perk-description">+1 Hit Points per rank from any source other than resting</li>
@@ -53,7 +53,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/hunter.webp"/>
+                    <img src="/src/static/perks/images/ui/hunter.webp"/>
                     <p>Hunter</p>
                     <ul>
                         <li class="perk-description">Gain the Vicious damage effect against mutated mammals, lizards,
@@ -69,7 +69,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/lead-belly.webp"/>
+                    <img src="/src/static/perks/images/ui/lead-belly.webp"/>
                     <p>Lead Belly</p>
                     <ul>
                         <li class="perk-description">Reduced or immunity to radiation damage from food</li>
@@ -83,7 +83,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/pathfinder.webp"/>
+                    <img src="/src/static/perks/images/ui/pathfinder.webp"/>
                     <p>Pathfinder</p>
                     <ul>
                         <li class="perk-description">Reduced travel time by half with a successful Perception + Survival
@@ -100,7 +100,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/pyromaniac.webp"/>
+                    <img src="/src/static/perks/images/ui/pyromaniac.webp"/>
                     <p>Pyromaniac</p>
                     <ul>
                         <li class="perk-description">Increased damage with fire-based weapons by 1d6 per rank</li>
@@ -114,7 +114,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/party-boy.webp"/>
+                    <img src="/src/static/perks/images/ui/party-boy.webp"/>
                     <p>Party Girl/Party Boy</p>
                     <ul>
                         <li class="perk-description">Immune to alcohol addiction; gain +2 health from drinking alcohol
@@ -129,7 +129,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/toughness.webp"/>
+                    <img src="/src/static/perks/images/ui/toughness.webp"/>
                     <p>Toughness</p>
                     <ul>
                         <li class="perk-description">Increased 'Damage Resistance'</li>
@@ -143,7 +143,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/faster-healing.webp"/>
+                    <img src="/src/static/perks/images/ui/faster-healing.webp"/>
                     <p>Faster Healing</p>
                     <ul>
                         <li class="perk-description">1d20 can be bought for free when treating one's injuries</li>
@@ -157,7 +157,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/adamantium-skeleton.webp"/>
+                    <img src="/src/static/perks/images/ui/adamantium-skeleton.webp"/>
                     <p>Adamantium Skeleton</p>
                     <ul>
                         <li class="perk-description">Increases damage required for a critical hit to all limbs</li>
@@ -174,7 +174,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/chem-resistant.webp"/>
+                    <img src="/src/static/perks/images/ui/chem-resistant.webp"/>
                     <p>Chem Resistant</p>
                     <ul>
                         <li class="perk-description">Become immune to chem addiction</li>
@@ -190,7 +190,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/snakeater.webp"/>
+                    <img src="/src/static/perks/images/ui/snakeater.webp"/>
                     <p>Snakeater</p>
                     <ul>
                         <li class="perk-description">+2 to poison damage resistance</li>
@@ -204,7 +204,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/solar-powered.webp"/>
+                    <img src="/src/static/perks/images/ui/solar-powered.webp"/>
                     <p>Solar Powered</p>
                     <ul>
                         <li class="perk-description">Heal radiation damage in direct sunlight</li>
@@ -218,7 +218,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/size-matters.webp"/>
+                    <img src="/src/static/perks/images/ui/size-matters.webp"/>
                     <p>Size Matters</p>
                     <ul>
                         <li class="perk-description">Add 1d6 to all attacks with Heavy guns</li>
@@ -232,7 +232,7 @@ const Endurance: Component<PROPS> = props => {
                     <div class="closeContainer">
                         <button class="close">x</button>
                     </div>
-                    <img src="images/rad-resistance.webp"/>
+                    <img src="/src/static/perks/images/ui/rad-resistance.webp"/>
                     <p>Rad Resistance</p>
                     <ul>
                         <li class="perk-description">+1 Radiation Resistance to all limbs per rank</li>

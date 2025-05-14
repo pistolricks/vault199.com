@@ -7,7 +7,7 @@ const Perception: Component<PROPS> = props => {
     return (
         <div>
             <header class="header">
-                <img src="images/logo.png"/>
+                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
             </header>
 
             <a class="back" href="index.html">Categories</a>
@@ -19,7 +19,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/ghost.webp"/>
+                        <img src="/src/static/perks/images/ui/ghost.webp"/>
                         <p>Ghost</p>
                         <ul>
                             <li class="perk-description">Sneak tests in darkness allow for one free additional d20</li>
@@ -32,7 +32,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/demolition-expert.webp"/>
+                        <img src="/src/static/perks/images/ui/demolition-expert.webp"/>
                         <p>Demolition Expert</p>
                         <ul>
                             <li class="perk-description">Gain the Vicious quality with weapons that have the Blast
@@ -47,7 +47,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/refractor.webp"/>
+                        <img src="/src/static/perks/images/ui/refractor.webp"/>
                         <p>Refractor</p>
                         <ul>
                             <li class="perk-description">+1 Energy Resistance for all limbs per rank</li>
@@ -60,7 +60,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/awareness.webp"/>
+                        <img src="/src/static/perks/images/ui/awareness.webp"/>
                         <p>Awareness</p>
                         <ul>
                             <li class="perk-description">Using the Aim minor action, gain +1 pierce or add 1 to a
@@ -75,7 +75,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/night-person.webp"/>
+                        <img src="/src/static/perks/images/ui/night-person.webp"/>
                         <p>Night Person</p>
                         <ul>
                             <li class="perk-description">Difficulty increases due to darkness are reduced by 1</li>
@@ -88,7 +88,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/cautious-nature.webp"/>
+                        <img src="/src/static/perks/images/ui/cautious-nature.webp"/>
                         <p>Cautious Nature</p>
                         <ul>
                             <li class="perk-description">Re-roll 1d20 on tests if action points were spent</li>
@@ -102,7 +102,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/infiltrator.webp"/>
+                        <img src="/src/static/perks/images/ui/infiltrator.webp"/>
                         <p>Infiltrator</p>
                         <ul>
                             <li class="perk-description">Re-roll 1d20 on Lockpick skill tests</li>
@@ -115,7 +115,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/laser-commander.webp"/>
+                        <img src="/src/static/perks/images/ui/laser-commander.webp"/>
                         <p>Laser Commander</p>
                         <ul>
                             <li class="perk-description">Increase damage with ranged energy weapons by 1d6 per rank</li>
@@ -128,7 +128,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/concentrated-fire.webp"/>
+                        <img src="/src/static/perks/images/ui/concentrated-fire.webp"/>
                         <p>Concentrated Fire</p>
                         <ul>
                             <li class="perk-description">Allowed to re-roll 3d6 after spending additional ammunition to
@@ -143,7 +143,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/sniper.webp"/>
+                        <img src="/src/static/perks/images/ui/sniper.webp"/>
                         <p>Sniper</p>
                         <ul>
                             <li class="perk-description">Taking the Aim minor action and making a ranged attack with a
@@ -159,7 +159,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/pickpocket.webp"/>
+                        <img src="/src/static/perks/images/ui/pickpocket.webp"/>
                         <p>Pickpocket</p>
                         <ul>
                             <li class="perk-description">Rank 1: Ignore first complication of Agility + Sneak test</li>
@@ -175,7 +175,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/master-thief.webp"/>
+                        <img src="/src/static/perks/images/ui/master-thief.webp"/>
                         <p>Master Thief</p>
                         <ul>
                             <li class="perk-description">+1 to opponent detection tests to notice picking a lock or
@@ -190,7 +190,7 @@ const Perception: Component<PROPS> = props => {
                         <div class="closeContainer">
                             <button class="close">x</button>
                         </div>
-                        <img src="images/meltdown.webp"/>
+                        <img src="/src/static/perks/images/ui/meltdown.webp"/>
                         <p>Meltdown</p>
                         <ul>
                             <li class="perk-description">Enemies explode and cause damage to one additional enemy in
