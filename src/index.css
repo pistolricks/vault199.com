@@ -31,7 +31,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--background-color);
-  cursor: url('./assets/mouse.svg')
+  cursor: url('./static/images/crosshair.png'), auto;
 }
 
 main {

@@ -1,0 +1,81 @@
+:root {
+  --pip-boy-primary-color: #18dc0c;
+  --pip-boy-secondary-color: #11291b;
+  --pip-boy-background-color: #10170f;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37.8rem;
+  margin-top: -2rem;
+}
+
+#vault-boy-walking {
+  position: absolute;
+  margin-left: 13.65rem;
+  width: 10.5rem;
+  margin-top: 1rem;
+  filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+}
+
+.info-icon-web,
+.info-icon-engineering {
+  margin-left: 1rem;
+}
+
+.info-icon {
+  background-color: var(--pip-boy-secondary-color);
+  margin-right: 0.4rem;
+}
+
+.info-icon > p {
+  color: var(--pip-boy-primary-color);
+}
+
+.info-icon-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.info-icon-thin {
+  width: 2.4rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-icon-large > img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.info-icon-thin > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.info-icon-thin > p {
+  font-family: "Monofonto", serif;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.identity-container > p {
+  font-family: "Monofonto", serif;
+  font-size: 1.4rem;
+  color: var(--pip-boy-primary-color);
+  text-align: center;
+  width: 37.8rem;
+  margin: 1rem;
+}
+
+/*# sourceMappingURL=_stat_status.css.map */

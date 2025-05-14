@@ -1,0 +1,50 @@
+:root {
+  --pip-boy-primary-color: #18dc0c;
+  --pip-boy-secondary-color: #11291b;
+  --pip-boy-background-color: #10170f;
+}
+
+header {
+  text-transform: uppercase;
+  width: 37.8rem;
+  position: relative;
+}
+
+.header {
+  margin-left: 10rem;
+  max-width: 37.8rem;
+}
+
+.tabs, .sub-tabs {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  margin-top: 19rem;
+}
+
+.tabs li > a,
+.sub-tabs li > a {
+  font-size: 2.2rem;
+  color: var(--pip-boy-primary-color);
+}
+
+.tabs li > a {
+  margin-right: 4.1rem;
+}
+
+.sub-tabs {
+  display: none;
+}
+
+.sub-tabs-active {
+  display: flex;
+  align-items: center;
+}
+
+.sub-tabs li > a {
+  margin-right: 0.8rem;
+}
+
+/*# sourceMappingURL=_header.css.map */

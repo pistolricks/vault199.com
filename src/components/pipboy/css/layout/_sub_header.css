@@ -1,0 +1,28 @@
+:root {
+  --pip-boy-primary-color: #18dc0c;
+  --pip-boy-secondary-color: #11291b;
+  --pip-boy-background-color: #10170f;
+}
+
+.sub-tabs {
+  margin-top: 1rem;
+}
+
+.sub-tabs > a {
+  font-weight: lighter;
+  margin-right: 1rem;
+}
+
+.sub-header-active-tab {
+  opacity: 0.8;
+}
+
+.sub-header-inactive-tab-near {
+  opacity: 0.5;
+}
+
+.sub-header-inactive-tab-far {
+  opacity: 0.2;
+}
+
+/*# sourceMappingURL=_sub_header.css.map */

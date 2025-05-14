@@ -1,0 +1,85 @@
+:root {
+  --pip-boy-primary-color: #18dc0c;
+  --pip-boy-secondary-color: #11291b;
+  --pip-boy-background-color: #10170f;
+}
+
+.health-gauge-container {
+  margin-top: 2rem;
+  height: 21rem;
+  width: 37.8;
+}
+
+.health-gauge {
+  border: 0.1rem solid var(--pip-boy-primary-color);
+  background: var(--pip-boy-background-color);
+  width: 3.8rem;
+  height: 0.9rem;
+  position: absolute;
+}
+
+.health-gauge-top,
+.health-gauge-bottom {
+  margin-left: 17rem;
+  width: 3.8rem;
+}
+
+.health-gauge-top {
+  top: 8rem;
+}
+
+.health-gauge-bottom {
+  top: 25rem;
+}
+
+.health-gauge-left-top,
+.health-gauge-left-bottom {
+  margin-left: 5.65rem;
+}
+
+.health-gauge-left-top,
+.health-gauge-right-top {
+  top: 14rem;
+}
+
+.health-gauge-left-bottom,
+.health-gauge-right-bottom {
+  top: 20rem;
+}
+
+.health-gauge-right-top,
+.health-gauge-right-bottom {
+  margin-left: 30.2rem;
+}
+
+.health-gauge-top::before,
+.health-gauge-right-top::before,
+.health-gauge-left-bottom::before,
+.health-gauge-right-bottom::before {
+  content: "";
+  border: 0.1rem solid var(--pip-boy-primary-color);
+  background: var(--pip-boy-primary-color);
+  width: 3.61rem;
+  height: 0.7rem;
+  position: absolute;
+}
+
+.health-gauge-left-top::before {
+  content: "";
+  border: 0.1rem solid var(--pip-boy-primary-color);
+  background: var(--pip-boy-primary-color);
+  width: 1.52rem;
+  height: 0.7rem;
+  position: absolute;
+}
+
+.health-gauge-bottom::before {
+  content: "";
+  border: 0.1rem solid var(--pip-boy-primary-color);
+  background: var(--pip-boy-primary-color);
+  width: 2.28rem;
+  height: 0.7rem;
+  position: absolute;
+}
+
+/*# sourceMappingURL=_health_gauges.css.map */
