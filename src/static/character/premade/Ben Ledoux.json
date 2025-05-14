@@ -1,0 +1,148 @@
+{
+    "name": "Benjamin Ledoux",
+    "level": 21,
+    "ap": 4,
+    "xp": 1600,
+    "health": 2100,
+    "isRobot": false,
+    "isNPC": false,
+    "origin": "",
+    "traits": "",
+    "equipmentPack": "",
+    "attributes": {
+        "STR": 4,
+        "PER": 2,
+        "END": 3,
+        "CHA": 9,
+        "INT": 6,
+        "AGI": 7,
+        "LCK": 10
+    },
+    "skills": {
+        "Athletics": {
+            "attribute": "STR",
+            "rank": 0,
+            "isTag": false
+        },
+        "Barter": {
+            "attribute": "CHA",
+            "rank": 0,
+            "isTag": false
+        },
+        "Big Guns": {
+            "attribute": "END",
+            "rank": 0,
+            "isTag": false
+        },
+        "EnergyWeapons": {
+            "attribute": "PER",
+            "rank": 0,
+            "isTag": false
+        },
+        "Explosives": {
+            "attribute": "PER",
+            "rank": 0,
+            "isTag": false
+        },
+        "Lockpick": {
+            "attribute": "PER",
+            "rank": 0,
+            "isTag": false
+        },
+        "Medicine": {
+            "attribute": "INT",
+            "rank": 0,
+            "isTag": false
+        },
+        "MeleeWeapons": {
+            "attribute": "STR",
+            "rank": 0,
+            "isTag": false
+        },
+        "Pilot": {
+            "attribute": "PER",
+            "rank": 0,
+            "isTag": false
+        },
+        "Repair": {
+            "attribute": "INT",
+            "rank": 0,
+            "isTag": false
+        },
+        "Science": {
+            "attribute": "INT",
+            "rank": 0,
+            "isTag": false
+        },
+        "SmallGuns": {
+            "attribute": "AGI",
+            "rank": 0,
+            "isTag": false
+        },
+        "Sneak": {
+            "attribute": "AGI",
+            "rank": 0,
+            "isTag": false
+        },
+        "Speech": {
+            "attribute": "CHA",
+            "rank": 0,
+            "isTag": false
+        },
+        "Surivival": {
+            "attribute": "END",
+            "rank": 0,
+            "isTag": false
+        },
+        "Throwing": {
+            "attribute": "AGI",
+            "rank": 0,
+            "isTag": false
+        },
+        "Unarmed": {
+            "attribute": "STR",
+            "rank": 0,
+            "isTag": false
+        }
+    },
+    "perks": {},
+    "stats": {
+        "carryWeight": 200,
+        "damageResist": {
+            "physical": 0,
+            "energy": 0,
+            "radiation": 0,
+            "poison": 0
+        },
+        "defense": 1,
+        "initiative": 10,
+        "maxHealth": 10,
+        "meleeBonus": 0
+    },
+    "inventory": {
+        "currency": {
+            "caps": 0,
+            "pre-war": 0,
+            "gold": 0,
+            "newMoney": 0,
+            "scrip": 0
+        },
+        "gear": {
+            "ammo": {},
+            "armor": {},
+            "clothing": {},
+            "foodAndDrink": {},
+            "chems": {},
+            "otherConsumables": {},
+            "weapons": {},
+            "booksAndMags": {},
+            "other": {}
+        },
+        "mods": {
+            "armor": {},
+            "clothing": {},
+            "weapon": {},
+            "robot": {}
+        }
+    }
+}

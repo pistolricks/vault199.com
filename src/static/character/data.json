@@ -1,0 +1,1295 @@
+{
+    "origins": {
+        "Brotherhood Initiate": {
+            "description": "Born from the terrible revelations of the Mariposa Rebellion, Roger Maxson formed the Brotherhood of Steel so that his people—and eventually the rest of the survivors in this new world—would have something to believe in. With its own mythology, creed, and hierarchy, the Brotherhood of Steel’s primary goal is the recovery and preservation of the technology of the pre-war world. With the Great War disrupting humanity’s access to technology, the Brotherhood’s knights and scribes do all they can to secure the technology of the past, for the needs of future generations. You may be a descendant of a knight or paladin, born into the Brotherhood and a firm believer of their doctrine, or you may be a new recruit, pledging yourself to their cause and looking to rise through their ranks. Although the Brotherhood share a common goal, their chapters across the wasteland can have different beliefs and protocols, and they aren’t as unified as they seem from the outside. While the West Coast Brotherhood of Steel warred with the New California Republic over reclamation of technology and the NCR’s expansion efforts, the East Coast chapter was effectively isolated when it prioritized charity over the exchange of technology and the preservation of pre-war equipment. Elder Lyons’ mission became humanitarian, and while that earned them isolation at first, Arthur Maxson led their expansion of influence from Washington D.C. to the entire Eastern Seaboard, refocusing their efforts on technological recovery and development.",
+            "trait": {
+                "name": "The Chain that Binds",
+                "description": "You gain one additional Tag skill, which must be one of Energy Weapons, Science, or Repair. As a member of the Brotherhood of Steel, you are bound by the chain of command: The Chain that Binds. You must carry out the orders of your immediate superiors, and you are responsible for your subordinate siblings. If you do not carry out your duty, you are expelled from the Brotherhood and your technology will be reclaimed—by any means necessary."
+            }
+        },
+        "Ghoul": {
+            "description": "Prolonged exposure to the effects of background gamma radiation—part of the fallout of the Great War—can spontaneously mutate humans. You are one of those mutants. Either slowly, or strangely spontaneously, your body changed into that of a rotting, living corpse. You no longer age the same way, and appear unaffected by radiation. Your skin peels from your flesh but seems to be sustained by your mutated metabolism. You are a “ghoul”—a necrotic post-human—one of many rag-tag survivors who weren’t lucky enough to get into a Vault-Tec facility. You may have been born after the war, and over time developed the necrotic mutation. You may have come from Vault 12 in Bakersfield, California, whose vault door did not close, exposing the population to the radiation from outside. You may have taken refuge in a ghoul settlement, like Underworld in the Capital Wasteland, and have ventured out recently to explore, scavenge, and survive. Civilized ghouls, such as yourself, also fear a possible degeneration into a frenzied, feral nature. Feral ghouls are necrotic mutants like yourself who have lost higher brain functions, and reverted to a primal, violent state. They attack non-ghouls indiscriminately to defend their territory or feed. Whether this loss of reason is due to acute levels of radiation or the inevitable outcome of the mutation, you’re not sure, and that makes it all the more terrifying.",
+            "trait": {
+                "name": "Necrotic Post-Human",
+                "description": "You are immune to radiation damage. In fact, you’re healed by it—you regain 1 HP for every 3 points of radiation damage inflicted upon you, and if you rest in an irradiated location, you may re-roll your dice pool when checking if your injuries heal. In addition, Survival becomes a Tag skill, increasing it by 2 ranks. You age at a much-decreased rate, and you’re probably older than your unmutated companions—you may even have survived the Great War of 2077—but you’re sterile: “the first generation of ghouls is the last” as the saying goes. You may face discrimination from “smoothskins” (humans who aren’t ghouls), increasing the difficulty or complication range of Charisma tests depending on your opponent’s beliefs."
+            }
+        },
+        "Super Mutant": {
+            "description": "You are a brutal, mutated human, forced to evolve from thoughtless experiments by the twisted science of the pre- and post-war world. Infected with the Forced Evolutionary Virus (F.E.V.), your body has mutated into a tall, muscular killing machine, filled with a rage. You could have originated from the Master’s army at the Mariposa military base, California, created as he experimented on unwilling human victims, splitting into one of the factions upon his death to attack or rebuild the wasteland with its survivors. Your origins could be rooted in the Evolutionary Experimentation Program of Vault 87, whose super mutant groups terrorize the Capital Wasteland. You could have been abducted from the Commonwealth and exposed to the F.E.V. by the Institute and disposed of back into the wasteland to fend for yourself in small bands of raiders. Or finally, you could have been a resident of Huntersville, Appalachia, whose water supply was contaminated with the virus and the mutations went unchecked. Although these super mutants share the same qualities, the groups formed from the three strains haven’t mixed, and there is little evidence they have met one another. While some groups have migrated or moved in their lifetime, none have travelled far enough to encounter one another, so where your quests take place will likely dictate your origin.",
+            "trait": {
+                "name": "Forced Evolution",
+                "description": "Your initial Strength and Endurance attributes are increased by +2 each, and your maximum Strength and Endurance are increased to 12, but your maximum Intelligence and Charisma are both reduced to 6. You may not have more than 4 ranks in any skill. You are completely immune to radiation and poison damage. You stand over seven feet tall, and your body is bulky and muscular. Your skin is green, yellow, or grey, regardless of what color it was when you were human. You do not seem to age, but you are sterile. You can only wear armor which has been made to fit a super mutant."
+            }
+        },
+        "Mister Handy": {
+            "description": "The General Atomics International robot “Mister Handy” exploded onto the robotic market as a reliable construction robot, known for its durability and ease of maintenance, but its real breakthrough came in a collaboration with RobCo to produce a domestic model. You are one of these domestic automatons, produced some time between 2037 and 2077, seeking to provide every household in America with butler-like servitude. Equipped with state-of-the-art programming, you have initiative and can adapt your own coding to learn more from your environment. This capacity for self-determination is what has enabled your survival beyond the Great War; where other robots may have broken down, you have managed to shake loose from the shackles of your programming and find a life for yourself. Many models exist, and you could come from any of the Mister Handy, Mister Gutsy, Miss Nanny, or Mister Orderly series. You are powered by a nuclear core, can replace your own fuel, and repair yourself or other Mister Handy units. Your model has three mechanical arms and three mechanical eyes on stalks, and your jet propulsion keeps you hovering above the ground, providing you have all the fuel you need. With this rugged design, you have survived so far.",
+            "trait": {
+                "name": "Mister Handy Robot",
+                "description": "You have 360° vision and improved sensory systems that can detect smells, chemicals, and radiation, reducing the difficulty of Perception tests that rely on sight and smell by 1. You are also immune to radiation and poison damage, but you cannot use chems, nor can you benefit from food, drink, or rest. You move by jet propulsion, hovering above the ground, unaffected by difficult terrain or obstacles. Your carry weight is 150 lbs., and it cannot be increased by your Strength or perks, but it can be increased by modified armor. You cannot recover from your own injuries or heal health points without receiving repairs (see Healing Robots, p.34). You cannot manipulate the physical world like humans do, instead you have three of the arm attachments in the Arm Attachments table, determined by your choice of equipment pack. If you select an arm that features a weapon, you also gain 20 shots of ammo for that weapon."
+            },
+            "arms": {
+                "10mm Auto Pistol": {
+                    "effect": "You can make ranged attacks using a 10mm auto pistol (see 10mm pistol, with an automatic receiver mod, p.95)."
+                },
+                "Buzz-Saw": {
+                    "effect": "You can cut objects and make melee attacks with a circular saw. The buzz-saw inflicts 3 CD Piercing 1 physical damage."
+                },
+                "Flamer": {
+                    "effect": "You can set objects alight, cook food, or make ranged attacks with a short-range flamethrower (see flamer, p.106)."
+                },
+                "Laser Emitter": {
+                    "effect": "You can cut objects or make ranged attacks using a laser (see laser gun, p.101)."
+                },
+                "Pincer": {
+                    "effect": "You can pick up objects with an individual pincer that weighes no more than 40 lbs. and manipulate objects in your environment. You may also make unarmed attacks (2 CD physical damage) with the pincer."
+                }
+            }
+        },
+        "Survivor": {
+            "description": "You are the living legacy of the people who prepared for Armageddon on their own. You are only alive in the post-nuclear apocalyptic landscape because your forebears dug in, survived, and found community enough to continue humanity’s existence. You could be from any number of settlements, isolated shelters, or traveling groups that sparsely populate the wasteland from West Coast to East Coast. You could be from the New California Republic, carrying on the legacy of Vault 15 and Shady Sands. You could fight to protect others, calling a group of survivors like the Minutemen or the Regulators your home. You could also be a merciless raider or be born into one of these groups but escaped in order to rehabilitate and reform. Wherever you are from, or wherever you travel, making connections and laying down roots can be hard. Survivors are naturally wary of others, and are always on the lookout for the next conman, raiding party, or thief that will take their hard-earned resources. Travelling vast distances is difficult too, and many travelling survivors—particularly trading caravans—move between large settlements within their area of the wasteland, rather than travelling from coast to coast.",
+            "traits": {
+                "Educated": {
+                    "benefit": "You have one additional tag skill.",
+                    "penalty": "When you fail a skill test using a skill other than a tag skill, the GM gains 1 AP."
+                },
+                "Fast Shot": {
+                    "benefit": "If you take a second major action in combat, and use it to make a ranged attack, the additional major action only costs 1 AP, rather than 2.",
+                    "penalty": "You cannot benefit from the Aim minor action—you’re too impatient."
+                },
+                "Gifted": {
+                    "benefit": "Choose two S.P.E.C.I.A.L. attributes and increase them by +1 each.",
+                    "penalty": "Your maximum number of Luck points is one fewer than your Luck attribute."
+                },
+                "Heavy Handed": {
+                    "benefit": "Your Melee Damage bonus increases by +1 CD.",
+                    "penalty": "Your melee and unarmed attacks suffer a complication on a 19 or 20, rather than only a 20."
+                },
+                "Small Frame": {
+                    "benefit": "You may re-roll 1d20 on all AGI tests which rely on balance or contortion.",
+                    "penalty": "Your carry weight is 150 + (5 x STR) lbs., rather than 150 + (10 x STR) lbs."
+                }
+            }
+        },
+        "Vault Dweller": {
+            "description": "When the bombs were falling, you or your predecessors were lucky enough to be safely secured in one of the one hundred and twenty-two Vault-Tec facilities, deep underground protected by thick blast doors and layers of rock and concrete. Your family either had enough money to buy their space or were randomly selected to enter the vault to be saved from the nuclear devastation above—perhaps only to be condemned to immoral experiments run by Vault-Tec on unwitting participants. You are free from mutation and disease. The Vault-Tec program has afforded you a safe home for some time, but not without some cost. The vault you came from used you as a human test subject, manipulating your understanding of the world and your behavior in order to study you. That’s left you with a profound psychological change, compared to the survivors on the surface you now know, and affects how you make your way through the wasteland. Whether through design or poor planning, many of the vaults were not well stocked or prepared for the long wait until nuclear fallout had reached safe levels outside, and many fell into disrepair or out of supplies. Due to these shortcomings, many vault dwellers sought help from the surface, and many vaults opened in order to allow supplies to reach them. By opening their vault doors, the isolated societies inside opened themselves up to mixing with the survivors above, and established a permanent connection with the surface—the most notable example being the residents of Vault 15, who split up and went on to establish the settlement Shady Sands, as well as the raiding gangs of the Jackals, Vipers, and Khans when their vault opened.",
+            "trait": {
+                "name": "Vault Kid",
+                "description": "Your healthier start to life at the hands of trained doctors and sophisticated auto-docs means you reduce the difficulty of all END tests to resist the effects of disease. In addition, your carefully-planned upbringing means you have one additional tag skill of your choice. You may also work with the Gamemaster to determine what sort of experiment took place within your Vault. Once per quest, the GM may introduce a complication which reflects the nature of the experiment you unwittingly took part in, or introduce a complication related to your early life of isolation and confinement within the Vault. If the GM does this, you immediately regain one Luck Point."
+            }
+        }
+    },
+    "startingEquipment": {
+        "packs": {
+            "bos": {
+                "Brotherhood of Steel Initiate": {
+
+                },
+                "Brotherhood of Steel Scribe": {
+
+                }
+            },
+            "mrHandy": {
+                "Miss Nanny": {
+
+                },
+                "Mister Farmhand": {
+
+                },
+                "Mister Gutsy": {
+
+                },
+                "Mister Handy": {
+
+                },
+                "Nurse Handy": {
+
+                }
+            },
+            "superMutant": {
+                "Super Mutant Brute": {
+
+                },
+                "Super Mutant Skirmisher": {
+
+                }
+            },
+            "vaultDweller": {
+                "Vault-Tec Resident": {
+
+                },
+                "Vault-Tec Security": {
+
+                }
+            },
+            "wastelander": {
+                "Mercenary": {
+
+                },
+                "Raider": {
+
+                },
+                "Settler": {
+
+                },
+                "Trader": {
+
+                },
+                "Wanderer": {
+
+                }
+            }
+        },
+        "trinkets": {
+
+        },
+        "tagSkillItems": {
+            "Athletics": {
+
+            },
+            "Barter": {
+
+            },
+            "Big Guns": {
+
+            },
+            "Energy Weapons": {
+
+            },
+            "Explosives": {
+
+            },
+            "Lockpick": {
+
+            },
+            "Medicine": {
+
+            },
+            "Melee Weapons": {
+
+            },
+            "Pilot": {
+
+            },
+            "Repair": {
+
+            },
+            "Science": {
+
+            },
+            "Small Guns": {
+
+            },
+            "Sneak": {
+
+            },
+            "Speech": {
+
+            },
+            "Survival": {
+
+            },
+            "Throwing": {
+
+            },
+            "Unarmed": {
+
+            }
+            
+        },
+        "higherLevel": [
+            [100, 1],
+            [250, 1],
+            [450, 1],
+            [700, 2],
+            [1000, 2],
+            [1350, 2],
+            [1750, 2],
+            [2200, 3],
+            [2700, 3],
+            [3250, 3],
+            [3850, 3],
+            [4500, 4],
+            [5200, 4],
+            [5950, 4],
+            [6750, 4],
+            [7600, 5],
+            [8500, 5],
+            [9450, 5],
+            [10450, 5],
+            ["10450 + (level * 50)", "Any"]
+        ]
+    },
+    "perks": {
+        "Action Boy/Girl": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": null
+            },
+            "description": "When you spend AP to take an additional major action, you do not suffer the increased skill test difficulty during your second action"
+        },
+        "Adamantium Skeleton": {
+            "ranks": 3,
+            "requirements": {
+                "levels": [1, 4, 7],
+                "attributes": {
+                    "END": 7
+                }
+            },
+            "description": "When you suffer damage, the amount of damage needed to inflict a critical hit on you increases by your rank in this perk. For example, if you have one rank in this perk, you suffer a critical hit from 6 or more damage, rather than 5 or more. Each time you take this perk, the level requirement increases by 3."
+        },
+        "Adrenalin Rush": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "STR": 7
+                }
+            },
+            "description": "When your health is below its maximum value, you count your STR score as 10 for all purposes when attempting a STR-based skill test or melee attack."
+        },
+        "Animal Friend": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [1, 6],
+                "attributes": {
+                    "CHA": 6
+                }
+            },
+            "description": "At rank 1, whenever a creature NPC with the Mammal, Lizard, or Insect keyword would attack you, roll 1 CD: on any result other than an Effect, the creature chooses not to attack you, although it may still attack another character it can target. At rank 2, you can attempt a CHA + Survival test with a difficulty of 2 as a major action. If you succeed, the animal treats you as friendly and will attack anyone who attacks you. Mighty and Legendary animals are unaffected by this perk. Each time you take this perk, the level requirement increases by 5."
+        },
+        "Aquaboy/Aquagirl": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [1, 4],
+                "attributes": {
+                    "END": 5
+                }
+            },
+            "description": "Water is your ally. At rank 1, you no longer take radiation damage from swimming in irradiated water, and you can hold your breath for twice as long as normal. At rank 2, enemies add +2 to the difficulty to tests to detect you while you are submerged underwater. Each time you take this perk, the level requirement increases by 3."
+        },
+        "Armorer": {
+            "ranks": 4,
+            "requirements": {
+                "levels": [0, 4, 8, 12],
+                "attributes": {
+                    "STR": 5,
+                    "INT": 6
+                }
+            },
+            "description": "You can modify armor with armor mods. Each rank in this perk unlocks an additional rank of mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Awareness": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 7
+                }
+            },
+            "description": "When you take the Aim minor action at a target within Close range, you spot their weaknesses and can attack more efficiently. The next attack you make against that target gains the Piercing 1 damage effect, or improves the rating of any existing Piercing X damage effect by 1."
+        },
+        "Barbarian": {
+            "ranks": 1,
+            "requirements": {
+                "levels": 4,
+                "attributes": {
+                    "STR": 7
+                },
+                "isRobot": false
+            },
+            "description": "Your physical Damage Resistance increases on all hit locations based on your STR. You do not gain this benefit while wearing Power Armor. STR 7-8: +1 physical DR; STR 9-10: +2 physical DR; STR 11+: +3 physical DR."
+        },
+        "Basher": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "STR": 6
+                }
+            },
+            "description": "When you make a melee attack by bashing with your gun (see p.111), your attack gains the Vicious damage effect."
+        },
+        "Better Criticals": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "LCK": 9
+                }
+            },
+            "description": "When you inflict one or more points of damage to an enemy, you may spend 1 Luck Point to automatically inflict a critical hit, causing an injury."
+        },
+        "Big Leagues": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "STR": 8
+                }
+            },
+            "description": "When you make a melee attack with a two-handed melee weapon, the weapon gains the Vicious damage effect."
+        },
+        "Black Widow/Lady Killer": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "CHA": 6
+                }
+            },
+            "description": "The Black Widow perk affects men and masculine characters, while the Lady Killer perk affects women and feminine characters—they are otherwise identical. When you attempt a CHA based skill test to influence a character of the chosen gender, you may re-roll 1d20. In addition, your attacks inflict +1 CD additional damage against characters of the chosen gender."
+        },
+        "Blacksmith": {
+            "ranks": 3,
+            "requirements": {
+                "levels": [2, 6, 10],
+                "attributes": {
+                    "STR": 6
+                }
+            },
+            "description": "You can modify melee weapons with weapon mods. Each rank in this perk unlocks an additional rank of melee weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, and rank 3 unlocks rank 3 mods. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Blitz": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [1, 4],
+                "attributes": {
+                    "AGI": 9
+                }
+            },
+            "description": "When you move into reach of an opponent and make a melee attack against them in one turn, you may re-roll one d20 on your attack. At rank 2, you also inflict +1 CD damage with that attack. Each time you take this perk, the level requirement increases by 3."
+        },
+        "Bloody Mess": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "LCK": 6
+                }
+            },
+            "description": "When you inflict a critical hit, roll 1 CD; if you roll an Effect, you inflict one additional injury to a random location."
+        },
+        "Can Do!": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "LCK": 5
+                }
+            },
+            "description": "When you are scavenging a location that contains food, you gain 1 additional random food item, without spending AP."
+        },
+        "Cap Collector": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "CHA": 5
+                }
+            },
+            "description": "When you buy or sell items, you may increase or decrease the price of the goods being traded by 10%."
+        },
+        "Cautious Nature": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 7
+                }
+            },
+            "description": "Whenever you attempt a skill test, and you buy one or more d20s by spending Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Daring Nature."
+        },
+        "Center Mass": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "AGI": 7
+                }
+            },
+            "description": "When you make a ranged attack, you may choose to strike your target’s Torso location (or equivalent, for creatures that use a different location table) without increasing the difficulty of the attack. In addition, you may re-roll 1d20 when making the test for your attack."
+        },
+        "Chem Resistant": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [1, 5],
+                "attributes": {
+                    "END": 7
+                }
+            },
+            "description": "At rank 1, roll one fewer CD when determining if you become addicted to chems, to a minimum of 0. At rank 2, you cannot become addicted to chems. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Chemist": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "INT": 7
+                }
+            },
+            "description": "Chems you create last twice as long as normal (see p.164). In addition, you unlock chems recipes that have this perk as a requirement."
+        },
+        "Commando": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [2, 5],
+                "attributes": {
+                    "AGI": 8
+                }
+            },
+            "description": "When you make a ranged attack with any weapon with a Fire Rate of 3 or higher (except heavy weapons), you add +1 CD per rank to the weapon’s damage. Each time you take this perk, the level requirement increases by 3."
+        },
+        "Comprehension": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "INT": 6
+                }
+            },
+            "description": "After you use the bonus gained from reading a magazine, roll 1 CD. If you roll an Effect, you may use that bonus one additional time."
+        },
+        "Concentrated Fire": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 8,
+                    "AGI": 6
+                }
+            },
+            "description": "When you make a ranged attack and spend ammunition to increase the damage, you may re-roll up to 3 CD for your damage roll."
+        },
+        "Daring Nature": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "LCK": 7
+                }
+            },
+            "description": "Whenever you attempt a skill test, and you buy one or more d20s by giving the gamemaster Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Cautious Nature."
+        },
+        "Demolition Expert": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 6,
+                    "LCK": 6
+                }
+            },
+            "description": "When you make an attack using a weapon with the Blast quality, the attack gains the Vicious damage effect. In addition, you unlock explosives recipes which have this perk as a requirement."
+        },
+        "Dodger": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [4, 10],
+                "attributes": {
+                    "AGI": 6
+                }
+            },
+            "description": "At rank 1, when you take the Defend major action, you reduce the difficulty of the skill test by 1. At rank 2, the AP cost to further increase your Defense is reduced to 1 AP. Each time you take this perk, the level requirement increases by 6."
+        },
+        "Dogmeat": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "CHA": 5
+                }
+            },
+            "description": "You aren’t alone in the wilderness. You have a pet dog that serves as a friend and ally in dangerous times. The dog has the profile shown to the side and is treated as an allied NPC creature under your command (see p.338). If you need to forage for food and water, your dog looks after themselves. If your dog is slain, then you either find a new dog before the next adventure, or you may trade this perk for a different one after this adventure."
+        },
+        "Entomologist": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "INT": 7
+                }
+            },
+            "description": "When you make an attack against an NPC with the Insect keyword, your attack gains the Piercing 1 damage effect, or improves the rating of any Piercing X effect the weapon has by +1."
+        },
+        "Fast Metabolism": {
+            "ranks": 3,
+            "requirements": {
+                "levels": [1, 4, 7],
+                "attributes": {
+                    "END": 6
+                },
+                "isRobot": false
+            },
+            "description": "When you regain one or more HP from any source other than rest, increase the total HP regained by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 3."
+        },
+        "Faster Healing": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "END": 6
+                },
+                "isRobot": false
+            },
+            "description": "When you make an END + Survival test to heal your own injuries, the first additional d20 you buy is free. The normal maximum of 5d20 still applies."
+        },
+        "Finesse": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "AGI": 9
+                }
+            },
+            "description": "Once per combat encounter, you may re-roll all the CD on a single damage roll without spending any Luck points."
+        },
+        "Fortune Finder": {
+            "ranks": 3,
+            "requirements": {
+                "levels": [2, 6, 10],
+                "attributes": {
+                    "LCK": 5
+                }
+            },
+            "description": "Whenever you roll to determine how much money you find, you find more. At rank 1, you find +3 CD additional caps. At rank 2, you find +6 CD  additional caps. At rank 3, you find +10 CD additional caps. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Ghost": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 5,
+                    "AGI": 6
+                }
+            },
+            "description": "Whenever you attempt an AGI + Sneak test in shadows or darkness, the first additional d20 you buy is free. The normal maximum of 5d20 still applies."
+        },
+        "Grim Reaper's Sprint": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "LCK": 8
+                }
+            },
+            "description": "When you make an attack which kills one or more enemies, roll 1 CD  . If you roll an Effect, add 2 AP to the group’s pool."
+        },
+        "Gun Fu": {
+            "ranks": 3,
+            "requirements": {
+                "levels": [1, 6, 11],
+                "attributes": {
+                    "AGI": 10
+                }
+            },
+            "description": "When you succeed at a ranged attack, you may spend 1 AP and 1 ammo to hit a second target within Close range of your initial target. The second target takes the same damage as the initial target. At rank 2, you may spend 2 AP and 2 ammo to hit two additional targets. At rank 3, you may spend 3 AP and 3 ammo to hit three additional targets. Each time you take this perk, the level requirement increases by 5."
+        },
+        "Gun Nut": {
+            "ranks": 4,
+            "requirements": {
+                "levels": [2, 6, 10, 14],
+                "attributes": {
+                    "INT": 6
+                }
+            },
+            "description": "You can modify small guns and heavy weapons with weapon mods. Each rank in this perk unlocks an additional rank of weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Gunslinger": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [2, 6],
+                "attributes": {
+                    "AGI": 7
+                }
+            },
+            "description": "When you make an attack with a onehanded ranged weapon with a Fire Rate of 2 or lower, you increase the weapon’s damage by +1 CD per rank. In addition, you may re-roll the hit location die. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Hacker": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "INT": 8
+                }
+            },
+            "description": "The difficulty of skill tests to hack computers is decreased by 1, to a minimum of 0."
+        },
+        "Healer": {
+            "ranks": 3,
+            "requirements": {
+                "levels": [1, 6, 11],
+                "attributes": {
+                    "INT": 7
+                }
+            },
+            "description": "When you heal a patient’s HP using the First Aid action, increase the amount of HP healed by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 5."
+        },
+        "Heave Ho!": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "STR": 8
+                }
+            },
+            "description": "When you make a thrown weapon attack, you may spend 1 AP to increase the Range of the weapon by one step—from Close to Medium, or from Medium to Long."
+        },
+        "Hunter": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "END": 6
+                }
+            },
+            "description": "When you make an attack against an NPC with one of the Mammal, Lizard, or Insect keywords and the Mutated keyword, your attack gains the Vicious damage effect, if it did not already have that effect."
+        },
+        "Infiltrator": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 8
+                }
+            },
+            "description": "When you attempt a Lockpick skill test to unlock a door or container, you may re-roll 1d20."
+        },
+        "Inspirational": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "CHA": 8
+                }
+            },
+            "description": "Because you lead by example, the maximum number of AP the group may save is increased by 1."
+        },
+        "Intense Training": {
+            "ranks": 10,
+            "requirements": {
+                "levels": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+                "attributes": null
+            },
+            "description": "Increase any one S.P.E.C.I.A.L attribute by 1 rank. As usual, your S.P.E.C.I.A.L attributes cannot be increased beyond 10 using this method. Each time you take this perk, the level requirement increases by 2."
+        },
+        "Iron Fist": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [1, 6],
+                "attributes": {
+                    "STR": 6
+                }
+            },
+            "description": "At rank 1, your unarmed attacks inflict +1 CD damage. At rank 2, your unarmed attacks also gain the Vicious damage effect. Each time you take this perk, the level requirement increases by 5."
+        },
+        "Junktown Jerky Vendor": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "CHA": 8
+                }
+            },
+            "description": "The difficulty of any CHA + Barter test you attempt to buy or sell goods is reduced by 1, to a minimum of 0."
+        },
+        "Jury Rigging": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": null
+            },
+            "description": "You can repair an item without needing to expend any components. However, the repair is temporary, and the item will break again on the next complication you suffer while using it. The complication range of all skill tests to use the item increases by 1, to the roll of a 19–20."
+        },
+        "Laser Commander": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [2, 6],
+                "attributes": {
+                    "PER": 8
+                }
+            },
+            "description": "When you make an attack with a ranged energy weapon, the damage is increased by +1 CD per rank in this perk. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Lead Belly": {
+            "ranks": 2,
+            "requirements": {
+                "levels": [1, 5],
+                "attributes": {
+                    "END": 6
+                }
+            },
+            "description": "At rank 1, you may re-roll the CD  to determine if you suffer radiation damage from irradiated food or drink. At rank 2, you are immune to radiation damage from consuming irradiated food or drink. Each time you take this perk, the level requirement increases by 4."
+        },
+        "Life Giver": {
+            "ranks": 5,
+            "requirements": {
+                "levels": [5, 10, 15, 20, 25],
+                "attributes": null
+            },
+            "description": "Increase your maximum health points by your Endurance rank. Each time you take this perk, the level requirement increases by 5."
+        },
+        "Light Step": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": null
+            },
+            "description": "When you roll to generate any complications on an Agility-based skill test, you may ignore one complication for every 1 AP spent. In addition, you may re-roll 1d20 on any AGI + Athletics test to avoid traps triggered by pressure plates or similar mechanisms."
+        },
+        "Master Thief": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 8,
+                    "AGI": 9
+                }
+            },
+            "description": "When you are attempting to pick a lock or pickpocket somebody, the difficulty of the opponent’s skill test to detect you increases by +1"
+        },
+        "Medic": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "INT": 8
+                }
+            },
+            "description": "When you use the First Aid action to try to treat an injury, you can re-roll 1d20."
+        },
+        "Meltdown": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "PER": 10
+                }
+            },
+            "description": "When you kill an enemy with an energy weapon, they explode. Roll a number of CD equal to half the weapon’s damage rating (round down). For each Effect rolled, one creature within Close range of the exploding enemy (starting with the closest) suffers energy damage equal to the total rolled on the CD."
+        },
+        "Mister Sandman": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "AGI": 9
+                }
+            },
+            "description": "When you make a sneak attack with a silenced or suppressed weapon, the damage is increased by +2 CD. You cannot gain this benefit while in Power Armor."
+        },
+        "Moving Target": {
+            "ranks": 1,
+            "requirements": {
+                "levels": null,
+                "attributes": {
+                    "AGI": 6
+                }
+            },
+            "description": "When you take the Sprint action, your Defense increases by +1 until the start of your next turn."
+        }
+    },
+    "equipment": {
+        "ammo": {
+            ".38": {
+                "quantity": [10, 5],
+                "weight": 0,
+                "cost": 1,
+                "rarity": 0,
+                "description": "Small-caliber pistol ammunition designed for double-action revolvers before the Great War. Abundant enough that it is the ammunition of choice for most makeshift firearms, and several more powerful weapons can be modified to accept a .38 cartridge, sacrificing stopping power for availability of ammunition."
+            },
+            "10mm": {
+                "quantity": "8 + 4CD",
+                "weight": 0,
+                "cost": 2,
+                "rarity": 0,
+                "description": "One of the most common types of pistol round found in the wastelands, manufactured in vast quantities before the Great War to accompany the large numbers of 10mm pistols they were producing as sidearms for soldiers, and as personal defense weapons for civilians."
+            },
+            ".308": {
+                "quantity": "6 + 3CD",
+                "weight": 0,
+                "cost": 3,
+                "rarity": 1,
+                "description":  "A high-powered rifle round normally used in hunting rifles and some bolt-action pipe rifles. They’re a com- mon enough sight in the wastelands that a weapon using .308 rounds is unlikely to run out of ammuni- tion too often."
+            },
+            "Flare": {
+                "quantity": "2 + 1CD",
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Shotgun Shell": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            ".45": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Flamer Fuel": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Fusion Cell": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Gamma Round": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Railway Spike": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Syringer Ammo": {
+                "quantity": "will have nested table for dif types",
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            ".44 Magnum": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            ".50": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "5.56mm": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "5mm": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Fusion Core": {
+                "quantity": "1",
+                "weight": "4",
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Missile": {
+                "quantity": ,
+                "weight": "7",
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Plasma Cartridge": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "2mm EC": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Mini-Nuke": {
+                "quantity": ,
+                "weight": "12",
+                "cost": ,
+                "rarity": ,
+                "description": 
+            }
+        },
+        "smallGuns": {
+            ".44 Pistol": {
+                "ammo": ".44 Magnum",
+                "damage": 6,
+                "effects": [
+                    "Vicious"
+                ],
+                "damageType": "Physical",
+                "fireRate": 1,
+                "range": "C",
+                "qualities": [
+                    "Close Quarters"
+                ],
+                "weight": 4,
+                "cost": 99,
+                "rarity": 2,
+                "mods": {
+                    "receiver": [
+                        "Omit empty lists? probably"
+                    ],
+                    "barrel": [
+
+                    ],
+                    "grip": [
+
+                    ],
+                    "sights": [
+
+                    ]
+                }
+            },
+            "10mm Pistol": {
+                "ammo": "10mm",
+                "damage": 4,
+                "effects": [],
+                "damageType": "Physical",
+                "fireRate": 2,
+                "range": "C",
+                "qualities": [
+                    "Close Quarters",
+                    "Reliable"
+                ],
+                "weight": 4,
+                "cost": 50,
+                "rarity": 1,
+                "mods": {
+                    "receiver": [
+                        "Calibrated", "Hardened", "Automatic", "Hair Trigger", "Powerful", "Advanced"
+                    ],
+                    "barrel": [
+                        "Long Barrel", "Ported Barrel"
+                    ],
+                    "grip": [
+                        "Comfort Grip", "Sharpshooter's Grip"
+                    ],
+                    "sights": [
+                        "Reflex Sight", "Recon Scope"
+                    ],
+                    "Muzzle": [
+                        "Compensator", "Suppressor"
+                    ]
+                }
+            },
+            "Flare Gun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Assault Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Combat Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Gauss Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Hunting Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Submachine Gun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Combat Shotgun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Double-Barrel Shotgun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Pipe Bolt-Action": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Pipe Gun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Pipe Revolver": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Railway Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Syringer": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "mods": {
+
+            }
+        },
+        "energyWeapons": {
+            "mods": {
+                
+            }
+        },
+        "bigGuns": {
+
+        },
+        "meleeWeapons": {
+
+        },
+        "throwingWeapons": {
+
+        },
+        "explosives": {
+
+        },
+        "apparel": {
+            "clothing": {
+
+            },
+            "outfits": {
+
+            },
+            "headgear": {
+
+            },
+            "mods": {
+
+            }
+        },
+        "armor": {
+            "raider": {
+                "mods": {
+
+                }
+            },
+            "leather": {
+                "mods": {
+                    
+                    }
+            },
+            "metal": {
+                "mods": {
+                    
+                    }
+            },
+            "combat": {
+                "mods": {
+                    
+                    }
+            },
+            "synth": {
+                "mods": {
+                    
+                    }
+            },
+            "vaultTec": {
+
+            },
+            "mods": {
+
+            }
+        },
+        "powerArmor": {
+            "mods": {
+
+            }
+        },
+        "robotArmor": {
+
+        },
+        "consumables": {
+            "food": {
+
+            },
+            "drinks": {
+
+            },
+            "chems": {
+
+            },
+            "other": {
+                
+            }
+        },
+        "booksAndMags": {
+
+        },
+        "misc": {
+            "utlity": {
+
+            },
+            "robotMods": {
+                
+            }
+        }
+    }
+}
