@@ -39,7 +39,7 @@ const Register: Component<RouteSectionProps> = (props) => {
                            placeholder="Password"/>
                 </div>
 
-                <div class={"w-full flex justify-end"}>
+                <div class={"w-full flex gap-x-1 justify-end"}>
                     <A class={styles.button} href="/">Cancel</A>
                     <button class={styles.button} type="submit">Submit</button>
                 </div>
