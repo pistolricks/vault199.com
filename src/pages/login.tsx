@@ -10,10 +10,6 @@ const Login: Component<RouteSectionProps> = (props) => {
     const submission = useSubmission(loginUserHandler);
 
 
-    const errors = createMemo(() => {
-        return submission?.error
-    })
-
     const results = createMemo(() => {
         return submission?.result
     })

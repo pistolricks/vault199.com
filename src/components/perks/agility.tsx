@@ -1,4 +1,5 @@
 import {Component} from "solid-js";
+import styles from "~/components/perks/style.module.css";
 
 type PROPS = {
 
@@ -8,18 +9,12 @@ const Agility: Component<PROPS> = props => {
 
     return (
         <div>
-            <header class="header">
-                <img src="/src/static/perks/images/ui/logo.png" alt={"logo"}/>
-            </header>
-
-            <a class="back" href="index.html">Categories</a>
-
-            <div class="cardContainer">
-                <div class="cardItem button">
-                    <div class="closeContainer">
-                        <button class="close">x</button>
+            <div class={styles["cardContainer"]}>
+                <div class={`${styles["cardItem"]} ${styles["button"]}`}>
+                    <div class={styles["closeContainer"]}>
+                        <button class={styles["close"]}>x</button>
                     </div>
-                    <img src="/src/static/perks/images/ui/dodger.webp"/>
+                    <img src="/src/static/perks/images/ui/dodger.webp" alt={""}/>
                     <p>Dodger</p>
                     <ul>
                         <li class="perk-description">Reduce difficulty of Defend major action by 1</li>
@@ -31,11 +26,11 @@ const Agility: Component<PROPS> = props => {
                     </ul>
                 </div>
 
-                <div class="cardItem button">
-                    <div class="closeContainer">
-                        <button class="close">x</button>
+                <div class={`${styles["cardItem"]} ${styles["button"]}`}>
+                    <div class={styles["closeContainer"]}>
+                        <button class={styles["close"]}>x</button>
                     </div>
-                    <img src="/src/static/perks/images/ui/moving-target.webp"/>
+                    <img src="/src/static/perks/images/ui/moving-target.webp" alt={""}/>
                     <p>Moving Target</p>
                     <ul>
                         <li class="perk-description">When sprinting, Defense increase +1 until next turn</li>
@@ -45,11 +40,11 @@ const Agility: Component<PROPS> = props => {
                     </ul>
                 </div>
 
-                <div class="cardItem button">
-                    <div class="closeContainer">
-                        <button class="close">x</button>
+                <div class={`${styles["cardItem"]} ${styles["button"]}`}>
+                    <div class={styles["closeContainer"]}>
+                        <button class={styles["close"]}>x</button>
                     </div>
-                    <img src="/src/static/perks/images/ui/quick-hands.webp"/>
+                    <img src="/src/static/perks/images/ui/quick-hands.webp" alt={""}/>
                     <p>Quick Draw</p>
                     <ul>
                         <li class="perk-description">Draw an item or weapon for free</li>
@@ -59,11 +54,11 @@ const Agility: Component<PROPS> = props => {
                     </ul>
                 </div>
 
-                <div class="cardItem button">
-                    <div class="closeContainer">
-                        <button class="close">x</button>
+                <div class={`${styles["cardItem"]} ${styles["button"]}`}>
+                    <div class={styles["closeContainer"]}>
+                        <button class={styles["close"]}>x</button>
                     </div>
-                    <img src="/src/static/perks/images/ui/center-of-mass.webp"/>
+                    <img src="/src/static/perks/images/ui/center-of-mass.webp" alt={""}/>
                     <p>Center of Mass</p>
                     <ul>
                         <li class="perk-description">Choose to aim at the torso of an enemy without an increase in
@@ -75,33 +70,17 @@ const Agility: Component<PROPS> = props => {
                     </ul>
                 </div>
 
-                <div class="cardItem button">
-                    <div class="closeContainer">
-                        <button class="close">x</button>
+                <div class={`${styles["cardItem"]} ${styles["button"]}`}>
+                    <div class={styles["closeContainer"]}>
+                        <button class={styles["close"]}>x</button>
                     </div>
-                    <img src="/src/static/perks/images/ui/rifleman.webp"/>
+                    <img src="/src/static/perks/images/ui/rifleman.webp" alt={""}/>
                     <p>Rifleman</p>
                     <ul>
                         <li class="perk-description"> Increased damage for non-heavy twohanded weapons</li>
                         <li class="levelReq">Level Req: None</li>
                         <li>Other Req: <span class="perkGlow">Agility 7</span></li>
                         <li>Ranks: 3</li>
-                    </ul>
-                </div>
-
-                <div class="cardItem button">
-                    <div class="closeContainer">
-                        <button class="close">x</button>
-                    </div>
-                    <img src="/src/static/perks/images/ui/dodger.webp"/>
-                    <p>Dodger</p>
-                    <ul>
-                        <li class="perk-description">Reduce difficulty of Defend major action by 1</li>
-                        <li class="levelReq">Level Req:</li>
-                        <li><span class="levelGlow">Level 4 (rank 1)</span></li>
-                        <li><span class="levelGlow">Level 10 (rank 2)</span></li>
-                        <li>Other Req: <span class="perkGlow">Agility 6</span></li>
-                        <li>Ranks: 2</li>
                     </ul>
                 </div>
 
