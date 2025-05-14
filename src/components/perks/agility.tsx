@@ -14,7 +14,7 @@ const Agility: Component<PROPS> = props => {
                     <div class={styles["closeContainer"]}>
                         <button class={styles["close"]}>x</button>
                     </div>
-                    <img src="/src/static/perks/images/ui/dodger.webp" alt={""}/>
+                    <img class={""} src="/src/static/perks/images/ui/dodger.webp" alt={""}/>
                     <p>Dodger</p>
                     <ul>
                         <li class="perk-description">Reduce difficulty of Defend major action by 1</li>

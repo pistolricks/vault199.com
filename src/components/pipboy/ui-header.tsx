@@ -1,21 +1,21 @@
 import {Component} from "solid-js";
-
+import styles from "./css/layout/header.module.css"
 type PROPS = {}
 
 const UiHeader: Component<PROPS> = props => {
 
     return (
-        <header class="header">
+        <header class={styles.header}>
             <div>
-                <ul class="tabs">
-                    <li class="tab-active"><a href="#stat-status-section">STAT</a></li>
+                <ul class={styles.tabs}>
+                    <li class={styles["tab-active"]}><a href="#stat-status-section">STAT</a></li>
                     <li><a href="#exp-jobs-section">EXP</a></li>
                     <li><a href="#data-section">DATA</a></li>
                     <li><a href="#map-section">MAP</a></li>
                     <li><a href="#color-section">COLOR</a></li>
                 </ul>
             </div>
-            <div class="header-lines">
+            <div class={styles["header-lines"]}>
                 <img id="header-line-before" src="img/header_line_before.png" alt="graphical stuff"/>
                 <img id="header-line-after" src="img/header_line_after.png" alt="graphical stuff"/>
             </div>
