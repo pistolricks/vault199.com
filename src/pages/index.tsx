@@ -8,7 +8,6 @@ import {TypingAnimationComponent} from "~/components/ui/text/typing-animation";
 
 import {ProgressComponent} from "~/components/ui/progress";
 import {classNames} from "~/components/navigation";
-import RetroGridComponent, {RetroGrid} from "~/components/ui/retro-grid";
 import AnimatedBeamComponent from "~/components/ui/animated-beam";
 
 
