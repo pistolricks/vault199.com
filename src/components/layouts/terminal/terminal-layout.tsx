@@ -32,12 +32,9 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
                         <TerminalHeader {...props}/>
                         <TerminalNavigation {...props}/>
 
-
                         {props.children}
 
-
                     </Show>
-                    <AiCompanion name={"mrshandy"}/>
                 </div>
             </div>
         </div>
