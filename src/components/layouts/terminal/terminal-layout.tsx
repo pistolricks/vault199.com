@@ -39,7 +39,7 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
 
 
                     </Show>
-                    <AiCompanion/>
+                    <AiCompanion name={"mrhandy"}/>
                 </div>
             </div>
         </div>

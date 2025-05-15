@@ -10,11 +10,15 @@ interface ChatItem {
     isMe?: boolean;
 }
 
-const AiCompanion: Component<{}> = (props) => {
+const AiCompanion: Component<{
+    name: string;
+}> = (props) => {
     let outputDivRef: HTMLDivElement | undefined;
     let chatHistoryRef: HTMLDivElement | undefined;
     let videoRef: HTMLVideoElement | undefined;
     let audioPlayerRef: HTMLAudioElement | undefined; // For playing received audio chunks
+
+    const name = () => props.name;
 
     const [outputText, setOutputText] = createSignal<string[]>([]);
     const [chatHistory, setChatHistory] = createSignal<ChatItem[]>([]);
@@ -103,6 +107,7 @@ const AiCompanion: Component<{}> = (props) => {
             turns: [{parts: [{text: msg}]}]
         }
     });
+
     const createImageContent = (msg: string) => JSON.stringify({media: {data: msg, mimeType: 'image/jpeg'}}); // Assuming jpeg, adjust if other types are used
     const createAudioContent = (msg: string) => JSON.stringify({media: {data: msg, mimeType: 'audio/pcm'}});
 
@@ -165,15 +170,15 @@ const AiCompanion: Component<{}> = (props) => {
 
     onMount(() => {
         // WebSocket URL - replace with your actual WebSocket endpoint
-        const wsUrl = 'ws://localhost:8080/live'; // Placeholder, adjust as needed
+        const wsUrl = `ws://localhost:${import.meta.env.VITE_AI_PORT}/${import.meta.env.VITE_AI_PATH}${name()}`; // Placeholder, adjust as needed
 
         const openWs = () => {
             if (ws) return;
             ws = new WebSocket(wsUrl); // Original code used '{{.}}' which is a template placeholder
 
-            ws.onopen = () => printToOutput('OPEN');
+            ws.onopen = () => printToOutput('SIGNAL');
             ws.onclose = () => {
-                printToOutput('CLOSE');
+                printToOutput('NO SIGNAL');
                 ws = null;
             };
             ws.onmessage = (evt) => {
@@ -309,11 +314,11 @@ const AiCompanion: Component<{}> = (props) => {
                     {isRecording() ? 'Online' : 'Offline'}
                 </button>
             </div>
-            <ul>
-                {/*
-                <li style={{width: '30%'}}>
+
+            <div class={"relative flex justify-start items-center"}>
+                <div style={{width: '30%'}}>
                     <div ref={outputDivRef} style={{
-                        'max-height': '40vh',
+                        'max-height': '15vh',
                         'overflow-y': 'scroll',
                         'border': '1px solid #ccc',
                         padding: '8px'
@@ -322,11 +327,8 @@ const AiCompanion: Component<{}> = (props) => {
                             {(msg, i) => <div class="output-message">[{i()}] {msg}</div>}
                         </For>
                     </div>
-                </li>
-
-                <li style={{width: '50%'}}>
-                    <div ref={chatHistoryRef} class='audio-history'
-                         style={{'max-height': '80vh', 'overflow-y': 'scroll'}}>
+                    <div ref={chatHistoryRef} class='absolute top-0 left-0 audio-history hidden'
+                         style={{'max-height': '15vh', 'overflow-y': 'scroll'}}>
                         <For each={chatHistory()}>
                             {(item) => (
                                 <div classList={{
@@ -350,9 +352,8 @@ const AiCompanion: Component<{}> = (props) => {
                             )}
                         </For>
                     </div>
-                </li>
-*/}
-            </ul>
+                </div>
+            </div>
         </>
     );
 }
