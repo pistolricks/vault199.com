@@ -26,8 +26,6 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
 
                                 <img src={PleaseStandBy} class="absolute inset-0 w-full h-full object-cover"
                                      alt="Please stand by"/>
-
-
                             </div>
                         }
                         when={!isRouting()}>
@@ -39,7 +37,7 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
 
 
                     </Show>
-                    <AiCompanion name={"mrhandy"}/>
+                    <AiCompanion name={"mrshandy"}/>
                 </div>
             </div>
         </div>
