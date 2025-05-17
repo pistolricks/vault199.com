@@ -3,6 +3,7 @@ import { A, useLocation } from '@solidjs/router';
 
 import BaseDock from "~/components/base-dock";
 import Cookies from "cookies-ts";
+import AiCompanion from "~/components/ai-companion";
 const cookies = new Cookies()
 
 export const currentUser = () => {
@@ -43,7 +44,6 @@ const App: Component = (props: { children: Element }) => {
           <main class={'scrollbar-hide'}>
             <Suspense>{props.children}</Suspense>
           </main>
-          
       </div>
 
 
