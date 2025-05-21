@@ -26,12 +26,20 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
                     <Logout token={token()}/>
                 </div>
             </Show>
-            <div class="sm:hidden flex justify-center items-center">
-                <img src={Logo} alt="Vault-Tec" width="740" height="729" class={styles["logo-v"]}/>
+            <div class="sm:hidden flex justify-center items-start">
+                <img src={Logo} alt="Vault-Tec"  class={"object-contain max-w-[150px]"}/>
             </div>
-            <div class="hidden sm:block">
+            <div class="hidden sm:flex justify-start items-start gap-2">
                 <div class={styles["col-one"]}>
-                    <img src={Logo} alt="Vault-Tec" width="740" height="729" class={styles["logo-v"]}/>
+                    <img src={Logo} alt="Vault-Tec"  class={"object-contain w-[200px] sm:w-[220px] md:w-[250px] lg:w-[300px]"}/>
+                </div>
+                <div class={"leading-6"}>
+                    <div class={"px-2"}>
+                        <h4 class={"leading-none"}>ROBCO INDUSTRIES (tm) <br/> <b>U</b>nified <b>O</b>perating <b>S</b>ystem</h4>
+                        <p>---------------------</p>
+                        <p class={"leading-none text-sm"}>v 1.0.0</p>
+                        <p class={"text-sm"}>(c)2075 - 2077 ROBCO INDUSTRIES</p>
+                    </div>
                 </div>
             </div>
 

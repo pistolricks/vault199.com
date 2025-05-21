@@ -37,9 +37,16 @@ export async function updateSessionUser(user: USER, authentication_token: AUTHEN
     }
 
     try {
-        cookies.set('user', update_user);
-        cookies.set('token', authentication_token.token);
-        console.log(cookies.get('user'))
+        cookies.set('id', update_user.id);
+        cookies.set('name', update_user.name);
+        cookies.set('username', update_user.username);
+        cookies.set('email', update_user.email);
+        cookies.set('bio', update_user.bio);
+        cookies.set('created_at', update_user.created_at);
+        cookies.set('updated_at', update_user.updated_at);
+        cookies.set('token', update_user.token);
+
+
 
     } catch (err) {
         return err as Error;
@@ -61,8 +68,15 @@ export async function getSessionToken(): Promise<string | undefined> {
 
 export async function clearSessionUser() {
     try {
-        cookies.remove('user');
+        cookies.remove('id');
+        cookies.remove('name');
+        cookies.remove('username');
+        cookies.remove('email');
+        cookies.remove('bio');
+        cookies.remove('created_at');
+        cookies.remove('updated_at');
         cookies.remove('token');
+
 
     } catch (err) {
         return err as Error;

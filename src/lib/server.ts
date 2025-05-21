@@ -2,6 +2,7 @@ import {db} from "./db";
 import {clearSessionUser, getSessionToken, updateSessionUser} from "~/lib/session";
 import {query, redirect} from "@solidjs/router";
 import {AUTHENTICATION_TOKEN} from "~/lib/index";
+import { cookies } from "~/app";
 
 export const baseApi = (`http://localhost:${import.meta.env.VITE_SERVER_PORT}/api/${import.meta.env.VITE_API_VERSION}`)
 
@@ -26,8 +27,9 @@ export async function resendActivateEmail(resendInput: { email: string }) {
 
 export async function login(userInput: { username: string, password: string }) {
     const res = await db.user.login({where: {userInput}});
+    console.log('login-res', res)
     await updateSessionUser(res.user, res.auth_token)
-    console.log("auth_token", res.auth_token)
+    console.log("cookies.auth_token", cookies.get('token'))
 
    throw redirect("/");
 

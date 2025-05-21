@@ -14,9 +14,6 @@ import AnimatedBeamComponent from "~/components/ui/animated-beam";
 const Home: Component<RouteSectionProps> = (props) => {
 
 
-    const username = currentUser()?.["username"];
-
-
     const [getValue, setValue] = createSignal(0);
     const [getShow, setShow] = createSignal(false);
     const [getShowUpdate, setShowUpdate] = createSignal(false);
@@ -55,15 +52,9 @@ const Home: Component<RouteSectionProps> = (props) => {
 
             <Show
                 fallback={
-                    <div class={"p-2"}>
-                        <h4>ROBCO INDUSTRIES (tm) <br/> <b>U</b>nified <b>O</b>perating <b>S</b>ystem</h4>
-                        <p>----------------------------------------</p>
-                        <p>v 1.0.0</p>
-                        <p>(c)2075 - 2077 ROBCO INDUSTRIES</p>
-                        <p>- Server 199 -</p>
-                    </div>
+                    <></>
                 }
-                when={currentUser()?.["token"]}>
+                when={currentUser()?.token()}>
                 <div class={"w-full flex justify-center items-center text-center"}>
                     <div class={"flex flex-col text-balance text-center w-full"}>
                         <div class={"flex justify-center items-center"}>
@@ -71,12 +62,12 @@ const Home: Component<RouteSectionProps> = (props) => {
                                 <TypingAnimationComponent text={"Welcome back,"} duration={50}/>
                             </Show>
                             <div class={"w-2"}/>
-                            <TypingAnimationComponent text={` ${username}`} duration={100}/>
+                            <TypingAnimationComponent text={` ${currentUser()?.username()}`} duration={100}/>
                         </div>
 
                         <Show when={getShow()}>
                             <Show when={getValue() < 100}>
-                                <TypingAnimationComponent text={`Please connect your Pipboy and click update`}
+                                <TypingAnimationComponent text={`Please update your Pipboy to the latest version.`}
                                                           class={"text-normal text-base"} duration={50}/>
                             </Show>
                         </Show>

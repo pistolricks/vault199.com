@@ -222,7 +222,7 @@ export default function AnimatedBeamComponent() {
 
 	return (
 		<div class="relative w-full mx-auto max-w-sm my-6" ref={containerRef}>
-			<div class="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
+			<div class="flex size-full flex-col max-w-lg max-h-[50dvh] items-stretch justify-between gap-10">
 				<div class="flex flex-row items-center justify-between">
 					<Circle ref={div1Ref}>
 

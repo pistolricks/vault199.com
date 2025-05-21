@@ -73,7 +73,3 @@ export const loginUserHandler = action(async (data: FormData) => {
     console.log(userInput)
     return await login(userInput)
 })
-
-export const logoutUserHandler = action(async () => {
-    return await logout()
-})
