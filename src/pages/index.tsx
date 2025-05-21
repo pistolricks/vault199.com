@@ -9,6 +9,7 @@ import {TypingAnimationComponent} from "~/components/ui/text/typing-animation";
 import {ProgressComponent} from "~/components/ui/progress";
 import {classNames} from "~/components/navigation";
 import AnimatedBeamComponent from "~/components/ui/animated-beam";
+import AiCompanion from "~/components/ai-companion";
 
 
 const Home: Component<RouteSectionProps> = (props) => {
@@ -107,6 +108,7 @@ const Home: Component<RouteSectionProps> = (props) => {
             </Show>
 
 
+            <AiCompanion name={"mrshandy"}/>
             <p class="clear"><br/></p>
 
 
