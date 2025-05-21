@@ -28,7 +28,7 @@ const Activate: Component<RouteSectionProps> = (props) => {
 
         console.log("activate-response", getResponse())
         if (getResponse()?.user?.activated) {
-            navigate("/login")
+            navigate("/")
 
 
         }

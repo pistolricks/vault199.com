@@ -31,6 +31,10 @@ const Register: Component<RouteSectionProps> = (props) => {
                     <input class={'px-1 bg-gray-300/20 w-full '} type="text" required name="lastName"
                            placeholder="Last Name"/>
                 </div>
+                <div class={"flex flex-col sm:justify-start w-full"}>
+                    <input class={'px-1 bg-gray-300/20 w-full'} type="text" required name="username"
+                           placeholder="Username"/>
+                </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
                     <input class="px-1 bg-gray-300/20 w-full" required type="email" name="email" placeholder="Email"/>
                 </div>

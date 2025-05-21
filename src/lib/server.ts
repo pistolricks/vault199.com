@@ -5,7 +5,7 @@ import {AUTHENTICATION_TOKEN} from "~/lib/index";
 
 export const baseApi = (`http://localhost:${import.meta.env.VITE_SERVER_PORT}/api/${import.meta.env.VITE_API_VERSION}`)
 
-export async function register(userInput: { name: string, email: string, password: string }) {
+export async function register(userInput: { name: string, username: string, email: string, password: string }) {
     const res = await db.user.register({where: {userInput}});
     console.log('register-res', res)
     return res;
@@ -24,19 +24,20 @@ export async function resendActivateEmail(resendInput: { email: string }) {
     else return res;
 }
 
-export async function login(userInput: { email: string, password: string }) {
+export async function login(userInput: { username: string, password: string }) {
     const res = await db.user.login({where: {userInput}});
-    await updateSessionUser(res.user, res.authentication_token, res.folder)
-    if (!res.user.activated) throw redirect("/activate");
-    if (res.user.activated) throw redirect("/");
-    else return res;
+    await updateSessionUser(res.user, res.auth_token)
+    console.log("auth_token", res.auth_token)
+
+   throw redirect("/");
+
 
 }
 
-export async function logout() {
+export async function logout(token: string) {
     await clearSessionUser();
-    // return await db.user.logout();
-    return true;
+    let res = await db.user.logout(token);
+    throw redirect("/login");
 
 }
 
@@ -46,7 +47,7 @@ export const getUserToken = query(async () => {
 }, 'token')
 
 
-export async function getUserDetails(userInput: { email: string, token: string }) {
+export async function getUserDetails(userInput: { username: string, token: string }) {
     const res = await db.user.findUser({where: {userInput}});
     console.log('details-res', res)
     return res;

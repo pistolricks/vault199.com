@@ -14,7 +14,7 @@ import AnimatedBeamComponent from "~/components/ui/animated-beam";
 const Home: Component<RouteSectionProps> = (props) => {
 
 
-    const user = currentUser()?.["name"];
+    const username = currentUser()?.["username"];
 
 
     const [getValue, setValue] = createSignal(0);
@@ -63,7 +63,7 @@ const Home: Component<RouteSectionProps> = (props) => {
                         <p>- Server 199 -</p>
                     </div>
                 }
-                when={currentUser()}>
+                when={currentUser()?.["token"]}>
                 <div class={"w-full flex justify-center items-center text-center"}>
                     <div class={"flex flex-col text-balance text-center w-full"}>
                         <div class={"flex justify-center items-center"}>
@@ -71,7 +71,7 @@ const Home: Component<RouteSectionProps> = (props) => {
                                 <TypingAnimationComponent text={"Welcome back,"} duration={50}/>
                             </Show>
                             <div class={"w-2"}/>
-                            <TypingAnimationComponent text={` ${user}`} duration={100}/>
+                            <TypingAnimationComponent text={` ${username}`} duration={100}/>
                         </div>
 
                         <Show when={getShow()}>

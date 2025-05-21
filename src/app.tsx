@@ -4,12 +4,15 @@ import { A, useLocation } from '@solidjs/router';
 import BaseDock from "~/components/base-dock";
 import Cookies from "cookies-ts";
 import AiCompanion from "~/components/ai-companion";
-const cookies = new Cookies()
+export const cookies = new Cookies()
+cookies.config({ expires: "30d" })
+
 
 export const currentUser = () => {
     const ck = cookies.get("user");
     const [getUser, setUser] = createSignal(ck)
     const user = createMemo(() => {
+        console.log("ck", ck)
         setUser(ck)
         return getUser();
     })
@@ -21,21 +24,6 @@ export const currentUser = () => {
 const App: Component = (props: { children: Element }) => {
   const location = useLocation();
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            const main = document.querySelector('main');
-
-            if (targetElement) {
-                main.scrollTo({
-                    top: targetElement.offsetTop - main.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
 
   return (
     <>

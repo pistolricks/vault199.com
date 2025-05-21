@@ -16,7 +16,7 @@ export const getUserDetailsHandler = action(async (data: FormData) => {
     if (!token) throw redirect("/")
 
     const userInput = {
-        email: String(data.get("email")),
+        username: String(data.get("username")),
         token: token.token,
     }
     let res = await getUserDetails(userInput)
@@ -28,6 +28,7 @@ export const getUserDetailsHandler = action(async (data: FormData) => {
 export const registerUserHandler = action(async (data: FormData) => {
     let fName = String(data.get("firstName"));
     let lName = String(data.get("lastName"));
+    let username = String(data.get("username"));
 
     let firstName = fName.toLowerCase();
     let lastName = lName.toLowerCase();
@@ -37,13 +38,15 @@ export const registerUserHandler = action(async (data: FormData) => {
 
     const userInput = {
         name: name,
+        username: username,
         email: email.toLowerCase(),
         password: String(data.get("password")),
     }
 
     let res = await register(userInput)
     console.log("registerUserHandler", res)
-    if (res.user?.id) throw redirect("/activate")
+    if(res.user?.id) throw redirect("/login")
+    // if (res.user?.id) throw redirect("/activate")
     else return res;
 })
 
@@ -63,7 +66,7 @@ export const resendActivateEmailHandler = action(async (data: FormData) => {
 
 export const loginUserHandler = action(async (data: FormData) => {
     const userInput = {
-        email: String(data.get("email")),
+        username: String(data.get("username")),
         password: String(data.get("password")),
     }
 

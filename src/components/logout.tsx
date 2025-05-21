@@ -1,14 +1,24 @@
 import {Component, createEffect, createMemo} from "solid-js";
-import {loginUserHandler, logoutUserHandler} from "~/lib/users";
-import {useNavigate, useSubmission} from "@solidjs/router";
-import styles from "~/components/layouts/terminal/style.module.css"
 
-type PROPS = {}
+import {action, redirect, useNavigate, useSubmission} from "@solidjs/router";
+import styles from "~/components/layouts/terminal/style.module.css"
+import {currentUser} from "~/app";
+import {logout} from "~/lib";
+
+type PROPS = {
+    token: string;
+}
 
 const Logout: Component<PROPS> = props => {
-    const submission = useSubmission(logoutUserHandler);
 
-    const navigate = useNavigate();
+    const handleLogout = action(async() => {
+        const token = props.token;
+        let res = await logout(token)
+
+
+    })
+
+    const submission = useSubmission(handleLogout);
 
     const errors = createMemo(() => {
         return submission.error
@@ -20,13 +30,10 @@ const Logout: Component<PROPS> = props => {
 
     createEffect(() => {
         console.log(results(), "results")
-        if (results() === true) {
-            navigate("/login")
-        }
     })
 
     return (
-        <form class={''} action={logoutUserHandler} method={'post'}>
+        <form class={''} action={handleLogout} method={'post'}>
             <button class={styles.button} type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5}
                      stroke="currentColor" class="size-6">
