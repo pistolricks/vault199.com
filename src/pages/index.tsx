@@ -50,9 +50,11 @@ const Home: Component<RouteSectionProps> = (props) => {
     createEffect(() => {
         console.log(getValue())
 
+        console.log(currentUser().name())
+
         console.log(cookies.get("active"))
 
-        if(currentUser().active() === true){
+        if(cookies.get("active") as unknown as boolean === true){
             navigate("/dashboard")
         }
 

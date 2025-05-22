@@ -1,15 +1,15 @@
 import {Dock, DockIcon} from "~/components/ui/dock";
 import {A} from "@solidjs/router";
 import home from "~/static/images/building.png"
+import Drawer from "@corvu/drawer";
 export default function BaseDock() {
     return (
-        <div class={"w-full flex justify-center items-center"}>
-            <Dock class="my-2 bg-gray-50">
-                <DockIcon>
-                    <A href={'/'}>
-                        <img src={home} class="text-gray-400 fill-gray-100 size-full" alt={"home"}/>
-                    </A>
-                </DockIcon>
+        <div class={"absolute bottom-2"}>
+            <Dock>
+            <Drawer.Trigger contextId={"activated-1"} class={"size-full aspect-square"}  as={DockIcon}>
+                    <img src={home} class="size-full aspect-square bg-black/10 dark:bg-white/40 rounded-full" alt={"home"}/>
+                </Drawer.Trigger>
+
             </Dock>
         </div>
     );

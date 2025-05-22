@@ -5,7 +5,10 @@ import {BaseNumberTicker} from "~/components/ui/number-ticker";
 import ProgressBar from "~/components/ui/progress";
 import {Dynamic} from "solid-js/web";
 import {PipBoyUpdating} from "~/components/pipboy/pipboy-updating";
-import {currentUser} from "~/app";
+import {cookies, currentUser} from "~/app";
+import SvgDraw from "~/components/ui/gsap/svg-draw";
+import FalloutNvSvg from "~/components/ui/svgs/fallout_nv_svg";
+import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
 
 
 const Updating: Component<RouteSectionProps & { path?: string }> = props => {
@@ -21,11 +24,15 @@ const Updating: Component<RouteSectionProps & { path?: string }> = props => {
     })
 
     return (
+
         <UpdatingLayout {...props}>
-            <Show when={!currentUser().active()}>
+
+            <Show when={!cookies.get("active") as unknown as boolean}>
                 <Dynamic component={PipBoyUpdating} path={"/dashboard"}/>
+
             </Show>
         </UpdatingLayout>
+
     );
 };
 
