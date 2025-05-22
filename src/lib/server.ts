@@ -12,6 +12,12 @@ export async function register(userInput: { name: string, username: string, emai
     return res;
 }
 
+export async function updateUser(userInput: { id: number, name: string, username: string, email: string, bio: string, active: boolean }) {
+    const res = await db.user.update({where: {userInput}});
+    console.log('register-res', res?.user)
+    return res?.user;
+}
+
 export async function activateUser(activateInput: { token: string }) {
     const res = await db.user.activate({where: {activateInput}});
     console.log('status', res.status)

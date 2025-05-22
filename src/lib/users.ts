@@ -1,6 +1,15 @@
 import {action, query, redirect} from "@solidjs/router";
-import {activateUser, getUserDetails, getUserToken, login, logout, register, resendActivateEmail,} from "~/lib/server";
-import {getSessionUser, SessionUser} from "~/lib/session";
+import {
+    activateUser,
+    getUserDetails,
+    getUserToken,
+    login,
+    logout,
+    register,
+    resendActivateEmail,
+    updateUser,
+} from "~/lib/server";
+import {getSessionUser, SessionUser, updateSessionUser} from "~/lib/session";
 import {capitalizeFirstLetter} from "~/lib/utils";
 
 export const getUser = query(async () => {
@@ -49,6 +58,34 @@ export const registerUserHandler = action(async (data: FormData) => {
     // if (res.user?.id) throw redirect("/activate")
     else return res;
 })
+
+export const updateUserHandler = async (data: FormData) => {
+    let id = Number(data.get("id"));
+    let name = String(data.get("name"));
+    let username = String(data.get("username"));
+    let email = String(data.get("email"));
+    let bio = String(data.get("bio")) ?? "";
+    let active = Boolean(data.get("active"));
+    let token = String(data.get("token"));
+
+    const userInput = {
+        id: id,
+        name: name,
+        username: username,
+        email: email.toLowerCase(),
+        bio: bio,
+        active: active,
+        token: token
+    }
+
+    let res = await updateUser(userInput)
+    console.log("updateUser", res)
+
+
+    // if (res.user?.id) throw redirect("/activate")
+    return res;
+}
+
 
 export const activateUserHandler = async (token: string) => {
     const activateInput = {

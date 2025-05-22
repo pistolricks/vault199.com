@@ -16,19 +16,7 @@ const UpdatingLayout: Component<RouteSectionProps> = props => {
                 <div class={styles["glare"]}></div>
 
 
-                <Show
-                    fallback={
-                        <div class={""}>
-
-
-                        </div>
-                    }
-                    when={!isRouting()}>
-
-
                     {props.children}
-
-                </Show>
 
 
             </div>

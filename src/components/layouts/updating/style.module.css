@@ -6,13 +6,9 @@
     font-size: 16px;
     width: 100vw;
     height: 100vh;
+    position: fixed;
 }
 
-pre {
-    margin: auto;
-    margin-top: 10vh;
-    display: table;
-}
 
 .glare {
     position: fixed;

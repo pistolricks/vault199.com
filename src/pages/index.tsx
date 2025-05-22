@@ -1,15 +1,17 @@
 import {Component, createEffect, createMemo, createSignal, onCleanup, onMount, Show} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
-import {RouteSectionProps, useNavigate} from "@solidjs/router";
+import {RouteSectionProps, useAction, useNavigate} from "@solidjs/router";
 import PleaseStandBy from "~/static/images/please-stand-by.jpg";
 import styles from "~/components/layouts/terminal/style.module.css"
-import {currentUser} from "~/app";
+import {cookies, currentUser} from "~/app";
 import {TypingAnimationComponent} from "~/components/ui/text/typing-animation";
 
 
 import {classNames} from "~/components/navigation";
 import {BaseNumberTicker} from "~/components/ui/number-ticker";
 import {BaseNoSignalScreen} from "~/components/ui/no-signal-screen";
+import UpdatingLayout from "~/components/layouts/updating/updating-layout";
+import {updateUserHandler} from "~/lib/users";
 
 
 
@@ -48,11 +50,34 @@ const Home: Component<RouteSectionProps> = (props) => {
     createEffect(() => {
         console.log(getValue())
 
+        console.log(cookies.get("active"))
+
+        if(currentUser().active() === true){
+            navigate("/dashboard")
+        }
+
         if(getValue() === 101){
             navigate("/updating")
         }
     })
 
+
+    const handleUpdatePipboy = async() => {
+         setOpen(() => true)
+        const formData = new FormData();
+         formData.append("id", currentUser().id())
+        formData.append("name", currentUser().name())
+        formData.append("username", currentUser().username())
+        formData.append("name", currentUser().name())
+        formData.append("bio", currentUser().bio())
+        formData.append("active", String(true))
+        formData.append("token", currentUser().token())
+
+        let res = await updateUserHandler(formData)
+
+
+        console.log(res)
+    }
 
     return (
         <TerminalLayout {...props} >
@@ -80,7 +105,10 @@ const Home: Component<RouteSectionProps> = (props) => {
                         </Show>
                         <div class={"h-10"}></div>
                         <Show when={getShowUpdate()}>
+
+
                             <button
+                                type={"button"}
                                 style={{
                                     'backdrop-filter': `brightness(${getValue()})`,
                                     'opacity': getValue() === 100 ? "0" : "1",
@@ -90,7 +118,7 @@ const Home: Component<RouteSectionProps> = (props) => {
                                     styles.button,
                                     "max-w-1/2 left-1/2 -translate-x-1/2",
                                     "animate-in fade-in duration-200 slide-in-from-bottom",
-                                )} onClick={() => setOpen(true)}>
+                                )} onClick={handleUpdatePipboy}>
                                 <Show
                                     fallback={
                                         <Show when={getValue() < 100}>
@@ -106,16 +134,9 @@ const Home: Component<RouteSectionProps> = (props) => {
                             </button>
 
                             <Show when={getValue() > 95}>
+                                <UpdatingLayout {...props} >
 
-                                <>
-
-                                </>
-
-                                {/*
-                                <div class={"flex justify-center items-center"}>
-                                    <AnimatedBeamComponent/>
-                                </div>
-                                */}
+                                </UpdatingLayout>
                             </Show>
                         </Show>
                     </div>

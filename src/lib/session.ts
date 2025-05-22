@@ -10,6 +10,7 @@ export type SessionUser = {
     username: string | undefined;
     email: string | undefined;
     bio: string | undefined;
+    active: boolean | undefined;
     created_at: string | undefined;
     updated_at: string | undefined;
     token: string | undefined;
@@ -20,31 +21,33 @@ export type SessionUser = {
 export function getSession() {
     "use server";
 
-    return cookies.get('user');
+    return {
+        id: cookies.get('id'),
+        name: cookies.get('name'),
+        username: cookies.get('username'),
+        email: cookies.get('email'),
+        bio: cookies.get('bio'),
+        active: cookies.get('active'),
+        created_at: cookies.get('created_at'),
+        updated_at: cookies.get('updated_at'),
+        token: cookies.get('token'),
+    };
 }
 
 export async function updateSessionUser(user: USER, authentication_token: AUTHENTICATION_TOKEN) {
     console.log('updateSessionUser', user, authentication_token)
-    const update_user = {
-        id: user?.id,
-        name: user?.username,
-        username: user?.username,
-        email: user?.email,
-        bio: user?.bio,
-        created_at: user?.created_at,
-        updated_at: user?.updated_at,
-        token: authentication_token.token,
-    }
+
 
     try {
-        cookies.set('id', update_user.id);
-        cookies.set('name', update_user.name);
-        cookies.set('username', update_user.username);
-        cookies.set('email', update_user.email);
-        cookies.set('bio', update_user.bio);
-        cookies.set('created_at', update_user.created_at);
-        cookies.set('updated_at', update_user.updated_at);
-        cookies.set('token', update_user.token);
+        cookies.set('id',  user?.id);
+        cookies.set('name',  user?.username);
+        cookies.set('username',  user?.username);
+        cookies.set('email',  user?.email);
+        cookies.set('bio',  user?.bio);
+        cookies.set('active',  user?.active);
+        cookies.set('created_at',  user?.created_at);
+        cookies.set('updated_at',  user?.updated_at);
+        cookies.set('token',  authentication_token.token);
 
 
 
@@ -52,12 +55,32 @@ export async function updateSessionUser(user: USER, authentication_token: AUTHEN
         return err as Error;
     }
 
-    return cookies.get('user');
+    return  {
+        id: cookies.get('id'),
+        name: cookies.get('name'),
+        username: cookies.get('username'),
+        email: cookies.get('email'),
+        bio: cookies.get('bio'),
+        active: cookies.get('active'),
+        created_at: cookies.get('created_at'),
+        updated_at: cookies.get('updated_at'),
+        token: cookies.get('token'),
+    };
 }
 
 
 export async function getSessionUser() {
-    return cookies.get('user');
+    return  {
+        id: cookies.get('id'),
+        name: cookies.get('name'),
+        username: cookies.get('username'),
+        email: cookies.get('email'),
+        bio: cookies.get('bio'),
+        active: cookies.get('active'),
+        created_at: cookies.get('created_at'),
+        updated_at: cookies.get('updated_at'),
+        token: cookies.get('token'),
+    };
 }
 
 export async function getSessionToken(): Promise<string | undefined> {
@@ -73,6 +96,7 @@ export async function clearSessionUser() {
         cookies.remove('username');
         cookies.remove('email');
         cookies.remove('bio');
+        cookies.remove('active');
         cookies.remove('created_at');
         cookies.remove('updated_at');
         cookies.remove('token');

@@ -13,6 +13,7 @@ export const currentUser = () => {
     const username = () => cookies.get('username');
     const email = () => cookies.get('email');
     const bio = () => cookies.get('bio');
+    const active = () => Boolean(cookies.get('active'));
     const created_at = () => cookies.get('created_at');
     const updated_at = () => cookies.get('updated_at');
     const token = () => cookies.get('token');
@@ -23,6 +24,7 @@ export const currentUser = () => {
         username,
         email,
         bio,
+        active,
         created_at,
         updated_at,
         token

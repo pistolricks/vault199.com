@@ -9,6 +9,7 @@ export type USER = {
     username: string;
     email: string;
     bio?: string;
+    active?: boolean;
     created_at: string;
     updated_at?: string;
     token: string;
@@ -20,6 +21,17 @@ const fetchRegister = async (userInput: { name: string, username: string, email:
             method: "POST",
             headers: {
                 "origin": import.meta.env.VITE_APP_URL,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userInput),
+        })
+    ).json()
+
+const fetchUserUpdate = async (userInput: { id: number, name: string, username: string, email: string, bio: string, active: boolean }) =>
+    (await fetch(`${baseApi}/users/${userInput.id}`, {
+            method: "PUT",
+            headers: {
+                Authorization: `Bearer ${cookies.get("token")}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(userInput),
@@ -75,6 +87,10 @@ export const db = {
         async register({where: {userInput}}: { where: { userInput: { name: string; username: string, email: string; password: string } }
         }) {
             return await fetchRegister(userInput);
+        },
+        async update({where: {userInput}}: { where: { userInput: { id: number, name: string; username: string, email: string; bio: string, active: boolean } }
+        }) {
+            return await fetchUserUpdate(userInput);
         },
         async activate({where: {activateInput}}: { where: { activateInput: { token: string }; } }) {
             return await fetchActivate(activateInput);

@@ -39,7 +39,7 @@ export default function ProgressBar(props: {value: number}) {
                 <label
                     id="p01f-label"
                     for="p01f"
-                    class="order-2 mb-0 text-center text-xs text-pink-500"
+                    class="order-2 mb-0 text-center text-xs text-green-500"
                 >
                     <span class="sr-only">uploading</span>
 
@@ -49,7 +49,7 @@ export default function ProgressBar(props: {value: number}) {
                     id="p01f"
                     max="100"
                     value={value()}
-                    class="block w-full min-w-[50dvh] overflow-hidden rounded bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-pink-500 [&::-moz-progress-bar]:bg-pink-500"
+                    class="block w-full min-w-[50dvh] overflow-hidden rounded bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-amber-500 [&::-moz-progress-bar]:bg-amber-500"
                 >
 
                 </progress>
