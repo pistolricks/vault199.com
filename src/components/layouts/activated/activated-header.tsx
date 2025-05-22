@@ -42,22 +42,7 @@ const ActivatedHeader: Component<RouteSectionProps> = props => {
                         </ul>
                         <div class="flex-1 gap-x-6 mr-2 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
 
-                            <Show
-                                fallback={
-                                <div class={"p-2"}>
-
-                                    <a href="javascript:void(0)" class="block text-gray-700 hover:text-gray-900">
-                                        Log in
-                                    </a>
-                                    <A activeClass={"selected"} href="/login" title="">LOGIN</A>
-
-                                </div>
-                            }
-                                when={cookies.get("token")}>
-                                <div class={"p-2"}>
-
-                                </div>
-                            </Show>
+                            <div></div>
 
                         </div>
                     </div>

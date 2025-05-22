@@ -35,7 +35,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 >
                     {children()}
                 </main>
-                <SvgDraw class={"bg-[#001423] absolute inset-0 top-11 w-screen  h-[92dvh]"}>
+                <SvgDraw class={"bg-[#001423] absolute inset-0 top-11 w-screen  h-[90dvh]"}>
                     <FalloutNvSvg/>
                 </SvgDraw>
             </div>

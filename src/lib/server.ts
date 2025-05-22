@@ -38,7 +38,7 @@ export async function login(userInput: { username: string, password: string }) {
     await updateSessionUser(res.user, res.auth_token)
     console.log("cookies.auth_token", cookies.get('token'))
 
-   throw redirect("/");
+   throw redirect("/dashboard");
 
 
 }
