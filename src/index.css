@@ -164,3 +164,14 @@ div.retro-container {
 .grid {
   animation: grid 15s linear infinite;
 }
+
+@keyframes blink {
+  0% {opacity: 0}
+  30% {opacity: 1}
+  70% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.blink {
+  animation: blink 0.4s linear infinite;
+}

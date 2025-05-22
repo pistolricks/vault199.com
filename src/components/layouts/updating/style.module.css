@@ -1,0 +1,55 @@
+.background {
+    background: hsl(157, 58%, 17%);
+    color: hsl(154 84% 70%);
+    text-shadow: 0 0 4px hsl(154 84% 70%);
+    font-family: monospace;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+}
+
+pre {
+    margin: auto;
+    margin-top: 10vh;
+    display: table;
+}
+
+.glare {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* ensure the effect doesn't cover the text */
+    background: radial-gradient(hsl(154 5% 15%) 0%, hsl(154 50% 5%) 70%);
+}
+
+@keyframes lines {
+    0% {background-position: 0px 0px}
+    50% {background-position: 0px 0px}
+    51% {background-position: 0px 2px}
+    100% {background-position: 0px 2px}
+}
+
+.interlaced {
+    position: fixed;
+    background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.3) 3px 4px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    animation: lines 0.06666666s linear infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 0}
+    30% {opacity: 1}
+    70% {opacity: 1}
+    100% {opacity: 0}
+}
+
+.blink {
+    animation: blink 0.4s linear infinite;
+}

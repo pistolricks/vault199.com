@@ -1,19 +1,21 @@
 import {Component, createEffect, createMemo, createSignal, onCleanup, onMount, Show} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
-import {RouteSectionProps} from "@solidjs/router";
+import {RouteSectionProps, useNavigate} from "@solidjs/router";
 import PleaseStandBy from "~/static/images/please-stand-by.jpg";
 import styles from "~/components/layouts/terminal/style.module.css"
 import {currentUser} from "~/app";
 import {TypingAnimationComponent} from "~/components/ui/text/typing-animation";
 
-import {ProgressComponent} from "~/components/ui/progress";
+
 import {classNames} from "~/components/navigation";
-import AnimatedBeamComponent from "~/components/ui/animated-beam";
-import AiCompanion from "~/components/ai-companion";
+import {BaseNumberTicker} from "~/components/ui/number-ticker";
+import {BaseNoSignalScreen} from "~/components/ui/no-signal-screen";
+
 
 
 const Home: Component<RouteSectionProps> = (props) => {
 
+    const navigate = useNavigate();
 
     const [getValue, setValue] = createSignal(0);
     const [getShow, setShow] = createSignal(false);
@@ -45,6 +47,10 @@ const Home: Component<RouteSectionProps> = (props) => {
 
     createEffect(() => {
         console.log(getValue())
+
+        if(getValue() === 101){
+            navigate("/updating")
+        }
     })
 
 
@@ -68,7 +74,7 @@ const Home: Component<RouteSectionProps> = (props) => {
 
                         <Show when={getShow()}>
                             <Show when={getValue() < 100}>
-                                <TypingAnimationComponent text={`Please update your Pipboy to the latest version.`}
+                                <TypingAnimationComponent text={`Critical Update`}
                                                           class={"text-normal text-base"} duration={50}/>
                             </Show>
                         </Show>
@@ -89,26 +95,33 @@ const Home: Component<RouteSectionProps> = (props) => {
                                     fallback={
                                         <Show when={getValue() < 100}>
                                             <div class={"animate-out slide-out-to-bottom"}>
-                                                <ProgressComponent setValue={setValue} start={getOpen()}/>
+
+                                                <BaseNumberTicker type={"spring"} value={101} setValue={setValue}/>%
                                             </div>
                                         </Show>
                                     }
                                     when={!getOpen()}>
-                                    UPDATE
+                                    SYNC
                                 </Show>
                             </button>
-                            <Show when={getValue() === 100}>
+
+                            <Show when={getValue() > 95}>
+
+                                <>
+
+                                </>
+
+                                {/*
                                 <div class={"flex justify-center items-center"}>
                                     <AnimatedBeamComponent/>
                                 </div>
+                                */}
                             </Show>
                         </Show>
                     </div>
                 </div>
             </Show>
 
-
-            <AiCompanion name={"mrshandy"}/>
             <p class="clear"><br/></p>
 
 

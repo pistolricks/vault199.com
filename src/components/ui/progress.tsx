@@ -28,3 +28,33 @@ export const ProgressComponent = (props: { start: boolean, setValue?: Setter<num
         </Progress.Root>
     )
 }
+
+
+export default function ProgressBar(props: {value: number}) {
+    const value = () => props.value;
+    return (
+        <>
+
+            <div class="flex w-full gap-2">
+                <label
+                    id="p01f-label"
+                    for="p01f"
+                    class="order-2 mb-0 text-center text-xs text-pink-500"
+                >
+                    <span class="sr-only">uploading</span>
+
+                </label>
+                <progress
+                    aria-labelledby="p01f-label"
+                    id="p01f"
+                    max="100"
+                    value={value()}
+                    class="block w-full min-w-[50dvh] overflow-hidden rounded bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-pink-500 [&::-moz-progress-bar]:bg-pink-500"
+                >
+
+                </progress>
+            </div>
+            {/*<!-- End Danger progress bar with trailing icon --> */}
+        </>
+    )
+}

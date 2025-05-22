@@ -1,4 +1,10 @@
 
+@keyframes blink {
+    0% {opacity: 0}
+    30% {opacity: 1}
+    70% {opacity: 1}
+    100% {opacity: 0}
+}
 
 @keyframes scroll {
     0% { height: 0 }
@@ -197,6 +203,9 @@ textarea:focus,
 input[type=submit]:focus,
 .button:focus {
     outline: 0;
+    cursor {
+        animation: blink 0.4s linear infinite;
+    }
 }
 
 input[type=submit],
@@ -223,7 +232,12 @@ input[type=submit]:hover,
     background: #00dd00;
     color: #383838;
     opacity: 0.8;
+    cursor {
+        animation: blink 0.4s linear infinite;
+    }
+
 }
+
 
 
 .expandingArea { position: relative }

@@ -76,3 +76,12 @@ export const NoSignalScreen: Component<NoSignalScreenProps> = (props) => {
 		/>
 	);
 };
+
+const BaseNoSignalScreen: Component<NoSignalScreenProps> = props => {
+
+	return (
+		<NoSignalScreen {...props} />
+	);
+};
+
+export {BaseNoSignalScreen}
