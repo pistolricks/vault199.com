@@ -4,7 +4,7 @@ import {query, redirect} from "@solidjs/router";
 import {AUTHENTICATION_TOKEN} from "~/lib/index";
 import { cookies } from "~/app";
 
-// export const baseApi = (`http://localhost:${import.meta.env.VITE_SERVER_PORT}/api/${import.meta.env.VITE_API_VERSION}`)
+// export const devApi = (`http://localhost:${import.meta.env.VITE_SERVER_PORT}/api/${import.meta.env.VITE_API_VERSION}`)
 export const baseApi = (`${import.meta.env.VITE_API_PRODUCTION_PATH}/api/${import.meta.env.VITE_API_VERSION}`)
 
 export async function register(userInput: { name: string, username: string, email: string, password: string }) {

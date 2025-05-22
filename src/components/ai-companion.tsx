@@ -170,7 +170,7 @@ const AiCompanion: Component<{
 
     onMount(() => {
         // WebSocket URL - replace with your actual WebSocket endpoint
-        const wsUrl = `ws://localhost:${import.meta.env.VITE_AI_PORT}/${import.meta.env.VITE_AI_PATH}${name()}`; // Placeholder, adjust as needed
+        const wsUrl = `ws://${import.meta.env.VITE_API_PRODUCTION_PATH}${name()}`; // Placeholder, adjust as needed
 
         const openWs = () => {
             if (ws) return;
