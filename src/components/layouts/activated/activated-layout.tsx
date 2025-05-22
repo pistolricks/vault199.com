@@ -10,12 +10,16 @@ import FalloutNvSvg from "~/components/ui/svgs/fallout_nv_svg";
 import SvgDraw from "~/components/ui/gsap/svg-draw";
 import BaseDrawer, { DrawerContent } from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
-
+import map3 from "~/static/pipboy/assets/map/map3.png"
 const ActivatedLayout: Component<RouteSectionProps> = props => {
 
     const isRouting = useIsRouting();
 
     const children = () => props.children;
+
+    const handleApps = (e: string) => {
+
+    }
 
     return (
         <BaseDrawer side={"bottom"} contextId={"activated-1"}>
@@ -35,13 +39,15 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                     <FalloutNvSvg/>
                 </SvgDraw>
             </div>
-            <ActivatedFooter/>
+            <ActivatedFooter onClick={handleApps} />
         </div>
             <DrawerContent
                 side={"bottom"}
                 contextId={"activated-1"}
+                class={styles.glass}
             >
 
+                <img src={map3} class={'h-full w-screen object-cover'} alt={'map'}/>
 
 
             </DrawerContent>

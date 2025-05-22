@@ -32,7 +32,7 @@ export const Dock: ParentComponent<DockProps> = (props) => {
 	return (
 		<div
 			class={cn(
-				"supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 flex items-end h-[58px] w-max gap-2 rounded-2xl border p-2 backdrop-blur-md",
+				"supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 flex items-end h-[60px] w-max gap-2 rounded-2xl  p-2 backdrop-blur-md",
 				localProps.class,
 			)}
 			{...forwardProps}
@@ -76,7 +76,7 @@ export const DockIcon: ParentComponent<DockIconProps> = (props) => {
 		);
 	};
 
-	const baseWidth = 40;
+	const baseWidth = 58;
 
 	const width = () =>
 		((150 - Math.abs(distance())) / 150) *
