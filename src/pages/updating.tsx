@@ -1,14 +1,10 @@
-import {Component, createEffect, createSignal, Match, onCleanup, onMount, Show, Switch} from "solid-js";
+import {Component, createEffect, Show} from "solid-js";
 import UpdatingLayout from "~/components/layouts/updating/updating-layout";
 import {RouteSectionProps, useNavigate} from "@solidjs/router";
-import {BaseNumberTicker} from "~/components/ui/number-ticker";
-import ProgressBar from "~/components/ui/progress";
 import {Dynamic} from "solid-js/web";
 import {PipBoyUpdating} from "~/components/pipboy/pipboy-updating";
 import {cookies, currentUser} from "~/app";
-import SvgDraw from "~/components/ui/gsap/svg-draw";
-import FalloutNvSvg from "~/components/ui/svgs/fallout_nv_svg";
-import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
+import ActivatePipboy from "~/components/pipboy/activate-pipboy";
 
 
 const Updating: Component<RouteSectionProps & { path?: string }> = props => {
@@ -17,8 +13,8 @@ const Updating: Component<RouteSectionProps & { path?: string }> = props => {
 
 
     createEffect(() => {
-        console.log(currentUser().active())
-        if(currentUser().active() === true){
+        console.log(cookies.get('token'))
+        if (cookies.get('token') as unknown as boolean === true) {
             navigate("/dashboard")
         }
     })
@@ -28,6 +24,9 @@ const Updating: Component<RouteSectionProps & { path?: string }> = props => {
         <UpdatingLayout {...props}>
 
             <Show when={!cookies.get("active") as unknown as boolean}>
+
+                <ActivatePipboy {...props} />
+
                 <Dynamic component={PipBoyUpdating} path={"/dashboard"}/>
 
             </Show>
