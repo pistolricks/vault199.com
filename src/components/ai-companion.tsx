@@ -173,7 +173,7 @@ const AiCompanion: Component<{
 
         const wsUrl = !!import.meta.env.VITE_DEV
             ?
-            (`ws://localhost:${import.meta.env.VITE_SERVER_PORT}/${import.meta.env.VITE_AI_PATH}${name()}`) : (`ws://${import.meta.env.VITE_API_PRODUCTION_DOMAIN}/${import.meta.env.VITE_AI_PATH}${name()}`)
+            (`ws://localhost:${import.meta.env.VITE_SERVER_PORT}/${import.meta.env.VITE_AI_PATH}${name()}`) : (`wss://${import.meta.env.VITE_API_PRODUCTION_DOMAIN}/${import.meta.env.VITE_AI_PATH}${name()}`)
 
 
                  // Placeholder, adjust as needed

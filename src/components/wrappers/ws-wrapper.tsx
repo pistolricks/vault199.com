@@ -38,7 +38,7 @@ const WsWrapper: ParentComponent<{
             ws.close();
         }
 
-        ws = new WebSocket(`ws://${import.meta.env.VITE_API_PRODUCTION_PATH}/ws`);
+        ws = new WebSocket(`wss://${import.meta.env.VITE_API_PRODUCTION_PATH}/ws`);
 
         ws.onopen = function () {
             console.log("Connected to WebSocket server");
