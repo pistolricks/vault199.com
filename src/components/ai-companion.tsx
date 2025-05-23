@@ -171,9 +171,7 @@ const AiCompanion: Component<{
     onMount(() => {
         // WebSocket URL - replace with your actual WebSocket endpoint
 
-        const wsUrl = !!import.meta.env.VITE_DEV
-            ?
-            (`ws://localhost:${import.meta.env.VITE_SERVER_PORT}/${import.meta.env.VITE_AI_PATH}${name()}`) : (`wss://${import.meta.env.VITE_API_PRODUCTION_DOMAIN}/${import.meta.env.VITE_AI_PATH}${name()}`)
+        const wsUrl = (`wss://${import.meta.env.VITE_APP_URL}/${import.meta.env.VITE_AI_PATH}${name()}`)
 
 
                  // Placeholder, adjust as needed
