@@ -170,7 +170,13 @@ const AiCompanion: Component<{
 
     onMount(() => {
         // WebSocket URL - replace with your actual WebSocket endpoint
-        const wsUrl = `ws://${import.meta.env.VITE_API_PRODUCTION_PATH}${name()}`; // Placeholder, adjust as needed
+
+        const wsUrl = !!import.meta.env.VITE_DEV
+            ?
+            (`ws://localhost:${import.meta.env.VITE_SERVER_PORT}/${import.meta.env.VITE_AI_PATH}${name()}`) : (`ws://${import.meta.env.VITE_API_PRODUCTION_DOMAIN}/${import.meta.env.VITE_AI_PATH}${name()}`)
+
+
+                 // Placeholder, adjust as needed
 
         const openWs = () => {
             if (ws) return;
@@ -307,12 +313,9 @@ const AiCompanion: Component<{
         <>
             <audio ref={audioPlayerRef} style={{display: 'none'}}/>
             {/* Hidden audio player for received chunks */}
-            <div class={"flex justify-end gap-x-1 glass"}>
-                <button class={styles.button} onClick={handleCloseConnection}>Emergency Shutoff</button>
+            <div class={"flex flex-col gap-y-4"}>
+            <div class={"flex justify-end gap-x-1"}>
 
-                <button class={styles.button} onClick={handleRecordToggle}>
-                    {isRecording() ? 'Online' : 'Offline'}
-                </button>
             </div>
 
             <div class={" flex justify-center items-center h-full mt-4"}>
@@ -353,6 +356,12 @@ const AiCompanion: Component<{
                         </For>
                     </div>
                 </div>
+                <button class={styles.button} onClick={handleCloseConnection}>Emergency Shutoff</button>
+
+                <button class={styles.button} onClick={handleRecordToggle}>
+                    {isRecording() ? 'Online' : 'Offline'}
+                </button>
+            </div>
             </div>
         </>
     );

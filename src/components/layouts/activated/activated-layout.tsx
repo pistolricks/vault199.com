@@ -9,6 +9,7 @@ import BaseDrawer, {DrawerContent} from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
 import SatApp from "~/components/pipboy/apps/sat-app";
+import GalleryApp from "~/components/pipboy/apps/gallery-app";
 
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
@@ -18,7 +19,8 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
     const [getComponent, setComponent] = createSignal<ValidComponent>(SatApp)
 
     const apps = {
-       sat: SatApp
+       sat: SatApp,
+        gallery: GalleryApp,
     }
 
     const handleApps = (e: string) => {
@@ -45,9 +47,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                     >
                         {children()}
                     </main>
-                    <SvgDraw class={"bg-[#001423] absolute inset-0 top-11 w-screen  h-[90dvh]"}>
-                        <FalloutNvSvg/>
-                    </SvgDraw>
+
                 </div>
                 <ActivatedFooter onClick={handleApps}/>
             </div>

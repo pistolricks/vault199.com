@@ -30,9 +30,9 @@ export const Dock: ParentComponent<DockProps> = (props) => {
 	const [mouseX, setMouseX] = createSignal(Number.POSITIVE_INFINITY);
 
 	return (
-		<div
+		<div //supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md
 			class={cn(
-				"supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 flex items-end h-[60px] w-max gap-2 rounded-2xl  p-2 backdrop-blur-md",
+				" flex items-end h-[60px] w-max gap-2 rounded-2xl  p-2 ",
 				localProps.class,
 			)}
 			{...forwardProps}
@@ -52,10 +52,14 @@ export const Dock: ParentComponent<DockProps> = (props) => {
 	);
 };
 
-export interface DockIconProps extends JSX.HTMLAttributes<HTMLDivElement> {}
+export interface DockIconProps extends JSX.HTMLAttributes<HTMLDivElement> {
+	size?: number;
+}
 
 export const DockIcon: ParentComponent<DockIconProps> = (props) => {
 	const [localProps, forwardProps] = splitProps(props, ["class", "children"]);
+
+	const size = () => props.size ?? 58;
 
 	const dockContext = useContext(DockContext);
 	if (!dockContext) {
@@ -76,7 +80,7 @@ export const DockIcon: ParentComponent<DockIconProps> = (props) => {
 		);
 	};
 
-	const baseWidth = 58;
+	const baseWidth = size();
 
 	const width = () =>
 		((150 - Math.abs(distance())) / 150) *

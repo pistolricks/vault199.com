@@ -1,0 +1,511 @@
+[
+  {
+    "id": -1,
+    "id": -1,
+    "isEnabledToDraw": true,
+    "drawingOrder": -1,
+    "position": {
+      "x": 10,
+      "y": 60
+    },
+    "size": 1,
+    "angle": 0.0,
+    "alpha": 0,
+    "color": -15555584,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": 8947848
+    },
+    "imageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/;;;;;",
+    "scale": 1.0,
+    "imageWidth": 0,
+    "imageHeight": 0,
+    "width": 1463,
+    "height": 627
+  },
+  {
+    "id": 45,
+    "id": 45,
+    "isEnabledToDraw": true,
+    "drawingOrder": 8,
+    "position": {
+      "x": -3,
+      "y": 12
+    },
+    "size": 1,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -16777216,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "imageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/Bottom.png",
+    "scale": 3.0199999809265137,
+    "imageWidth": 482,
+    "imageHeight": 204
+  },
+  {
+    "id": 8,
+    "id": 8,
+    "isEnabledToDraw": true,
+    "drawingOrder": 9,
+    "position": {
+      "x": 310,
+      "y": 190
+    },
+    "size": 57,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -2897022,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "text": "CALL",
+    "prefix": "",
+    "suffix": "",
+    "textTypeface": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/AGENCYR.TTF",
+    "align": 1,
+    "textCase": {
+      "mTextCase": 2
+    }
+  },
+  {
+    "id": 9,
+    "id": 9,
+    "isEnabledToDraw": true,
+    "drawingOrder": 45,
+    "position": {
+      "x": 518,
+      "y": 190
+    },
+    "size": 57,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -2897022,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "text": "MSG",
+    "prefix": "",
+    "suffix": "",
+    "textTypeface": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/AGENCYR.TTF",
+    "align": 1,
+    "textCase": {
+      "mTextCase": 2
+    }
+  },
+  {
+    "id": 61,
+    "id": 61,
+    "isEnabledToDraw": true,
+    "drawingOrder": 46,
+    "position": {
+      "x": 730,
+      "y": 190
+    },
+    "size": 57,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -2897022,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "text": "APPS",
+    "prefix": "",
+    "suffix": "",
+    "textTypeface": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/AGENCYR.TTF",
+    "align": 1,
+    "textCase": {
+      "mTextCase": 2
+    }
+  },
+  {
+    "id": 62,
+    "id": 62,
+    "isEnabledToDraw": true,
+    "drawingOrder": 61,
+    "position": {
+      "x": 931,
+      "y": 190
+    },
+    "size": 57,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -2897022,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "text": "CHRM",
+    "prefix": "",
+    "suffix": "",
+    "textTypeface": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/AGENCYR.TTF",
+    "align": 1,
+    "textCase": {
+      "mTextCase": 0
+    }
+  },
+  {
+    "id": 63,
+    "id": 63,
+    "isEnabledToDraw": true,
+    "drawingOrder": 62,
+    "position": {
+      "x": 1138,
+      "y": 190
+    },
+    "size": 58,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -2897022,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "text": "CAM",
+    "prefix": "",
+    "suffix": "",
+    "textTypeface": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/AGENCYR.TTF",
+    "align": 1,
+    "textCase": {
+      "mTextCase": 2
+    }
+  },
+  {
+    "id": 46,
+    "id": 46,
+    "isEnabledToDraw": true,
+    "drawingOrder": 63,
+    "position": {
+      "x": 206,
+      "y": 138
+    },
+    "size": 1,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -16777216,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "imageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Bottom/Apps Cover.png",
+    "scale": 3.009999990463257,
+    "imageWidth": 328,
+    "imageHeight": 23
+  },
+  {
+    "hotspot_id": 0,
+    "type": 0,
+    "position": {
+      "x": 222,
+      "y": 203
+    },
+    "dimensions": {
+      "x": 175,
+      "y": 175
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "Phone",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false,
+    "mIntent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.contacts/.activities.DialtactsActivity;S.hotspot_class_name=com.android.contacts.activities.DialtactsActivity;S.hotspot_label=Phone;i.hotspot_counter=0;S.hotspot_package_name=com.android.contacts;end"
+  },
+  {
+    "hotspot_id": 1,
+    "type": 0,
+    "position": {
+      "x": 431,
+      "y": 203
+    },
+    "dimensions": {
+      "x": 175,
+      "y": 175
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "Messaging",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false,
+    "mIntent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.mms/.ui.ConversationList;S.hotspot_class_name=com.android.mms.ui.ConversationList;S.hotspot_label=Messaging;i.hotspot_counter=1;S.hotspot_package_name=com.android.mms;end"
+  },
+  {
+    "hotspot_id": 2,
+    "type": 2,
+    "position": {
+      "x": 641,
+      "y": 203
+    },
+    "dimensions": {
+      "x": 175,
+      "y": 175
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "App Drawer",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false,
+    "mIntent": "intent:#Intent;action=com.teslacoilsw.launcher.ACTION;component=com.teslacoilsw.launcher/.NovaShortcutHandler;S.LAUNCHER_ACTION=APP_DRAWER;end"
+  },
+  {
+    "hotspot_id": 3,
+    "type": 0,
+    "position": {
+      "x": 846,
+      "y": 203
+    },
+    "dimensions": {
+      "x": 175,
+      "y": 175
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "Chrome",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false,
+    "mIntent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.chrome/com.google.android.apps.chrome.Main;S.hotspot_class_name=com.google.android.apps.chrome.Main;S.hotspot_label=Chrome;i.hotspot_counter=3;S.hotspot_package_name=com.android.chrome;end"
+  },
+  {
+    "hotspot_id": 4,
+    "type": 0,
+    "position": {
+      "x": 1053,
+      "y": 203
+    },
+    "dimensions": {
+      "x": 175,
+      "y": 175
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "Camera",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false,
+    "mIntent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.gallery3d/com.android.camera.CameraLauncher;S.hotspot_class_name=com.android.camera.CameraLauncher;S.hotspot_label=Camera;i.hotspot_counter=4;S.hotspot_package_name=com.android.gallery3d;end"
+  },
+  {
+    "hotspot_id": 5,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 6,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 7,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 8,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 9,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 10,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 11,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 12,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 13,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 14,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "metadata_id": 99,
+    "homescreenWidth": 714,
+    "homescreenHeight": 306,
+    "skin_name": "Fallout - Bottom",
+    "skin_type": 0,
+    "pkg_name": "",
+    "sdadd_string": "/storage/emulated/0/",
+    "init_htspts": false,
+    "s_n_w": false,
+    "mObjectUnderEditOp": -1,
+    "mHotspotUnderEditOp": 4,
+    "mPosition": {
+      "x": 0,
+      "y": 0
+    },
+    "maxWidthName": 1463,
+    "maxHeightName": 627
+  }
+]

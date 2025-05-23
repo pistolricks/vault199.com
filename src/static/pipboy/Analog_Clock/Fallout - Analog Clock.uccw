@@ -1,0 +1,368 @@
+[
+  {
+    "id": -1,
+    "id": -1,
+    "isEnabledToDraw": true,
+    "drawingOrder": -1,
+    "position": {
+      "x": 10,
+      "y": 60
+    },
+    "size": 1,
+    "angle": 0.0,
+    "alpha": 0,
+    "color": -1,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": 8947848
+    },
+    "imageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Analog Clock/;;;;;",
+    "scale": 1.0,
+    "imageWidth": 0,
+    "imageHeight": 0,
+    "width": 960,
+    "height": 960
+  },
+  {
+    "id": 45,
+    "id": 45,
+    "isEnabledToDraw": true,
+    "drawingOrder": 10,
+    "position": {
+      "x": 80,
+      "y": 93
+    },
+    "size": 1,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -16777216,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "imageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Analog Clock/clock4.png",
+    "scale": 3.7899999618530273,
+    "imageWidth": 209,
+    "imageHeight": 209
+  },
+  {
+    "id": 10,
+    "id": 10,
+    "isEnabledToDraw": true,
+    "drawingOrder": 45,
+    "position": {
+      "x": 272,
+      "y": 269
+    },
+    "size": 1,
+    "angle": 0.0,
+    "alpha": 255,
+    "color": -16777216,
+    "specialEffect": 0,
+    "isColorEditableInExternalApk": false,
+    "textShadow": {
+      "radius": 0.0,
+      "dx": 0.0,
+      "dy": 0.0,
+      "color": -7829368
+    },
+    "hourhandImageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Analog Clock/minutes.png",
+    "minuteHandImageAddress": "/storage/emulated/0/UltimateCustomClockWidget/Fallout - Analog Clock/hours.png",
+    "scale": 4.0,
+    "isHourHandImageDefault": false,
+    "isMinuteHandImageDefault": false,
+    "mode": "analog_standard",
+    "step_mode": "5_min_step",
+    "hour_mode": "12_hour_analog",
+    "hour_radius": 200,
+    "minute_radius": 280,
+    "hour_width": 30,
+    "minute_width": 30,
+    "hour_color": -2955887,
+    "minute_color": -5828864,
+    "isHourColorEditableInExternalApk": false,
+    "isMinuteColorEditableInExternalApk": false
+  },
+  {
+    "hotspot_id": 0,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 1,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 2,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 3,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 4,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 5,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 6,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 7,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 8,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 9,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 10,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 11,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 12,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 13,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "hotspot_id": 14,
+    "type": -1,
+    "position": {
+      "x": 0,
+      "y": -80
+    },
+    "dimensions": {
+      "x": 200,
+      "y": 80
+    },
+    "pkgName": "",
+    "className": "",
+    "mLabel": "",
+    "internalHotspotType": -1,
+    "isHotspotEditable": false
+  },
+  {
+    "metadata_id": 99,
+    "homescreenWidth": 0,
+    "homescreenHeight": 0,
+    "skin_name": "Fallout - Analog Clock",
+    "skin_type": 0,
+    "pkg_name": "",
+    "sdadd_string": "/storage/emulated/0/",
+    "init_htspts": false,
+    "s_n_w": false,
+    "mObjectUnderEditOp": -1,
+    "mHotspotUnderEditOp": 0,
+    "mPosition": {
+      "x": 0,
+      "y": 0
+    },
+    "maxWidthName": 960,
+    "maxHeightName": 960
+  }
+]
