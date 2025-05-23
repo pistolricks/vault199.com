@@ -27,6 +27,7 @@ const companions: Contact[] = [
     {
         id: 301,
         name: "Cross",
+        title: "cross",
         username: "@StarCrossed",
         avatar: crossAvatar,
         email: "cross@bos.com",
@@ -37,6 +38,7 @@ const companions: Contact[] = [
     {
         id: 302,
         name: "Butch Deloria",
+        title: "butch",
         username: "@OriginalSnake",
         avatar: butchAvatar,
         email: "butch@tunnelsnakes.com",
@@ -47,6 +49,7 @@ const companions: Contact[] = [
     {
         id: 303,
         name: "Clover",
+        title: "clover",
         username: "@CloverDoll",
         avatar: cloverAvatar,
         email: "lucky@paradisefalls.com",
@@ -57,6 +60,7 @@ const companions: Contact[] = [
     {
         id: 304,
         name: "Sergeant RL-3",
+        title: "sergeant",
         username: "@Sarge",
         avatar: sergeantAvatar,
         email: "sarge@getgutsy.com",
@@ -67,6 +71,7 @@ const companions: Contact[] = [
     {
         id: 305,
         name: "Jericho",
+        title: "jericho",
         username: "@JerichoTheDog",
         avatar: jerichoAvatar,
         email: "jericho@raiders.com",
@@ -77,6 +82,7 @@ const companions: Contact[] = [
     {
         id: 306,
         name: "Fawkes",
+        title: "fawkes",
         username: "@MutantLivesMatter",
         avatar: fawkesAvatar,
         email: "fawkes@remembernovember.com",
@@ -87,6 +93,7 @@ const companions: Contact[] = [
     {
         id: 307,
         name: "Dogmeat",
+        title: "dogmeat",
         username: "@Woof",
         avatar: dogmeatAvatar,
         email: "woof@dogmeat.com",
@@ -97,6 +104,7 @@ const companions: Contact[] = [
     {
         id: 308,
         name: "Charon",
+        title: "charon",
         username: "@WelcomeToHell",
         avatar: charonAvatar,
         email: "charon@ninthcircle.com",
