@@ -5,7 +5,7 @@ import {AUTHENTICATION_TOKEN} from "~/lib/index";
 import { cookies } from "~/app";
 
 
-export const baseApi = (`${import.meta.env.VITE_APP_URL}/api/${import.meta.env.VITE_API_VERSION}`)
+export const baseApi = (`${import.meta.env.VITE_APP_FULL_URL}/api/${import.meta.env.VITE_API_VERSION}`)
 
 
 export async function register(userInput: { name: string, username: string, email: string, password: string }) {
