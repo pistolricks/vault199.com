@@ -134,9 +134,9 @@ const CommunicationsApp: Component<PROPS> = props => {
             <Show when={getComm() === "contacts"}>
                 <div class={"flex flex-col justify-center items-center overflow-y-auto h-full duration-400 animate-in slide-in-from-bottom"}>
 
-                    <ScreenLayout height={"60dvh"} width={"100%"}>
+                    <ScreenLayout height={"100dvh"} width={"90dvw"}>
 
-                        <ContactList height={"60dvh"} list={companions}/>
+                        <ContactList height={"80dvh"} list={companions}/>
 
                     </ScreenLayout>
                 </div>
