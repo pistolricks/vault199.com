@@ -1,15 +1,26 @@
-import {Component} from "solid-js";
+import {Component, ParentProps} from "solid-js";
+import styles from "./style.module.css"
 
-type PROPS = {
-
+type PROPS = ParentProps & {
+    height?: string;
+    width?: string;
 }
 
 const ScreenLayout: Component<PROPS> = props => {
 
+    const height = () => props.height ?? "100vh";
+    const width = () => props.width ?? "100vw";
+
     return (
-        <div class="screen">
-            <p>It was this howling and firing of the guns at Ripley and St. George's Hill that we had heard at Upper Halliford. The Ripley gunners, unseasoned artillery volunteers who ought never to have been placed in such a position, fired one wild, premature, ineffectual volley, and bolted on horse and foot through the deserted village, while the Martian, without using his Heat-Ray, walked serenely over their guns, stepped gingerly among them, passed in front of them, and so came unexpectedly upon the guns in Painshill Park, which he destroyed.</p>
-            <p style="text-align:right">H. G. Wells - The War of the Worlds, Chapter 15</p>
+        <div
+            style={{
+                height: height(),
+                width: width(),
+            }}
+            class={styles.background}>
+        <div class={styles.screen}>
+            {props.children}
+        </div>
         </div>
     );
 };

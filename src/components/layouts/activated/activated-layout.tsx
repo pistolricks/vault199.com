@@ -1,25 +1,27 @@
-import {Component, createMemo, createSignal, ValidComponent} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, ValidComponent} from "solid-js";
 import {Dynamic} from "solid-js/web";
-import {RouteSectionProps, useIsRouting} from "@solidjs/router";
+import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import ActivatedHeader from "~/components/layouts/activated/activated-header";
-import FalloutNvSvg from "~/components/ui/svgs/fallout_nv_svg";
-import SvgDraw from "~/components/ui/gsap/svg-draw";
 import BaseDrawer, {DrawerContent} from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
 import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import GalleryApp from "~/components/pipboy/apps/gallery-app";
+import {createBreakpoints} from "@solid-primitives/media";
+import {matches} from "~/app";
 
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
+
+
 
     const children = () => props.children;
 
     const [getComponent, setComponent] = createSignal<ValidComponent>(CommunicationsApp)
 
     const apps = {
-       sat: CommunicationsApp,
+        sat: CommunicationsApp,
         gallery: GalleryApp,
     }
 
@@ -34,7 +36,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
 
     return (
-        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+        <BaseDrawer side={matches.sm ? "right" : "bottom"} contextId={"activated-1"}>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
                 <div class={styles["interlaced"]}></div>
                 <div class={styles["glare"]}></div>
@@ -52,14 +54,13 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 <ActivatedFooter onClick={handleApps}/>
             </div>
             <DrawerContent
-                side={"bottom"}
+                side={matches.sm ? "right" : "bottom"}
                 contextId={"activated-1"}
-                class={styles.glass}
+                class={matches.sm ? "w-sm" : "w-screen"}
             >
 
 
-
-                <Dynamic component={component()} />
+                <Dynamic component={component()}/>
 
 
             </DrawerContent>

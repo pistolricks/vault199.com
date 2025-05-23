@@ -1,6 +1,7 @@
-import {type Component, createMemo, createSignal, Suspense} from 'solid-js';
+import {type Component, createEffect, createMemo, createSignal, Suspense} from 'solid-js';
 import {RouteSectionProps, useLocation} from '@solidjs/router';
 import Cookies from "cookies-ts";
+import {createBreakpoints} from "@solid-primitives/media";
 
 
 export const cookies = new Cookies()
@@ -18,6 +19,8 @@ export const currentUser = () => {
     const updated_at = () => cookies.get('updated_at');
     const token = () => cookies.get('token');
 
+
+
     return {
         id,
         name,
@@ -31,8 +34,28 @@ export const currentUser = () => {
     }
 }
 
+const breakpoints = {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
+    xxl: "1536px"
+};
+
+
+export const matches = createBreakpoints(breakpoints);
+
+
 
 const App: Component<RouteSectionProps> = (props) => {
+
+    createEffect(() => {
+        console.log(matches.sm); // true when screen width >= 640px
+        console.log(matches.md);
+        console.log(matches.lg); // true when screen width >= 1024px
+        console.log(matches.xl); // true when screen width >= 1280px
+        console.log(matches.xxl);
+    });
 
     return (
         <>

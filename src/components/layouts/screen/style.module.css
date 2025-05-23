@@ -12,10 +12,8 @@
     box-sizing:border-box;
     font-family:'Fira Mono', monospace;
     font-size:20px;
-    height:100vh;
     overflow:hidden;
-    padding:10vmin;
-    width:100vw;
+    padding:1vmin;
 }
 
 .screen:before {
@@ -26,7 +24,7 @@
     opacity:.5;
     position:absolute;
     right:0;
-    z-index:1;
+    z-index:-1;
 }
 
 .screen:after {
