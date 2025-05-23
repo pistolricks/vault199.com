@@ -1,4 +1,5 @@
-import {Component} from "solid-js";
+import {Component, createMemo, createSignal, ValidComponent} from "solid-js";
+import {Dynamic} from "solid-js/web";
 import {RouteSectionProps, useIsRouting} from "@solidjs/router";
 import styles from "./style.module.css"
 import ActivatedHeader from "~/components/layouts/activated/activated-header";
@@ -6,15 +7,29 @@ import FalloutNvSvg from "~/components/ui/svgs/fallout_nv_svg";
 import SvgDraw from "~/components/ui/gsap/svg-draw";
 import BaseDrawer, {DrawerContent} from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
-import map3 from "~/static/pipboy/assets/map/map3.png"
+
+import SatApp from "~/components/pipboy/apps/sat-app";
+
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
 
     const children = () => props.children;
 
-    const handleApps = (e: string) => {
+    const [getComponent, setComponent] = createSignal<ValidComponent>(SatApp)
 
+    const apps = {
+       sat: SatApp
     }
+
+    const handleApps = (e: string) => {
+        console.log(e)
+        setComponent(() => apps[e])
+    }
+
+    const component = createMemo(() => {
+        return getComponent()
+    })
+
 
     return (
         <BaseDrawer side={"bottom"} contextId={"activated-1"}>
@@ -42,7 +57,9 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 class={styles.glass}
             >
 
-                <img src={map3} class={'h-full w-screen object-cover'} alt={'map'}/>
+
+
+                <Dynamic component={component()} />
 
 
             </DrawerContent>

@@ -307,7 +307,7 @@ const AiCompanion: Component<{
         <>
             <audio ref={audioPlayerRef} style={{display: 'none'}}/>
             {/* Hidden audio player for received chunks */}
-            <div class={"flex justify-end gap-x-1"}>
+            <div class={"flex justify-end gap-x-1 glass"}>
                 <button class={styles.button} onClick={handleCloseConnection}>Emergency Shutoff</button>
 
                 <button class={styles.button} onClick={handleRecordToggle}>
@@ -315,8 +315,8 @@ const AiCompanion: Component<{
                 </button>
             </div>
 
-            <div class={"relative flex justify-start items-center"}>
-                <div style={{width: '30%'}}>
+            <div class={" flex justify-center items-center h-full mt-4"}>
+                <div class={"p-4"} style={{width: '30%'}}>
                     <div ref={outputDivRef} style={{
                         'max-height': '15vh',
                         'overflow-y': 'scroll',
@@ -327,7 +327,7 @@ const AiCompanion: Component<{
                             {(msg, i) => <div class="output-message">[{i()}] {msg}</div>}
                         </For>
                     </div>
-                    <div ref={chatHistoryRef} class='absolute top-0 left-0 audio-history hidden'
+                    <div ref={chatHistoryRef} class='absolute bottom-0 inset-x-0 audio-history hidden'
                          style={{'max-height': '15vh', 'overflow-y': 'scroll'}}>
                         <For each={chatHistory()}>
                             {(item) => (
