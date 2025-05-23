@@ -8,7 +8,7 @@ import SvgDraw from "~/components/ui/gsap/svg-draw";
 import BaseDrawer, {DrawerContent} from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
-import SatApp from "~/components/pipboy/apps/sat-app";
+import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import GalleryApp from "~/components/pipboy/apps/gallery-app";
 
 
@@ -16,10 +16,10 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
     const children = () => props.children;
 
-    const [getComponent, setComponent] = createSignal<ValidComponent>(SatApp)
+    const [getComponent, setComponent] = createSignal<ValidComponent>(CommunicationsApp)
 
     const apps = {
-       sat: SatApp,
+       sat: CommunicationsApp,
         gallery: GalleryApp,
     }
 
