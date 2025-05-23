@@ -1,4 +1,4 @@
-import {Component, createMemo, createSignal} from "solid-js";
+import {Component, createMemo, createSignal, Show} from "solid-js";
 import chat from "~/static/app/icons/bottom_bar/apple-app-alt-2.png"
 import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png"
 import vChat from "~/static/app/icons/bottom_bar/apple-app-alt-5.png"
@@ -15,7 +15,10 @@ import sergeantAvatar from "~/static/companions/sergeant/sergeant.webp"
 import cloverAvatar from "~/static/companions/clover/clover.webp"
 import {Contact, ContactList} from "~/components/lists/contact-list";
 import ScreenLayout from "~/components/layouts/screen/screen-layout";
-
+import pipboyTop from "~/static/pipboy/assets/ui/pipboy_top.png"
+import pipboyLeft from "~/static/pipboy/assets/ui/pipboy_left.png"
+import pipboyRight from "~/static/pipboy/assets/ui/pipboy_right.png"
+import pipboyBottom from "~/static/pipboy/assets/ui/pipboy_bottom.png"
 type PROPS = {
     data: any
 }
@@ -127,13 +130,17 @@ const CommunicationsApp: Component<PROPS> = props => {
 
         <div class={"flex justify-center items-center absolute inset-0 h-screen w-screen"}>
 
-            <div class={"flex flex-col justify-center items-center overflow-y-auto h-full"}>
 
-                <ScreenLayout height={"30dvh"} width={"100%"}>
-                <ContactList list={companions}/>
-                </ScreenLayout>
-            </div>
+            <Show when={getComm() === "contacts"}>
+                <div class={"flex flex-col justify-center items-center overflow-y-auto h-full duration-400 animate-in slide-in-from-bottom"}>
 
+                    <ScreenLayout height={"60dvh"} width={"100%"}>
+
+                        <ContactList height={"60dvh"} list={companions}/>
+
+                    </ScreenLayout>
+                </div>
+            </Show>
 
             <BottomPipboyMenu menuItems={menuItems} onClick={handleCommunications} appName={communications()}/>
 

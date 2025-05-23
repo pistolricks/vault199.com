@@ -16,9 +16,11 @@ export type Contact = {
 }
 const ContactList: Component<{
     list: Contact[]
+    height?: string;
 }> = (props) => {
     const list = () => props.list;
 
+    const height = () => props.height ?? "50vh";
 
     const handleClick = (c: Contact, event: Event) => {
         console.log("Data:", c, "Event:", event);
@@ -32,10 +34,9 @@ const ContactList: Component<{
             <div
                 style={{
                     'background-color': `url(${pipBg})`,
-                    height: '60vh',
+                    height: height(),
                 }}
                 class="flex flex-col overflow-y-scroll shadow-xl">
-
                 <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full">
 
                     <For each={list()}>
