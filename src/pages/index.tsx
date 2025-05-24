@@ -15,7 +15,6 @@ const Home: Component<RouteSectionProps> = (props) => {
 
 
 
-
         </TerminalLayout>
 
             </>

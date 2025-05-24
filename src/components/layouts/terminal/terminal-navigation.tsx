@@ -17,7 +17,8 @@ const TerminalNavigation: Component<RouteSectionProps> = props => {
                     <li><A href="/" title="">HOME</A></li>
                 </Show>
                 <Show when={!currentUser()?.token()}>
-                    <li><A activeClass={"selected"} href="/login" title="">LOGIN</A></li>
+                   <li><A activeClass={"selected"} href="/login" title="">LOGIN</A></li>
+                    <li><A activeClass={"selected"} href="/dashboard" title="">Dashboard</A></li>
                 </Show>
             </ul>
         </nav>
