@@ -20,6 +20,7 @@ const fetchRegister = async (userInput: { name: string, username: string, email:
     (await fetch(`${baseApi}/users`, {
             method: "POST",
             headers: {
+                "origin": import.meta.env.VITE_API_URL,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(userInput),
