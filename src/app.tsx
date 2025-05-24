@@ -1,5 +1,5 @@
-import {type Component, createEffect, createMemo, createSignal, Suspense} from 'solid-js';
-import {RouteSectionProps, useLocation} from '@solidjs/router';
+import {type Component, createEffect, Suspense} from 'solid-js';
+import {RouteSectionProps} from '@solidjs/router';
 import Cookies from "cookies-ts";
 import {createBreakpoints} from "@solid-primitives/media";
 
@@ -18,7 +18,6 @@ export const currentUser = () => {
     const created_at = () => cookies.get('created_at');
     const updated_at = () => cookies.get('updated_at');
     const token = () => cookies.get('token');
-
 
 
     return {
@@ -44,7 +43,6 @@ const breakpoints = {
 
 
 export const matches = createBreakpoints(breakpoints);
-
 
 
 const App: Component<RouteSectionProps> = (props) => {
