@@ -4,13 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly." />
+    <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/README.md" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/favicon-16x16.png" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/favicon-32x32.png" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/favicon.ico" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/manifest.webmanifest" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/pwa-assets-generator.config.ts" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/pwa-assets.config.js" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/index.html" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/index.html" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/package.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/package.json" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/vite.env.d.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/vite.env.d.ts" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/vite.config.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/vite.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="/Volumes/ssd/home/WebstormProjects/vault199" value="before-pwa" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="/Volumes/ssd/home/WebstormProjects/vault199" />
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -248,7 +270,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
