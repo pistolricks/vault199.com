@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vault199.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.webmanifest" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/dictionaries/project.xml" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/vault199.iml" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/package-lock.json" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/package.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/package.json" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/README.md" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/manifest.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ai-companion.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ai-companion.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +16,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -198,7 +173,7 @@
       <workItem from="1748020738956" duration="4596000" />
       <workItem from="1748039687108" duration="1382000" />
       <workItem from="1748041125816" duration="1257000" />
-      <workItem from="1748043347584" duration="6568000" />
+      <workItem from="1748043347584" duration="8877000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />
