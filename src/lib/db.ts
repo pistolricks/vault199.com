@@ -54,6 +54,11 @@ const fetchResendActivateEmail = async (resendInput: { email: string }) =>
 
 const fetchLogin = async (userInput: { username: string, password: string }) =>
     (await fetch(`${baseApi}/tokens/authentication`, {
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+            "origin": import.meta.env.VITE_API_URL,
+        },
             method: "POST",
             body: JSON.stringify(userInput),
         })
