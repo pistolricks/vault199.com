@@ -171,10 +171,14 @@ const AiCompanion: Component<{
     onMount(() => {
         // WebSocket URL - replace with your actual WebSocket endpoint
 
-        const wsUrl = (`ws://localhost:4000/api/v1/ai/${name()}`)
+        const wsUrl = !!import.meta.env.VITE_DEV
+            ?
+            (`ws://localhost:${import.meta.env.VITE_SERVER_PORT}/api/v1/ai/${name()}`)
+            :
+            (`wss://${import.meta.env.VITE_API_PRODUCTION_DOMAIN}/api/v1/ai/${name()}`)
 
 
-                 // Placeholder, adjust as needed
+        // Placeholder, adjust as needed
 
         const openWs = () => {
             if (ws) return;
@@ -312,54 +316,54 @@ const AiCompanion: Component<{
             <audio ref={audioPlayerRef} style={{display: 'none'}}/>
             {/* Hidden audio player for received chunks */}
             <div class={"flex flex-col gap-y-4"}>
-            <div class={"flex justify-end gap-x-1"}>
+                <div class={"flex justify-end gap-x-1"}>
 
-            </div>
-
-            <div class={" flex justify-center items-center h-full mt-4"}>
-                <div class={"p-4"} style={{width: '30%'}}>
-                    <div ref={outputDivRef} style={{
-                        'max-height': '15vh',
-                        'overflow-y': 'scroll',
-                        'border': '1px solid #ccc',
-                        padding: '8px'
-                    }}>
-                        <For each={outputText()}>
-                            {(msg, i) => <div class="output-message">[{i()}] {msg}</div>}
-                        </For>
-                    </div>
-                    <div ref={chatHistoryRef} class='absolute bottom-0 inset-x-0 audio-history hidden'
-                         style={{'max-height': '15vh', 'overflow-y': 'scroll'}}>
-                        <For each={chatHistory()}>
-                            {(item) => (
-                                <div classList={{
-                                    'vertical-container': true,
-                                    'chat-message-container': true,
-                                    'align-right': !!item.isMe
-                                }}>
-                                    <div class="chat-message-name">{item.name || (item.isMe ? 'Me' : 'System')}</div>
-                                    {item.type === 'text' && <div class="chat-message-text">{item.content}</div>}
-                                    {item.type === 'audioLink' && (
-                                        <a href={item.audioUrl}
-                                           download={`${item.name || 'recording'}.wav`}>{item.content}</a>
-                                    )}
-                                    {item.type === 'audioPlayer' && item.audioUrl && (
-                                        <div>
-                                            <div>{item.content}</div>
-                                            <audio src={item.audioUrl} controls/>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </For>
-                    </div>
                 </div>
-                <button class={styles.button} onClick={handleCloseConnection}>Emergency Shutoff</button>
 
-                <button class={styles.button} onClick={handleRecordToggle}>
-                    {isRecording() ? 'Online' : 'Offline'}
-                </button>
-            </div>
+                <div class={" flex justify-center items-center h-full mt-4"}>
+                    <div class={"p-4"} style={{width: '30%'}}>
+                        <div ref={outputDivRef} style={{
+                            'max-height': '15vh',
+                            'overflow-y': 'scroll',
+                            'border': '1px solid #ccc',
+                            padding: '8px'
+                        }}>
+                            <For each={outputText()}>
+                                {(msg, i) => <div class="output-message">[{i()}] {msg}</div>}
+                            </For>
+                        </div>
+                        <div ref={chatHistoryRef} class='absolute bottom-0 inset-x-0 audio-history hidden'
+                             style={{'max-height': '15vh', 'overflow-y': 'scroll'}}>
+                            <For each={chatHistory()}>
+                                {(item) => (
+                                    <div classList={{
+                                        'vertical-container': true,
+                                        'chat-message-container': true,
+                                        'align-right': !!item.isMe
+                                    }}>
+                                        <div class="chat-message-name">{item.name || (item.isMe ? 'Me' : 'System')}</div>
+                                        {item.type === 'text' && <div class="chat-message-text">{item.content}</div>}
+                                        {item.type === 'audioLink' && (
+                                            <a href={item.audioUrl}
+                                               download={`${item.name || 'recording'}.wav`}>{item.content}</a>
+                                        )}
+                                        {item.type === 'audioPlayer' && item.audioUrl && (
+                                            <div>
+                                                <div>{item.content}</div>
+                                                <audio src={item.audioUrl} controls/>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </For>
+                        </div>
+                    </div>
+                    <button class={styles.button} onClick={handleCloseConnection}>Emergency Shutoff</button>
+
+                    <button class={styles.button} onClick={handleRecordToggle}>
+                        {isRecording() ? 'Online' : 'Offline'}
+                    </button>
+                </div>
             </div>
         </>
     );
