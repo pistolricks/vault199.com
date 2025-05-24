@@ -7,7 +7,6 @@
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ai-companion.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ai-companion.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/db.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/db.ts" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/server.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +175,7 @@
       <workItem from="1748041125816" duration="1257000" />
       <workItem from="1748043347584" duration="11684000" />
       <workItem from="1748106983969" duration="2672000" />
-      <workItem from="1748114627492" duration="348000" />
+      <workItem from="1748114627492" duration="1114000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />
