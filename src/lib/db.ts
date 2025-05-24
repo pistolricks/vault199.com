@@ -54,9 +54,6 @@ const fetchResendActivateEmail = async (resendInput: { email: string }) =>
 
 const fetchLogin = async (userInput: { username: string, password: string }) =>
     (await fetch(`${baseApi}/tokens/authentication`, {
-        headers: {
-            "Content-Type": "application/json",
-        },
             method: "POST",
             body: JSON.stringify(userInput),
         })
