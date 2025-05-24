@@ -12,15 +12,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vite-pwa/assets-generator": "^1.0.0",
     "tailwindcss": "^4.1.6",
     "tailwindcss-animate": "^1.0.7",
     "timeago.js": "^4.0.2",
     "vite": "^6.0.0",
     "vite-plugin-pages": "^0.32.4",
-    "vite-plugin-pwa": "^1.0.0",
-    "vite-plugin-solid": "^2.11.6",
-    "workbox-window": "^7.3.0"
+    "vite-plugin-solid": "^2.11.6"
   },
   "dependencies": {
     "@ark-ui/solid": "^5.9.1",
