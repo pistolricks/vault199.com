@@ -2,6 +2,7 @@ import {Component, createEffect, createMemo, createSignal, Show} from "solid-js"
 import {A, RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import Logo from "~/static/images/vault-tec.png"
+import top from "~/static/pipboy/Top_White/Fallout - Top (White)/Top.png"
 import {cookies, currentUser} from "~/app";
 import Logout from "~/components/logout";
 
@@ -29,7 +30,10 @@ const ActivatedHeader: Component<RouteSectionProps> = props => {
     return (
 
         <div class={styles["background"] + "h-60 overflow-y-auto"}>
-        <header class={"sticky top-0 py-4 z-40 h-10 items-center"}>
+            <img src={top} class={"fixed top-0 w-full inset-x-0 object-contain z-40"}/>
+
+        <header class={"fixed top-0 py-4 z-40 h-10 items-center"}>
+
             <nav class={`pb-5 md:text-sm flex justify-between items-center`}>
                 <div class="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                     <div class="flex items-center justify-between py-5 md:block">

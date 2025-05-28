@@ -15,14 +15,18 @@ export type Contact = {
     active: boolean
 
 
+
 }
 const ContactList: Component<{
     list: Contact[]
     height?: string;
+    bg?: string;
 }> = (props) => {
     const list = () => props.list;
 
     const height = () => props.height ?? "50vh";
+
+    const bg = () => props.bg ?? pipBg;
 
     const [getSelected, setSelected] = createSignal<Contact | null>(null);
 
@@ -39,15 +43,10 @@ const ContactList: Component<{
     return (
         <>
 
-            <div
-                style={{
-                    'background-color': `url(${pipBg})`,
-                    height: height(),
-                }}
-                class="flex flex-col overflow-y-scroll shadow-xl">
+
                 <Show
                     fallback={
-                        <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full">
+                        <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full w-4/5">
 
                             <For each={list()}>
                                 {(contact) => (
@@ -59,7 +58,7 @@ const ContactList: Component<{
                     when={selected()}>
                     <AiCompanion name={selected()?.title}/>
                 </Show>
-            </div>
+
 
         </>
     )
@@ -70,7 +69,7 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
     console.log(props)
 
     return (
-        <li class="flex items-center gap-4 px-4 py-3 h-24">
+        <li class="flex items-center gap-4 px-4 py-3 h-24 max-h-24">
             <div class="self-start">
                 <button
                     onClick={props.onClick}
@@ -80,7 +79,7 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
                         src={props.avatar}
                         alt={props.name}
                         title={props.name}
-                        class="h-[8rem] w-24 object-cover"
+                        class="h-[8rem] w-24 max-h-24 object-cover"
                     />
 
                     <span class={classNames(
