@@ -1,0 +1,36 @@
+{
+        "name": "Vault-Tec Vault 199",
+        "short_name": "Vault 199",
+        "description": "Pipboy 3000 tested and approved by Vault-Tec",
+        "theme_color": "#00dd00",
+        "background_color": "#111",
+        "display": "standalone",
+        "orientation": "portrait",
+        "scope": "./",
+        "start_url": "/",
+        "icons": [
+            {
+                "src": "img/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png"
+            },
+            {
+                "src": "img/icons/icon-1024.png",
+                "sizes": "1024x1024",
+                "type": "image/png"
+            },
+            {
+                "src": "img/icons/icon-maskable.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "maskable"
+            }
+        ],
+    "screenshots": [
+        {
+            "src": "img/icons/screenshot.png",
+            "sizes": "800x534",
+            "type": "image/png"
+        }
+    ]
+}
