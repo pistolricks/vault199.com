@@ -83,7 +83,7 @@
       <recent name="$PROJECT_DIR$/src/components/ui/text" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -130,8 +130,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.serve" />
       </list>
@@ -181,7 +181,7 @@
       <workItem from="1748114627492" duration="2508000" />
       <workItem from="1748403076783" duration="245000" />
       <workItem from="1748403338480" duration="781000" />
-      <workItem from="1748404135356" duration="9608000" />
+      <workItem from="1748404135356" duration="9660000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />
