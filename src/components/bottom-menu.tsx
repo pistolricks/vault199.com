@@ -39,7 +39,7 @@ export default function BottomMenu(props: {
         <div class={"absolute bottom-12 sm:bottom-8 w-full flex justify-center items-center gap-x-5 sm:gap-x-8"}>
             <Drawer.Trigger style={{
                 width: matches?.sm ? '58px' : '37px',
-            }} class="absolute left-[2rem]" onClick={() => props.onClick("navigation")} contextId={"activated-1"}  >
+            }} class="absolute left-[10%]" onClick={() => props.onClick("navigation")} contextId={"activated-1"}  >
                 <img src={navigation} class="size-full aspect-square bg-black/10 dark:bg-white/40 rounded-full" alt={"navigation"}/>
             </Drawer.Trigger>
             <Drawer.Trigger style={{
