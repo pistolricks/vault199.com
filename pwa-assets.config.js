@@ -4,8 +4,8 @@ module.exports = defineConfig({
   preset: {
     apple: [
       {
-        sizes: [180],
-        href: 'apple-touch-icon.png',
+        sizes: [512],
+        href: 'icon512.png',
       },
     ],
     favicons: [
