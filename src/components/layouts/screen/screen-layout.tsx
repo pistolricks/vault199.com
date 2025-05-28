@@ -9,7 +9,7 @@ type PROPS = ParentProps & {
 const ScreenLayout: Component<PROPS> = props => {
 
     const height = () => props.height ?? "100vh";
-    const width = () => props.width ?? "100vw";
+    const width = () => props.width ?? "100%";
 
     return (
         <div

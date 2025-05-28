@@ -66,8 +66,8 @@ const DrawerContent = <T extends ValidComponent = "div">(
 
     let sides = {
         top: "fixed w-full inset-x-0 top-0 z-50 flex h-full border-l-2 border-b-2 border-r-2  rounded-b-lg after:absolute after:inset-x-0 after:top-[calc(100%-1px)] after:h-1/2 z-50 flex flex-col pt-3 after:bg-inherit data-transitioning:transition-transform data-transitioning:duration-500 data-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none",
-        right: "fixed inset-y-0 right-0 z-50 w-screen border-l-2 flex h-screen flex-col after:bg-inherit data-transitioning:transition-transform data-transitioning:duration-500 data-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none",
-        bottom: "fixed w-full inset-x-0 bottom-0 z-50 flex h-full border-l-2 border-t-2 border-r-2  sm:rounded-t-lg after:absolute after:inset-x-0 after:top-[calc(100%-1px)] after:h-1/2 z-50 flex flex-col pt-3 after:bg-inherit data-transitioning:transition-transform data-transitioning:duration-500 data-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none",
+        right: "fixed inset-y-0 right-0 bottom-0 z-50 w-screen border-l-2 flex h-screen flex-col after:bg-inherit data-transitioning:transition-transform data-transitioning:duration-500 data-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none",
+        bottom: "fixed w-screen inset-x-0 bottom-0 z-50 sm:right-0 sm:max-w-sm flex flex-col h-screen border-l-2 border-t-2 border-r-2  sm:rounded-t-lg after:absolute after:inset-x-0 after:top-[calc(100%-1px)] after:h-1/2 z-50 flex flex-col pt-3 after:bg-inherit data-transitioning:transition-transform data-transitioning:duration-500 data-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none",
         left: "fixed inset-y-0 left-0 z-50 w-screen md:max-w-md border-r-2 flex h-screen flex-col after:bg-inherit data-transitioning:transition-transform data-transitioning:duration-500 data-transitioning:ease-[cubic-bezier(0.32,0.72,0,1)] md:select-none",
     }[side() as 'top' | 'right' | 'bottom' | 'left'];
 
@@ -76,7 +76,7 @@ const DrawerContent = <T extends ValidComponent = "div">(
         <DrawerPrimitive.Content
             contextId={props.contextId}
             class={cn(
-                "border-corvu-400 bg-corvu-bg",
+                "border-[#111] bg-corvu-bg w-screen sm:max-w-sm sm:right-0",
                 sides,
                 props.class,
             )}

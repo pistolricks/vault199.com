@@ -1,4 +1,4 @@
-import {Component} from "solid-js";
+import {Component, createMemo, createSignal, JSX} from "solid-js";
 
 import bottomMenuRb from "~/static/pipboy/bottom/bottom_menu_rb.png"
 import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png"

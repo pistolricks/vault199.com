@@ -36,7 +36,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
 
     return (
-        <BaseDrawer side={matches.sm ? "right" : "bottom"} contextId={"activated-1"}>
+        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
                 <div class={styles["interlaced"]}></div>
                 <div class={styles["glare"]}></div>
@@ -53,9 +53,9 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 <ActivatedFooter onClick={handleApps}/>
             </div>
             <DrawerContent
-                side={matches.sm ? "right" : "bottom"}
+                side={"bottom"}
                 contextId={"activated-1"}
-                class={matches.sm ? "w-sm" : "w-screen"}
+                class={matches.sm ? "max-w-sm" : "w-screen"}
             >
 
 

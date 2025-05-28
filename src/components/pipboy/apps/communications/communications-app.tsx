@@ -136,13 +136,13 @@ const CommunicationsApp: Component<PROPS> = props => {
 
     return (
 
-        <div class={"flex justify-center items-center absolute inset-0 h-screen w-screen"}>
+        <div class={"flex justify-center items-center absolute inset-x-0 top-0 h-[80dvh] w-screen sm:max-w-sm bottom-20"}>
 
 
             <Show when={getComm() === "contacts"}>
-                <div class={"flex flex-col justify-center items-center overflow-y-auto h-full duration-400 animate-in slide-in-from-bottom"}>
+                <div class={"flex flex-col justify-center items-center overflow-y-auto  duration-400 animate-in slide-in-from-bottom"}>
 
-                    <ScreenLayout height={"100dvh"} width={"90dvw"}>
+                    <ScreenLayout height={"80dvh"}>
 
                         <ContactList height={"80dvh"} list={companions}/>
 
