@@ -9,12 +9,12 @@ type PROPS = {
 
 const CompanionApp: Component<PROPS> = props => {
 
-    const name = () => props.name ?? "mrhandy";
+
 
 
     return (
         <div>
-            <AiCompanion name={name()}/>
+
         </div>
     );
 };

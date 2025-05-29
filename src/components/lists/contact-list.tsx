@@ -57,7 +57,7 @@ const ContactList: Component<{
                         </ul>
                     }
                     when={selected()}>
-                    <AiCompanion name={selected()?.title}/>
+                    <AiCompanion name={selected()?.title} avatar={selected()?.avatar} />
                 </Show>
             </div>
 

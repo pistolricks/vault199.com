@@ -1,5 +1,6 @@
 import {Component, createSignal, For, onCleanup, onMount} from 'solid-js';
 import styles from "~/components/layouts/terminal/style.module.css"
+import {classNames} from "~/components/navigation";
 
 interface ChatItem {
     id: string;
@@ -12,6 +13,7 @@ interface ChatItem {
 
 const AiCompanion: Component<{
     name: string;
+    avatar: string;
 }> = (props) => {
     let outputDivRef: HTMLDivElement | undefined;
     let chatHistoryRef: HTMLDivElement | undefined;
@@ -19,6 +21,8 @@ const AiCompanion: Component<{
     let audioPlayerRef: HTMLAudioElement | undefined; // For playing received audio chunks
 
     const name = () => props.name;
+
+    const avatar = () => props.avatar;
 
     const [outputText, setOutputText] = createSignal<string[]>([]);
     const [chatHistory, setChatHistory] = createSignal<ChatItem[]>([]);
@@ -311,21 +315,29 @@ const AiCompanion: Component<{
         <>
             <audio ref={audioPlayerRef} style={{display: 'none'}}/>
             {/* Hidden audio player for received chunks */}
-            <div class={"flex flex-col gap-y-4"}>
+            <div class={"flex flex-col gap-y-2"}>
                 <div class={"flex justify-end gap-x-1"}>
 
                 </div>
 
                 <div class={" flex justify-center items-center h-full mt-4"}>
-                    <div class={"p-4"} style={{width: '30%'}}>
-                        <div ref={outputDivRef} style={{
-                            'max-height': '15vh',
+                    <div class={classNames(
+                        isRecording() ? '' : 'grayscale-100',
+                        "p-4 overflow-x-hidden"
+                    )} style={{
+                        "background-image": `url(${avatar()})`,
+                        "background-size": "contain",
+                        "background-repeat": "no-repeat",
+                        width: '80dvh', height: '40dvh'}}>
+                        <div ref={outputDivRef}
+                             class={"overflow-x-hidden"}
+                             style={{
+                            'height': '40dvh',
                             'overflow-y': 'scroll',
                             'border': '1px solid #ccc',
-                            padding: '8px'
                         }}>
                             <For each={outputText()}>
-                                {(msg, i) => <div class="output-message">[{i()}] {msg}</div>}
+                                {(msg, i) => <div class="opacity-10">[{i()}] {msg}</div>}
                             </For>
                         </div>
                         <div ref={chatHistoryRef} class='absolute bottom-0 inset-x-0 audio-history hidden'
@@ -354,12 +366,13 @@ const AiCompanion: Component<{
                             </For>
                         </div>
                     </div>
-                    <button class={styles.button} onClick={handleCloseConnection}>Emergency Shutoff</button>
 
-                    <button class={styles.button} onClick={handleRecordToggle}>
-                        {isRecording() ? 'Online' : 'Offline'}
-                    </button>
                 </div>
+                <button class={styles.button} onClick={handleRecordToggle}>
+                    {isRecording() ? 'Online' : 'Offline'}
+                </button>
+
+                <button class={styles.button} onClick={handleCloseConnection}>SHUTDOWN</button>
             </div>
         </>
     );

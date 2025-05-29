@@ -4,7 +4,6 @@ import TerminalHeader from "~/components/layouts/terminal/terminal-header";
 import TerminalNavigation from "~/components/layouts/terminal/terminal-navigation";
 import styles from "./style.module.css"
 import PleaseStandBy from "~/static/images/please-stand-by.jpg"
-import AiCompanion from "~/components/ai-companion";
 
 const TerminalLayout: Component<RouteSectionProps> = props => {
 
@@ -17,7 +16,6 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
             <div class={styles["scanline"]}></div>
             <div class={styles["wrapper"]}>
                 <div class={`${styles.content} ${styles.clearfix} w-full`}>
-
 
 
                     <Show

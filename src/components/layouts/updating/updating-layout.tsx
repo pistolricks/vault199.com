@@ -1,10 +1,6 @@
-import {Component, Show} from "solid-js";
+import {Component} from "solid-js";
 import {RouteSectionProps, useIsRouting} from "@solidjs/router";
-import TerminalHeader from "~/components/layouts/terminal/terminal-header";
-import TerminalNavigation from "~/components/layouts/terminal/terminal-navigation";
 import styles from "./style.module.css"
-import PleaseStandBy from "~/static/images/please-stand-by.jpg"
-import AiCompanion from "~/components/ai-companion";
 
 const UpdatingLayout: Component<RouteSectionProps> = props => {
 
@@ -13,13 +9,13 @@ const UpdatingLayout: Component<RouteSectionProps> = props => {
     return (
         <div class={styles["background"]}>
             <div class={styles["interlaced"]}></div>
-                <div class={styles["glare"]}></div>
+            <div class={styles["glare"]}></div>
 
 
-                    {props.children}
+            {props.children}
 
 
-            </div>
+        </div>
 
     );
 }
