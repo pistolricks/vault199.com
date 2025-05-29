@@ -57,7 +57,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 contextId={"activated-1"}
                 style={{
                     'background-image': 'url(' + pbMonitor + ')',
-                    'background-size': '100% 86%',
+                    'background-size': '100% 90%',
                     'background-repeat': 'no-repeat',
                     'background-position': 'top',
                     'background-color': 'transparent'
