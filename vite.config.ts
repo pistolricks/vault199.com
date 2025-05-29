@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import Pages from 'vite-plugin-pages';
-import { VitePWA } from 'vite-plugin-pwa';
+import {VitePWA} from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths'
+
 export default defineConfig({
     plugins: [
         Pages({
@@ -12,7 +13,7 @@ export default defineConfig({
         VitePWA({
             registerType: 'autoUpdate',
             injectRegister: "auto",
-            includeAssets: ['favicon.ico','icon-192.png','icon-512.png', 'icon-1024.png', 'icon-maskable.png','screenshot.png'],
+            includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png', 'icon-1024.png', 'icon-maskable.png', 'screenshot.png'],
             workbox: {
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
                 // runtimeCaching is optional, you can configure it as needed
@@ -97,6 +98,13 @@ export default defineConfig({
                         "src": "img/icons/screenshot.png",
                         "sizes": "1179x2556",
                         "type": "image/png"
+                    },
+                    {
+                        "src": "img/icons/screenshot-wide.jpg",
+                        "sizes": "1074x603",
+                        "type": "image/jpeg",
+                        "form_factor": "wide",
+                        "label": "Application"
                     }
                 ]
             },

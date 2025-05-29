@@ -37,6 +37,13 @@
             "src": "img/icons/screenshot.png",
             "sizes": "1179x2556",
             "type": "image/png"
+        },
+        {
+         "src": "img/icons/screenshot-wide.jpg",
+          "sizes": "1074x603",
+          "type": "image/jpeg",
+          "form_factor": "wide",
+          "label": "Application"
         }
     ]
 }
