@@ -377,7 +377,7 @@ const AiCompanion: Component<{
                             width: '80%'
                         }}
                         class={styles.button} onClick={handleRecordToggle}>
-                        {isRecording() ? 'Online' : 'Offline'}
+                        {isRecording() ? 'Online' : 'Connect'}
                     </button>
                 </div>
                 <div class={"flex justify-center items-center"}>
