@@ -1,12 +1,12 @@
 /* @refresh reload */
 import './index.css';
 
-import { render, Suspense } from 'solid-js/web';
+import {render} from 'solid-js/web';
 
 import App from './app';
-import { Router } from '@solidjs/router';
+import {Router} from '@solidjs/router';
 import routes from '~solid-pages';
-import { registerSW } from 'virtual:pwa-register';
+import {registerSW} from 'virtual:pwa-register';
 
 // Register service worker
 const updateSW = registerSW({
@@ -31,7 +31,6 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
         'Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?',
     );
 }
-
 
 
 render(

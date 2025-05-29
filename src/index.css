@@ -69,6 +69,7 @@ h4 b {
 a {
   color: white;
   text-decoration: none;
+  -webkit-touch-callout: none;
 }
 
 a:hover {

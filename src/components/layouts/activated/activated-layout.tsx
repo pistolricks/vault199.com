@@ -5,7 +5,7 @@ import styles from "./style.module.css"
 import ActivatedHeader from "~/components/layouts/activated/activated-header";
 import BaseDrawer, {DrawerContent} from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
-
+import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png"
 import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import GalleryApp from "~/components/pipboy/apps/gallery-app";
 import {createBreakpoints} from "@solid-primitives/media";
@@ -55,6 +55,13 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
             <DrawerContent
                 side={"bottom"}
                 contextId={"activated-1"}
+                style={{
+                    'background-image': 'url(' + pbMonitor + ')',
+                    'background-size': '100% 86%',
+                    'background-repeat': 'no-repeat',
+                    'background-position': 'top',
+                    'background-color': 'transparent'
+                }}
                 class={matches.sm ? "max-w-sm" : "w-screen"}
             >
 
