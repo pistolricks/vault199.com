@@ -1,6 +1,6 @@
 console.log("I'm a service worker ready to serve")
 
-const url = ["index.html", "sw.js"]
+const url = ["/"]
 
 globalThis.addEventListener("fetch", (event: FetchEvent) => {
      caches.open("pwa").then(cache => {

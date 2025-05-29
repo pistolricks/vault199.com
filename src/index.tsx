@@ -14,7 +14,7 @@ const updateSW = registerSW({
         if (confirm('New content available. Reload?')) {
             // Dispatch custom event before updating
             window.dispatchEvent(new CustomEvent('pwa-update'));
-            updateSW(true); // Explicitly reload the page
+            updateSW(true).then(r => console.log("reload", r)); // Explicitly reload the page
         }
     },
     onOfflineReady() {
