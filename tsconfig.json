@@ -12,7 +12,8 @@
     ],
     "lib": [
       "ESNext",
-      "webworker"
+      "webworker",
+      "dom"
     ],
     "noEmit": true,
     "isolatedModules": true,
