@@ -15,15 +15,10 @@ import sergeantAvatar from "~/static/companions/sergeant/sergeant.webp"
 import cloverAvatar from "~/static/companions/clover/clover.webp"
 import {Contact, ContactList} from "~/components/lists/contact-list";
 import ScreenLayout from "~/components/layouts/screen/screen-layout";
-import monitorL from "~/static/pipboy/2000N/monitor-l.png"
-import monitorT from "~/static/pipboy/2000N/monitor-t.png"
-import monitorR from "~/static/pipboy/2000N/monitor-r.png"
-import monitorB from "~/static/pipboy/2000N/monitor-b.png"
 import pipboyTop from "~/static/pipboy/assets/ui/pipboy_top.png"
 import pipboyLeft from "~/static/pipboy/assets/ui/pipboy_left.png"
 import pipboyRight from "~/static/pipboy/assets/ui/pipboy_right.png"
 import pipboyBottom from "~/static/pipboy/assets/ui/pipboy_bottom.png"
-
 type PROPS = {
     data: any
 }
@@ -140,32 +135,24 @@ const CommunicationsApp: Component<PROPS> = props => {
 
 
     return (
-        <>
 
-            <div
-                class={"flex justify-center items-center absolute inset-x-0 bottom-[20dvh] h-[60dvh] w-screen sm:max-w-sm"}>
+        <div class={"flex justify-center items-center absolute inset-x-0 top-0 h-[80dvh] w-screen sm:max-w-sm bottom-20"}>
 
 
-                <Show when={getComm() === "contacts"}>
-                    <div
-                        class={"relative flex flex-col justify-center items-center overflow-y-auto  duration-400 animate-in slide-in-from-bottom"}>
+            <Show when={getComm() === "contacts"}>
+                <div class={"flex flex-col justify-center items-center overflow-y-auto h-[80dvh] duration-400 animate-in slide-in-from-bottom"}>
 
-                        <ScreenLayout height={"70dvh"}>
-                            <div class={"relative h-[70dvh] w-screen"}>
+                    <ScreenLayout height={"70dvh"}>
 
-                                <div class={'h-[60dvh] absolute bottom-10 inset-x-0 w-full flex flex-col justify-center items-center overflow-y-scroll'}>
-                                <ContactList  list={companions}/>
-                                </div>
-                            </div>
-                        </ScreenLayout>
+                        <ContactList height={"70dvh"} list={companions}/>
 
-                    </div>
-                </Show>
+                    </ScreenLayout>
+                </div>
+            </Show>
 
-                <BottomPipboyMenu menuItems={menuItems} onClick={handleCommunications} appName={communications()}/>
+            <BottomPipboyMenu menuItems={menuItems} onClick={handleCommunications} appName={communications()}/>
 
-            </div>
-        </>
+        </div>
     );
 };
 

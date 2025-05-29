@@ -15,15 +15,14 @@ export type Contact = {
     active: boolean
 
 
-
 }
 const ContactList: Component<{
     list: Contact[]
-    bg?: string;
+    height?: string;
 }> = (props) => {
     const list = () => props.list;
 
-    const bg = () => props.bg ?? pipBg;
+    const height = () => props.height ?? "50vh";
 
     const [getSelected, setSelected] = createSignal<Contact | null>(null);
 
@@ -40,7 +39,12 @@ const ContactList: Component<{
     return (
         <>
 
-
+            <div
+                style={{
+                    'background-color': `url(${pipBg})`,
+                    height: height(),
+                }}
+                class="flex flex-col overflow-y-scroll shadow-xl">
                 <Show
                     fallback={
                         <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full">
@@ -55,7 +59,7 @@ const ContactList: Component<{
                     when={selected()}>
                     <AiCompanion name={selected()?.title}/>
                 </Show>
-
+            </div>
 
         </>
     )
