@@ -326,16 +326,18 @@ const AiCompanion: Component<{
                         "p-4 overflow-x-hidden"
                     )} style={{
                         "background-image": `url(${avatar()})`,
-                        "background-size": "contain",
+                        "background-size": "cover",
+                        "background-position": "center",
                         "background-repeat": "no-repeat",
-                        width: '80%', height: '40dvh'}}>
+                        width: '80%', height: '40dvh'
+                    }}>
                         <div ref={outputDivRef}
                              class={"overflow-x-hidden"}
                              style={{
-                            'height': '40dvh',
-                            'overflow-y': 'scroll',
-                            'border': '1px solid #ccc',
-                        }}>
+                                 'height': '100%',
+                                 'overflow-y': 'scroll',
+                                 'border': '1px solid #ccc',
+                             }}>
                             <For each={outputText()}>
                                 {(msg, i) => <div class="opacity-10">[{i()}] {msg}</div>}
                             </For>
@@ -349,7 +351,8 @@ const AiCompanion: Component<{
                                         'chat-message-container': true,
                                         'align-right': !!item.isMe
                                     }}>
-                                        <div class="chat-message-name">{item.name || (item.isMe ? 'Me' : 'System')}</div>
+                                        <div
+                                            class="chat-message-name">{item.name || (item.isMe ? 'Me' : 'System')}</div>
                                         {item.type === 'text' && <div class="chat-message-text">{item.content}</div>}
                                         {item.type === 'audioLink' && (
                                             <a href={item.audioUrl}
@@ -368,11 +371,22 @@ const AiCompanion: Component<{
                     </div>
 
                 </div>
-                <button class={styles.button} onClick={handleRecordToggle}>
-                    {isRecording() ? 'Online' : 'Offline'}
-                </button>
-
-                <button class={styles.button} onClick={handleCloseConnection}>SHUTDOWN</button>
+                <div class={"flex justify-center items-center"}>
+                    <button
+                        style={{
+                            width: '80%'
+                        }}
+                        class={styles.button} onClick={handleRecordToggle}>
+                        {isRecording() ? 'Online' : 'Offline'}
+                    </button>
+                </div>
+                <div class={"flex justify-center items-center"}>
+                    <button
+                        style={{
+                            width: '80%'
+                        }}
+                        class={styles.button} onClick={handleCloseConnection}>SHUTDOWN</button>
+                </div>
             </div>
         </>
     );
