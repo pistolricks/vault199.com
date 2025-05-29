@@ -57,14 +57,9 @@ const App: Component<RouteSectionProps> = (props) => {
 
     return (
         <>
-            <div class="min-h-dvh h-dvh flex flex-col w-screen">
-
-                <main class={'scrollbar-hide'}>
-                    <Suspense>{props.children}</Suspense>
-                </main>
-            </div>
-
-
+            <main class={'scrollbar-hide'}>
+                <Suspense>{props.children}</Suspense>
+            </main>
         </>
     );
 };

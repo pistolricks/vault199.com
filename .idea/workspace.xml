@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/index.html" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/index.html" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/package-lock.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/package-lock.json" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/package.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/package.json" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/pwa-assets.config.js" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/icon-1024.png" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/public/img/icons/icon-1024.png" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/service-worker.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/service-worker.ts" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/character/data.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/character/data.json" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/tsconfig.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/tsconfig.json" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/app.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/bottom",
+    "last_opened_file_path": "/Users/eriksmith/WebstormProjects/vault199/public/img/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,18 +74,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img/icons" />
       <recent name="$PROJECT_DIR$/src/static/pipboy/bottom" />
       <recent name="$PROJECT_DIR$/src/static/pipboy/2000N" />
-      <recent name="$PROJECT_DIR$/public/img/icons" />
       <recent name="$PROJECT_DIR$/src/static/pipboy/assets/ui" />
       <recent name="$PROJECT_DIR$/src/static/companions/clover" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img/icons" />
       <recent name="$PROJECT_DIR$/src/static/companions" />
       <recent name="$PROJECT_DIR$/src/static/companions/cross" />
       <recent name="$PROJECT_DIR$/src/components/pipboy/apps/communications" />
       <recent name="$PROJECT_DIR$/src/static/pipboy/Bottom" />
-      <recent name="$PROJECT_DIR$/src/static/pipboy" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -148,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.generate-pwa-assets" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.serve" />
+        <item itemvalue="npm.generate-pwa-assets" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +199,10 @@
       <workItem from="1748403076783" duration="245000" />
       <workItem from="1748403338480" duration="781000" />
       <workItem from="1748404135356" duration="13468000" />
-      <workItem from="1748542193433" duration="2189000" />
+      <workItem from="1748542193433" duration="3475000" />
+      <workItem from="1748545693751" duration="491000" />
+      <workItem from="1748546191937" duration="150000" />
+      <workItem from="1748546353090" duration="287000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />
