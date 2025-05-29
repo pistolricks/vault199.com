@@ -74,13 +74,16 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
             <div class="self-start">
                 <button
                     onClick={props.onClick}
+                    disabled={!props.active}
                     class="relative flex h-full w-full items-center justify-center rounded-full text-white"
                 >
                     <img
                         src={props.avatar}
                         alt={props.name}
                         title={props.name}
-                        class="h-[8rem] w-24 max-h-24 object-cover"
+                        class={classNames(
+                            props.active ? "" : "grayscale-100",
+                            "h-[8rem] w-24 max-h-24 object-cover")}
                     />
 
                     <span class={classNames(

@@ -15,10 +15,10 @@ import sergeantAvatar from "~/static/companions/sergeant/sergeant.webp"
 import cloverAvatar from "~/static/companions/clover/clover.webp"
 import {Contact, ContactList} from "~/components/lists/contact-list";
 import ScreenLayout from "~/components/layouts/screen/screen-layout";
-import pipboyTop from "~/static/pipboy/assets/ui/pipboy_top.png"
-import pipboyLeft from "~/static/pipboy/assets/ui/pipboy_left.png"
-import pipboyRight from "~/static/pipboy/assets/ui/pipboy_right.png"
-import pipboyBottom from "~/static/pipboy/assets/ui/pipboy_bottom.png"
+// import pipboyTop from "~/static/pipboy/assets/ui/pipboy_top.png"
+// import pipboyLeft from "~/static/pipboy/assets/ui/pipboy_left.png"
+// import pipboyRight from "~/static/pipboy/assets/ui/pipboy_right.png"
+// import pipboyBottom from "~/static/pipboy/assets/ui/pipboy_bottom.png"
 type PROPS = {
     data: any
 }
@@ -136,7 +136,7 @@ const CommunicationsApp: Component<PROPS> = props => {
 
     return (
 
-        <div class={"flex justify-center items-center absolute inset-x-0 top-0 h-[80dvh] w-screen sm:max-w-sm bottom-20"}>
+        <div class={"flex justify-center items-center absolute inset-x-0 top-10 h-[80dvh] w-screen sm:max-w-sm bottom-20"}>
 
 
             <Show when={getComm() === "contacts"}>
