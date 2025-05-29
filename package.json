@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/serviceworker": "^0.0.136",
     "@vite-pwa/assets-generator": "^1.0.0",
     "tailwindcss": "^4.1.6",
     "tailwindcss-animate": "^1.0.7",

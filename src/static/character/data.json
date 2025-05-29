@@ -815,121 +815,121 @@
             "Flare": {
                 "quantity": "2 + 1CD",
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Shotgun Shell": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             ".45": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Flamer Fuel": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Fusion Cell": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Gamma Round": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Railway Spike": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Syringer Ammo": {
                 "quantity": "will have nested table for dif types",
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             ".44 Magnum": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             ".50": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "5.56mm": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "5mm": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Fusion Core": {
                 "quantity": "1",
                 "weight": "4",
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Missile": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": "7",
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Plasma Cartridge": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "2mm EC": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": 0,
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             },
             "Mini-Nuke": {
-                "quantity": ,
+                "quantity": 0,
                 "weight": "12",
-                "cost": ,
-                "rarity": ,
-                "description": 
+                "cost": 0,
+                "rarity": 0,
+                "description": 0
             }
         },
         "smallGuns": {
@@ -996,199 +996,199 @@
                 }
             },
             "Flare Gun": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Assault Rifle": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Combat Rifle": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Gauss Rifle": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Hunting Rifle": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Submachine Gun": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Combat Shotgun": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Double-Barrel Shotgun": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Pipe Bolt-Action": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Pipe Gun": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Pipe Revolver": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Railway Rifle": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "Syringer": {
-                "damage": ,
+                "damage": 0,
                 "effects": [
                     ""
                 ],
                 "damageType": "Physical",
-                "fireRate": ,
+                "fireRate": 0,
                 "range": "",
                 "qualities": [
                     ""
                 ],
-                "weight": ,
-                "cost": ,
-                "rarity": 
+                "weight": 0,
+                "cost": 0,
+                "rarity": 0
             },
             "mods": {
 

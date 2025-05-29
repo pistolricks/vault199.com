@@ -7,9 +7,17 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"],
+    "types": [
+      "vite/client"
+    ],
+    "lib": [
+      "ESNext",
+      "webworker"
+    ],
     "noEmit": true,
     "isolatedModules": true,
+
+    "baseUrl": "./",
     "paths": {
       "~/*": [
         "./src/*"
