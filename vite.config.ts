@@ -12,7 +12,7 @@ export default defineConfig({
         VitePWA({
             registerType: 'autoUpdate',
             injectRegister: "auto",
-            includeAssets: ['icon-512.png', 'icon-1024.png', 'icon-maskable.png','screenshot.png'],
+            includeAssets: ['favicon.ico','icon-192.png','icon-512.png', 'icon-1024.png', 'icon-maskable.png','screenshot.png'],
             workbox: {
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
                 // runtimeCaching is optional, you can configure it as needed
@@ -70,9 +70,15 @@ export default defineConfig({
                 "start_url": "/",
                 "icons": [
                     {
+                        "src": "img/icons/icon-192.png",
+                        "sizes": "192x192",
+                        "type": "image/png"
+                    },
+                    {
                         "src": "img/icons/icon-512.png",
                         "sizes": "512x512",
-                        "type": "image/png"
+                        "type": "image/png",
+                        "purpose": "any"
                     },
                     {
                         "src": "img/icons/icon-1024.png",
@@ -86,6 +92,13 @@ export default defineConfig({
                         "purpose": "maskable"
                     }
                 ],
+                "screenshots": [
+                    {
+                        "src": "img/icons/screenshot.png",
+                        "sizes": "1179x2556",
+                        "type": "image/png"
+                    }
+                ]
             },
         }),
         tsconfigPaths(),
