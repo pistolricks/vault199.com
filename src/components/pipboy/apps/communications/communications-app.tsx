@@ -140,7 +140,7 @@ const CommunicationsApp: Component<PROPS> = props => {
 
 
             <Show when={getComm() === "contacts"}>
-                <div class={"flex flex-col justify-center items-center overflow-y-auto h-[80dvh] duration-400 animate-in slide-in-from-bottom"}>
+                <div class={"flex flex-col justify-center items-center overflow-y-auto h-[80dvh] w-[80%] duration-400 animate-in slide-in-from-bottom"}>
 
                     <ScreenLayout height={"70dvh"}>
 

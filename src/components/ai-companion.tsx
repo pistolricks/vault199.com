@@ -320,7 +320,7 @@ const AiCompanion: Component<{
 
                 </div>
 
-                <div class={" flex justify-center items-center h-full mt-4"}>
+                <div class={" flex justify-center items-center h-full w-full mt-4"}>
                     <div class={classNames(
                         isRecording() ? '' : 'grayscale-100',
                         "p-4 overflow-x-hidden"
@@ -328,7 +328,7 @@ const AiCompanion: Component<{
                         "background-image": `url(${avatar()})`,
                         "background-size": "contain",
                         "background-repeat": "no-repeat",
-                        width: '80dvh', height: '40dvh'}}>
+                        width: '80%', height: '40dvh'}}>
                         <div ref={outputDivRef}
                              class={"overflow-x-hidden"}
                              style={{
