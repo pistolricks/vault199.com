@@ -19,12 +19,9 @@ export type Contact = {
 }
 const ContactList: Component<{
     list: Contact[]
-    height?: string;
     bg?: string;
 }> = (props) => {
     const list = () => props.list;
-
-    const height = () => props.height ?? "50vh";
 
     const bg = () => props.bg ?? pipBg;
 
@@ -46,7 +43,7 @@ const ContactList: Component<{
 
                 <Show
                     fallback={
-                        <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full w-full">
+                        <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full">
 
                             <For each={list()}>
                                 {(contact) => (

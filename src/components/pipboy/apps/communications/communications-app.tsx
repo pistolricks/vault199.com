@@ -152,8 +152,9 @@ const CommunicationsApp: Component<PROPS> = props => {
 
                         <ScreenLayout height={"70dvh"}>
                             <div class={"relative h-[70dvh] w-screen"}>
-                                <div class={'h-[70dvh] absolute bottom-0 inset-x-0 w-full flex flex-col justify-center items-center overflow-y-scroll'}>
-                                <ContactList height={"60dvh"} list={companions}/>
+
+                                <div class={'h-[60dvh] absolute bottom-10 inset-x-0 w-full flex flex-col justify-center items-center overflow-y-scroll'}>
+                                <ContactList  list={companions}/>
                                 </div>
                             </div>
                         </ScreenLayout>
