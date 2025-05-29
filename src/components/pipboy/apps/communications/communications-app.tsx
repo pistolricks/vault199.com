@@ -152,11 +152,7 @@ const CommunicationsApp: Component<PROPS> = props => {
 
                         <ScreenLayout height={"70dvh"}>
                             <div class={"relative h-[70dvh] w-screen"}>
-                                <img src={monitorL} class={"absolute h-[70dvh] z-10 -left-10 w-[123px]"}/>
-                                <img src={monitorR} class={"absolute h-[70dvh] z-10 -right-10 w-[123px]"}/>
-                                <img src={monitorB} class={"absolute  h-24 -bottom-5 z-10 w-full"}/>
-                                <img src={monitorT} class={"absolute  h-24 -top-5 z-10 w-full"}/>
-                                <div class={'h-[60dvh] absolute bottom-0 inset-x-0 w-full flex flex-col justify-center items-center overflow-y-scroll'}>
+                                <div class={'h-[70dvh] absolute bottom-0 inset-x-0 w-full flex flex-col justify-center items-center overflow-y-scroll'}>
                                 <ContactList height={"60dvh"} list={companions}/>
                                 </div>
                             </div>

@@ -46,7 +46,7 @@ const ContactList: Component<{
 
                 <Show
                     fallback={
-                        <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full w-4/5">
+                        <ul role="list" class="divide-y divide-gray-200 overflow-y-auto h-full w-full">
 
                             <For each={list()}>
                                 {(contact) => (
