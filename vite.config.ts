@@ -63,7 +63,7 @@ export default defineConfig({
                 "name": "Vault-Tec Vault 199",
                 "short_name": "Vault 199",
                 "description": "Pipboy 3000 tested and approved by Vault-Tec",
-                "theme_color": "#00dd00",
+                "theme_color": "#28467A",
                 "background_color": "#111",
                 "display": "standalone",
                 "orientation": "portrait",
