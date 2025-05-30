@@ -44,18 +44,18 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                         'background-repeat': 'no-repeat',
                         'background-size': '100% 100%',
                     }}
-                    class={"fixed inset-0 w-full h-full z-10"}></div>
-                <ActivatedHeader {...props}/>
-                <div class={'flex-1 flex flex-row overflow-y-hidden'}>
-                    <main
-                        class={'mx-auto max-w-7xl  scrollbar-hide flex-1 text-xs overflow-y-auto'}
-                    >
+                    class={"fixed inset-0 w-full h-full z-0 flex flex-row overflow-hidden"}></div>
+
+
+
                         <div class={styles["interlaced"]}></div>
                         <div class={styles["glare"]}></div>
                         {children()}
-                    </main>
 
-                </div>
+
+
+
+
                 <ActivatedFooter onClick={handleApps}/>
 
             </div>

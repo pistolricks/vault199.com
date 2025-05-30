@@ -70,7 +70,7 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
     console.log(props)
 
     return (
-        <li class="flex items-center gap-4 px-4 py-3 h-24 max-h-24">
+        <li class="flex items-center gap-x-4  h-24 overflow-hidden">
             <div class="self-start">
                 <button
                     onClick={props.onClick}
@@ -83,7 +83,7 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
                         title={props.name}
                         class={classNames(
                             props.active ? "" : "grayscale-100",
-                            "h-[8rem] w-24 max-h-24 object-cover")}
+                            "w-24 h-24 object-cover")}
                     />
 
                     <span class={classNames(
