@@ -73,7 +73,7 @@ const Initialize: Component<RouteSectionProps> = props => {
 
 
                                     }}
-                                    class={"object-fill"}
+                                    class={"object-fill inset-0"}
                                     controls={false} width={size.width} height={size.height} ref={video}>
                                     <source src={vid} type="video/mp4" />
                                 </video>
