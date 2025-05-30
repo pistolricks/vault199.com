@@ -24,7 +24,7 @@ const Initialize: Component<RouteSectionProps> = props => {
 
 
     const playVideo = async () => {
-        video.playsInline = true;
+
         await video.play();
         video.addEventListener('ended', function () {
             navigate(`/dashboard`);
@@ -64,8 +64,17 @@ const Initialize: Component<RouteSectionProps> = props => {
                         <div class={styles["glare"]}></div>
                         <div class={"h-screen flex justify-center items-center w-screen bg-black"}>
                             <div
-                                ref={setTarget} class={"relative h-[49%] w-full md:w-full md:h-[76%]"}>
-                                <video width={size.width} height={size.height} ref={video} webkit-playsinline={true} playsinline={true}>
+                                ref={setTarget} class={"relative h-[70%] w-screen md:w-full md:h-[76%] flex justify-center items-center"}>
+                                <video
+                                    style={{
+                                        'position': 'absolute',
+                                        'width': '100%',
+                                        'height': '100%',
+
+
+                                    }}
+                                    class={"object-fill"}
+                                    controls={false} width={size.width} height={size.height} ref={video}>
                                     <source src={vid} type="video/mp4" />
                                 </video>
                             </div>

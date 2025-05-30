@@ -176,10 +176,3 @@ div.retro-container {
 .blink {
   animation: blink 0.4s linear infinite;
 }
-
-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* or contain, fill, etc. */
-}
