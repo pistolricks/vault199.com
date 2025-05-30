@@ -332,7 +332,7 @@ const AiCompanion: Component<{
                         width: '80%', height: '40dvh'
                     }}>
                         <div ref={outputDivRef}
-                             class={"overflow-x-hidden"}
+                             class={"overflow-x-hidden scrollbar-hide"}
                              style={{
                                  'height': '100%',
                                  'overflow-y': 'scroll',

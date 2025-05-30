@@ -77,7 +77,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
                 <Dynamic component={component()}/>
 
-                <img src={bottomMenu2} class={"sm:max-w-xs fixed z-20 -bottom-2 h-auto object-contain w-full"}
+                <img src={bottomMenu2} class={"sm:max-w-xs fixed z-20 -bottom-6 sm:-bottom-2 h-auto object-contain w-full"}
                      alt={"bottom menu"}/>
             </DrawerContent>
 
