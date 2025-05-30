@@ -8,8 +8,11 @@ import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png"
 import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import GalleryApp from "~/components/pipboy/apps/gallery-app";
-import {createBreakpoints} from "@solid-primitives/media";
+import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png"
 import {matches} from "~/app";
+import ScreenLayout from "~/components/layouts/screen/screen-layout";
+import {classNames} from "~/components/navigation";
+import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
 
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
@@ -38,19 +41,26 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
     return (
         <BaseDrawer side={"bottom"} contextId={"activated-1"}>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
-                <div class={styles["interlaced"]}></div>
-                <div class={styles["glare"]}></div>
+                <div
+                    style={{
+                        'background-image': `url(${pbMonitor3000})`,
+                        'background-repeat': 'no-repeat',
+                        'background-size': '100% 100%',
+                    }}
+                    class={"fixed inset-0 w-full h-full z-10"}></div>
                 <ActivatedHeader {...props}/>
                 <div class={'flex-1 flex flex-row overflow-y-hidden'}>
-
                     <main
                         class={'mx-auto max-w-7xl  scrollbar-hide flex-1 text-xs overflow-y-auto'}
                     >
+                        <div class={styles["interlaced"]}></div>
+                        <div class={styles["glare"]}></div>
                         {children()}
                     </main>
 
                 </div>
                 <ActivatedFooter onClick={handleApps}/>
+
             </div>
             <DrawerContent
                 side={"bottom"}
@@ -60,15 +70,18 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                     'background-size': '100% 90%',
                     'background-repeat': 'no-repeat',
                     'background-position': 'top',
-                    'background-color': 'transparent'
+                    'background-color': 'black'
                 }}
-                class={matches.sm ? "max-w-sm" : "w-screen"}
+                class={classNames(
+
+                    matches.sm ? "max-w-sm" : "w-screen")}
             >
 
 
                 <Dynamic component={component()}/>
 
-
+                <img src={bottomMenu2} class={"sm:max-w-sm fixed z-20 -bottom-6 h-auto object-contain w-full"}
+                     alt={"bottom menu"}/>
             </DrawerContent>
 
         </BaseDrawer>

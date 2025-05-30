@@ -1,7 +1,7 @@
 import {Component, createEffect, createMemo, createSignal, Show} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
-import Logo from "~/static/images/vault-tec.png"
+import Logo from "~/static/logos/vault-tec.png"
 import {cookies, currentUser} from "~/app";
 import Logout from "~/components/logout";
 

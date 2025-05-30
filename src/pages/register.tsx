@@ -1,7 +1,7 @@
 import {Component, createEffect, createMemo, createSignal} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
 import {A, RouteSectionProps, useSubmission} from "@solidjs/router";
-import PleaseStandBy from "~/static/images/please-stand-by.jpg";
+import PleaseStandBy from "~/static/banners/please-stand-by.jpg";
 import styles from "~/components/layouts/terminal/style.module.css"
 import {registerUserHandler} from "~/lib/users";
 

@@ -35,7 +35,7 @@ export default function BottomMenu(props: {
     return (
 
         <>
-            <div class={"absolute bottom-12 sm:bottom-8 w-full flex justify-center items-center gap-x-5 sm:gap-x-8"}>
+            <div class={"absolute z-20 bottom-24 sm:bottom-32 right-5 sm:right-10 w-full flex justify-center items-center gap-x-5 sm:gap-x-8"}>
                 {/*
             <Drawer.Trigger style={{
                 width: matches?.sm ? '58px':'37px',

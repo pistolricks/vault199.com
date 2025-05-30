@@ -2,7 +2,7 @@ import Drawer from '@corvu/drawer'
 import DrawerPrimitive, {type ContentProps, type DynamicProps} from '@corvu/drawer'
 import {JSXElement, Setter, splitProps, type ValidComponent} from "solid-js";
 import {cn} from "~/lib/utils";
-
+import bg from "~/static/backgrounds/pipboy_back.png"
 
 type PROPS = {
     children?: JSXElement

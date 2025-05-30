@@ -3,7 +3,7 @@ import {RouteSectionProps, useIsRouting} from "@solidjs/router";
 import TerminalHeader from "~/components/layouts/terminal/terminal-header";
 import TerminalNavigation from "~/components/layouts/terminal/terminal-navigation";
 import styles from "./style.module.css"
-import PleaseStandBy from "~/static/images/please-stand-by.jpg"
+import PleaseStandBy from "~/static/banners/please-stand-by.jpg"
 
 const TerminalLayout: Component<RouteSectionProps> = props => {
 

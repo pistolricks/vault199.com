@@ -1,12 +1,12 @@
 import {Component, createEffect, createMemo, createSignal, Show} from "solid-js";
 import {A, RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
-import Logo from "~/static/images/vault-tec.png"
+import Logo from "~/static/logos/vault-tec.png"
 import top from "~/static/pipboy/Top_White/Fallout - Top (White)/Top.png"
 import {cookies, currentUser} from "~/app";
 import Logout from "~/components/logout";
 
-import vaultTecLogo from "~/static/images/vault.png";
+import vaultTecLogo from "~/static/logos/vault.png";
 import Drawer from "@corvu/drawer";
 const ActivatedHeader: Component<RouteSectionProps> = props => {
 
@@ -30,7 +30,7 @@ const ActivatedHeader: Component<RouteSectionProps> = props => {
     return (
 
         <div class={styles["background"] + "h-60 overflow-y-auto"}>
-            <img src={top} class={"fixed top-0 w-full inset-x-0 object-contain z-40"}/>
+
 
         <header class={"fixed top-0 py-4 z-40 h-10 items-center"}>
 

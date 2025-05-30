@@ -113,18 +113,24 @@ const companions: Contact[] = [
         active: true
     },
 ]
-const menuItems: MenuItem[] = [
-    {name: "vChat", icon: vChat},
-    {name: "mail", icon: mail},
-    {name: "contacts", icon: contacts},
-    {name: "call", icon: call},
-    {name: "chat", icon: chat},
-]
+
+
+
 
 const CommunicationsApp: Component<PROPS> = props => {
 
 
     const [getComm, setComm] = createSignal("")
+
+
+    const menuItems: MenuItem[] = [
+        {name: "vChat", icon: vChat},
+        {name: "mail", icon: mail},
+        {name: "contacts", icon: contacts},
+        {name: "call", icon: call},
+        {name: "chat", icon: chat},
+    ]
+
 
     const handleCommunications = (app: string) => {
         console.log(app)

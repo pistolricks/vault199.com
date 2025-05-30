@@ -6,9 +6,7 @@ import UpdatingLayout from "~/components/layouts/updating/updating-layout";
 import {RouteSectionProps} from "@solidjs/router";
 import ActivatedLayout from "~/components/layouts/activated/activated-layout";
 
-type PROPS = {
-    
-}
+type PROPS = {}
 
 const Dashboard: Component<RouteSectionProps> = props => {
 
@@ -16,7 +14,7 @@ const Dashboard: Component<RouteSectionProps> = props => {
     return (
         <ActivatedLayout {...props}>
 
-    </ActivatedLayout>
+        </ActivatedLayout>
     );
 };
 

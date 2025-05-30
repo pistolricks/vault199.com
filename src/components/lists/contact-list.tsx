@@ -1,6 +1,6 @@
 import {Component, createMemo, createSignal, For, Show} from "solid-js";
 import {classNames} from "~/components/navigation";
-import pipBg from "~/static/images/pipboy_back.png"
+import pipBg from "~/static/backgrounds/pipboy_back.png"
 import AiCompanion from "~/components/ai-companion";
 
 export type Contact = {

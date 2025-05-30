@@ -1,5 +1,4 @@
 import {Component} from "solid-js";
-import AiCompanion from "~/components/ai-companion";
 
 
 type PROPS = {
@@ -8,8 +7,6 @@ type PROPS = {
 
 
 const CompanionApp: Component<PROPS> = props => {
-
-
 
 
     return (
