@@ -45,7 +45,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     )} alt={menuItems()[0].name}/>
                 </button>
                 <button
-                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 ring-4 ring-gray-950/70 left-[28.4%] bottom-[37%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 ring-4 ring-gray-950/70 left-[28.8%] sm:left-[28.4%] bottom-[37%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[1].name)}>
                     <img src={menuItems()[1].icon} class={classNames(
                         appName() === menuItems()[1].name ? "brightness-100" : "brightness-60",
