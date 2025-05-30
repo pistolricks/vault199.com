@@ -129,7 +129,7 @@ strong {
 .output {
     /* -webkit-animation: crt-output 10ms infinite;
     animation: crt-output 10ms infinite; */
-    background-color: var(--black);
+
     position: absolute;
     padding: 0;
     pointer-events: auto;
@@ -219,6 +219,7 @@ strong {
 .pipboy {
     border: 3px solid rgb(var(--main));
     border-width: 2px 0;
+    border-radius: 10px;
     position: relative;
     height: 100%;
     padding: 16px 26px;
@@ -230,13 +231,14 @@ strong {
     position: absolute;
     content: "";
     width: 2px;
-    height: 100%;
+    height: 90%;
     background: linear-gradient(to bottom,
     rgb(var(--main)) 0%,
     rgba(0, 0, 0, 0) 35%,
     rgba(0, 0, 0, 0) 65%,
     rgb(var(--main)) 100%);
-    top: 0;
+    top: 5%;
+
 }
 
 .pipboy::before {
@@ -274,7 +276,7 @@ strong {
 
 .pip-head {
     position: absolute;
-    top: 0;
+    top: 26px;
     right: 0;
     width: max-content;
     max-width: 100%;
@@ -333,7 +335,7 @@ strong {
 
 .pipboy>.tab-content {
     line-height: 1.2em;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
     display: block;
     height: 100%;
@@ -831,19 +833,53 @@ a:hover {
     }
 }
 
+
+[data-scope='tabs'][data-part='root'] {
+    width: 100%;
+}
+
+[data-scope='tabs'][data-part='root'][data-orientation='vertical'] {
+    display: flex;
+}
+
+
+[data-scope='tabs'][data-part='list'][data-orientation='vertical'] {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+
+
 @media only screen and (max-width: 800px) {
+
+    [data-scope='tabs'][data-part='list'][data-orientation='vertical'] {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pipboy>.tab-content>.tab-pane {
+        padding-left: 0;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+
+
     .frame {
-        height: 79vh;
+        height: 82vh;
         width: 86%;
         max-height: unset;
         border: none;
     }
 
     .output {
-        padding: 25px 15px 30px 15px;
+        padding: 10px 5px 20px 5px;
     }
 
     .pipboy {
+        margin-top: 6px;
         padding-bottom: 20px;
     }
 
@@ -870,6 +906,10 @@ a:hover {
         display: none;
     }
 
+    .pipboy {
+        padding: 5px;
+    }
+
     .pip-body .options {
         width: 100%;
         max-width: unset;
@@ -881,8 +921,8 @@ a:hover {
     }
 
     .pip-body .info {
-        width: calc(100% + 30px);
-        margin-left: -30px;
+        width: calc(100%);
+        margin-left: 0;
         margin-top: 10px;
         position: relative;
         padding-bottom: 10px;
@@ -907,7 +947,7 @@ a:hover {
 
     .options label,
     .options a {
-        width: calc(100% + 24px);
+        width: calc(100%);
         max-width: unset;
     }
 
@@ -949,6 +989,10 @@ a:hover {
         -webkit-filter: brightness(1);
         filter: brightness(1);
     }
+
+
+
+
 }
 
 html.amber {
@@ -1071,5 +1115,3 @@ html.black {
 
  */
 }
-
-

@@ -1,19 +1,17 @@
 import {Component} from "solid-js";
-import { Tabs as ArkTabs } from "@ark-ui/solid";
+import {Tabs as ArkTabs} from "@ark-ui/solid";
 import StatsTab from "~/components/pipboy/tabs/stats-tab";
 import MiscTab from "~/components/pipboy/tabs/misc-tab";
 
-type PROPS = {
-
-}
+type PROPS = {}
 
 const Tabs: Component<PROPS> = props => {
 
     return (
         <div>
-            <ArkTabs.List class="pip-foot" role="tablist">
-
-                    <MiscTab />
+            <ArkTabs.List class="absolute bottom-[2px] left-[10%]" role="tablist">
+                <StatsTab/>
+                <MiscTab/>
 
             </ArkTabs.List>
         </div>

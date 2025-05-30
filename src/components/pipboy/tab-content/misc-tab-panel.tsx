@@ -1,50 +1,72 @@
+import { Tabs } from "@ark-ui/solid";
 import {Component} from "solid-js";
+import {Matches} from "@solid-primitives/media";
+import {classNames} from "~/components/navigation";
 
 type PROPS = {
-
+    matches: Matches<{
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        xxl: string;
+    }>
 }
 
 const MiscTabPanel: Component<PROPS> = props => {
 
+    const matches = () => props.matches;
     const getColor = (colorType) => {
         const r = document.querySelector(":root");
         r.className = colorType;
     };
 
     return (
-        <div
-            class="tab-pane fade"
-            role="tabpanel"
-            id="misc"
-            aria-labelledby="misc-tab"
+        <Tabs.Content value={"misc"}
+                      class="tab-pane fade"
+                      role="tabpanel"
+                      id="misc"
+                      aria-labelledby="misc-tab"
         >
+
             <h3 class="pip-title">Misc</h3>
+
             <div class="pip-body">
-                <ul class="options" role="tablist">
-                    <li
+
+                <Tabs.Root class={"mt-5 px-5"} orientation={matches().sm ? "vertical" : "horizontal"}>
+                <Tabs.List class="options" role="tablist">
+                    <Tabs.Trigger
+                        value={"misc-1"}
                         data-bs-toggle="tab"
                         data-bs-target="#misc-1"
                         role="tab"
                         class="active"
                     >
-                        <a>Backlight Color</a>
-                    </li>
-                    <li data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
-                        <a>Now she's gone</a>
-                    </li>
-                    <li data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
-                        <a>Memory</a>
-                    </li>
-                    <li data-bs-toggle="tab" data-bs-target="#misc-4" role="tab">
-                        <a>Irresistible</a>
-                    </li>
-                    <li data-bs-toggle="tab" data-bs-target="#misc-5" role="tab">
-                        <a>Dreams</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div
-                        class="info active tab-pane fade in show"
+                      A
+                    </Tabs.Trigger>
+                    <Tabs.Trigger
+                        value={"misc-2"} data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
+                        B
+                    </Tabs.Trigger>
+                    <Tabs.Trigger
+                        value={"misc-3"} data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
+                      C
+                    </Tabs.Trigger>
+                    <Tabs.Trigger
+                        value={"misc-4"} data-bs-toggle="tab" data-bs-target="#misc-4" role="tab">
+                      D
+                    </Tabs.Trigger>
+                    <Tabs.Trigger
+                        value={"misc-5"} data-bs-toggle="tab" data-bs-target="#misc-5" role="tab">
+                      E
+                    </Tabs.Trigger>
+                </Tabs.List>
+                <div class="tab-content mt-5">
+                    <Tabs.Content
+                        value={"misc-1"}
+                        class={classNames(
+                            matches().sm ? "info" : "",
+                            " active tab-pane fade in show")}
                         id="misc-1"
                         role="tabpanel"
                         aria-labelledby="misc-1-tab"
@@ -103,15 +125,18 @@ const MiscTabPanel: Component<PROPS> = props => {
                                 <label for="b-black">Science!</label>
                             </form>
                         </div>
-                    </div>
+                    </Tabs.Content>
 
-                    <div
-                        class="info tab-pane fade"
+                    <Tabs.Content
+                        value={"misc-2"}
+                        class={classNames(
+                            matches().sm ? "info" : "",
+                            " tab-pane fade")}
                         id="misc-2"
                         role="tabpanel"
                         aria-labelledby="misc-2-tab"
                     >
-                        <div class="post">
+                        <div class="post overflow-hidden">
                             <p>
                                 You wanted to be my bestie <br />
                                 I cried on your shoulder
@@ -121,43 +146,16 @@ const MiscTabPanel: Component<PROPS> = props => {
                                 <br />
                                 We enjoyed
                                 <br />
-                                We stayed up late
-                                <br />
-                                <br />
-                                We walked on a different path
-                                <br />
-                                But promised to watch each other's back
-                                <br />
-                                It's only been a few months
-                                <br />
-                                <br />
-                                But you do not talk anymore...like a stranger
-                                <br />
-                                Are we speaking a different tounge?
-                                <br />
-                                You said it hurts when you see me hurt
-                                <br />
-                                Do we still have that connection?
-                                <br />
-                                Do you miss me as I miss you?
-                                <br />
-                                <br />
-                                I'm looking for you in these fading memories
-                                <br />
-                                When you see this I want you to just look back
-                                <br />
-                                <br />
-                                I wish it's just the wind <br />
-                                flowing in different directions
-                                <br />
-                                and these letters reach out to you one day
-                                <br />
+
                             </p>
                         </div>
-                    </div>
+                    </Tabs.Content>
 
-                    <div
-                        class="info tab-pane fade"
+                    <Tabs.Content
+                        value={"misc-3"}
+                        class={classNames(
+                            matches().sm ? "info" : "",
+                            " tab-pane fade")}
                         id="misc-3"
                         role="tabpanel"
                         aria-labelledby="misc-3-tab"
@@ -174,9 +172,12 @@ const MiscTabPanel: Component<PROPS> = props => {
                                 <br /> ACCESS DENIED...
                             </p>
                         </div>
-                    </div>
-                    <div
-                        class="info tab-pane fade"
+                    </Tabs.Content>
+                    <Tabs.Content
+                        value={"misc-4"}
+                        class={classNames(
+                            matches().sm ? "info" : "",
+                            " tab-pane fade")}
                         id="misc-4"
                         role="tabpanel"
                         aria-labelledby="misc-4-tab"
@@ -193,9 +194,12 @@ const MiscTabPanel: Component<PROPS> = props => {
                                 the others.
                             </p>
                         </div>
-                    </div>
-                    <div
-                        class="info tab-pane fade"
+                    </Tabs.Content>
+                    <Tabs.Content
+                        value={"misc-5"}
+                        class={classNames(
+                            matches().sm ? "info" : "",
+                            " tab-pane fade")}
                         id="misc-5"
                         role="tabpanel"
                         aria-labelledby="misc-5-tab"
@@ -203,10 +207,14 @@ const MiscTabPanel: Component<PROPS> = props => {
                         <div class="post">
                             <p>In the end the dreams remained dreams </p>
                         </div>
-                    </div>
+                    </Tabs.Content>
                 </div>
+                </Tabs.Root>
             </div>
-        </div>
+
+
+
+        </Tabs.Content>
     );
 };
 
