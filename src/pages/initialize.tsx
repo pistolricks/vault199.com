@@ -65,7 +65,7 @@ const Initialize: Component<RouteSectionProps> = props => {
                         <div class={"h-screen flex justify-center items-center w-screen bg-black"}>
                             <div
                                 ref={setTarget} class={"relative h-[49%] w-full md:w-full md:h-[76%]"}>
-                                <video width={size.width} height={size.height} ref={video}>
+                                <video webkit-playsinline playsinline width={size.width} height={size.height} ref={video}>
                                     <source src={vid} type="video/mp4" />
                                 </video>
                             </div>
