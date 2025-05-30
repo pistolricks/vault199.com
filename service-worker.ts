@@ -1,5 +1,5 @@
 console.log("I'm a service worker ready to serve")
-
+/*
 const url = ["/"]
 
 globalThis.addEventListener("fetch", (event: FetchEvent) => {
@@ -11,3 +11,5 @@ globalThis.addEventListener("fetch", (event: FetchEvent) => {
     // Shift + Reload ignores service worker
     // event.respondWith(new Response ("Hey, it's a response from the service worker!"))
 })
+
+ */
