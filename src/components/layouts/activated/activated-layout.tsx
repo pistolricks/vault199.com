@@ -1,4 +1,4 @@
-import {Component, createEffect, createMemo, createSignal, ValidComponent} from "solid-js";
+import {Component, createMemo, createSignal, ValidComponent} from "solid-js";
 import {Dynamic} from "solid-js/web";
 import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
@@ -9,14 +9,11 @@ import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png"
 import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import GalleryApp from "~/components/pipboy/apps/gallery-app";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png"
-import {matches} from "~/app";
-import ScreenLayout from "~/components/layouts/screen/screen-layout";
 import {classNames} from "~/components/navigation";
 import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
 
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
-
 
 
     const children = () => props.children;
@@ -39,7 +36,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
 
     return (
-        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+        <BaseDrawer open={true} side={"bottom"} contextId={"activated-1"}>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
                 <div
                     style={{
@@ -74,13 +71,13 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 }}
                 class={classNames(
                     'w-screen sm:max-w-xs',
-                    )}
+                )}
             >
 
 
                 <Dynamic component={component()}/>
 
-                <img src={bottomMenu2} class={"sm:max-w-sm fixed z-20 -bottom-6 h-auto object-contain w-full"}
+                <img src={bottomMenu2} class={"sm:max-w-xs fixed z-20 -bottom-6 h-auto object-contain w-full"}
                      alt={"bottom menu"}/>
             </DrawerContent>
 

@@ -142,7 +142,7 @@ const CommunicationsApp: Component<PROPS> = props => {
 
     return (
 
-        <div class={"flex justify-center items-center absolute inset-x-0 top-10 h-[80dvh] w-screen sm:max-w-sm bottom-20"}>
+        <div class={"flex justify-center items-center absolute inset-x-0 top-10 h-[80dvh] w-screen sm:max-w-xs bottom-20"}>
 
 
             <Show when={getComm() === "contacts"}>

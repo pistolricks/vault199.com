@@ -1,14 +1,9 @@
 import {Component, createEffect, createSignal, onMount} from "solid-js";
 import {RouteSectionProps, useNavigate} from "@solidjs/router";
-import ActivatedLayout from "~/components/layouts/activated/activated-layout";
-import Startup from "~/components/pipboy/startup";
 import styles from "~/components/layouts/activated/style.module.css";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png";
-import ActivatedHeader from "~/components/layouts/activated/activated-header";
-import ActivatedFooter from "~/components/layouts/activated/activated-footer";
-import {createElementSize, useWindowSize} from "@solid-primitives/resize-observer";
+import {createElementSize} from "@solid-primitives/resize-observer";
 import vid from "~/static/pipboy/startup/initialize_startup.mp4";
-import ActivatePipboy from "~/components/pipboy/activate-pipboy";
 
 
 const Initialize: Component<RouteSectionProps> = props => {
@@ -17,11 +12,7 @@ const Initialize: Component<RouteSectionProps> = props => {
     const navigate = useNavigate()
 
 
-
-
-
     let video!: HTMLVideoElement
-
 
 
     const playVideo = async () => {
@@ -33,12 +24,11 @@ const Initialize: Component<RouteSectionProps> = props => {
     }
 
 
-
     createEffect(() => {
 
 
-        console.log("width",size.width); // => number
-        console.log("height",size.height); // => number
+        console.log("width", size.width); // => number
+        console.log("height", size.height); // => number
 
         console.log(size.height);
     });
@@ -66,18 +56,17 @@ const Initialize: Component<RouteSectionProps> = props => {
                         <div class={"h-screen flex justify-center items-center w-screen bg-black"}>
 
                             <div
-                                ref={setTarget} class={"relative h-[70%] w-screen md:w-full md:h-[76%] flex justify-center items-center"}>
+                                ref={setTarget}
+                                class={"relative h-[70%] w-screen md:w-full md:h-[76%] flex justify-center items-center"}>
                                 <video
                                     style={{
                                         'position': 'absolute',
                                         'width': '100%',
                                         'height': '100%',
-
-
                                     }}
                                     class={"object-fill inset-0"}
                                     controls={false} width={size.width} height={size.height} ref={video}>
-                                    <source src={vid} type="video/mp4" />
+                                    <source src={vid} type="video/mp4"/>
                                 </video>
                             </div>
                         </div>
