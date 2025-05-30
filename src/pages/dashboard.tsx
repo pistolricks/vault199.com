@@ -6,6 +6,8 @@ import UpdatingLayout from "~/components/layouts/updating/updating-layout";
 import {RouteSectionProps} from "@solidjs/router";
 import ActivatedLayout from "~/components/layouts/activated/activated-layout";
 import vid from "~/static/pipboy/startup/initialize_startup.mp4"
+import Agility from "~/components/perks/agility";
+import ActivatePipboy from "~/components/pipboy/activate-pipboy";
 
 type PROPS = {}
 

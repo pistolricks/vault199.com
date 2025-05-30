@@ -70,11 +70,11 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                     'background-size': '100% 90%',
                     'background-repeat': 'no-repeat',
                     'background-position': 'top',
-                    'background-color': 'black'
+                    'background-color': 'black',
                 }}
                 class={classNames(
-
-                    matches.sm ? "max-w-sm" : "w-screen")}
+                    'w-screen sm:max-w-xs',
+                    )}
             >
 
 

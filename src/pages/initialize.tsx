@@ -8,6 +8,7 @@ import ActivatedHeader from "~/components/layouts/activated/activated-header";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 import {createElementSize, useWindowSize} from "@solid-primitives/resize-observer";
 import vid from "~/static/pipboy/startup/initialize_startup.mp4";
+import ActivatePipboy from "~/components/pipboy/activate-pipboy";
 
 
 const Initialize: Component<RouteSectionProps> = props => {
@@ -63,6 +64,7 @@ const Initialize: Component<RouteSectionProps> = props => {
                         <div class={styles["interlaced"]}></div>
                         <div class={styles["glare"]}></div>
                         <div class={"h-screen flex justify-center items-center w-screen bg-black"}>
+
                             <div
                                 ref={setTarget} class={"relative h-[70%] w-screen md:w-full md:h-[76%] flex justify-center items-center"}>
                                 <video
