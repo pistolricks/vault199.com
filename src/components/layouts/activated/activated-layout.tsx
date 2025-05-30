@@ -36,7 +36,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
 
     return (
-        <BaseDrawer open={true} side={"bottom"} contextId={"activated-1"}>
+        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
                 <div
                     style={{
@@ -77,7 +77,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
                 <Dynamic component={component()}/>
 
-                <img src={bottomMenu2} class={"sm:max-w-xs fixed z-20 -bottom-6 h-auto object-contain w-full"}
+                <img src={bottomMenu2} class={"sm:max-w-xs fixed z-20 -bottom-2 h-auto object-contain w-full"}
                      alt={"bottom menu"}/>
             </DrawerContent>
 
