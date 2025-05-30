@@ -12,24 +12,8 @@ export default function BottomMenu(props: {
     onClick: (e: string) => any
 }) {
 
-    const breakpoints = {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        xxl: "1536px"
-    };
 
 
-    const matches = createBreakpoints(breakpoints);
-
-    createEffect(() => {
-        console.log(matches.sm); // true when screen width >= 640px
-        console.log(matches.md);
-        console.log(matches.lg); // true when screen width >= 1024px
-        console.log(matches.xl); // true when screen width >= 1280px
-        console.log(matches.xxl);
-    });
 
 
     return (
@@ -62,8 +46,7 @@ export default function BottomMenu(props: {
             </Drawer.Trigger>
             */}
                 <Drawer.Trigger style={{
-                    width: matches?.sm ? '58px' : '37px',
-                }} class="absolute z-10 right-[1.54rem]" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
+                }} class="size-[37px] sm:size-[58px] absolute z-10 right-[1.54rem]" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
                     <img src={sat} class="size-full aspect-square bg-black/10 dark:bg-white/40 rounded-full"
                          alt={"sat"}/>
                 </Drawer.Trigger>
