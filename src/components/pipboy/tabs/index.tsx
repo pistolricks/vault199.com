@@ -16,7 +16,9 @@ const Tabs: Component<PROPS> = props => {
                 <ProfilesTab/>
                 <StatsTab/>
                 <QuestsTab/>
+                {/*
                 <MiscTab/>
+                */}
                 <RadioTab/>
 
                 <ArkTabs.Indicator class={"ring ring-white absolute inset-0 size-10 rounded-xl"} />

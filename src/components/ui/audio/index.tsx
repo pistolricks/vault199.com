@@ -18,19 +18,14 @@ import track14 from "~/static/sounds/radio/songs/The Wanderer - Dion And Belmont
 import track15 from "~/static/sounds/radio/songs/Uranium Fever - Fallout 4.mp3"
 
 
-
-
 import mute from "~/static/sounds/icons/mute.png"
 import muteActive from "~/static/sounds/icons/mute_active.png"
 import play from "~/static/sounds/icons/play_button.png"
 import previous from "~/static/sounds/icons/previous_song.png"
 import next from "~/static/sounds/icons/next_song.png"
 import pause from "~/static/sounds/icons/pause_button.png"
-import replay from "~/static/sounds/icons/replay.png"
-import {sounds} from "~/lib/sounds";
-type PROPS = {
 
-}
+type PROPS = {}
 
 const customIcons = {
     play: play,
@@ -43,33 +38,32 @@ const customIcons = {
 
 const FalloutAudioPlayer: Component<PROPS> = props => {
 
-    let ref!:  HTMLAudioElement;
-
+    let ref!: HTMLAudioElement;
 
 
     const collection = createListCollection({
         items: [
-            { label: 'Take Me Home, Country Roads', value: track12 },
-            { label: 'The End of the World', value: track13 },
-            { label: 'The Wanderer', value: track14 },
-            { label: 'Uranium Fever', value: track15 },
-            { label: 'A Kiss to Build a Dream On', value: track1 },
-            { label: 'A Wonderful Guy', value: track2 },
-            { label: 'Accentuate the Positive', value: track3 },
-            { label: "Ain't That A Kick in the head", value: track4 },
-            { label: 'Anything Goes', value: track5 },
-            { label: 'Atom Bomb Baby', value: track6 },
-            { label: 'Big Iron', value: track7 },
-            { label: 'Butcher Pete', value: track8 },
-            { label: 'Civilization', value: track9 },
-            { label: 'Crazy He Calls Me', value: track10 },
-            { label: 'Rocket 69', value: track11 },
+            {label: 'Take Me Home, Country Roads', value: track12},
+            {label: 'The End of the World', value: track13},
+            {label: 'The Wanderer', value: track14},
+            {label: 'Uranium Fever', value: track15},
+            {label: 'A Kiss to Build a Dream On', value: track1},
+            {label: 'A Wonderful Guy', value: track2},
+            {label: 'Accentuate the Positive', value: track3},
+            {label: "Ain't That A Kick in the head", value: track4},
+            {label: 'Anything Goes', value: track5},
+            {label: 'Atom Bomb Baby', value: track6},
+            {label: 'Big Iron', value: track7},
+            {label: 'Butcher Pete', value: track8},
+            {label: 'Civilization', value: track9},
+            {label: 'Crazy He Calls Me', value: track10},
+            {label: 'Rocket 69', value: track11},
         ],
     })
 
     const [getTrack, setTrack] = createSignal(collection.items[0].value)
 
-    const handleNewTrack = (e: {label: string, value: string}) => {
+    const handleNewTrack = (e: { label: string, value: string }) => {
         console.log("new track", e)
         setTrack(() => e.value)
     }
@@ -87,13 +81,12 @@ const FalloutAudioPlayer: Component<PROPS> = props => {
 
     return (
         <div style={{
-        "--sap_theme-color": '#ffd52c',
-        "--sap_background-color": 'rgba(var(--main), 0.25)',
-        "--sap_bar-color": '#00dd00',
-        "--sap_time-color": '#ffd52c',
-        "--sap_font-family": 'inherit',
-    }}>
-
+            "--sap_theme-color": '#ffd52c',
+            "--sap_background-color": 'rgba(var(--main), 0.25)',
+            "--sap_bar-color": '#00dd00',
+            "--sap_time-color": '#ffd52c',
+            "--sap_font-family": 'inherit',
+        }}>
 
 
             <AudioPlayer
@@ -111,28 +104,28 @@ const FalloutAudioPlayer: Component<PROPS> = props => {
                 layout={"horizontal-reverse"}
             />
             <div class="pip-body mt-12 sm:mt-4">
-            <ul class="options h-[40dvh] overflow-y-auto">
-                <For each={collection.items}>
-                    {(item, i) => (
+                <ul class="options h-[40dvh] overflow-y-auto">
+                    <For each={collection.items}>
+                        {(item, i) => (
 
-                        <li>
-                            <input
-                                type="radio"
-                                id={`audio-${i()}`}
-                                name="audio-tape"
-                                value={item.value}
-                                onClick={() => handleNewTrack(item)}
-                                checked={track() === item.value}
-                            />
+                            <li>
+                                <input
+                                    type="radio"
+                                    id={`audio-${i()}`}
+                                    name="audio-tape"
+                                    value={item.value}
+                                    onClick={() => handleNewTrack(item)}
+                                    checked={track() === item.value}
+                                />
 
-                            <label for={`audio-${i()}`} class={" w-full"}>{item.label}</label>
+                                <label for={`audio-${i()}`} class={" w-full"}>{item.label}</label>
 
-                        </li>
+                            </li>
 
-                    )}
-                </For>
+                        )}
+                    </For>
 
-            </ul>
+                </ul>
             </div>
         </div>
     );
