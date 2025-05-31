@@ -3,6 +3,7 @@
 
 @plugin"tailwindcss-animate";
 @plugin"tailwind-scrollbar-hide";
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -263,6 +264,17 @@ strong {
     z-index: -1;
 }
 
+.pip-tab-title {
+    background: none;
+    border: none;
+    color: #00dd00;
+    position: absolute;
+    padding: 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
 .pip-head {
     position: absolute;
     top: 0px;
@@ -324,7 +336,7 @@ strong {
 
 .pipboy > .tab-content {
     line-height: 1.2em;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     display: block;
     height: 100%;
@@ -587,7 +599,7 @@ a:hover {
 }
 
 .br {
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .info {

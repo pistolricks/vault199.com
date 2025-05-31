@@ -29,7 +29,6 @@ const MiscTabPanel: Component<PROPS> = props => {
                       aria-labelledby="misc-tab"
         >
 
-            <h3 class="pip-title">Misc</h3>
 
             <div class="pip-body mt-24 sm:mt-4">
 

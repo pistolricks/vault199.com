@@ -1,24 +1,39 @@
-import {Component} from "solid-js";
+import {Component, Setter} from "solid-js";
 import {Tabs} from "@ark-ui/solid";
 import {soundTypes} from "~/lib/sounds";
-import quests from "~/static/app/icons/apps/apple-app-3.png";
+import data from "~/static/app/icons/fallout/tasks-work.png";
+import {classNames} from "~/components/navigation";
 
 type PROPS = {}
 
-const QuestsTab: Component<PROPS> = props => {
+const QuestsTab: Component<{
+    value: string;
+    setValue: Setter<string>
+    class?: string;
+}> = (props) => {
+
+    const value = () => props.value;
+
+    const className = () => props.class ?? "";
 
     return (
-        <Tabs.Trigger
-            property={"a"}
-            value="quests"
-            data-bs-toggle="tab"
-            data-bs-target="#quests"
-            role="tab"
-            class={"br"}
-            data-play-sound={soundTypes.scifi_click}
-        >
-            <img src={quests} class={"size-10 rounded-lg"} alt={"quests"} />
-        </Tabs.Trigger>
+        <div class={className()}>
+            <Tabs.Trigger
+                onClick={() => props.setValue(() => "data")}
+                property={"a"}
+                value="data"
+                data-bs-toggle="tab"
+                data-bs-target="#data"
+                role="tab"
+                class={classNames(
+                    value() === 'data' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
+                    "br"
+                )}
+                data-play-sound={soundTypes.scifi_click}
+            >
+                <img src={data} class={"size-10 rounded-lg"} alt={"data"}/>
+            </Tabs.Trigger>
+        </div>
     );
 };
 

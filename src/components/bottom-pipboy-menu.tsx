@@ -1,10 +1,7 @@
-import {Component, createMemo, createSignal, JSX} from "solid-js";
-
-import bottomMenuRb from "~/static/pipboy/bottom/bottom_menu_rb.png"
+import {Component} from "solid-js";
 import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png"
 
 import {classNames} from "~/components/navigation";
-import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
 
 export type MenuItem = {
     name: string;
@@ -51,7 +48,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     type={"button"} onClick={() => props.onClick(menuItems()[2].name)}>
                     <img src={menuItems()[2].icon} class={classNames(
                         appName() === menuItems()[2].name ? "brightness-100" : "brightness-60",
-                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
+                        "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[2].name}/>
                 </button>
 
@@ -64,7 +61,6 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     )} alt={menuItems()[4].name}/>
                 </button>
             </div>
-
 
 
         </div>

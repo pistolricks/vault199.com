@@ -1,24 +1,35 @@
-import {Component} from "solid-js";
+import {Component, Setter} from "solid-js";
 import {soundTypes} from "~/lib/sounds";
 import { Tabs } from "@ark-ui/solid";
-import radio from "~/static/app/icons/fallout/radio.png";
+import audio from "~/static/app/icons/fallout/radio.png";
+import {classNames} from "~/components/navigation";
 
 type PROPS = {
 
 }
 
-const RadioTab: Component<PROPS> = props => {
+const RadioTab: Component<{
+    value: string;
+    setValue: Setter<string>
+}> = (props) => {
+
+        const value = () => props.value;
+
 
     return (
         <Tabs.Trigger
-            value="radio"
+            value="audio"
             data-bs-toggle="tab"
-            data-bs-target="#radio"
+            data-bs-target="#audio"
             role="tab"
-            class={"br"}
+            class={classNames(
+                value() === 'audio' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
+                "br"
+            )}
             data-play-sound={soundTypes.scifi_click}
+            onClick={() => props.setValue(() => "audio")}
         >
-            <img src={radio} class={"size-10 rounded-lg"} alt={"radio"} />
+            <img src={audio} class={"size-10 rounded-lg"} alt={"audio"} />
         </Tabs.Trigger>
     );
 };

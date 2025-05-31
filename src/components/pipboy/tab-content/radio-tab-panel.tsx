@@ -10,13 +10,12 @@ type PROPS = {
 const RadioTabPanel: Component<PROPS> = props => {
 
     return (
-        <Tabs.Content value={"radio"}
+        <Tabs.Content value={"audio"}
                       class="tab-pane fade"
                       role="tabpanel"
                       id="stats"
                       aria-labelledby="radio-tab"
         >
-            <h3 class="pip-title">Radio</h3>
             <div class="pip-body">
                 <FalloutAudioPlayer/>
 

@@ -20,13 +20,12 @@ const QuestsTabPanel: Component<PROPS> = props => {
 
     return (
         <Tabs.Content
-            value={"quests"}
+            value={"data"}
             class="tab-pane fade"
             role="tabpanel"
-            id="quests"
-            aria-labelledby="quests-tab"
+            id="data"
+            aria-labelledby="data-tab"
         >
-            <h3 class="pip-title">Quests</h3>
             <div class="pip-body mt-24 sm:mt-4">
                 <Tabs.Root orientation={"horizontal"}>
                 <Tabs.List property={"ul"} class="options w-full" role="tablist">
@@ -53,9 +52,9 @@ const QuestsTabPanel: Component<PROPS> = props => {
                     </Tabs.Trigger>
                     <Tabs.Trigger
                                 property={"li"}
-                                value={"side-quests"}
+                                value={"side-data"}
                                 class={"w-full"}
-                                data-bs-toggle="tab" data-bs-target="#side-quests" role="tab">
+                                data-bs-toggle="tab" data-bs-target="#side-data" role="tab">
                         Side Quests
                     </Tabs.Trigger>
                 </Tabs.List>
@@ -225,11 +224,11 @@ const SideQuest: Component = props => {
 
     return (
         <Tabs.Content
-            value={"side-quests"}
+            value={"side-data"}
             class="info tab-pane fade"
-            id="side-quests"
+            id="side-data"
             role="tabpanel"
-            aria-labelledby="side-quests-tab"
+            aria-labelledby="side-data-tab"
         >
             <div class="post">
                 <div class="underlined-title">

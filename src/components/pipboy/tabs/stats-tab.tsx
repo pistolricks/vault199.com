@@ -1,25 +1,40 @@
-import {Component} from "solid-js";
+import {Component, Setter} from "solid-js";
 import {soundTypes} from "~/lib/sounds";
 import { Tabs } from "@ark-ui/solid";
-import stats from "~/static/app/icons/fallout/security.png";
+import stats from "~/static/app/icons/apps/apple-app-19.png"
+import {classNames} from "~/components/navigation";
 
 type PROPS = {
 
 }
 
-const StatsTab: Component<PROPS> = props => {
+const StatsTab: Component<{
+    value: string;
+    setValue: Setter<string>
+    class?: string;
+}> = (props) => {
+
+        const value = () => props.value;
+
+        const className = () => props.class ?? "";
 
     return (
+        <div class={className()}>
         <Tabs.Trigger
+            onClick={() => props.setValue(() => "stats")}
             value="stats"
             data-bs-toggle="tab"
             data-bs-target="#stats"
             role="tab"
-            class={"br"}
+            class={classNames(
+                value() === 'stats' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
+                "br"
+            )}
             data-play-sound={soundTypes.scifi_click}
         >
             <img src={stats} class={"size-10 rounded-lg"} alt={"stats"} />
         </Tabs.Trigger>
+        </div>
     );
 };
 
