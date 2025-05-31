@@ -3,6 +3,7 @@ import {Component, createEffect} from "solid-js";
 import MiscTabPanel from "~/components/pipboy/tab-content/misc-tab-panel";
 import StatsTabPanel from "~/components/pipboy/tab-content/stats-tab-panel";
 import {createBreakpoints} from "@solid-primitives/media";
+import RadioTabPanel from "~/components/pipboy/tab-content/radio-tab-panel";
 
 
 type PROPS = {
@@ -35,6 +36,7 @@ const TabContent: Component<PROPS> = props => {
         <div class={"tab-content"}>
             <StatsTabPanel/>
             <MiscTabPanel matches={matches} />
+            <RadioTabPanel/>
         </div>
     );
 };

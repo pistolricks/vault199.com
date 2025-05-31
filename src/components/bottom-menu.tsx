@@ -52,7 +52,7 @@ export default function BottomMenu(props: {
                 </Drawer.Trigger>
             </div>
 
-            <img src={bottom} class={"absolute bottom-0 w-full -z-0 object-contain"} alt={"bottom"}/>
+
         </>
     );
 }
