@@ -594,7 +594,7 @@ a:hover {
 .frame button:hover,
 .frame button:focus {
     background: rgba(var(--alt), 0.25);
-    outline: 1px solid;
+
 
 }
 
@@ -866,7 +866,7 @@ a:hover {
 }
 
 [data-scope='tabs'][data-part='indicator'][data-orientation='horizontal'] {
-    border: 1px solid;
+
 }
 
 [data-scope='tabs'][data-part='indicator'][data-orientation='vertical'] {

@@ -27,12 +27,12 @@ const ProfilesTab: Component<{
                 data-bs-target="#items"
                 role="tab"
                 class={classNames(
-                    value() === 'items' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
-                    "br"
+                    value() === 'items' ? "brightness-[200%]" : "",
+                    className()
                 )}
                 data-play-sound={soundTypes.scifi_click}
             >
-                <img src={profile} class={"size-10 rounded-lg"} alt={"profile"}/>
+                <img src={profile} class={"size-10"} alt={"profile"}/>
             </Tabs.Trigger>
         </div>
     );

@@ -26,12 +26,12 @@ const QuestsTab: Component<{
                 data-bs-target="#data"
                 role="tab"
                 class={classNames(
-                    value() === 'data' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
-                    "br"
+                    value() === 'data' ? "brightness-[200%]" : "",
+                    className()
                 )}
                 data-play-sound={soundTypes.scifi_click}
             >
-                <img src={data} class={"size-10 rounded-lg"} alt={"data"}/>
+                <img src={data} class={"size-10"} alt={"data"}/>
             </Tabs.Trigger>
         </div>
     );
