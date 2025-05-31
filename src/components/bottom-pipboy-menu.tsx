@@ -1,9 +1,10 @@
 import {Component, createMemo, createSignal, JSX} from "solid-js";
 
 import bottomMenuRb from "~/static/pipboy/bottom/bottom_menu_rb.png"
-import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png"
+import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png"
 
 import {classNames} from "~/components/navigation";
+import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
 
 export type MenuItem = {
     name: string;
@@ -25,61 +26,47 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     return (
         <div
 
-            class={"fixed inset-x-0 bottom-0 h-[20dvh] w-full flex justify-center items-center sm:max-w-sm"}>
+            class={"fixed inset-x-0 -bottom-2 h-[8dvh] w-full flex justify-center items-center sm:max-w-sm"}>
             <div
                 style={{
-                    'background-image': `url(${bottomMenuRb})`,
+                    'background-image': `url(${bottomMenuAlt})`,
                     'background-repeat': 'no-repeat',
                     'background-size': 'contain',
                     'background-position': 'center',
                     'background-color': 'transparent'
                 }}
-                class={"absolute w-full h-full sm:max-w-sm z-20 animate-in slide-in-from-bottom animate duration-700 transition-all -translate-y-[12px]"}>
+                class={"absolute w-full h-full sm:max-w-sm z-20 animate-in slide-in-from-bottom animate duration-700 transition-all -translate-y-[10px]"}>
 
                 <button
-                    class={"absolute rounded-full shadow-2xl shadow-gray-700 ring-4 ring-gray-950/70 left-[10.8%] sm:left-[10.2%] bottom-[41%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute rounded-full shadow-2xl shadow-gray-700  left-[20.5%] sm:left-[20.2%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[0].name)}>
                     <img src={menuItems()[0].icon} class={classNames(
                         appName() === menuItems()[0].name ? "brightness-100" : "brightness-60",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[0].name}/>
                 </button>
+
                 <button
-                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 ring-4 ring-gray-950/70 left-[29.2%] sm:left-[28.6%] bottom-[41%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
-                    type={"button"} onClick={() => props.onClick(menuItems()[1].name)}>
-                    <img src={menuItems()[1].icon} class={classNames(
-                        appName() === menuItems()[1].name ? "brightness-100" : "brightness-60",
-                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
-                    )} alt={menuItems()[1].name}/>
-                </button>
-                <button
-                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 ring-4 ring-gray-950/70 left-[47.9%] sm:left-[47.2%] bottom-[41%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 left-[45.8%] sm:left-[45.5%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[2].name)}>
                     <img src={menuItems()[2].icon} class={classNames(
                         appName() === menuItems()[2].name ? "brightness-100" : "brightness-60",
                          "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[2].name}/>
                 </button>
+
                 <button
-                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 ring-4 ring-gray-950/70 right-[27.2%] sm:right-[26.5%] bottom-[41%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
-                    type={"button"} onClick={() => props.onClick(menuItems()[3].name)}>
-                    <img src={menuItems()[3].icon} class={classNames(
-                        appName() === menuItems()[3].name ? "brightness-100" : "brightness-60",
-                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
-                    )} alt={menuItems()[3].name}/>
-                </button>
-                <button
-                    class={"absolute  rounded-full ring-4 ring-gray-950/70 right-[9%] sm:right-[8.3%] bottom-[41%] sm:bottom-[39.5%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute  rounded-full right-[20%] sm:right-[19.6%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[4].name)}>
                     <img src={menuItems()[4].icon} class={classNames(
                         appName() === menuItems()[4].name ? "brightness-100" : "brightness-60",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[4].name}/>
                 </button>
-
-
-
             </div>
+
+
+
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import {Component, createMemo, createSignal, Show} from "solid-js";
-import chat from "~/static/app/icons/bottom_bar/apple-app-alt-2.png"
+import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png"
 import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png"
-import vChat from "~/static/app/icons/bottom_bar/apple-app-alt-5.png"
+import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png"
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png"
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png"
 import BottomPipboyMenu, {MenuItem} from "~/components/bottom-pipboy-menu";
@@ -124,11 +124,11 @@ const CommunicationsApp: Component<PROPS> = props => {
 
 
     const menuItems: MenuItem[] = [
-        {name: "vChat", icon: vChat},
+        {name: "right", icon: right},
         {name: "mail", icon: mail},
         {name: "contacts", icon: contacts},
         {name: "call", icon: call},
-        {name: "chat", icon: chat},
+        {name: "left", icon: left},
     ]
 
 
@@ -142,15 +142,15 @@ const CommunicationsApp: Component<PROPS> = props => {
 
     return (
 
-        <div class={"flex justify-center items-center absolute inset-x-0 top-10 h-[80dvh] w-screen sm:max-w-xs bottom-20"}>
+        <div class={"flex justify-center items-center absolute inset-x-0 top-12 h-[80dvh] w-screen sm:max-w-xs bottom-20"}>
 
 
             <Show when={getComm() === "contacts"}>
-                <div class={"flex flex-col justify-center items-center overflow-y-auto h-[80dvh] w-[80%] duration-400 animate-in slide-in-from-bottom"}>
+                <div class={"flex flex-col justify-center items-center overflow-y-auto h-[80dvh] w-[80%]"}>
 
-                    <ScreenLayout height={"70dvh"}>
+                    <ScreenLayout height={"76dvh"}>
 
-                        <ContactList height={"70dvh"} list={companions}/>
+                        <ContactList height={"76dvh"} list={companions}/>
 
                     </ScreenLayout>
                 </div>

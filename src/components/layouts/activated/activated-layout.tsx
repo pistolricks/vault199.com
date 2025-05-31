@@ -11,7 +11,7 @@ import GalleryApp from "~/components/pipboy/apps/gallery-app";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png"
 import {classNames} from "~/components/navigation";
 import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
-import BottomMenu from "~/components/bottom-menu";
+import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png";
 
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
@@ -56,8 +56,8 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
 
 
-                <BottomMenu onClick={handleApps} />
 
+                <ActivatedFooter onClick={handleApps}/>
 
             </div>
             <DrawerContent
@@ -65,7 +65,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
                 contextId={"activated-1"}
                 style={{
                     'background-image': 'url(' + pbMonitor + ')',
-                    'background-size': '100% 90%',
+                    'background-size': '100% 92%',
                     'background-repeat': 'no-repeat',
                     'background-position': 'top',
                     'background-color': 'black',
@@ -78,7 +78,7 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
                 <Dynamic component={component()}/>
 
-                <img src={bottomMenu2} class={"sm:max-w-xs fixed z-20 -bottom-6 sm:-bottom-2 h-auto object-contain w-full"}
+                <img src={bottomMenu2} class={"sm:max-w-xs fixed -z-20 bottom-0 sm:-bottom-2 h-[53px] object-contain w-full"}
                      alt={"bottom menu"}/>
             </DrawerContent>
 

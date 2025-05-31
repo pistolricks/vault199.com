@@ -22,7 +22,7 @@ function BaseDrawer(props: PROPS) {
     const setOpen = () => props.setOpen ?? undefined;
 
     return (
-        <DrawerPrimitive open={open()} onOpenChange={setOpen()} contextId={contextId()} breakPoints={[1]} side={side()}>
+        <DrawerPrimitive dampFunction={() => 0} open={open()} onOpenChange={setOpen()} contextId={contextId()} breakPoints={[1]} side={side()}>
             {(props) => (
                 <>
 
