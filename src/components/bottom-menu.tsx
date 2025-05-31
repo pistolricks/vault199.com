@@ -4,7 +4,7 @@ import {createBreakpoints} from "@solid-primitives/media";
 // import chat from "~/static/app/icons/bottom_bar/apple-app-alt-2.png"
 // import drawer from "~/static/app/icons/bottom_bar/apple-app-alt-26.png"
 import bottom from "~/static/pipboy/Main_White/Fallout - Main (White)/Bottom.png"
-import sat from "~/static/app/icons/bottom_bar/browser.png"
+import sat from "~/static/app/icons/fallout/tech.png"
 import Drawer from "@corvu/drawer";
 import {createEffect} from "solid-js";
 
@@ -19,7 +19,7 @@ export default function BottomMenu(props: {
     return (
 
         <>
-            <div class={"absolute z-20 bottom-24 sm:bottom-32 right-5 sm:right-10 w-full flex justify-center items-center gap-x-5 sm:gap-x-8"}>
+            <div class={"absolute z-20 bottom-6  w-full flex justify-center items-center gap-x-5 sm:gap-x-8"}>
                 {/*
             <Drawer.Trigger style={{
                 width: matches?.sm ? '58px':'37px',
@@ -46,8 +46,8 @@ export default function BottomMenu(props: {
             </Drawer.Trigger>
             */}
                 <Drawer.Trigger style={{
-                }} class="size-[37px] sm:size-[58px] absolute z-10 right-[1.54rem]" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
-                    <img src={sat} class="size-full aspect-square bg-black/10 dark:bg-white/40 rounded-full"
+                }} class="w-1/2 flex justify-center items-center" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
+                    <img src={sat} class="size-10 aspect-square bg-black/10 dark:bg-white/40 rounded-full"
                          alt={"sat"}/>
                 </Drawer.Trigger>
             </div>

@@ -226,7 +226,9 @@ const StatsTabPanel: Component<PROPS> = props => {
                       id="stats"
                       aria-labelledby="stats-tab"
         >
+            {/*
             <h3 class="pip-title">Stats</h3>
+            */}
             <ul class="pip-head">
                 <li>
                     <b>LVL</b> 11
@@ -241,7 +243,7 @@ const StatsTabPanel: Component<PROPS> = props => {
                     <b>XP</b> 73.8%
                 </li>
             </ul>
-            <div class="pip-body">
+            <div class="pip-body mt-24 sm:mt-4">
 
 
             </div>

@@ -1,7 +1,7 @@
 import {Component} from "solid-js";
 import {soundTypes} from "~/lib/sounds";
-import {A} from "@solidjs/router";
 import { Tabs } from "@ark-ui/solid";
+import stats from "~/static/app/icons/apps/apple-app-16.png";
 
 type PROPS = {
 
@@ -17,7 +17,7 @@ const StatsTab: Component<PROPS> = props => {
             role="tab"
             data-play-sound={soundTypes.scifi_click}
         >
-            Stats
+            <img src={stats} class={"size-10 rounded-lg"} alt={"stats"} />
         </Tabs.Trigger>
     );
 };

@@ -1,7 +1,7 @@
 import {Component} from "solid-js";
 import {soundTypes} from "~/lib/sounds";
-import {A} from "@solidjs/router";
 import { Tabs } from "@ark-ui/solid";
+import radio from "~/static/app/icons/fallout/radio.png";
 
 type PROPS = {
 
@@ -17,7 +17,7 @@ const RadioTab: Component<PROPS> = props => {
             role="tab"
             data-play-sound={soundTypes.scifi_click}
         >
-            Radio
+            <img src={radio} class={"size-10 rounded-lg"} alt={"radio"} />
         </Tabs.Trigger>
     );
 };

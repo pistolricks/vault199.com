@@ -31,33 +31,46 @@ const MiscTabPanel: Component<PROPS> = props => {
 
             <h3 class="pip-title">Misc</h3>
 
-            <div class="pip-body">
+            <div class="pip-body mt-24 sm:mt-4">
 
-                <Tabs.Root class={"mt-5 px-5"} orientation={matches().sm ? "vertical" : "horizontal"}>
-                <Tabs.List class="options" role="tablist">
+                <Tabs.Root class={"mt-5 px-5"} orientation={"horizontal"}>
+                <Tabs.List property={"ul"} class="options w-full" role="tablist">
                     <Tabs.Trigger
                         value={"misc-1"}
+                        property={"li"}
                         data-bs-toggle="tab"
                         data-bs-target="#misc-1"
                         role="tab"
-                        class="active"
+                        class="active w-full"
                     >
                       A
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-2"} data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
+                        value={"misc-2"}
+                        property={"li"}
+                        class={"w-full"}
+                        data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
                         B
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-3"} data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
+                        value={"misc-3"}
+                        property={"li"}
+                        class={"w-full"}
+                        data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
                       C
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-4"} data-bs-toggle="tab" data-bs-target="#misc-4" role="tab">
+                        value={"misc-4"}
+                        property={"li"}
+                        class={"w-full"}
+                        data-bs-toggle="tab" data-bs-target="#misc-4" role="tab">
                       D
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-5"} data-bs-toggle="tab" data-bs-target="#misc-5" role="tab">
+                        value={"misc-5"}
+                        property={"li"}
+                        class={"w-full"}
+                        data-bs-toggle="tab" data-bs-target="#misc-5" role="tab">
                       E
                     </Tabs.Trigger>
                 </Tabs.List>

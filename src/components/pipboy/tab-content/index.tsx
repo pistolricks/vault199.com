@@ -4,12 +4,21 @@ import MiscTabPanel from "~/components/pipboy/tab-content/misc-tab-panel";
 import StatsTabPanel from "~/components/pipboy/tab-content/stats-tab-panel";
 import {createBreakpoints} from "@solid-primitives/media";
 import RadioTabPanel from "~/components/pipboy/tab-content/radio-tab-panel";
+import QuestsTabPanel from "~/components/pipboy/tab-content/quests-tab-panel";
+import ProfilesTabPanel from "~/components/pipboy/tab-content/profiles-tab-panel";
 
 
 type PROPS = {
 
 }
-
+const profiles = Object.freeze({
+    vaultboy: "vaultboy",
+    fullstack: "fullstack",
+    teamplayer: "teamplayer",
+    entertainer: "entertainer",
+    nerd: "nerd",
+    handyman: "handyman",
+});
 const TabContent: Component<PROPS> = props => {
 
     const breakpoints = {
@@ -34,7 +43,9 @@ const TabContent: Component<PROPS> = props => {
 
     return (
         <div class={"tab-content"}>
+            <ProfilesTabPanel profiles={profiles}/>
             <StatsTabPanel/>
+            <QuestsTabPanel matches={matches} />
             <MiscTabPanel matches={matches} />
             <RadioTabPanel/>
         </div>

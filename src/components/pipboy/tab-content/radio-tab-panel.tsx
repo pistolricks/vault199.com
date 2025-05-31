@@ -15,8 +15,8 @@ const RadioTabPanel: Component<PROPS> = props => {
                       id="stats"
                       aria-labelledby="radio-tab"
         >
-            <h3 class="pip-title">Tapes</h3>
-            <div class="pip-body">
+            <h3 class="pip-title">Radio</h3>
+            <div class="pip-body mt-24 sm:mt-4">
                 <ul class="options">
                     <li>
                         <input

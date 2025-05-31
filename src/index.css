@@ -242,7 +242,7 @@ strong {
     position: absolute;
     padding: 0 5px;
     text-transform: uppercase;
-    top: -15px;
+    top: 0;
     left: 40px;
     z-index: 2;
     letter-spacing: 0.1em;
@@ -565,7 +565,6 @@ a:hover {
     appearance: none;
     background: transparent;
     color: rgb(var(--main));
-    border: 1px solid rgb(var(--main));
     padding: 3px 10px;
     transition: all 0.1s ease;
 }
@@ -828,21 +827,17 @@ a:hover {
 }
 
 
+
+
 [data-scope='tabs'][data-part='list'][data-orientation='vertical'] {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    width: 100%;
 }
-
-
 
 @media only screen and (max-width: 800px) {
 
-    [data-scope='tabs'][data-part='list'][data-orientation='vertical'] {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+
 
     .cursor {
      display: none;

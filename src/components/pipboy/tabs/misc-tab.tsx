@@ -1,5 +1,6 @@
 import { Tabs } from "@ark-ui/solid";
 import {soundTypes} from "~/lib/sounds";
+import misc from "~/static/app/icons/apps/apple-app-33.png";
 
 const MiscTab = () => (
 
@@ -10,7 +11,7 @@ const MiscTab = () => (
             role="tab"
             data-play-sound={soundTypes.scifi_click}
         >
-            Misc
+            <img src={misc} class={"size-10 rounded-lg"} alt={"misc"} />
         </Tabs.Trigger>
 
 );

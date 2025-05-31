@@ -38,8 +38,6 @@ const Initialize: Component<RouteSectionProps> = props => {
 
     const playVideo = async () => {
 
-        if(!matches.sm)navigate(`/dashboard`);
-
         await video.play();
         video.addEventListener('ended', function () {
             navigate(`/dashboard`);
@@ -56,7 +54,9 @@ const Initialize: Component<RouteSectionProps> = props => {
         console.log(size.height);
     });
 
-    onMount(() => playVideo());
+    onMount(async () => {
+        await playVideo()
+    });
 
     return (
         <>
