@@ -12,7 +12,7 @@ const Tabs: Component<PROPS> = props => {
 
     return (
         <div>
-            <ArkTabs.List class="absolute -bottom-1 left-2 inset-x-0 flex justify-start w-full space-x-[10px]" role="tablist">
+            <ArkTabs.List class="absolute bottom-0 sm:bottom-2 left-2 inset-x-0 flex justify-start w-full space-x-[10px]" role="tablist">
                 <ProfilesTab/>
                 <StatsTab/>
                 <QuestsTab/>

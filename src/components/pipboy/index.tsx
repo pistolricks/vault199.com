@@ -2,6 +2,7 @@ import {Component, createEffect, onCleanup} from "solid-js";
 import Tabs from "~/components/pipboy/tabs";
 import TabContent from "~/components/pipboy/tab-content";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
+import PipboyHeader from "~/components/pipboy/header";
 
 type PROPS = {
     display?: string;
@@ -48,6 +49,8 @@ const PipBoy: Component<PROPS> = props => {
 
     return (
         <div class="bbody z-10" style={props.display}>
+
+
             <div id="frame" class="frame">
                 <div class="piece output container">
                     <div class="pipboy">
