@@ -44,6 +44,11 @@
     --secondary-color: #ff5c00;
     --tertiary-color: #c72d04;
     --background-color: #111;
+    --sap_theme-color: #00dd00;
+    --sap_background-color: #00dd00;
+    --sap_bar-color: #00dd00;
+    --sap_time-color: #333;
+    --sap_font-family: inherit;
     scrollbar-color: var(--primary-color) var(--secondary-color);
     font-size: clamp(18px, 3vw, 30px);
 
@@ -353,6 +358,12 @@ label {
     display: block;
     width: 300px;
     max-width: 32%;
+    position: fixed;
+}
+
+.options-full {
+    display: block;
+    width: 100%;
     position: fixed;
 }
 

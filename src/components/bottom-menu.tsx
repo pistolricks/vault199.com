@@ -19,7 +19,7 @@ export default function BottomMenu(props: {
     return (
 
         <>
-            <div class={"absolute z-20 bottom-[86px] sm:bottom-[132px] right-[100px] w-10"}>
+            <div class={"absolute z-20 bottom-[90px] sm:bottom-[132px] right-8 sm:right-[100px] w-10"}>
                 {/*
             <Drawer.Trigger style={{
                 width: matches?.sm ? '58px':'37px',

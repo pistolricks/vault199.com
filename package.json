@@ -43,6 +43,7 @@
     "motion": "^12.12.1",
     "postcss": "^8.5.3",
     "selecto": "^1.26.3",
+    "solid-audio-player": "^1.0.12",
     "solid-js": "^1.9.5",
     "solid-prevent-scroll": "^0.1.10",
     "swiper": "^11.2.6",
