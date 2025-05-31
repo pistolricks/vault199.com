@@ -4,6 +4,7 @@ import styles from "~/components/layouts/activated/style.module.css";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png";
 import {createElementSize} from "@solid-primitives/resize-observer";
 import vid from "~/static/pipboy/startup/initialize_startup.mp4";
+import {createBreakpoints} from "@solid-primitives/media";
 
 
 const Initialize: Component<RouteSectionProps> = props => {
@@ -11,11 +12,33 @@ const Initialize: Component<RouteSectionProps> = props => {
     const size = createElementSize(target);
     const navigate = useNavigate()
 
+    const breakpoints = {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        xxl: "1536px"
+    };
+
+
+    const matches = createBreakpoints(breakpoints);
+
+    createEffect(() => {
+        console.log(matches.sm); // true when screen width >= 640px
+        console.log(matches.md);
+        console.log(matches.lg); // true when screen width >= 1024px
+        console.log(matches.xl); // true when screen width >= 1280px
+        console.log(matches.xxl);
+    });
+
+
 
     let video!: HTMLVideoElement
 
 
     const playVideo = async () => {
+
+        if(!matches.sm)navigate(`/dashboard`);
 
         await video.play();
         video.addEventListener('ended', function () {
