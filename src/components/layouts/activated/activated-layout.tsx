@@ -11,6 +11,7 @@ import GalleryApp from "~/components/pipboy/apps/gallery-app";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png"
 import {classNames} from "~/components/navigation";
 import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
+import BottomMenu from "~/components/bottom-menu";
 
 
 const ActivatedLayout: Component<RouteSectionProps> = props => {
@@ -55,8 +56,8 @@ const ActivatedLayout: Component<RouteSectionProps> = props => {
 
 
 
+                <BottomMenu onClick={handleApps} />
 
-                <ActivatedFooter onClick={handleApps}/>
 
             </div>
             <DrawerContent

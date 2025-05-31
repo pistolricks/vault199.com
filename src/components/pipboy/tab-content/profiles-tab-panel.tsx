@@ -124,7 +124,7 @@ const FullStackInfo = () => (
             </li>
             <li class="span-2">Caffeine Lvls: Over 9000</li>
         </ul>
-        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", height: '100px' }}>
+        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px' }}>
             The mastermind behind lemonade stands in the digital age. I turn caffeine
             into companies and ideas into apps that might just take over the world...
             or at least make it more interesting
@@ -158,7 +158,7 @@ const TeamPlayerInfo = () => (
             </li>
             <li class="span-2">Morale 💯</li>
         </ul>
-        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", height: '100px' }}>
+        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px' }}>
             I play well with others, especially when there’s pizza involved. I bring
             teams together faster than a Wi-Fi connection, making sure every project
             is a ‘high-five’ moment.
@@ -193,7 +193,7 @@ const EntertainerInfo = () => (
             </li>
             <li class="span-2">Fans: 1 (Hi Mom!)</li>
         </ul>
-        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", height: '100px' }}>
+        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px' }}>
             Putting the 'pro' in procrastination by crafting stories and experiences
             that actually make you want to finish your work early. My content’s so
             engaging, even my mom shares it.
@@ -222,7 +222,7 @@ const NerdInfo = () => (
             </li>
             <li class="span-2">Trivia Wins: 94%</li>
         </ul>
-        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", height: '100px' }}>
+        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px' }}>
             The guru of geekery, with more books than friends and more curiosity than
             a cat. I dive into code like it’s a ball pit and come out with digital
             magic (and sometimes just more questions).
@@ -257,7 +257,7 @@ const HandymanInfo = () => (
             </li>
             <li class="span-2">Production takedown - 7</li>
         </ul>
-        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", height: '100px' }}>
+        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px' }}>
             I solve problems you didn’t even know you had, and occasionally create new
             ones — ever debugged on production?
         </p>

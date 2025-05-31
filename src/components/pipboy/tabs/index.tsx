@@ -12,15 +12,14 @@ const Tabs: Component<PROPS> = props => {
 
     return (
         <div>
-            <ArkTabs.List class="absolute bottom-0 left-[10%]" role="tablist">
+            <ArkTabs.List class="absolute bottom-0 left-2 inset-x-0 flex justify-start w-full space-x-[10px]" role="tablist">
                 <ProfilesTab/>
                 <StatsTab/>
                 <QuestsTab/>
                 <MiscTab/>
-                {/*
                 <RadioTab/>
-                */}
 
+                <ArkTabs.Indicator class={"ring ring-white absolute inset-0 size-10 rounded-xl"} />
             </ArkTabs.List>
         </div>
     );

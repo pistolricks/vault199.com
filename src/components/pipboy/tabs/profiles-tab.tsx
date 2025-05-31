@@ -15,6 +15,7 @@ const ProfilesTab: Component<PROPS> = props => {
             data-bs-toggle="tab"
             data-bs-target="#profiles"
             role="tab"
+            class={"br"}
             data-play-sound={soundTypes.scifi_click}
         >
             <img src={profile} class={"size-10 rounded-lg"} alt={"profile"} />

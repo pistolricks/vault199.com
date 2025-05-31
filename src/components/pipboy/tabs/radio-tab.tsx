@@ -15,6 +15,7 @@ const RadioTab: Component<PROPS> = props => {
             data-bs-toggle="tab"
             data-bs-target="#radio"
             role="tab"
+            class={"br"}
             data-play-sound={soundTypes.scifi_click}
         >
             <img src={radio} class={"size-10 rounded-lg"} alt={"radio"} />

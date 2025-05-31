@@ -51,7 +51,7 @@ const PipBoy: Component<PROPS> = props => {
             <div id="frame" class="frame">
                 <div class="piece output container">
                     <div class="pipboy">
-                        <ArkTabs.Root class={"h-full w-full overflow-hidden"}>
+                        <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
                             <Tabs/>
                             <TabContent/>
                         </ArkTabs.Root>

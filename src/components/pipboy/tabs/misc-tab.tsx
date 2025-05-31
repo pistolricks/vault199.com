@@ -9,6 +9,7 @@ const MiscTab = () => (
             data-bs-toggle="tab"
             data-bs-target="#misc"
             role="tab"
+            class={"br"}
             data-play-sound={soundTypes.scifi_click}
         >
             <img src={misc} class={"size-10 rounded-lg"} alt={"misc"} />

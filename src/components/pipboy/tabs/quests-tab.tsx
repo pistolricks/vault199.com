@@ -14,6 +14,7 @@ const QuestsTab: Component<PROPS> = props => {
             data-bs-toggle="tab"
             data-bs-target="#quests"
             role="tab"
+            class={"br"}
             data-play-sound={soundTypes.scifi_click}
         >
             <img src={quests} class={"size-10 rounded-lg"} alt={"quests"} />

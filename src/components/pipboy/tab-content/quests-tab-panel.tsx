@@ -125,7 +125,7 @@ const QuestContent: Component<{
                     id={`carousel-${id()}`}
                     class="carousel slide w-100 carousel-fade"
                     data-bs-ride="carousel"
-                    style={{height: '250px'}}
+                    style={{height: '100px'}}
                 >
                     <div class="carousel-inner w-100">
                         <For each={questData().images}>

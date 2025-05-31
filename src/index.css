@@ -34,7 +34,6 @@
 }
 
 
-
 :root {
     font-family: "VT323", monospace;
     font-weight: 400;
@@ -49,7 +48,6 @@
     font-size: clamp(18px, 3vw, 30px);
 
 }
-
 
 
 ::selection {
@@ -318,7 +316,7 @@ strong {
     list-style: none;
 }
 
-.pipboy>.tab-content {
+.pipboy > .tab-content {
     line-height: 1.2em;
     overflow-y: auto;
     overflow-x: hidden;
@@ -327,7 +325,7 @@ strong {
     padding-right: 1px;
 }
 
-.pipboy>.tab-content>.tab-pane {
+.pipboy > .tab-content > .tab-pane {
     padding-left: 30px;
     height: 100%;
     overflow-y: auto;
@@ -403,7 +401,7 @@ label {
     background: rgba(var(--alt), 0.25);
 }
 
-.colors input:checked+label {
+.colors input:checked + label {
     color: var(--black);
     background: rgb(var(--main), 0.8);
 }
@@ -424,7 +422,7 @@ label {
     outline-color: currentColor;
 }
 
-.options input:checked+label::before,
+.options input:checked + label::before,
 .options .active a::before {
     background: currentColor;
     outline-color: currentColor;
@@ -565,7 +563,7 @@ a:hover {
     appearance: none;
     background: transparent;
     color: rgb(var(--main));
-    padding: 3px 10px;
+    padding: 1px 1px;
     transition: all 0.1s ease;
 }
 
@@ -573,6 +571,11 @@ a:hover {
 .frame button:focus {
     background: rgba(var(--alt), 0.25);
     outline: 1px solid;
+
+}
+
+.br {
+    border-radius: 15px;
 }
 
 .info {
@@ -827,28 +830,38 @@ a:hover {
 }
 
 
-
-
 [data-scope='tabs'][data-part='list'][data-orientation='vertical'] {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
+[data-scope='tabs'][data-part='indicator'] {
+
+
+}
+
+[data-scope='tabs'][data-part='indicator'][data-orientation='horizontal'] {
+    border: 1px solid;
+}
+
+[data-scope='tabs'][data-part='indicator'][data-orientation='vertical'] {
+
+}
+
+
 @media only screen and (max-width: 800px) {
 
 
-
     .cursor {
-     display: none;
+        display: none;
     }
 
-    .pipboy>.tab-content>.tab-pane {
+    .pipboy > .tab-content > .tab-pane {
         padding-left: 0;
         height: 100%;
         overflow-y: auto;
     }
-
 
 
     .frame {
@@ -975,8 +988,6 @@ a:hover {
     }
 
 
-
-
 }
 
 html.amber {
@@ -1076,26 +1087,26 @@ html.black {
 }
 
 @media only screen and (max-width: 767px) {
-/*
-    .piece::before,
-    .piece::after {
-        top: 0;
-        left: 50%;
-        width: 0;
-        height: 100%;
-    }
+    /*
+        .piece::before,
+        .piece::after {
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 100%;
+        }
 
-    .black .piece::before {
-        background-size: cover;
-        width: 100%;
-        left: 0;
-    }
+        .black .piece::before {
+            background-size: cover;
+            width: 100%;
+            left: 0;
+        }
 
-    .black .piece::after {
-        background-size: cover;
-        width: 100%;
-        left: 0;
-    }
+        .black .piece::after {
+            background-size: cover;
+            width: 100%;
+            left: 0;
+        }
 
- */
+     */
 }

@@ -19,7 +19,7 @@ export default function BottomMenu(props: {
     return (
 
         <>
-            <div class={"absolute z-20 bottom-6  w-full flex justify-center items-center gap-x-5 sm:gap-x-8"}>
+            <div class={"absolute z-20 bottom-[86px] right-8 w-10"}>
                 {/*
             <Drawer.Trigger style={{
                 width: matches?.sm ? '58px':'37px',
@@ -46,7 +46,7 @@ export default function BottomMenu(props: {
             </Drawer.Trigger>
             */}
                 <Drawer.Trigger style={{
-                }} class="w-1/2 flex justify-center items-center" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
+                }} class="" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
                     <img src={sat} class="size-10 aspect-square bg-black/10 dark:bg-white/40 rounded-full"
                          alt={"sat"}/>
                 </Drawer.Trigger>
