@@ -27,12 +27,13 @@ const StatsTab: Component<{
             data-bs-target="#stats"
             role="tab"
             class={classNames(
-                value() === 'stats' ? "brightness-[200%] rounded-bl-2xl" : "",
+                "rounded-bl-lg",
+                value() === 'stats' ? "brightness-[200%]" : "",
                 className()
             )}
             data-play-sound={soundTypes.scifi_click}
         >
-            <img src={stats} class={"size-10 rounded-bl-2xl"} alt={"stats"} />
+            <img src={stats} class={"size-10 rounded-bl-lg"} alt={"stats"} />
         </Tabs.Trigger>
         </div>
     );

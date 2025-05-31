@@ -19,12 +19,11 @@ const MiscTab: Component<{
             data-bs-target="#misc"
             role="tab"
             class={classNames(
-                value() === 'misc' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
-                "br"
+                value() === 'misc' ? "brightness-[200%]" : "",
             )}
             data-play-sound={soundTypes.scifi_click}
         >
-            <img src={misc} class={"size-10 rounded-lg"} alt={"misc"}/>
+            <img src={misc} class={"size-10"} alt={"misc"}/>
         </Tabs.Trigger>
     )
 };

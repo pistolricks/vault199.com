@@ -20,7 +20,7 @@ const Tabs: Component<PROPS> = props => {
                 <div class={"flex justify-start items-baseline ml-[8%] mb-[5%] sm:mb-[4%] md:mb-[3.7%]"}>
                     <h2 class="pip-tab-title text-3xl md:text-4xl">{title()}</h2>
                 </div>
-                <ArkTabs.List class={"flex justify-end items-center space-x-2 mr-[7%] mb-[1%]"}>
+                <ArkTabs.List class={"flex justify-end items-center space-x-1 mr-[7%] mb-[1%]"}>
                 <MiscTab value={title()} setValue={props.setTitle} />
                 <RadioTab value={title()} setValue={props.setTitle} />
                 </ArkTabs.List>

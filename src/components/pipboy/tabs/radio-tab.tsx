@@ -23,13 +23,13 @@ const RadioTab: Component<{
             data-bs-target="#audio"
             role="tab"
             class={classNames(
-                value() === 'audio' ? "ring-2 ring-green-700 ring-offset-1 rounded-[25px]" : "",
-                "br"
+                "rounded-tr-2xl",
+                value() === 'audio' ? "brightness-[200%]" : "",
             )}
             data-play-sound={soundTypes.scifi_click}
             onClick={() => props.setValue(() => "audio")}
         >
-            <img src={audio} class={"size-10 rounded-lg"} alt={"audio"} />
+            <img src={audio} class={"size-10 rounded-tr-2xl"} alt={"audio"} />
         </Tabs.Trigger>
     );
 };
