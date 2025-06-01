@@ -3,13 +3,16 @@ import solidPlugin from 'vite-plugin-solid';
 import Pages from 'vite-plugin-pages';
 import {VitePWA} from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
     plugins: [
+        tailwindcss(),
+        solidPlugin(),
         Pages({
             dirs: ['src/pages'],
         }),
-        solidPlugin(),
+
         VitePWA({
             registerType: 'autoUpdate',
             injectRegister: "auto",

@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import url(https://fonts.googleapis.com/css?family=VT323);
 @import "ol/ol.css";
 
 @plugin"tailwindcss-animate";
