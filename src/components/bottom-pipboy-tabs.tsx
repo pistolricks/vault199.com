@@ -3,6 +3,7 @@ import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png"
 
 import {classNames} from "~/components/navigation";
 import { Tabs } from "@ark-ui/solid";
+import cover from "~/static/pipboy/2000N/app_cover.png";
 
 export type MenuItem = {
     name: string;
@@ -24,7 +25,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     return (
         <div
 
-            class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] -bottom-2 h-[8dvh] md:h-[11dvh] w-full flex justify-center items-center sm:max-w-sm"}>
+            class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] -bottom-2 h-[8dvh] sm:h-[10dvh] md:h-[11dvh] w-full flex justify-center items-center sm:max-w-sm"}>
             <Tabs.List
                 style={{
                     'background-image': `url(${bottomMenuAlt})`,
@@ -46,6 +47,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         appName() === menuItems()[0].name ? "brightness-200" : "brightness-100",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[0].name}/>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
                 </Tabs.Trigger>
 
                 <Tabs.Trigger
@@ -59,6 +61,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         appName() === menuItems()[1].name ? "brightness-200" : "brightness-100",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[1].name}/>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
                 </Tabs.Trigger>
 
                 <Tabs.Trigger
@@ -72,6 +75,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         appName() === menuItems()[2].name ? "brightness-200" : "brightness-100",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[2].name}/>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
                 </Tabs.Trigger>
             </Tabs.List>
 

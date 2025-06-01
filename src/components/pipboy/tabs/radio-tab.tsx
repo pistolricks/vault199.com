@@ -3,6 +3,7 @@ import {soundTypes} from "~/lib/sounds";
 import { Tabs } from "@ark-ui/solid";
 import audio from "~/static/app/icons/fallout/radio.png";
 import {classNames} from "~/components/navigation";
+import cover from "~/static/pipboy/2000N/app_cover.png";
 
 type PROPS = {
 
@@ -23,6 +24,7 @@ const RadioTab: Component<{
             data-bs-target="#audio"
             role="tab"
             class={classNames(
+                "relative",
                 "size-10 md:size-8",
                 value() === 'audio' ? "brightness-[200%]" : "",
             )}
@@ -30,6 +32,7 @@ const RadioTab: Component<{
             onClick={() => props.setValue(() => "audio")}
         >
             <img src={audio} class={"size-full"} alt={"audio"} />
+            <img src={cover} class={"absolute inset-0 size-full"} alt={"cover"}/>
         </Tabs.Trigger>
     );
 };

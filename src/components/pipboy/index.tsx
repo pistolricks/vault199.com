@@ -13,7 +13,7 @@ import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import stats from "~/static/app/icons/apps/apple-app-19.png"
 import items from "~/static/app/icons/fallout/shopping.png"
 import data from "~/static/app/icons/fallout/tasks-work.png";
-
+import cover from "~/static/pipboy/2000N/app_cover.png"
 
 type PROPS = {
     display?: string;
@@ -78,6 +78,7 @@ const PipBoy: Component<PROPS> = props => {
                     </div>
 
                     <div class={"absolute right-[12%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
+
                         <Tabs title={title()} setTitle={setTitle}/>
                     </div>
                     <div id="frame" class="frame">
