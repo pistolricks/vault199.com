@@ -289,11 +289,11 @@ const ProfilesTabPanel: Component<{
 
     return (
         <Tabs.Content
-            value={"social"}
+            value={"items"}
             class="tab-pane fade show active"
             role="tabpanel"
-            id="social"
-            aria-labelledby="social-tab"
+            id="items"
+            aria-labelledby="items-tab"
         >
             <ul class="pip-head">
                 <li>

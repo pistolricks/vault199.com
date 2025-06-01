@@ -21,15 +21,15 @@ const ProfilesTab: Component<{
     return (
         <div class={className()}>
             <Tabs.Trigger
-                onClick={() => props.setValue(() => "items")}
+                onClick={() => props.setValue(() => "inv")}
                 property={"a"}
-                value="items"
+                value="inv"
                 data-bs-toggle="tab"
-                data-bs-target="#items"
+                data-bs-target="#inv"
                 role="tab"
                 class={classNames(
                     "relative",
-                    value() === 'items' ? "brightness-[200%]" : "",
+                    value() === 'inv' ? "brightness-[200%]" : "",
                     className()
                 )}
                 data-play-sound={soundTypes.scifi_click}
