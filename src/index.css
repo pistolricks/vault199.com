@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import url(https://fonts.googleapis.com/css?family=VT323);
+@import "ol/ol.css";
 
 @plugin"tailwindcss-animate";
 @plugin"tailwind-scrollbar-hide";
@@ -36,6 +37,7 @@
 }
 
 
+
 :root {
     font-family: "VT323", monospace;
     font-weight: 400;
@@ -56,6 +58,28 @@
 
 }
 
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.ol-attribution {
+    display: none;
+}
+
+.ol-zoom-in {
+    display: none;
+}
+
+.ol-zoom-out {
+    display: none;
+}
+
+.ol-rotate-reset {
+    display: none;
+}
 
 ::selection {
     background-color: rgba(var(--alt), 0.7);

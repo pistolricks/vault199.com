@@ -1,41 +1,59 @@
 import {Component, createEffect, createMemo, createSignal} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
-import ActivatedLayout from "~/components/layouts/activated/activated-layout";
+import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
 
 import PipBoy from "~/components/pipboy";
-import { Tabs } from "@ark-ui/solid";
+import {getGps} from "~/lib/geo";
+import {Contact} from "~/components/lists/contact-list";
+
 
 type PROPS = {}
 
 const Dashboard: Component<RouteSectionProps> = props => {
 
     const [getComponentName, setComponentName] = createSignal('map')
-    const [getData, setData] = createSignal(null)
+    const [getCompanion, setCompanion] = createSignal<Contact>()
+    const [getData, setData] = createSignal<ActivatedLayoutRouteData>(null)
+    const [getCoords, setCoords] = createSignal(null)
 
-    const handleClick = (e: any) => {
+    const handleClick = async(e: any) => {
         console.log(e)
+
+        let coords = await getGps(setCoords);
+
+        // setCoords(coords)
+
+        setCompanion(e)
         setComponentName(e.component)
+
         setData({
-            companion: e
+            companion: e,
+            coords: coords,
         })
     }
 
     const componentName = createMemo(() => getComponentName())
 
-    const data = createMemo(() => getData())
+    const data = createMemo(async() => {
+        setData({
+            companion: getCompanion(),
+            coords: await getCoords(),
+        })
+       return getData()
+    })
 
-    createEffect(() => {
+    createEffect(async() => {
         console.log("componentName", componentName())
-        console.log("data", data())
+        console.log("data", await data())
+        console.log("coords", await getCoords())
+
     })
 
 
 
     return (
 
-        <ActivatedLayout data={{
-            companion: data()?.companion
-        }} componentName={componentName()} {...props}>
+        <ActivatedLayout data={data()} componentName={componentName()} {...props}>
             <PipBoy onClick={handleClick} setComponent={setComponentName} />
         </ActivatedLayout>
 

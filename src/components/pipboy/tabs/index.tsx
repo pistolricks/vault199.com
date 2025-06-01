@@ -1,19 +1,18 @@
 import {Component, Setter} from "solid-js";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
-import MiscTab from "~/components/pipboy/tabs/misc-tab";
 import RadioTab from "./radio-tab";
 import map from "~/static/app/icons/misc apps/30misc-apps-30.png"
 import Drawer from "@corvu/drawer";
-
-import misc from "~/static/app/icons/apps/apple-app-33.png";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import {classNames} from "~/components/navigation";
 import SocialTab from "~/components/pipboy/tabs/social-tab";
+import {start} from "~/lib/geo";
 
 type PROPS = {
     title: string;
     setTitle: Setter<string>;
     setComponent: Setter<string>;
+    onClick: (e: any) => any;
 }
 
 const Tabs: Component<PROPS> = props => {
@@ -40,8 +39,13 @@ const Tabs: Component<PROPS> = props => {
 
 
             <SocialTab value={title()} setValue={props.setTitle}/>
+
             <Drawer.Trigger
-                onClick={() => props.setComponent(() => "map")}
+                onClick={() => {
+                    props.setComponent(() => "map");
+                    props.onClick({component: "map"});
+                    start();
+                }}
                 class={classNames(
                     "relative",
                     "size-10 md:size-8",

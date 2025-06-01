@@ -83,7 +83,7 @@ const PipBoy: Component<PROPS> = props => {
 
                     <div class={"absolute right-[4.5%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
 
-                        <Tabs title={title()} setTitle={setTitle} setComponent={props.setComponent}/>
+                        <Tabs onClick={props.onClick} title={title()} setTitle={setTitle} setComponent={props.setComponent}/>
                     </div>
                     <div id="frame" class="frame">
 

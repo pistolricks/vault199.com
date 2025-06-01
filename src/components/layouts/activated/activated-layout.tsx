@@ -29,10 +29,12 @@ const pipboyTypes = {
     map: pbMonitor2000,
 }
 
-interface ActivatedLayoutRouteData {
+export interface ActivatedLayoutRouteData {
     companion?: Contact; // Making companion optional as props.data?.companion suggests it might not always exist
     title?: string;
     avatar?: string;
+    coords?: GeolocationCoordinates;
+    component?: string;
 }
 
 const ActivatedLayout: Component<RouteSectionProps & { componentName: string } > = props => {
@@ -40,7 +42,9 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string } >
     const componentName = () => props.componentName;
     const children = () => props.children;
 
-    const typedRouteData = () => props.data as ActivatedLayoutRouteData | undefined;
+    const [getData, setData] = createSignal<ActivatedLayoutRouteData>(props.data);
+
+
 
 
     const [getComponent, setComponent] = createSignal<ValidComponent>(apps[componentName()])
@@ -70,8 +74,10 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string } >
     })
 
 
-    createEffect(() => {
-        console.log("activeLayoutData", props.data)
+    createEffect(async() => {
+
+        setData(await props.data)
+        console.log("getData",getData(),"activeLayoutData", await props.data)
     })
 
     return (
@@ -111,14 +117,7 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string } >
                 )}
             >
 
-
-                <Show
-                    fallback={<Dynamic component={component()}/>}
-                    when={componentName() === "aiCompanion"}>
-                    <AiCompanion name={typedRouteData()?.companion?.title} avatar={typedRouteData()?.companion?.avatar} />
-                </Show>
-
-
+                <Dynamic data={getData()} component={component()}/>
 
 
             </DrawerContent>

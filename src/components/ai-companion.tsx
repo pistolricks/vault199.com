@@ -1,4 +1,4 @@
-import {Component, createMemo, createSignal, For, onCleanup, onMount, Show} from 'solid-js';
+import {Component, createEffect, createMemo, createSignal, For, onCleanup, onMount, Show} from 'solid-js';
 import styles from "~/components/layouts/terminal/style.module.css"
 import {classNames} from "~/components/navigation";
 import chatBox from "~/static/pipboy/chatbox/chatbox_001.png"
@@ -10,6 +10,7 @@ import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
+import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
 interface ChatItem {
     id: string;
     type: 'text' | 'audioLink' | 'audioPlayer';
@@ -20,17 +21,18 @@ interface ChatItem {
 }
 
 const AiCompanion: Component<{
-    name: string;
-    avatar: string;
+    data: ActivatedLayoutRouteData
+
 }> = (props) => {
     let outputDivRef: HTMLDivElement | undefined;
     let chatHistoryRef: HTMLDivElement | undefined;
     let videoRef: HTMLVideoElement | undefined;
     let audioPlayerRef: HTMLAudioElement | undefined; // For playing received audio chunks
 
-    const name = () => props.name;
+    const name = () => props.data.companion.title;
+    const avatar = () => props.data.companion.avatar;
 
-    const avatar = () => props.avatar;
+    createEffect(() => console.log("ai", props.data))
 
     const [outputText, setOutputText] = createSignal<string[]>([]);
     const [chatHistory, setChatHistory] = createSignal<ChatItem[]>([]);

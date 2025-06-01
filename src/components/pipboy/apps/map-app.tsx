@@ -1,14 +1,17 @@
-import {Component, createMemo, createSignal} from "solid-js";
+import {Component, createEffect, createMemo, createSignal} from "solid-js";
 import map3 from "~/static/pipboy/assets/map/map3.png"
-import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png";
+import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
 import BottomPipboyMenu, {MenuItem} from "~/components/bottom-pipboy-menu";
 import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png";
 import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
-type PROPS = {
+import MapWrapper from "~/components/wrappers/map-wrapper";
+import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
 
+type PROPS = {
+    data?: ActivatedLayoutRouteData
 }
 
 const MapApp: Component<PROPS> = props => {
@@ -33,21 +36,27 @@ const MapApp: Component<PROPS> = props => {
     const communications = createMemo(() => getComm())
 
 
+    createEffect(() => {
+
+    })
 
     return (
- <>
-        <div
-            style={{
-                'background-image': `url(${map3})`,
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
-                'background-size': 'cover',
-            }}
-            class={" absolute left-5 right-5 top-8 bottom-20"}>
+        <>
+            <div
+                style={{
+                    'background-image': `url(${map3})`,
+                    'background-repeat': 'no-repeat',
+                    'background-position': 'center',
+                    'background-size': 'cover',
+                }}
+                class={" absolute left-5 right-5 top-8 bottom-20"}>
 
-        </div>
-     <BottomPipboyMenu menuItems={menuItems} onClick={handleCommunications} appName={communications()}/>
-     </>
+                <MapWrapper data={props.data}/>
+
+
+            </div>
+            <BottomPipboyMenu menuItems={menuItems} onClick={handleCommunications} appName={communications()}/>
+        </>
     );
 };
 
