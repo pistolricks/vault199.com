@@ -1,17 +1,17 @@
 import {Component, createEffect, createMemo, createSignal, For, onCleanup, onMount, Show} from 'solid-js';
-import styles from "~/components/layouts/terminal/style.module.css"
 import {classNames} from "~/components/navigation";
 import chatBox from "~/static/pipboy/chatbox/chatbox_001.png"
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png"
 import BottomPipboyMenu, {MenuItem} from "~/components/bottom-pipboy-menu";
 import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
+import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
-import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
 import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
 import {Contact} from "~/components/lists/contact-list";
+
 interface ChatItem {
     id: string;
     type: 'text' | 'audioLink' | 'audioPlayer';
@@ -39,7 +39,6 @@ const AiCompanion: Component<{
 
     const name = () => companion()?.title ?? "clover";
     const avatar = () => companion()?.avatar;
-
 
 
     const [outputText, setOutputText] = createSignal<string[]>([]);
@@ -268,17 +267,17 @@ const AiCompanion: Component<{
 
     };
 
-    const recordStop = async() => {
+    const recordStop = async () => {
         if (processor) {
             processor.disconnect();
             processor = null; // Clear the processor
         }
         setIsRecording(false);
         const stream = await navigator.mediaDevices.getUserMedia({audio: true});
-         stream?.getTracks().forEach(track => track.stop());
+        stream?.getTracks().forEach(track => track.stop());
 
 
-         // screenStream?.getTracks().forEach(track => track.stop());
+        // screenStream?.getTracks().forEach(track => track.stop());
         // If there were any audio chunks sent but turn wasn't complete, handle them
         if (audioChunksSent.length > 0) {
             // Decide if you want to send a "final" chunk or encode what's there
@@ -356,8 +355,6 @@ const AiCompanion: Component<{
     }
 
     const communications = createMemo(() => getComm())
-
-
 
 
     return (
@@ -441,7 +438,7 @@ const AiCompanion: Component<{
                             "rotate-90 p-1",
                             "bg-red-800",
                             "absolute z-50 rounded-full ring ring-gray-950 inset-0 h-[2.2rem] w-[2.2rem]"
-                        )} />
+                        )}/>
                     </Show>
 
                     <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
@@ -450,7 +447,7 @@ const AiCompanion: Component<{
                     disabled={isRecording()}
                     class={classNames(
                         isRecording() ? "brightness-50 bg-gray-400/80" : "brightness-150 bg-red-700/80",
-                    "absolute z-50 rounded-full top-[75.7%] left-[6.6%] h-[2.2rem] w-[2.2rem]")}
+                        "absolute z-50 rounded-full top-[75.7%] left-[6.6%] h-[2.2rem] w-[2.2rem]")}
                     type={"button"} onClick={handleCloseConnection}>
                     <PowerButton/>
 
@@ -467,20 +464,23 @@ const AiCompanion: Component<{
 export default AiCompanion;
 
 
-const PowerButton = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor"
+const PowerButton = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5}
+                               stroke="currentColor"
                                class={classNames(
                                    "absolute z-50 rounded-full ring ring-gray-950 inset-0 h-[2.2rem] w-[2.2rem]"
                                )}
 >
-    <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9"/>
 </svg>
 
 
 const PhoneIcon: Component<{
     class?: string;
-}> = (props) => ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor"
-                             class={props.class}
->
-    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-</svg>)
+}> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor"
+         class={props.class}
+    >
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
+    </svg>)
 

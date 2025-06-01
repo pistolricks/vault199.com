@@ -1,10 +1,9 @@
 import {Feature, Map, View} from 'ol';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
 import {MapboxVectorLayer} from 'ol-mapbox-style';
+import {defaults as defaultControls} from 'ol/control/defaults.js';
 
 
-import {Component, createEffect, createMemo, createSignal, JSX, onMount} from "solid-js";
+import {Component, createEffect, createMemo, createSignal} from "solid-js";
 import {useGeographic} from "ol/proj";
 import {Point} from "ol/geom";
 import VectorLayer from "ol/layer/Vector";
@@ -16,7 +15,6 @@ type PROPS = {
     data?: ActivatedLayoutRouteData
 
 }
-
 
 
 const styleJson = `https://api.maptiler.com/maps/01972bb3-925c-76b1-a282-45de8f142fbc/style.json?key=cqdV2IAoMQWG4iAF4GIx`;
@@ -42,10 +40,6 @@ const MapWrapper: Component<PROPS> = props => {
     })
 
 
-
-
-
-
     createEffect(() => {
 
 
@@ -56,9 +50,11 @@ const MapWrapper: Component<PROPS> = props => {
         const place = new Point(current());
 
 
-
-
         const map = new Map({
+            controls: defaultControls({
+                zoom: false,
+            }),
+
             target: mapElement()!,
             view: new View({
                 center: getPoint(),
@@ -87,8 +83,8 @@ const MapWrapper: Component<PROPS> = props => {
         <div ref={setMapElement}
              class={"bg-green-400/50"}
              style={{
-            height: "84.6dvh"
-        }} id="map"></div>
+                 height: "84.6dvh"
+             }} id="map"></div>
     );
 };
 

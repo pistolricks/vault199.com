@@ -26,15 +26,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <script src="/src/lib/geo.ts" defer></script>
-  <script>
 
+  <script type="module">
     if('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        navigator.serviceWorker.register('/sw.js', { scope: '/', type: 'module' })
       })
     }
   </script>
+
 </head>
 <body class="min-h-dvh h-dvh flex flex-col w-screen overflow-hidden">
 <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -42,6 +42,7 @@
 
 
 <script src="/src/index.tsx" type="module"></script>
+<script type="module" src="/src/lib/geo.ts" ></script>
 <output></output>
 </body>
 </html>

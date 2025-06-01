@@ -1,22 +1,18 @@
-import {Component, createEffect, createMemo, createSignal, Show, ValidComponent} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, ValidComponent} from "solid-js";
 import {Dynamic} from "solid-js/web";
 import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import BaseDrawer, {DrawerContent} from "~/components/ui/drawer";
-import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png"
 import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png"
 import chatBox from "~/static/pipboy/chatbox/chatbox.png"
-import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import GalleryApp from "~/components/pipboy/apps/gallery-app";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png"
 import {classNames} from "~/components/navigation";
-import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png";
-import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png"
 import MapApp from "~/components/pipboy/apps/map-app";
 import AiCompanion from "~/components/ai-companion";
-import cloverAvatar from "~/static/companions/clover/clover.webp";
 import {Contact} from "~/components/lists/contact-list";
+
 const apps = {
     aiCompanion: AiCompanion,
     gallery: GalleryApp,
@@ -37,7 +33,7 @@ export interface ActivatedLayoutRouteData {
     component?: string;
 }
 
-const ActivatedLayout: Component<RouteSectionProps & { componentName: string } > = props => {
+const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> = props => {
 
     const componentName = () => props.componentName;
     const children = () => props.children;
@@ -45,10 +41,7 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string } >
     const [getData, setData] = createSignal<ActivatedLayoutRouteData>(props.data);
 
 
-
-
     const [getComponent, setComponent] = createSignal<ValidComponent>(apps[componentName()])
-
 
 
     const [getPipboyType, setPipboyType] = createSignal<string>(pipboyTypes[componentName()])
@@ -74,10 +67,10 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string } >
     })
 
 
-    createEffect(async() => {
+    createEffect(async () => {
 
         setData(await props.data)
-        console.log("getData",getData(),"activeLayoutData", await props.data)
+        console.log("getData", getData(), "activeLayoutData", await props.data)
     })
 
     return (
@@ -97,8 +90,6 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string } >
                 <div class={styles["interlaced"]}></div>
                 <div class={styles["glare"]}></div>
                 {children()}
-
-
 
 
             </div>

@@ -43,6 +43,7 @@ const MapApp: Component<PROPS> = props => {
     return (
         <>
             <div
+                data-corvu-no-drag={true}
                 style={{
                     'background-image': `url(${map3})`,
                     'background-repeat': 'no-repeat',

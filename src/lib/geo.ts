@@ -1,4 +1,4 @@
-import {Component, createMemo, createSignal, onMount, Setter} from "solid-js";
+import {Setter} from "solid-js";
 
 
 export function start() {
@@ -22,7 +22,6 @@ export function start() {
                 maximumAge: 30000,
                 timeout: 60000
             },
-
         )
     }
     return coords;

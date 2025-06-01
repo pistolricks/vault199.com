@@ -1,4 +1,4 @@
-import {type Component, createEffect, Suspense} from 'solid-js';
+import {type Component, createEffect, onMount, Suspense} from 'solid-js';
 import {RouteSectionProps} from '@solidjs/router';
 import Cookies from "cookies-ts";
 import {createBreakpoints} from "@solid-primitives/media";
@@ -55,8 +55,13 @@ const App: Component<RouteSectionProps> = (props) => {
         console.log(matches.xxl);
     });
 
+    onMount(() => {
+
+    })
+
     return (
         <>
+
             <main class={'scrollbar-hide'}>
                 <Suspense>{props.children}</Suspense>
             </main>
