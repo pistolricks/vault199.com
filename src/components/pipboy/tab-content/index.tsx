@@ -3,10 +3,10 @@ import {Component, createEffect} from "solid-js";
 import MiscTabPanel from "~/components/pipboy/tab-content/misc-tab-panel";
 import StatsTabPanel from "~/components/pipboy/tab-content/stats-tab-panel";
 import {createBreakpoints} from "@solid-primitives/media";
-import RadioTabPanel from "~/components/pipboy/tab-content/radio-tab-panel";
-import QuestsTabPanel from "~/components/pipboy/tab-content/quests-tab-panel";
-import ProfilesTabPanel from "~/components/pipboy/tab-content/profiles-tab-panel";
-import SocialTabPanel from "~/components/pipboy/tab-content/social-tab-panel";
+import MediaTabPanel from "~/components/pipboy/tab-content/media-tab-panel";
+import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
+import ItemsTabPanel from "~/components/pipboy/tab-content/items-tab-panel";
+import ContactsTabPanel from "~/components/pipboy/tab-content/contacts-tab-panel";
 
 
 type PROPS = {
@@ -44,12 +44,12 @@ const TabContent: Component<PROPS> = props => {
 
     return (
         <div class={"tab-content"}>
-            <ProfilesTabPanel profiles={profiles}/>
+            <ItemsTabPanel profiles={profiles}/>
             <StatsTabPanel/>
-            <QuestsTabPanel matches={matches} />
+            <DataTabPanel/>
             <MiscTabPanel matches={matches} />
-            <RadioTabPanel/>
-            <SocialTabPanel onClick={props.onClick} />
+            <MediaTabPanel/>
+            <ContactsTabPanel onClick={props.onClick} />
         </div>
     );
 };

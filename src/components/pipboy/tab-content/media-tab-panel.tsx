@@ -7,7 +7,7 @@ type PROPS = {
 
 }
 
-const RadioTabPanel: Component<PROPS> = props => {
+const MediaTabPanel: Component<PROPS> = props => {
 
     return (
         <Tabs.Content value={"audio"}
@@ -25,4 +25,4 @@ const RadioTabPanel: Component<PROPS> = props => {
     );
 };
 
-export default RadioTabPanel;
+export default MediaTabPanel;

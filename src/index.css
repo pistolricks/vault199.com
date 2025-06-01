@@ -526,7 +526,9 @@ label::before {
 a:hover,
 a.active,
 li.active a {
+    /*
     outline: 2px solid currentColor;
+     */
 }
 
 a:hover {

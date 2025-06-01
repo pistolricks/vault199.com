@@ -1,22 +1,25 @@
 import {Component, For} from "solid-js";
-import {soundTypes} from "~/lib/sounds";
 import MouseMoveEffect from "~/components/ui/mouse-move-effect";
 import {Tabs} from "@ark-ui/solid";
-import {Matches} from "@solid-primitives/media";
 
-type PROPS = {
-    matches: Matches<{
+
+
+
+/*
+*     matches: Matches<{
         sm: string;
         md: string;
         lg: string;
         xl: string;
         xxl: string;
     }>
-}
+* */
+type PROPS = {}
 
-const QuestsTabPanel: Component<PROPS> = props => {
 
-    const matches = () => props.matches;
+const DataTabPanel: Component<PROPS> = props => {
+
+
 
     return (
         <Tabs.Content
@@ -77,7 +80,7 @@ const QuestsTabPanel: Component<PROPS> = props => {
     );
 };
 
-export default QuestsTabPanel;
+export default DataTabPanel;
 
 
 const QuestContent: Component<{

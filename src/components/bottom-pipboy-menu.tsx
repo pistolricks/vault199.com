@@ -7,11 +7,13 @@ import cover from "~/static/pipboy/2000N/app_cover.png";
 export type MenuItem = {
     name: string;
     icon: string;
+    href?: string;
 }
 
 type PROPS = {
     onClick?: (e: string) => any;
     appName?: string;
+
     menuItems: MenuItem[];
 }
 

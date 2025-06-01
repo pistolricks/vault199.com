@@ -1,35 +1,36 @@
-import {Component, createEffect, createMemo, createSignal, onCleanup, Setter} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, JSXElement, onCleanup, Setter} from "solid-js";
 import Tabs from "~/components/pipboy/tabs";
 import TabContent from "~/components/pipboy/tab-content";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
-import ProfilesTab from "~/components/pipboy/tabs/profiles-tab";
-import StatsTab from "~/components/pipboy/tabs/stats-tab";
-import QuestsTab from "~/components/pipboy/tabs/quests-tab";
 import BottomPipboyTabs from "~/components/bottom-pipboy-tabs";
 import {MenuItem} from "~/components/bottom-pipboy-menu";
-import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
-import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
-import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import stats from "~/static/app/icons/apps/apple-app-19.png"
 import items from "~/static/app/icons/fallout/shopping.png"
 import data from "~/static/app/icons/fallout/tasks-work.png";
-import cover from "~/static/pipboy/2000N/app_cover.png"
+import HeaderMenu from "~/components/pipboy/header/menu";
+import BottomPipboyRoutingMenu from "~/components/bottom-pipboy-routing-menu";
+import {useLocation} from "@solidjs/router";
 
 type PROPS = {
     display?: string;
     setComponent: Setter<string>;
     onClick?: (e) => any;
+    children?: JSXElement;
 }
 
 const menuItems: MenuItem[] = [
-    {name: "stats", icon: stats},
-    {name: "items", icon: items},
-    {name: "data", icon: data},
+    {name: "stats", href: '/stats', icon: stats},
+    {name: "items", href: '/items', icon: items},
+    {name: "data", href: '/data', icon: data},
 
 ]
 
 const PipBoy: Component<PROPS> = props => {
     let cursor!: HTMLDivElement;
+
+    const location = useLocation();
+
+    const children = () => props.children;
 
     const [getTitle, setTitle] = createSignal("stats")
 
@@ -71,19 +72,21 @@ const PipBoy: Component<PROPS> = props => {
     const title = createMemo(() => getTitle())
 
 
-
     return (
         <>
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
 
-                <div class="bbody z-10" style={props.display}>
+                <div class="bbody" style={props.display}>
                     <div class={"absolute left-[6.75%] h-[18%] object-bottom w-1/4 flex justify-start items-center"}>
-                        <h2 class="pip-tab-title text-2xl">{title()}</h2>
+                        <h2 class="pip-tab-title text-2xl">
+                            {location.pathname.replace("/", "")}
+                        </h2>
                     </div>
 
                     <div class={"absolute right-[4.5%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
 
-                        <Tabs onClick={props.onClick} title={title()} setTitle={setTitle} setComponent={props.setComponent}/>
+                        <HeaderMenu/>
+
                     </div>
                     <div id="frame" class="frame">
 
@@ -91,14 +94,18 @@ const PipBoy: Component<PROPS> = props => {
                             <div class="pipboy">
 
 
-                                <TabContent onClick={props.onClick} />
+
+
+
+                                {children()}
+
 
 
                                 <div class="piece glow noclick"></div>
                                 <div class="piece scanlines noclick"></div>
                             </div>
                         </div>
-                            <div ref={cursor} class="cursor">
+                        <div ref={cursor} class="cursor">
                             <img
                                 src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"
                                 alt="PipBoy Cursor" // Added alt attribute for accessibility
@@ -107,9 +114,10 @@ const PipBoy: Component<PROPS> = props => {
                         </div>
 
                     </div>
-                </div>
 
-                <BottomPipboyTabs onClick={(e) => setTitle(e)} appName={title()} menuItems={menuItems}/>
+                </div>
+                <BottomPipboyRoutingMenu menuItems={menuItems}/>
+
             </ArkTabs.Root>
         </>
     );

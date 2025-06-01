@@ -5,7 +5,7 @@ import map from "~/static/app/icons/misc apps/30misc-apps-30.png"
 import Drawer from "@corvu/drawer";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import {classNames} from "~/components/navigation";
-import SocialTab from "~/components/pipboy/tabs/social-tab";
+import SocialTab from "~/components/pipboy/tabs/contacts-tab";
 import {start} from "~/lib/geo";
 
 type PROPS = {

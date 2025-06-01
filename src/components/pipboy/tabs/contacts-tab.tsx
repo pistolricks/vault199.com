@@ -5,7 +5,7 @@ import {Component, Setter} from "solid-js";
 import {classNames} from "~/components/navigation";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import social from "~/static/app/icons/fallout/social.png";
-const MiscTab: Component<{
+const ContactsTab: Component<{
     value: string;
     setValue: Setter<string>
 }> = (props) => {
@@ -32,4 +32,4 @@ const MiscTab: Component<{
     )
 };
 
-export default MiscTab;
+export default ContactsTab;

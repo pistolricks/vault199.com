@@ -264,7 +264,7 @@ const HandymanInfo = () => (
     </div>
 );
 
-const ProfilesTabPanel: Component<{
+const ItemsTabPanel: Component<{
     profiles: any;
 }> = (props) => {
 
@@ -403,4 +403,4 @@ const ProfilesTabPanel: Component<{
         </Tabs.Content>
     );
 };
-export default ProfilesTabPanel;
+export default ItemsTabPanel;

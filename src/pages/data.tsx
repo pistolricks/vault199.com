@@ -5,12 +5,13 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
+import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
 import BaseDrawer from "~/components/ui/drawer";
 
 
 type PROPS = {}
 
-const Dashboard: Component<RouteSectionProps> = props => {
+const DataSection: Component<RouteSectionProps> = props => {
 
     const [getComponentName, setComponentName] = createSignal('map')
     const [getCompanion, setCompanion] = createSignal<Contact>()
@@ -40,7 +41,7 @@ const Dashboard: Component<RouteSectionProps> = props => {
             companion: getCompanion(),
             coords: await getCoords(),
         })
-       return getData()
+        return getData()
     })
 
     createEffect(async() => {
@@ -53,12 +54,14 @@ const Dashboard: Component<RouteSectionProps> = props => {
 
 
     return (
-        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-            <PipBoy onClick={handleClick} setComponent={setComponentName} />
+            <PipBoy onClick={handleClick} setComponent={setComponentName}>
+                <DataTabPanel/>
+            </PipBoy>
         </ActivatedLayout>
-        </BaseDrawer>
+
     );
 };
 
-export default Dashboard;
+export default DataSection;

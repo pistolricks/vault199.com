@@ -12,18 +12,18 @@ import dogmeatAvatar from "~/static/companions/dogmeat/dogmeat.webp";
 import charonAvatar from "~/static/companions/charon/charon.webp";
 
 
-const SocialTabPanel: Component<{
+const ContactsTabPanel: Component<{
     onClick: (data: any) => any,
 }> = (props) => {
 
 
     return (
         <Tabs.Content
-            value={"contact"}
+            value={"contacts"}
             class="tab-pane fade show active"
             role="tabpanel"
-            id="contact"
-            aria-labelledby="contact-tab"
+            id="contacts"
+            aria-labelledby="contacts-tab"
         >
 
             <div class="pip-body">
@@ -41,7 +41,7 @@ const SocialTabPanel: Component<{
         </Tabs.Content>
     );
 };
-export default SocialTabPanel;
+export default ContactsTabPanel;
 
 
 const companions: Contact[] = [
