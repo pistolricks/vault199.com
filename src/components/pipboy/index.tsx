@@ -77,7 +77,7 @@ const PipBoy: Component<PROPS> = props => {
                         <h2 class="pip-tab-title text-2xl">{title()}</h2>
                     </div>
 
-                    <div class={"absolute right-[12%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
+                    <div class={"absolute right-[4.5%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
 
                         <Tabs title={title()} setTitle={setTitle}/>
                     </div>
