@@ -1,4 +1,4 @@
-import {Component, createEffect, createMemo, createSignal, onCleanup} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, onCleanup, Setter} from "solid-js";
 import Tabs from "~/components/pipboy/tabs";
 import TabContent from "~/components/pipboy/tab-content";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
@@ -17,6 +17,8 @@ import cover from "~/static/pipboy/2000N/app_cover.png"
 
 type PROPS = {
     display?: string;
+    setComponent: Setter<string>;
+    onClick?: (e) => any;
 }
 
 const menuItems: MenuItem[] = [
@@ -68,6 +70,8 @@ const PipBoy: Component<PROPS> = props => {
 
     const title = createMemo(() => getTitle())
 
+
+
     return (
         <>
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
@@ -79,7 +83,7 @@ const PipBoy: Component<PROPS> = props => {
 
                     <div class={"absolute right-[4.5%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
 
-                        <Tabs title={title()} setTitle={setTitle}/>
+                        <Tabs title={title()} setTitle={setTitle} setComponent={props.setComponent}/>
                     </div>
                     <div id="frame" class="frame">
 
@@ -87,7 +91,7 @@ const PipBoy: Component<PROPS> = props => {
                             <div class="pipboy">
 
 
-                                <TabContent/>
+                                <TabContent onClick={props.onClick} />
 
 
                                 <div class="piece glow noclick"></div>
@@ -104,6 +108,7 @@ const PipBoy: Component<PROPS> = props => {
 
                     </div>
                 </div>
+
                 <BottomPipboyTabs onClick={(e) => setTitle(e)} appName={title()} menuItems={menuItems}/>
             </ArkTabs.Root>
         </>

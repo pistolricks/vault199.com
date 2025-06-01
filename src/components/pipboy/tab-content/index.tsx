@@ -6,10 +6,11 @@ import {createBreakpoints} from "@solid-primitives/media";
 import RadioTabPanel from "~/components/pipboy/tab-content/radio-tab-panel";
 import QuestsTabPanel from "~/components/pipboy/tab-content/quests-tab-panel";
 import ProfilesTabPanel from "~/components/pipboy/tab-content/profiles-tab-panel";
+import SocialTabPanel from "~/components/pipboy/tab-content/social-tab-panel";
 
 
 type PROPS = {
-
+    onClick: (e: any) => any;
 }
 const profiles = Object.freeze({
     vaultboy: "vaultboy",
@@ -48,6 +49,7 @@ const TabContent: Component<PROPS> = props => {
             <QuestsTabPanel matches={matches} />
             <MiscTabPanel matches={matches} />
             <RadioTabPanel/>
+            <SocialTabPanel onClick={props.onClick} />
         </div>
     );
 };

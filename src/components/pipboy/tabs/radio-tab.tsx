@@ -25,7 +25,7 @@ const RadioTab: Component<{
             role="tab"
             class={classNames(
                 "relative",
-                "size-10 md:size-8 rounded-br-lg",
+                "size-10 md:size-8 rounded-tr-xl",
                 value() === 'audio' ? "brightness-[200%]" : "",
             )}
             data-play-sound={soundTypes.scifi_click}

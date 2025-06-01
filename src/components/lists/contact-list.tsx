@@ -2,6 +2,7 @@ import {Component, createMemo, createSignal, For, Show} from "solid-js";
 import {classNames} from "~/components/navigation";
 import pipBg from "~/static/backgrounds/pipboy_back.png"
 import AiCompanion from "~/components/ai-companion";
+import Drawer from "@corvu/drawer";
 
 export type Contact = {
     id: number
@@ -13,11 +14,13 @@ export type Contact = {
     phone?: string
     bio?: string
     active: boolean
+    component?: string
 
 
 }
 const ContactList: Component<{
     list: Contact[]
+    onClick: (e?: any) => any;
     height?: string;
 }> = (props) => {
     const list = () => props.list;
@@ -51,7 +54,7 @@ const ContactList: Component<{
 
                             <For each={list()}>
                                 {(contact) => (
-                                    <ContactItem {...contact} onClick={() => handleClick(contact)}/>
+                                    <ContactItem {...contact} onClick={() => props.onClick(contact)}/>
                                 )}
                             </For>
                         </ul>
@@ -72,9 +75,10 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
     return (
         <li class="flex items-center gap-x-4  h-24 overflow-hidden">
             <div class="self-start">
-                <button
+                <Drawer.Trigger
                     onClick={props.onClick}
                     disabled={!props.active}
+                    contextId={"activated-1"}
                     class="relative flex h-full w-full items-center justify-center rounded-full text-white"
                 >
                     <img
@@ -91,7 +95,7 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
                         ``)}>
                 <span class="sr-only"> {props.active ? "active" : "inactive"} </span>
               </span>
-                </button>
+                </Drawer.Trigger>
             </div>
 
             <div class="flex flex-col gap-0 min-h-[2rem] items-start justify-center w-full min-w-0">
