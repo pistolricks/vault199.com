@@ -263,14 +263,22 @@ const AiCompanion: Component<{
     const handleCloseConnection = () => {
         if (!ws) return;
         ws.close();
+
+        console.log("closed connection", ws)
+
     };
 
-    const recordStop = () => {
+    const recordStop = async() => {
         if (processor) {
             processor.disconnect();
             processor = null; // Clear the processor
         }
         setIsRecording(false);
+        const stream = await navigator.mediaDevices.getUserMedia({audio: true});
+         stream?.getTracks().forEach(track => track.stop());
+
+
+         // screenStream?.getTracks().forEach(track => track.stop());
         // If there were any audio chunks sent but turn wasn't complete, handle them
         if (audioChunksSent.length > 0) {
             // Decide if you want to send a "final" chunk or encode what's there
@@ -321,7 +329,7 @@ const AiCompanion: Component<{
             recordStop();
             if (ws && ws.readyState === WebSocket.OPEN) {
                 // Optionally send a message to server that recording/turn has ended
-                // ws.send(createContent("Audio input finished by user."));
+                ws.send(createContent("Audio input finished by user."));
             }
         } else {
             audioChunksSent = []; // Clear previous chunks before starting new recording
