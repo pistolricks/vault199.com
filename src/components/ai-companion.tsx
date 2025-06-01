@@ -11,6 +11,7 @@ import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
 import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
+import {Contact} from "~/components/lists/contact-list";
 interface ChatItem {
     id: string;
     type: 'text' | 'audioLink' | 'audioPlayer';
@@ -21,7 +22,7 @@ interface ChatItem {
 }
 
 const AiCompanion: Component<{
-    data: ActivatedLayoutRouteData
+    data?: ActivatedLayoutRouteData
 
 }> = (props) => {
     let outputDivRef: HTMLDivElement | undefined;
@@ -29,10 +30,17 @@ const AiCompanion: Component<{
     let videoRef: HTMLVideoElement | undefined;
     let audioPlayerRef: HTMLAudioElement | undefined; // For playing received audio chunks
 
-    const name = () => props.data.companion.title;
-    const avatar = () => props.data.companion.avatar;
+    const [companion, setCompanion] = createSignal<Contact | null>(props.data?.companion);
 
-    createEffect(() => console.log("ai", props.data))
+    createEffect(() => {
+        setCompanion(props.data?.companion);
+        console.log(props.data?.companion, "c", companion())
+    })
+
+    const name = () => companion()?.title ?? "clover";
+    const avatar = () => companion()?.avatar;
+
+
 
     const [outputText, setOutputText] = createSignal<string[]>([]);
     const [chatHistory, setChatHistory] = createSignal<ChatItem[]>([]);
@@ -182,59 +190,59 @@ const AiCompanion: Component<{
         }
     };
 
-    onMount(() => {
-        // WebSocket URL - replace with your actual WebSocket endpoint
-
-        const wsUrl = (`${import.meta.env.VITE_API_WS}/api/v1/ai/${name()}`)
+    const wsUrl = (`${import.meta.env.VITE_API_WS}/api/v1/ai/${name()}`)
 
 
-        // Placeholder, adjust as needed
+    // Placeholder, adjust as needed
 
-        const openWs = () => {
-            if (ws) return;
-            ws = new WebSocket(wsUrl); // Original code used '{{.}}' which is a template placeholder
+    const openWs = () => {
+        if (ws) return;
+        ws = new WebSocket(wsUrl); // Original code used '{{.}}' which is a template placeholder
 
-            ws.onopen = () => printToOutput('SIGNAL');
-            ws.onclose = () => {
-                printToOutput('NO SIGNAL');
-                ws = null;
-            };
-            ws.onmessage = (evt) => {
-                const data = JSON.parse(evt.data);
-                if (!data.serverContent) return;
-
-                if (data.serverContent.turnComplete) {
-                    if (audioChunksSent.length > 0) {
-                        printChatAudio(encodeAudio(audioChunksSent, sampleRate, 16, 1), 'Me');
-                        audioChunksSent = [];
-                    }
-                    // The original logic suggests Gemini 2.0 also sends chunks that are accumulated.
-                    // If data.serverContent.turnComplete implies all chunks for the turn are sent, then encode and play.
-                    if (audioChunksReceived.length > 0) {
-                        printChatAudio(encodeAudio(audioChunksReceived, sampleRate, 16, 1), 'Gemini 2.0');
-                        audioChunksReceived = [];
-                    }
-                    return;
-                }
-
-                if (!data.serverContent.modelTurn || !data.serverContent.modelTurn.parts || !data.serverContent.modelTurn.parts[0]) return;
-
-                const part = data.serverContent.modelTurn.parts[0];
-                if (part.inlineData) {
-                    const inlineData = part.inlineData;
-                    printToOutput(`RECEIVED: ${typeof (inlineData)} ${inlineData.mimeType} ${inlineData.data.substring(0, 30)}...`);
-                    if (inlineData.mimeType.startsWith('audio/pcm')) {
-                        const audioData = b64ToUint8Array(inlineData.data);
-                        audioQueue.push(audioData); // Add to general queue for sequential playback
-                        audioChunksReceived.push(audioData); // Accumulate for "Gemini 2.0" message on turnComplete
-                        playNextChunk();
-                    }
-                } else if (part.text) {
-                    printChatText(part.text, "Gemini 2.0"); // Handle text messages from Gemini
-                }
-            };
-            ws.onerror = (event) => printToOutput('ERROR: ' + JSON.stringify(event));
+        ws.onopen = () => printToOutput('SIGNAL');
+        ws.onclose = () => {
+            printToOutput('NO SIGNAL');
+            ws = null;
         };
+        ws.onmessage = (evt) => {
+            const data = JSON.parse(evt.data);
+            if (!data.serverContent) return;
+
+            if (data.serverContent.turnComplete) {
+                if (audioChunksSent.length > 0) {
+                    printChatAudio(encodeAudio(audioChunksSent, sampleRate, 16, 1), 'Me');
+                    audioChunksSent = [];
+                }
+                // The original logic suggests Gemini 2.0 also sends chunks that are accumulated.
+                // If data.serverContent.turnComplete implies all chunks for the turn are sent, then encode and play.
+                if (audioChunksReceived.length > 0) {
+                    printChatAudio(encodeAudio(audioChunksReceived, sampleRate, 16, 1), 'Gemini 2.0');
+                    audioChunksReceived = [];
+                }
+                return;
+            }
+
+            if (!data.serverContent.modelTurn || !data.serverContent.modelTurn.parts || !data.serverContent.modelTurn.parts[0]) return;
+
+            const part = data.serverContent.modelTurn.parts[0];
+            if (part.inlineData) {
+                const inlineData = part.inlineData;
+                printToOutput(`RECEIVED: ${typeof (inlineData)} ${inlineData.mimeType} ${inlineData.data.substring(0, 30)}...`);
+                if (inlineData.mimeType.startsWith('audio/pcm')) {
+                    const audioData = b64ToUint8Array(inlineData.data);
+                    audioQueue.push(audioData); // Add to general queue for sequential playback
+                    audioChunksReceived.push(audioData); // Accumulate for "Gemini 2.0" message on turnComplete
+                    playNextChunk();
+                }
+            } else if (part.text) {
+                printChatText(part.text, "Gemini 2.0"); // Handle text messages from Gemini
+            }
+        };
+        ws.onerror = (event) => printToOutput('ERROR: ' + JSON.stringify(event));
+    };
+
+
+    onMount(() => {
         openWs();
     });
 
@@ -308,6 +316,7 @@ const AiCompanion: Component<{
     };
 
     const handleRecordToggle = () => {
+        openWs();
         if (isRecording()) {
             recordStop();
             if (ws && ws.readyState === WebSocket.OPEN) {
@@ -339,6 +348,7 @@ const AiCompanion: Component<{
     }
 
     const communications = createMemo(() => getComm())
+
 
 
 
