@@ -29,7 +29,7 @@ const RadioTab: Component<{
             data-play-sound={soundTypes.scifi_click}
             onClick={() => props.setValue(() => "audio")}
         >
-            <img src={audio} class={"size-10 rounded-tr-2xl"} alt={"audio"} />
+            <img src={audio} class={"size-10 lg:size-8 rounded-tr-2xl md:rounded-none"} alt={"audio"} />
         </Tabs.Trigger>
     );
 };

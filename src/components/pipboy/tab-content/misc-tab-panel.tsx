@@ -22,11 +22,11 @@ const MiscTabPanel: Component<PROPS> = props => {
     };
 
     return (
-        <Tabs.Content value={"misc"}
+        <Tabs.Content value={"settings"}
                       class="tab-pane fade"
                       role="tabpanel"
-                      id="misc"
-                      aria-labelledby="misc-tab"
+                      id="settings"
+                      aria-labelledby="settings-tab"
         >
 
 
@@ -35,53 +35,53 @@ const MiscTabPanel: Component<PROPS> = props => {
                 <Tabs.Root class={"mt-5 px-5"} orientation={"horizontal"}>
                 <Tabs.List property={"ul"} class="options w-full" role="tablist">
                     <Tabs.Trigger
-                        value={"misc-1"}
+                        value={"settings-1"}
                         property={"li"}
                         data-bs-toggle="tab"
-                        data-bs-target="#misc-1"
+                        data-bs-target="#settings-1"
                         role="tab"
                         class="active w-full"
                     >
                       A
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-2"}
+                        value={"settings-2"}
                         property={"li"}
                         class={"w-full"}
-                        data-bs-toggle="tab" data-bs-target="#misc-2" role="tab">
+                        data-bs-toggle="tab" data-bs-target="#settings-2" role="tab">
                         B
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-3"}
+                        value={"settings-3"}
                         property={"li"}
                         class={"w-full"}
-                        data-bs-toggle="tab" data-bs-target="#misc-3" role="tab">
+                        data-bs-toggle="tab" data-bs-target="#settings-3" role="tab">
                       C
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-4"}
+                        value={"settings-4"}
                         property={"li"}
                         class={"w-full"}
-                        data-bs-toggle="tab" data-bs-target="#misc-4" role="tab">
+                        data-bs-toggle="tab" data-bs-target="#settings-4" role="tab">
                       D
                     </Tabs.Trigger>
                     <Tabs.Trigger
-                        value={"misc-5"}
+                        value={"settings-5"}
                         property={"li"}
                         class={"w-full"}
-                        data-bs-toggle="tab" data-bs-target="#misc-5" role="tab">
+                        data-bs-toggle="tab" data-bs-target="#settings-5" role="tab">
                       E
                     </Tabs.Trigger>
                 </Tabs.List>
                 <div class="tab-content mt-5">
                     <Tabs.Content
-                        value={"misc-1"}
+                        value={"settings-1"}
                         class={classNames(
                             matches().sm ? "info" : "",
                             " active tab-pane fade in show")}
-                        id="misc-1"
+                        id="settings-1"
                         role="tabpanel"
-                        aria-labelledby="misc-1-tab"
+                        aria-labelledby="settings-1-tab"
                     >
                         <div class="post">
                             <p>Select HUD / Backlight Color</p>
@@ -140,13 +140,13 @@ const MiscTabPanel: Component<PROPS> = props => {
                     </Tabs.Content>
 
                     <Tabs.Content
-                        value={"misc-2"}
+                        value={"settings-2"}
                         class={classNames(
                             matches().sm ? "info" : "",
                             " tab-pane fade")}
-                        id="misc-2"
+                        id="settings-2"
                         role="tabpanel"
-                        aria-labelledby="misc-2-tab"
+                        aria-labelledby="settings-2-tab"
                     >
                         <div class="post overflow-hidden">
                             <p>
@@ -164,13 +164,13 @@ const MiscTabPanel: Component<PROPS> = props => {
                     </Tabs.Content>
 
                     <Tabs.Content
-                        value={"misc-3"}
+                        value={"settings-3"}
                         class={classNames(
                             matches().sm ? "info" : "",
                             " tab-pane fade")}
-                        id="misc-3"
+                        id="settings-3"
                         role="tabpanel"
-                        aria-labelledby="misc-3-tab"
+                        aria-labelledby="settings-3-tab"
                     >
                         <div class="post">
                             <p>For you my brain remembers every little detail </p>
@@ -186,13 +186,13 @@ const MiscTabPanel: Component<PROPS> = props => {
                         </div>
                     </Tabs.Content>
                     <Tabs.Content
-                        value={"misc-4"}
+                        value={"settings-4"}
                         class={classNames(
                             matches().sm ? "info" : "",
                             " tab-pane fade")}
-                        id="misc-4"
+                        id="settings-4"
                         role="tabpanel"
-                        aria-labelledby="misc-4-tab"
+                        aria-labelledby="settings-4-tab"
                     >
                         <div class="post">
                             <p>
@@ -208,13 +208,13 @@ const MiscTabPanel: Component<PROPS> = props => {
                         </div>
                     </Tabs.Content>
                     <Tabs.Content
-                        value={"misc-5"}
+                        value={"settings-5"}
                         class={classNames(
                             matches().sm ? "info" : "",
                             " tab-pane fade")}
-                        id="misc-5"
+                        id="settings-5"
                         role="tabpanel"
-                        aria-labelledby="misc-5-tab"
+                        aria-labelledby="settings-5-tab"
                     >
                         <div class="post">
                             <p>In the end the dreams remained dreams </p>
