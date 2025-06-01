@@ -29,13 +29,13 @@ const StatsTab: Component<{
             role="tab"
             class={classNames(
                 "relative",
-                "rounded-bl-lg",
+                "rounded-tr-lg",
                 value() === 'stats' ? "brightness-[200%]" : "",
                 className()
             )}
             data-play-sound={soundTypes.scifi_click}
         >
-            <img src={stats} class={"size-10 rounded-bl-lg"} alt={"stats"} />
+            <img src={stats} class={"size-10 rounded-tr-lg"} alt={"stats"} />
             <img src={cover} class={"transform rotate-12 absolute inset-0 size-full"} alt={"cover"}/>
         </Tabs.Trigger>
         </div>

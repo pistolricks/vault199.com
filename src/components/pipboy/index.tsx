@@ -85,13 +85,6 @@ const PipBoy: Component<PROPS> = props => {
 
                         <div class="piece output container">
                             <div class="pipboy">
-                                <ArkTabs.List
-                                    class="absolute -bottom-2 sm:bottom-2 left-0 inset-x-0 flex justify-start w-full"
-                                    role="tablist">
-                                    <StatsTab value={title()} setValue={setTitle}/>
-                                    <ProfilesTab value={title()} setValue={setTitle}/>
-                                    <QuestsTab value={title()} setValue={setTitle}/>
-                                </ArkTabs.List>
 
 
                                 <TabContent/>
@@ -101,7 +94,7 @@ const PipBoy: Component<PROPS> = props => {
                                 <div class="piece scanlines noclick"></div>
                             </div>
                         </div>
-                        <div ref={cursor} class="cursor">
+                            <div ref={cursor} class="cursor">
                             <img
                                 src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"
                                 alt="PipBoy Cursor" // Added alt attribute for accessibility

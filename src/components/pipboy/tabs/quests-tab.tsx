@@ -33,7 +33,7 @@ const QuestsTab: Component<{
                 )}
                 data-play-sound={soundTypes.scifi_click}
             >
-                <img src={data} class={"size-10"} alt={"data"}/>
+                <img src={data} class={"size-10 rounded-bl-lg"} alt={"data"}/>
                 <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
             </Tabs.Trigger>
         </div>
