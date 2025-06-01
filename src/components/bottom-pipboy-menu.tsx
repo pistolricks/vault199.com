@@ -24,7 +24,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     return (
         <div
 
-            class={"fixed inset-x-0 bottom-0 h-[8dvh] sm:h-[10dvh] w-full flex justify-center items-center sm:max-w-sm"}>
+            class={"fixed inset-x-0 bottom-0 h-16 w-screen flex justify-center items-center sm:max-w-xs"}>
             <div
                 style={{
                     'background-image': `url(${bottomMenuAlt})`,

@@ -25,7 +25,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     return (
         <div
 
-            class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] -bottom-2 h-[8dvh] sm:h-[10dvh] md:h-[11dvh] w-full flex justify-center items-center sm:max-w-sm"}>
+            class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] -bottom-2 h-16 sm:h-12 w-full flex justify-center items-center sm:max-w-xs"}>
             <Tabs.List
                 style={{
                     'background-image': `url(${bottomMenuAlt})`,
@@ -34,7 +34,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     'background-position': 'center',
                     'background-color': 'transparent'
                 }}
-                class={"absolute w-full h-full sm:max-w-sm z-20 animate-in slide-in-from-bottom animate duration-700 transition-all -translate-y-[10px]"}>
+                class={"absolute w-full h-full sm:max-w-xs z-20 animate-in slide-in-from-bottom animate duration-700 transition-all -translate-y-[10px]"}>
 
                 <Tabs.Trigger
                     value={menuItems()[0].name}
