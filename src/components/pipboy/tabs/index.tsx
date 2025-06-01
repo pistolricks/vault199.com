@@ -15,7 +15,7 @@ const Tabs: Component<PROPS> = props => {
     return (
 
 
-            <ArkTabs.List class={"flex justify-center items-center"}>
+            <ArkTabs.List class={"flex justify-center items-center space-x-0.5"}>
                 <MiscTab value={title()} setValue={props.setTitle}/>
                 <RadioTab value={title()} setValue={props.setTitle}/>
             </ArkTabs.List>

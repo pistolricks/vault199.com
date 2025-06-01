@@ -13,18 +13,18 @@ const MiscTab: Component<{
 
     return (
         <Tabs.Trigger
-            onClick={() => props.setValue(() => "settings")}
-            value="settings"
+            onClick={() => props.setValue(() => "config")}
+            value="config"
             data-bs-toggle="tab"
-            data-bs-target="#settings"
+            data-bs-target="#config"
             role="tab"
             class={classNames(
                 "size-10 md:size-8",
-                value() === 'settings' ? "brightness-[200%]" : "",
+                value() === 'config' ? "brightness-[200%]" : "",
             )}
             data-play-sound={soundTypes.scifi_click}
         >
-            <img src={misc} class={"size-full rounded-tl-2xl md:rounded-none"} alt={"misc"}/>
+            <img src={misc} class={"size-full"} alt={"misc"}/>
         </Tabs.Trigger>
     )
 };

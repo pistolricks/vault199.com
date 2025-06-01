@@ -73,9 +73,11 @@ const PipBoy: Component<PROPS> = props => {
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
 
                 <div class="bbody z-10" style={props.display}>
+                    <div class={"absolute left-[6.75%] h-[18%] object-bottom w-1/4 flex justify-start items-center"}>
+                        <h2 class="pip-tab-title text-2xl">{title()}</h2>
+                    </div>
 
-
-                    <div class={"absolute right-[10%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
+                    <div class={"absolute right-[12%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
                         <Tabs title={title()} setTitle={setTitle}/>
                     </div>
                     <div id="frame" class="frame">
