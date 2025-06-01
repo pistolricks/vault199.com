@@ -71,11 +71,15 @@ const PipBoy: Component<PROPS> = props => {
     return (
         <>
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
-                <Tabs title={title()} setTitle={setTitle}/>
+
                 <div class="bbody z-10" style={props.display}>
 
 
+                    <div class={"absolute right-[10%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
+                        <Tabs title={title()} setTitle={setTitle}/>
+                    </div>
                     <div id="frame" class="frame">
+
                         <div class="piece output container">
                             <div class="pipboy">
                                 <ArkTabs.List

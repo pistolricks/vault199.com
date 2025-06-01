@@ -19,11 +19,12 @@ const MiscTab: Component<{
             data-bs-target="#settings"
             role="tab"
             class={classNames(
+                "size-10 md:size-8",
                 value() === 'settings' ? "brightness-[200%]" : "",
             )}
             data-play-sound={soundTypes.scifi_click}
         >
-            <img src={misc} class={"size-10 lg:size-8 rounded-tl-2xl md:rounded-none"} alt={"misc"}/>
+            <img src={misc} class={"size-full rounded-tl-2xl md:rounded-none"} alt={"misc"}/>
         </Tabs.Trigger>
     )
 };

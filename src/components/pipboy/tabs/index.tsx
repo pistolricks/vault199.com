@@ -13,17 +13,13 @@ const Tabs: Component<PROPS> = props => {
     const title = () => props.title;
 
     return (
-        <div
-            class="absolute z-50 top-[5.5%] sm:top-[6.75%] md:top-[5.6%] inset-x-0 w-full size-10 flex justify-between items-center"
-            role="tablist">
-            <div class={"flex justify-start items-center ml-[8%]"}>
-                <h2 class="pip-tab-title text-3xl md:text-4xl">{title()}</h2>
-            </div>
-            <ArkTabs.List class={"flex justify-end items-center space-x-1 mr-[7%]"}>
+
+
+            <ArkTabs.List class={"flex justify-center items-center"}>
                 <MiscTab value={title()} setValue={props.setTitle}/>
                 <RadioTab value={title()} setValue={props.setTitle}/>
             </ArkTabs.List>
-        </div>
+
 
     );
 };
