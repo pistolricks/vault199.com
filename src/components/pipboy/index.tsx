@@ -15,14 +15,14 @@ type PROPS = {
     display?: string;
     setComponent: Setter<string>;
     onClick?: (e) => any;
+    menuItems: MenuItem[];
     children?: JSXElement;
 }
 
 const menuItems: MenuItem[] = [
-    {name: "stats", href: '/stats', icon: stats},
+    {name: "profile", href: '/profile', icon: stats},
     {name: "items", href: '/items', icon: items},
     {name: "data", href: '/data', icon: data},
-
 ]
 
 const PipBoy: Component<PROPS> = props => {
@@ -85,7 +85,7 @@ const PipBoy: Component<PROPS> = props => {
 
                     <div class={"absolute right-[4.5%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
 
-                        <HeaderMenu/>
+                        <HeaderMenu menus={props.menuItems}/>
 
                     </div>
                     <div id="frame" class="frame">

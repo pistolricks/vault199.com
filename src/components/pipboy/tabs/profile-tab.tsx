@@ -9,7 +9,7 @@ type PROPS = {
 
 }
 
-const StatsTab: Component<{
+const ProfileTab: Component<{
     value: string;
     setValue: Setter<string>
     class?: string;
@@ -42,4 +42,4 @@ const StatsTab: Component<{
     );
 };
 
-export default StatsTab;
+export default ProfileTab;

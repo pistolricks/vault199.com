@@ -5,7 +5,7 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import StatsTabPanel from "~/components/pipboy/tab-content/stats-tab-panel";
+import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
 import BaseDrawer from "~/components/ui/drawer";
 import MapTabPanel from "~/components/pipboy/tab-content/map-tab-panel";
 

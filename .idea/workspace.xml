@@ -8,16 +8,20 @@
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-routing-menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-routing-menu.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/header/menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/header/menu.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/contacts-tab-panel.tsx" beforeDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/profiles-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/quests-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/radio-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/social-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/social-tab.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/dashboard.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/dashboard.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/items-tab-panel.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/media-tab-panel.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/stats-tab-panel.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/stats-tab.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/contacts.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/items.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/map.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/media.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/stats.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +67,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/eriksmith/WebstormProjects/vault199/src/components",
+    "last_opened_file_path": "/Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/2000N",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,18 +92,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/static/pipboy/2000N" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/pipboy/tab-content" />
       <recent name="$PROJECT_DIR$/src/static/pipboy/chatbox" />
       <recent name="$PROJECT_DIR$/src/components/pipboy/tabs" />
-      <recent name="$PROJECT_DIR$/src/static/pipboy/2000N" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/pages" />
-      <recent name="$PROJECT_DIR$/src/pages/pipboy" />
-      <recent name="$PROJECT_DIR$/src/static/sounds/radio/songs" />
-      <recent name="$PROJECT_DIR$/src/static/sounds/pipboy" />
-      <recent name="$PROJECT_DIR$/src/static/sounds/icons" />
+      <recent name="$PROJECT_DIR$/src/pages/data" />
+      <recent name="$PROJECT_DIR$/src/pages/items" />
+      <recent name="$PROJECT_DIR$/src/pages/index" />
+      <recent name="$PROJECT_DIR$/src/pages/profile/contacts" />
+      <recent name="$PROJECT_DIR$/src/pages/profile/map" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -221,7 +225,7 @@
       <workItem from="1748615335978" duration="27834000" />
       <workItem from="1748670221599" duration="50922000" />
       <workItem from="1748756171406" duration="3958000" />
-      <workItem from="1748760217916" duration="46731000" />
+      <workItem from="1748760217916" duration="51171000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />

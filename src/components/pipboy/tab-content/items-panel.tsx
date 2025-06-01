@@ -264,7 +264,7 @@ const HandymanInfo = () => (
     </div>
 );
 
-const ItemsTabPanel: Component<{
+const ItemsPanel: Component<{
     profiles: any;
 }> = (props) => {
 
@@ -288,8 +288,7 @@ const ItemsTabPanel: Component<{
     })
 
     return (
-        <Tabs.Content
-            value={"items"}
+        <div
             class="tab-pane fade show active"
             role="tabpanel"
             id="items"
@@ -400,7 +399,7 @@ const ItemsTabPanel: Component<{
                     </div>
                 </div>
             </div>
-        </Tabs.Content>
+        </div>
     );
 };
-export default ItemsTabPanel;
+export default ItemsPanel;

@@ -12,14 +12,13 @@ import dogmeatAvatar from "~/static/companions/dogmeat/dogmeat.webp";
 import charonAvatar from "~/static/companions/charon/charon.webp";
 
 
-const ContactsTabPanel: Component<{
+const ContactsPanel: Component<{
     onClick: (data: any) => any,
 }> = (props) => {
 
 
     return (
-        <Tabs.Content
-            value={"contacts"}
+        <div
             class="tab-pane fade show active"
             role="tabpanel"
             id="contacts"
@@ -38,10 +37,10 @@ const ContactsTabPanel: Component<{
                 </div>
 
             </div>
-        </Tabs.Content>
+        </div>
     );
 };
-export default ContactsTabPanel;
+export default ContactsPanel;
 
 
 const companions: Contact[] = [

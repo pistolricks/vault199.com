@@ -1,12 +1,12 @@
 import { Tabs } from "@ark-ui/solid";
 import {Component, createEffect} from "solid-js";
 import MiscTabPanel from "~/components/pipboy/tab-content/misc-tab-panel";
-import StatsTabPanel from "~/components/pipboy/tab-content/stats-tab-panel";
+import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
 import {createBreakpoints} from "@solid-primitives/media";
-import MediaTabPanel from "~/components/pipboy/tab-content/media-tab-panel";
+import MediaPanel from "~/components/pipboy/tab-content/media-panel";
 import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
-import ItemsTabPanel from "~/components/pipboy/tab-content/items-tab-panel";
-import ContactsTabPanel from "~/components/pipboy/tab-content/contacts-tab-panel";
+import ItemsPanel from "~/components/pipboy/tab-content/items-panel";
+import ContactsPanel from "~/components/pipboy/tab-content/contacts-panel";
 
 
 type PROPS = {
@@ -44,12 +44,12 @@ const TabContent: Component<PROPS> = props => {
 
     return (
         <div class={"tab-content"}>
-            <ItemsTabPanel profiles={profiles}/>
-            <StatsTabPanel/>
+            <ItemsPanel profiles={profiles}/>
+            <ProfilePanel/>
             <DataTabPanel/>
             <MiscTabPanel matches={matches} />
-            <MediaTabPanel/>
-            <ContactsTabPanel onClick={props.onClick} />
+            <MediaPanel/>
+            <ContactsPanel onClick={props.onClick} />
         </div>
     );
 };

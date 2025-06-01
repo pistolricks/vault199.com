@@ -5,20 +5,19 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
+import MediaPanel from "~/components/pipboy/tab-content/media-panel";
 import BaseDrawer from "~/components/ui/drawer";
-
 
 type PROPS = {}
 
-const DataSection: Component<RouteSectionProps> = props => {
+const MediaSection: Component<RouteSectionProps> = props => {
 
     const [getComponentName, setComponentName] = createSignal('map')
     const [getCompanion, setCompanion] = createSignal<Contact>()
     const [getData, setData] = createSignal<ActivatedLayoutRouteData>(null)
     const [getCoords, setCoords] = createSignal(null)
 
-    const handleClick = async(e: any) => {
+    const handleClick = async (e: any) => {
         console.log(e)
 
         let coords = await getGps(setCoords);
@@ -36,7 +35,7 @@ const DataSection: Component<RouteSectionProps> = props => {
 
     const componentName = createMemo(() => getComponentName())
 
-    const data = createMemo(async() => {
+    const data = createMemo(async () => {
         setData({
             companion: getCompanion(),
             coords: await getCoords(),
@@ -44,7 +43,7 @@ const DataSection: Component<RouteSectionProps> = props => {
         return getData()
     })
 
-    createEffect(async() => {
+    createEffect(async () => {
         console.log("componentName", componentName())
         console.log("data", await data())
         console.log("coords", await getCoords())
@@ -52,16 +51,16 @@ const DataSection: Component<RouteSectionProps> = props => {
     })
 
 
-
     return (
 
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
             <PipBoy onClick={handleClick} setComponent={setComponentName}>
-                <DataTabPanel/>
+                <MediaPanel/>
             </PipBoy>
         </ActivatedLayout>
+
 
     );
 };
 
-export default DataSection;
+export default MediaSection;

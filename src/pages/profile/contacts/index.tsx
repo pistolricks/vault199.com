@@ -5,13 +5,14 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import StatsTabPanel from "~/components/pipboy/tab-content/stats-tab-panel";
+import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
+import ContactsPanel from "~/components/pipboy/tab-content/contacts-panel";
 import BaseDrawer from "~/components/ui/drawer";
 
 
 type PROPS = {}
 
-const StatsSection: Component<RouteSectionProps> = props => {
+const ContactsSection: Component<RouteSectionProps> = props => {
 
     const [getComponentName, setComponentName] = createSignal('map')
     const [getCompanion, setCompanion] = createSignal<Contact>()
@@ -54,14 +55,14 @@ const StatsSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
             <PipBoy onClick={handleClick} setComponent={setComponentName}>
-                <StatsTabPanel/>
+                <ContactsPanel onClick={handleClick} />
             </PipBoy>
         </ActivatedLayout>
-        </BaseDrawer>
+
     );
 };
 
-export default StatsSection;
+export default ContactsSection;

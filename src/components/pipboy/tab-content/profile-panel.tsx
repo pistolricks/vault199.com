@@ -1,10 +1,8 @@
-import { Tabs } from "@ark-ui/solid";
+import {Tabs} from "@ark-ui/solid";
 import {Component, createSignal} from "solid-js";
 import {soundTypes} from "~/lib/sounds";
 
-type PROPS = {
-
-}
+type PROPS = {}
 
 
 const groups = Object.freeze({
@@ -79,7 +77,7 @@ const content = {
     ],
 };
 
-const SkillTag = ({ activeGroup, groupName, group = [] }) => {
+const SkillTag = ({activeGroup, groupName, group = []}) => {
     if (activeGroup === groupName)
         return (
             <>
@@ -97,7 +95,6 @@ const SkillTag = ({ activeGroup, groupName, group = [] }) => {
             </>
         );
 };
-
 
 
 const Skills = () => {
@@ -130,8 +127,8 @@ const Skills = () => {
                         </a>
                     ))}
                 </div>
-                <div style={{ height: "10vh" }}></div>
-                <p style={{ 'text-align': "center", 'font-size': '12' }}>
+                <div style={{height: "10vh"}}></div>
+                <p style={{'text-align': "center", 'font-size': '12'}}>
                     I usually work with a lot more tools but to summaries following are my
                     frequent pick
                 </p>
@@ -149,7 +146,7 @@ const Skills = () => {
     );
 };
 
-const CraftedItem = ({ title, description, pointers, link, isFirst }) => (
+const CraftedItem = ({title, description, pointers, link, isFirst}) => (
     <div class={isFirst ? "carousel-item active" : "carousel-item"}>
         <div class="underlined-title d-flex align-items-center">
             <h4 class="flex-grow-1">
@@ -213,18 +210,17 @@ const Crafted = (props: { data: any }) => {
 // --Crafted
 
 
-
-const StatsTabPanel: Component<PROPS> = props => {
+const ProfilePanel: Component<PROPS> = props => {
 
     let title: HTMLElement;
     let stimpack: HTMLDivElement;
 
     return (
-        <Tabs.Content value={"stats"}
-                      class="tab-pane fade"
-                      role="tabpanel"
-                      id="stats"
-                      aria-labelledby="stats-tab"
+        <div
+            class="tab-pane fade"
+            role="tabpanel"
+            id="stats"
+            aria-labelledby="stats-tab"
         >
             {/*
             <h3 class="pip-title">Stats</h3>
@@ -247,8 +243,8 @@ const StatsTabPanel: Component<PROPS> = props => {
 
 
             </div>
-        </Tabs.Content>
+        </div>
     );
 };
 
-export default StatsTabPanel;
+export default ProfilePanel;

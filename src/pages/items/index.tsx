@@ -5,9 +5,13 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import ItemsTabPanel from "~/components/pipboy/tab-content/items-tab-panel";
+import ItemsPanel from "~/components/pipboy/tab-content/items-panel";
 import BaseDrawer from "~/components/ui/drawer";
-
+import {MenuItem} from "~/components/bottom-pipboy-menu";
+import items from "~/static/app/icons/fallout/shopping.png";
+import stats from "~/static/app/icons/apps/apple-app-19.png";
+import data from "~/static/app/icons/fallout/tasks-work.png";
+import armor from "~/static/app/icons/fallout/gym.png"
 const profiles = Object.freeze({
     vaultboy: "vaultboy",
     fullstack: "fullstack",
@@ -16,6 +20,12 @@ const profiles = Object.freeze({
     nerd: "nerd",
     handyman: "handyman",
 });
+
+const menuItems: MenuItem[] = [
+    {name: "weapons", href: '/items/weapons', icon: items},
+    {name: "armor", href: '/items/armor', icon: armor},
+    {name: "misc", href: '/items/misc', icon: data}
+]
 
 type PROPS = {}
 
@@ -64,8 +74,8 @@ const ItemsSection: Component<RouteSectionProps> = props => {
     return (
 
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-            <PipBoy onClick={handleClick} setComponent={setComponentName}>
-                <ItemsTabPanel profiles={profiles}/>
+            <PipBoy menuItems={menuItems} onClick={handleClick} setComponent={setComponentName}>
+                <ItemsPanel profiles={profiles}/>
             </PipBoy>
         </ActivatedLayout>
 

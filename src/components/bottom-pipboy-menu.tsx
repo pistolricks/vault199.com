@@ -1,5 +1,5 @@
 import {Component} from "solid-js";
-import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png"
+import bottomMenuAlt from "~/static/pipboy/2000N/pb2000_blank.png"
 
 import {classNames} from "~/components/navigation";
 import cover from "~/static/pipboy/2000N/app_cover.png";

@@ -5,19 +5,34 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import MediaTabPanel from "~/components/pipboy/tab-content/media-tab-panel";
+import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
 import BaseDrawer from "~/components/ui/drawer";
+
+import social from "~/static/app/icons/fallout/social.png";
+import map from "~/static/app/icons/misc apps/30misc-apps-30.png";
+import audio from "~/static/app/icons/fallout/radio.png";
+import {MenuItem} from "~/components/bottom-pipboy-menu";
+import stats from "~/static/app/icons/apps/apple-app-19.png";
+import items from "~/static/app/icons/fallout/shopping.png";
+import data from "~/static/app/icons/fallout/tasks-work.png";
+
 
 type PROPS = {}
 
-const MediaSection: Component<RouteSectionProps> = props => {
+const menuItems: MenuItem[] = [
+    {name: "stats", href: '/profile/stats', icon: items},
+    {name: "contacts", href: '/profile/contacts', icon: items},
+    {name: "media", href: '/profile/media', icon: data},
+]
+
+const ProfileSection: Component<RouteSectionProps> = props => {
 
     const [getComponentName, setComponentName] = createSignal('map')
     const [getCompanion, setCompanion] = createSignal<Contact>()
     const [getData, setData] = createSignal<ActivatedLayoutRouteData>(null)
     const [getCoords, setCoords] = createSignal(null)
 
-    const handleClick = async (e: any) => {
+    const handleClick = async(e: any) => {
         console.log(e)
 
         let coords = await getGps(setCoords);
@@ -35,7 +50,7 @@ const MediaSection: Component<RouteSectionProps> = props => {
 
     const componentName = createMemo(() => getComponentName())
 
-    const data = createMemo(async () => {
+    const data = createMemo(async() => {
         setData({
             companion: getCompanion(),
             coords: await getCoords(),
@@ -43,7 +58,7 @@ const MediaSection: Component<RouteSectionProps> = props => {
         return getData()
     })
 
-    createEffect(async () => {
+    createEffect(async() => {
         console.log("componentName", componentName())
         console.log("data", await data())
         console.log("coords", await getCoords())
@@ -51,16 +66,16 @@ const MediaSection: Component<RouteSectionProps> = props => {
     })
 
 
-    return (
 
+    return (
+        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-            <PipBoy onClick={handleClick} setComponent={setComponentName}>
-                <MediaTabPanel/>
+            <PipBoy onClick={handleClick} menuItems={menuItems} setComponent={setComponentName}>
+                <ProfilePanel/>
             </PipBoy>
         </ActivatedLayout>
-
-
+        </BaseDrawer>
     );
 };
 
-export default MediaSection;
+export default ProfileSection;

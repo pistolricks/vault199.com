@@ -6,13 +6,21 @@ import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
 import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
-import ContactsTabPanel from "~/components/pipboy/tab-content/contacts-tab-panel";
 import BaseDrawer from "~/components/ui/drawer";
+import {MenuItem} from "~/components/bottom-pipboy-menu";
+import items from "~/static/app/icons/fallout/shopping.png";
+import stats from "~/static/app/icons/apps/apple-app-19.png";
+import data from "~/static/app/icons/fallout/tasks-work.png";
 
+const menuItems: MenuItem[] = [
+    {name: "map", href: '/data/map', icon: items},
+    {name: "events", href: '/data/events', icon: stats},
+    {name: "key", href: '/data/key', icon: data},
+]
 
 type PROPS = {}
 
-const ContactsSection: Component<RouteSectionProps> = props => {
+const DataSection: Component<RouteSectionProps> = props => {
 
     const [getComponentName, setComponentName] = createSignal('map')
     const [getCompanion, setCompanion] = createSignal<Contact>()
@@ -57,12 +65,12 @@ const ContactsSection: Component<RouteSectionProps> = props => {
     return (
 
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-            <PipBoy onClick={handleClick} setComponent={setComponentName}>
-                <ContactsTabPanel onClick={handleClick} />
+            <PipBoy menuItems={menuItems} onClick={handleClick} setComponent={setComponentName}>
+                <DataTabPanel/>
             </PipBoy>
         </ActivatedLayout>
 
     );
 };
 
-export default ContactsSection;
+export default DataSection;

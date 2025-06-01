@@ -7,10 +7,10 @@ type PROPS = {
 
 }
 
-const MediaTabPanel: Component<PROPS> = props => {
+const MediaPanel: Component<PROPS> = props => {
 
     return (
-        <Tabs.Content value={"audio"}
+        <div
                       class="tab-pane fade"
                       role="tabpanel"
                       id="stats"
@@ -21,8 +21,8 @@ const MediaTabPanel: Component<PROPS> = props => {
 
 
             </div>
-        </Tabs.Content>
+        </div>
     );
 };
 
-export default MediaTabPanel;
+export default MediaPanel;
