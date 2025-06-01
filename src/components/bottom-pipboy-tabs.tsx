@@ -24,7 +24,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     return (
         <div
 
-            class={"fixed z-40 inset-x-0 -bottom-2 h-[8dvh] w-full flex justify-center items-center sm:max-w-sm"}>
+            class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] -bottom-2 h-[8dvh] md:h-[11dvh] w-full flex justify-center items-center sm:max-w-sm"}>
             <Tabs.List
                 style={{
                     'background-image': `url(${bottomMenuAlt})`,
@@ -37,7 +37,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
 
                 <Tabs.Trigger
                     value={menuItems()[0].name}
-                    class={"absolute rounded-full shadow-2xl shadow-gray-700  left-[20.5%] sm:left-[20.2%] bottom-[16%] sm:bottom-[16%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute rounded-full shadow-2xl shadow-gray-700  left-[20.5%] sm:left-[20.2%] md:left-[21.5%] bottom-[16%] sm:bottom-[16%] md:bottom-[13%] h-[1.7rem] w-[1.7rem]"}
                     data-bs-toggle="tab"
                     data-bs-target={`#${menuItems()[0].name}`}
                     role="tab"
@@ -53,7 +53,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     data-bs-toggle="tab"
                     data-bs-target={`#${menuItems()[1].name}`}
                     role="tab"
-                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 left-[45.8%] sm:left-[45.5%] bottom-[16%] sm:bottom-[16%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute  rounded-full shadow-2xl shadow-gray-700 left-[45.8%] sm:left-[45.5%] md:left-[46.2%] bottom-[16%] sm:bottom-[16%] md:bottom-[13%] h-[1.7rem] w-[1.7rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[1].name)}>
                     <img src={menuItems()[1].icon} class={classNames(
                         appName() === menuItems()[1].name ? "brightness-200" : "brightness-100",
@@ -66,7 +66,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     data-bs-toggle="tab"
                     data-bs-target={`#${menuItems()[2].name}`}
                     role="tab"
-                    class={"absolute  rounded-full right-[20%] sm:right-[19.6%] bottom-[16%] sm:bottom-[16%] h-[1.7rem] w-[1.7rem]"}
+                    class={"absolute  rounded-full right-[20%] sm:right-[19.6%] md:right-[21%] bottom-[16%] sm:bottom-[16%] md:bottom-[13%] h-[1.7rem] w-[1.7rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[2].name)}>
                     <img src={menuItems()[2].icon} class={classNames(
                         appName() === menuItems()[2].name ? "brightness-200" : "brightness-100",

@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-menu.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-tabs.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-tabs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
