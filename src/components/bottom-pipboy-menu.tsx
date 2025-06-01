@@ -38,7 +38,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     class={"absolute rounded-full shadow-2xl shadow-gray-700  left-[20.5%] sm:left-[20.2%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[0].name)}>
                     <img src={menuItems()[0].icon} class={classNames(
-                        appName() === menuItems()[0].name ? "brightness-100" : "brightness-60",
+                        appName() === menuItems()[0].name ? "brightness-150" : "brightness-60",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[0].name}/>
                 </button>
@@ -47,7 +47,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     class={"absolute  rounded-full shadow-2xl shadow-gray-700 left-[45.8%] sm:left-[45.5%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[2].name)}>
                     <img src={menuItems()[2].icon} class={classNames(
-                        appName() === menuItems()[2].name ? "brightness-100" : "brightness-60",
+                        appName() === menuItems()[2].name ? "brightness-150" : "brightness-60",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[2].name}/>
                 </button>
@@ -56,7 +56,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     class={"absolute  rounded-full right-[20%] sm:right-[19.6%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                     type={"button"} onClick={() => props.onClick(menuItems()[4].name)}>
                     <img src={menuItems()[4].icon} class={classNames(
-                        appName() === menuItems()[4].name ? "brightness-100" : "brightness-60",
+                        appName() === menuItems()[4].name ? "brightness-150" : "brightness-60",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[4].name}/>
                 </button>

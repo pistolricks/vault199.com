@@ -47,7 +47,7 @@ export default function BottomMenu(props: {
             */}
                 <Drawer.Trigger style={{
                 }} class="" onClick={() => props.onClick("sat")} contextId={"activated-1"}>
-                    <img src={sat} class="size-10 aspect-square bg-black/10 dark:bg-white/40 rounded-tl-2xl rounded-br-lg"
+                    <img src={sat} class="size-10 aspect-square bg-black/10 dark:bg-white/40  rounded-br-lg"
                          alt={"sat"}/>
                 </Drawer.Trigger>
             </div>

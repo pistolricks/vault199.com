@@ -2,18 +2,29 @@ import {Component, createEffect, createMemo, createSignal, onCleanup} from "soli
 import Tabs from "~/components/pipboy/tabs";
 import TabContent from "~/components/pipboy/tab-content";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
-import RadioTab from "~/components/pipboy/tabs/radio-tab";
 import ProfilesTab from "~/components/pipboy/tabs/profiles-tab";
 import StatsTab from "~/components/pipboy/tabs/stats-tab";
 import QuestsTab from "~/components/pipboy/tabs/quests-tab";
-import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png";
-import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png";
+import BottomPipboyTabs from "~/components/bottom-pipboy-tabs";
+import {MenuItem} from "~/components/bottom-pipboy-menu";
+import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
+import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
+import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
+import stats from "~/static/app/icons/apps/apple-app-19.png"
+import items from "~/static/app/icons/fallout/shopping.png"
+import data from "~/static/app/icons/fallout/tasks-work.png";
 
 
 type PROPS = {
     display?: string;
 }
 
+const menuItems: MenuItem[] = [
+    {name: "stats", icon: stats},
+    {name: "items", icon: items},
+    {name: "data", icon: data},
+
+]
 
 const PipBoy: Component<PROPS> = props => {
     let cursor!: HTMLDivElement;
@@ -76,10 +87,7 @@ const PipBoy: Component<PROPS> = props => {
                                 </ArkTabs.List>
 
 
-
                                 <TabContent/>
-
-
 
 
                                 <div class="piece glow noclick"></div>
@@ -96,6 +104,7 @@ const PipBoy: Component<PROPS> = props => {
 
                     </div>
                 </div>
+                <BottomPipboyTabs onClick={(e) => setTitle(e)} appName={title()} menuItems={menuItems}/>
             </ArkTabs.Root>
         </>
     );
