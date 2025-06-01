@@ -1,15 +1,5 @@
-import fullstack_vault_boy_gif from "~/static/gifs/fullstack_vault_boy.gif";
-import vaultboy_gif from "~/static/gifs/vaultboy.gif";
-import teamplayer_gif from "~/static/gifs/teamplayer.gif";
-import handyman_gif from "~/static/gifs/handyman.gif";
-import nerd_gif from "~/static/gifs/nerd.gif";
-import entertainer_gif from "~/static/gifs/entertainer.gif";
-
-
-import { soundTypes } from "~/lib/sounds";
-import {Component, createEffect, createMemo, createSignal} from "solid-js";
-import { Tabs } from "@ark-ui/solid";
-import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
+import {Component} from "solid-js";
+import {Tabs} from "@ark-ui/solid";
 import ScreenLayout from "~/components/layouts/screen/screen-layout";
 import {Contact, ContactList} from "~/components/lists/contact-list";
 import crossAvatar from "~/static/companions/cross/cross.webp";
@@ -22,7 +12,6 @@ import dogmeatAvatar from "~/static/companions/dogmeat/dogmeat.webp";
 import charonAvatar from "~/static/companions/charon/charon.webp";
 
 
-
 const SocialTabPanel: Component<{
     onClick: (data: any) => any,
 }> = (props) => {
@@ -30,11 +19,11 @@ const SocialTabPanel: Component<{
 
     return (
         <Tabs.Content
-            value={"social"}
+            value={"contact"}
             class="tab-pane fade show active"
             role="tabpanel"
-            id="social"
-            aria-labelledby="social-tab"
+            id="contact"
+            aria-labelledby="contact-tab"
         >
 
             <div class="pip-body">

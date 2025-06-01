@@ -14,19 +14,19 @@ const MiscTab: Component<{
 
     return (
         <Tabs.Trigger
-            onClick={() => props.setValue(() => "social")}
-            value="social"
+            onClick={() => props.setValue(() => "contact")}
+            value="contact"
             data-bs-toggle="tab"
-            data-bs-target="#social"
+            data-bs-target="#contact"
             role="tab"
             class={classNames(
                 "relative",
                 "size-10 md:size-8",
-                value() === 'social' ? "brightness-[200%]" : "",
+                value() === 'contact' ? "brightness-[200%]" : "",
             )}
             data-play-sound={soundTypes.scifi_click}
         >
-            <img src={social} class={"size-full"} alt={"social"}/>
+            <img src={social} class={"size-full"} alt={"contact"}/>
             <img src={cover} class={"absolute inset-0 size-full"} alt={"cover"}/>
         </Tabs.Trigger>
     )
