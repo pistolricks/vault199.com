@@ -1,23 +1,22 @@
-import {type Component, createEffect, createMemo, createSignal, onMount, Suspense, ValidComponent} from 'solid-js';
+import {type Component, createEffect, createMemo, createSignal, lazy, Suspense} from 'solid-js';
 import {RouteSectionProps, useLocation} from '@solidjs/router';
-import Cookies from "cookies-ts";
-import {createBreakpoints} from "@solid-primitives/media";
 import BaseDrawer, {DrawerContent} from './components/ui/drawer';
 import {classNames} from "~/components/navigation";
 import {Dynamic} from "solid-js/web";
-import chatBox from "~/static/pipboy/chatbox/chatbox.png";
-import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
-import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
-import AiCompanion from "~/components/ai-companion";
-import GalleryApp from "~/components/pipboy/apps/gallery-app";
-import MapApp from "~/components/pipboy/apps/map-app";
-import {ActivatedLayoutRouteData} from "~/lib/types";
-import ActivatedLayout from "~/components/layouts/activated/activated-layout";
-import {Contact} from "~/components/lists/contact-list";
+import Cookies from "cookies-ts";
+
 import {getGps} from "~/lib/geo";
 import PipBoy from "~/components/pipboy";
 import {collection} from "~/lib/menu";
 
+import chatBox from "~/static/pipboy/chatbox/chatbox.png";
+import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
+import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
+
+const AiCompanion = lazy(() => import("~/components/ai-companion"));
+const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
+const MapApp = lazy(() => import("~/components/pipboy/apps/map-app"));
+const ActivatedLayout = lazy(() => import("~/components/layouts/activated/activated-layout"));
 
 
 export const cookies = new Cookies()
@@ -73,8 +72,8 @@ const App: Component<RouteSectionProps> = (props) => {
     const location = useLocation();
 
     const menuItems = createMemo(() => {
-       let m = collection.items.filter(item => item.label === location.pathname) ?? undefined;
-        if(!m)return;
+        let m = collection.items.filter(item => item.label === location.pathname) ?? undefined;
+        if (!m) return;
         console.log("m", m, location.pathname)
         return m?.[0]?.value;
     })
@@ -101,7 +100,6 @@ const App: Component<RouteSectionProps> = (props) => {
 
         setData(current)
     }
-
 
 
     createEffect(async () => {
