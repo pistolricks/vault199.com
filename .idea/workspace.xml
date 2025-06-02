@@ -9,7 +9,6 @@
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/items-panel.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/items-panel.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/profile-panel.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/profile-panel.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +213,7 @@
       <workItem from="1748670221599" duration="50922000" />
       <workItem from="1748756171406" duration="3958000" />
       <workItem from="1748760217916" duration="52090000" />
-      <workItem from="1748856260797" duration="34834000" />
+      <workItem from="1748856260797" duration="37219000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />

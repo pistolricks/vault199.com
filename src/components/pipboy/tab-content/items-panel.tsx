@@ -230,39 +230,7 @@ const NerdInfo = () => (
     </div>
 );
 
-const HandymanInfo = () => (
-    <div>
-        <ul class="info-table">
-            <li class="vboy-wrap"></li>
-            <li class="clear">
-        <span class="fade-a">
-          <b>Bugs</b> 154
-        </span>
-                <span class="fade-b">
-          <b>Bugs Added</b>
-          154
-        </span>
-            </li>
-            <li>
-                <b>PRs</b> 300+
-            </li>
-            <li>
-                <b>Eureka</b> 29
-            </li>
-            <li>
-                <b>CND</b>{" "}
-                <span class="condition">
-          <span class="fill" style="width: 91%;"></span>
-        </span>
-            </li>
-            <li class="span-2">Production takedown - 7</li>
-        </ul>
-        <p class="extra" style={{ 'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px' }}>
-            I solve problems you didn’t even know you had, and occasionally create new
-            ones — ever debugged on production?
-        </p>
-    </div>
-);
+
 
 const ItemsPanel: Component<{
     profiles: any;
@@ -391,7 +359,6 @@ const ItemsPanel: Component<{
                                 [profiles().fullstack]: <FullStackInfo />,
                                 [profiles().entertainer]: <EntertainerInfo />,
                                 [profiles().teamplayer]: <TeamPlayerInfo />,
-                                [profiles().handyman]: <HandymanInfo />,
                                 [profiles().nerd]: <NerdInfo />,
                                 [profiles().vaultboy]: <p>Please select a profile</p>,
                             }[activeProfile()]

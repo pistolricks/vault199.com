@@ -1,238 +1,33 @@
-import {Tabs} from "@ark-ui/solid";
-import {Component, createSignal} from "solid-js";
-import {soundTypes} from "~/lib/sounds";
+import {Component} from "solid-js";
 import {classNames} from "~/components/navigation";
 import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 
 type PROPS = {}
 
 
-const groups = Object.freeze({
-    none: "none",
-    frontend: "Frontend",
-    backend: "Backend",
-    databases: "Databases",
-    apis: "APIs",
-    sdks: "SDKs",
-    devops: "DevOps",
-    misc: "Misc",
-});
+const ProfilePanel: Component<PROPS> = props => {
 
-const allGroups = Object.entries(groups).filter(
-    ([key, value]) => value !== "none"
-);
-
-const groupTagsMap = Object.freeze({
-    none: [],
-    frontend: ["HTML", "CSS", "Javascript / Typescript", "React", "Flutter"],
-    backend: ["Dart", "Python", "NodeJS"],
-    databases: ["PostgreSQL", "MongoDB", "Firebase Firestore", "Redis"],
-    apis: ["REST", "GraphQL", "WebSockets"],
-    sdks: [
-        "Firebase",
-        "Fastify",
-        "NextJs",
-        "Sequelize",
-        "Prisma",
-        "Jimp",
-        "Pdf-Lib",
-        "ChartJS",
-        "Redux",
-        "Streams",
-    ],
-    devops: ["Docker", "EC2", "AWS", "Lightsail", "Linux", "Caddy"],
-    misc: ["Hasura", "Razorpay", "Git"],
-});
-
-const groupTags = Object.entries(groupTagsMap);
-
-const content = {
-    Crafted: [
-        {
-            title: "Ural",
-            description: "A screenshot organizer with machine learning",
-            link: "https://github.com/purplecandy/ural/tree/master/flutter",
-            pointers: [
-                "A screenshot organizer that finds your screenshot by its contents.",
-                "You can search for the screenshot by describing it like bank statement, amazon, hand bang",
-                "Effectively performing OCR in the background and caching to SQLite",
-            ],
-        },
-        {
-            title: "Nano",
-            description: "A state management library for Flutter",
-            link: "https://flutter-nano.surge.sh/",
-            pointers: [
-                "Nano is a modular state management library with a strict architectural pattern",
-                "Predictable, fully asynchronous, terse",
-                "Nano is an evolution of all my own state management tools built ever since Flutter was in Alpha.",
-            ],
-        },
-        {
-            title: "Kibibyte Drive",
-            description: "A microservice for cloning drive files",
-            link: "https://github.com/purplecandy/kibibytedrive",
-            pointers: [
-                "A simple tool developed with React and Node for quickly cloning files between drive accounts",
-            ],
-        },
-    ],
-};
-
-const SkillTag = ({activeGroup, groupName, group = []}) => {
-    if (activeGroup === groupName)
-        return (
-            <>
-                {group.map((name) => (
-                    <a class="p-2">{name}</a>
-                ))}
-            </>
-        );
-    else
-        return (
-            <>
-                {group.map((name) => (
-                    <a class="p-2 disabled">{name}</a>
-                ))}
-            </>
-        );
-};
-
-
-const Skills = () => {
-    const [activeGroup, setGroup] = createSignal(groups.none);
-
-    const handleMouseHover = (group) => {
-        setGroup(group);
-    };
-
-    const handleMouseLeave = () => {
-        setGroup(groups.none);
-    };
+    let title: HTMLElement;
+    let stimpack: HTMLDivElement;
 
     return (
-        <div
-            class="tab-pane fade in active show"
-            id="skills"
-            role="tabpanel"
-            aria-labelledby="skills-tab"
-        >
-            <div class="stats-page">
-                <div class="underlined-title d-flex mt-2 justify-content-evenly">
-                    {allGroups.map(([groupType, groupName]) => (
-                        <a
-                            class="mr-2 p-2"
-                            onMouseEnter={() => handleMouseHover(groupType)}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            {groupName}
-                        </a>
-                    ))}
-                </div>
-                <div style={{height: "10vh"}}></div>
-                <p style={{'text-align': "center", 'font-size': '12'}}>
-                    I usually work with a lot more tools but to summaries following are my
-                    frequent pick
-                </p>
-                <div class="container d-flex flex-wrap justify-content-center">
-                    {groupTags.map(([group, tags]) => (
-                        <SkillTag
-                            activeGroup={activeGroup}
-                            groupName={group}
-                            group={tags}
-                        />
-                    ))}
-                </div>
+
+
+        <div class={"relative w-full h-full"}>
+            <HeaderData class={"absolute top-0 w-full flex justify-center items-center"}/>
+            <div class={"absolute inset-0 flex justify-center items-center"}>
+                <VaultBoy class={"size-1/2"}/>
             </div>
+
+            <FooterData class={"absolute bottom-0 w-full flex justify-center items-center"}/>
         </div>
+
+
     );
 };
 
-const CraftedItem = ({title, description, pointers, link, isFirst}) => (
-    <div class={isFirst ? "carousel-item active" : "carousel-item"}>
-        <div class="underlined-title d-flex align-items-center">
-            <h4 class="flex-grow-1">
-                {title.toUpperCase()}{" "}
-                <span>
-        </span>
-            </h4>
-            <div>
-                <a
-                    class="p-1"
-                    data-bs-target="#carousel-crafted"
-                    data-bs-slide="prev"
-                    role="button"
-                >
-                    {"<"}
-                </a>{" "}
-                <a
-                    class="p-1"
-                    data-bs-target="#carousel-crafted"
-                    data-bs-slide="next"
-                    role="button"
-                >
-                    {">"}
-                </a>
-            </div>
-        </div>
-        <div class="container mt-2">
-            <p>{description}</p>
-            <ol>
-                {pointers.map((pointer, i) => (
-                    <li>{pointer}</li>
-                ))}
-            </ol>
-        </div>
-    </div>
-);
+export default ProfilePanel;
 
-// Crafted
-const Crafted = (props: { data: any }) => {
-    return (
-        <div
-            class="tab-pane fade in"
-            id="crafted"
-            role="tabpanel"
-            aria-labelledby="crafted-tab"
-        >
-            <div
-                id="carousel-crafted"
-                class="stats-page carousel slide"
-                data-bs-ride="carousel"
-            >
-                <div class="carousel-inner">
-                    {props.data.map((e, i) => (
-                        <CraftedItem key={i} isFirst={i === 0} {...e} />
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-};
-// --Crafted
-
-
-const StatsHeader: Component<{}> = props => {
-
-    return (
-        <div>
-            <ul class="pip-head">
-                <li>
-                    <b>LVL</b> 11
-                </li>
-                <li>
-                    <b>HP</b> 89/110
-                </li>
-                <li>
-                    <b>AP</b> 38/40
-                </li>
-                <li>
-                    <b>XP</b> 73.8%
-                </li>
-            </ul>
-        </div>
-    );
-};
 
 const VaultBoy: Component<{
     class?: string;
@@ -245,7 +40,6 @@ const VaultBoy: Component<{
                 className()
             )}
             style={{
-                margin: "0 auto",
                 background: `url(${vaultBoyGif})`,
                 'background-size': "contain",
                 'background-repeat': "no-repeat",
@@ -254,26 +48,59 @@ const VaultBoy: Component<{
     )
 };
 
-const ProfilePanel: Component<PROPS> = props => {
-
-    let title: HTMLElement;
-    let stimpack: HTMLDivElement;
+const HeaderData: Component<{
+    class?: string;
+}> = (props) => {
+    const className = () => props.class;
 
     return (
-
-
-
-            <div class={"relative w-full h-full"}>
-                <div class={"absolute inset-0 flex justify-center items-center"}>
-                    <VaultBoy class={"h-40 w-40"}/>
-                </div>
-
+        <div class={className()}>
+            <div class={"flex flex-col"}>
+                <ul class="info-table">
+                    <li class="vboy-wrap"></li>
+                    <li class="clear">
+        <span class="fade-a">
+          <b>Bugs</b> 154
+        </span>
+                        <span class="fade-b">
+        <b>Bugs</b> 154
+        </span>
+                    </li>
+                    <li>
+                        <b>PRs</b> 300+
+                    </li>
+                    <li>
+                        <b>Eureka</b> 29
+                    </li>
+                    <li>
+                        <b>CND</b>{" "}
+                        <span class="condition">
+          <span class="fill" style="width: 91%;"></span>
+        </span>
+                    </li>
+                    <li class="span-2">Production takedown - 7</li>
+                </ul>
             </div>
-
-
+        </div>
     );
-};
+}
 
-export default ProfilePanel;
+const FooterData: Component<{
+    class?: string;
+}> = (props) => {
+    const className = () => props.class;
+
+    return (
+        <div class={className()}>
+            <div class={"flex flex-col"}>
+                <p class="extra"
+                   style={{'padding-left': 0, 'overflow-y': "auto", 'overflow-x': "hidden", height: '100px'}}>
+                    When the bombs were falling, you or your predecessors were lucky enough to be safely secured in one of the one hundred and twenty-two Vault-Tec facilities, deep underground protected by thick blast doors and layers of rock and concrete. Your family either had enough money to buy their space or were randomly selected to enter the vault to be saved from the nuclear devastation above—perhaps only to be condemned to immoral experiments run by Vault-Tec on unwitting participants. You are free from mutation and disease. The Vault-Tec program has afforded you a safe home for some time, but not without some cost. The vault you came from used you as a human test subject, manipulating your understanding of the world and your behavior in order to study you. That’s left you with a profound psychological change, compared to the survivors on the surface you now know, and affects how you make your way through the wasteland. Whether through design or poor planning, many of the vaults were not well stocked or prepared for the long wait until nuclear fallout had reached safe levels outside, and many fell into disrepair or out of supplies. Due to these shortcomings, many vault dwellers sought help from the surface, and many vaults opened in order to allow supplies to reach them. By opening their vault doors, the isolated societies inside opened themselves up to mixing with the survivors above, and established a permanent connection with the surface—the most notable example being the residents of Vault 15, who split up and went on to establish the settlement Shady Sands, as well as the raiding gangs of the Jackals, Vipers, and Khans when their vault opened.
+                </p>
+            </div>
+        </div>
+    );
+}
 
 
+export {VaultBoy, HeaderData, FooterData};
