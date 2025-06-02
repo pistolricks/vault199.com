@@ -7,7 +7,7 @@ import HeaderMenu from "~/components/pipboy/header/menu";
 import {useLocation} from "@solidjs/router";
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-routing-menu";
-import bgLines from "~/static/backgrounds/pipboyscanlines.png"
+
 type PROPS = {
     display?: string;
     setComponent: Setter<string>;
@@ -79,7 +79,8 @@ const PipBoy: Component<PROPS> = props => {
                         <Show
                             fallback={
                                 <h2 class="pip-tab-title text-xl flex flex-col">
-                                    <span class={"text-xs/2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
+                                    <span
+                                        class={"text-xs/2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
                                     <span>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
                                 </h2>
                             }
@@ -90,9 +91,10 @@ const PipBoy: Component<PROPS> = props => {
                     </div>
 
                     <Show when={props.menuItems?.length > 0}>
-                    <div class={"absolute right-[5.8%] sm:right-[8%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
-                        <HeaderMenu menus={props.menuItems}/>
-                    </div>
+                        <div
+                            class={"absolute right-[5.8%] sm:right-[8%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
+                            <HeaderMenu menus={props.menuItems}/>
+                        </div>
                     </Show>
                     <div id="frame" class="frame">
 

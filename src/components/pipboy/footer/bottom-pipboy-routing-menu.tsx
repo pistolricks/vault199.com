@@ -1,8 +1,8 @@
 import {Component} from "solid-js";
-import bottomMenuAlt from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/2000N/pb2000_blank.png"
+import bottomMenuAlt from "~/static/pipboy/2000N/pb2000_blank.png"
 
-import {classNames} from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/components/navigation";
-import cover from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/2000N/app_cover.png";
+import {classNames} from "~/components/navigation";
+import cover from "~/static/pipboy/2000N/app_cover.png";
 import {A, useLocation} from "@solidjs/router";
 
 export type MenuItem = {

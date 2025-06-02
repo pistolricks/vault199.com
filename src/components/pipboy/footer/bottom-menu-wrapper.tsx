@@ -1,8 +1,8 @@
 import {Component} from "solid-js";
-import bottom from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/bottom/bottom.png"
-import bottomMenu1 from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/bottom/bottom_menu_1.png"
-import bottomMenu2 from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/bottom/bottom_menu_2.png"
-import BaseDock from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/components/base-dock";
+import bottom from "~/static/pipboy/bottom/bottom.png"
+import bottomMenu1 from "~/static/pipboy/bottom/bottom_menu_1.png"
+import bottomMenu2 from "~/static/pipboy/bottom/bottom_menu_2.png"
+import BaseDock from "~/components/base-dock";
 type PROPS = {
     onClick?: (e: string) => any;
 }

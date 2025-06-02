@@ -1,9 +1,9 @@
 import {Component} from "solid-js";
-import bottomMenuAlt from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/2000N/pb2000uib.png"
+import bottomMenuAlt from "~/static/pipboy/2000N/pb2000uib.png"
 
-import {classNames} from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/components/navigation";
+import {classNames} from "~/components/navigation";
 import { Tabs } from "@ark-ui/solid";
-import cover from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/2000N/app_cover.png";
+import cover from "~/static/pipboy/2000N/app_cover.png";
 
 export type MenuItem = {
     name: string;

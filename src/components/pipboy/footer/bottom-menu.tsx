@@ -3,8 +3,8 @@ import {createBreakpoints} from "@solid-primitives/media";
 // import profile from "~/static/app/icons/bottom_bar/apple-app-alt-23.png"
 // import chat from "~/static/app/icons/bottom_bar/apple-app-alt-2.png"
 // import drawer from "~/static/app/icons/bottom_bar/apple-app-alt-26.png"
-import bottom from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White)/Bottom.png"
-import sat from "../../../../../../../../../Users/eriksmith/WebstormProjects/vault199/src/static/app/icons/fallout/tech.png"
+import bottom from "~/static/pipboy/Main_White/Fallout - Main (White)/Bottom.png"
+import sat from "~/static/app/icons/fallout/tech.png"
 import Drawer from "@corvu/drawer";
 import {createEffect} from "solid-js";
 import ProgressBar from "~/components/ui/progress";
