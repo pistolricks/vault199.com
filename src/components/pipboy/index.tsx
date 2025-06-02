@@ -1,4 +1,4 @@
-import {Component, createEffect, createMemo, createSignal, JSXElement, onCleanup, Setter} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, JSXElement, onCleanup, Setter, Show} from "solid-js";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
 import stats from "~/static/app/icons/apps/apple-app-19.png"
 import items from "~/static/app/icons/fallout/shopping.png"
@@ -12,7 +12,7 @@ type PROPS = {
     display?: string;
     setComponent: Setter<string>;
     onClick?: (e) => any;
-    menuItems: MenuItem[];
+    menuItems?: MenuItem[];
     children?: JSXElement;
 }
 
@@ -76,18 +76,24 @@ const PipBoy: Component<PROPS> = props => {
                 <div class="bbody" style={props.display}>
                     <div
                         class={"absolute left-[6.75%] sm:left-[8%] md:left-10% h-[18%] object-bottom w-1/4 flex justify-start items-center"}>
-                        <h2
-                            class="pip-tab-title text-xl flex flex-col">
-                            <span class={"text-xs/2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
-                            <span>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
-                        </h2>
+                        <Show
+                            fallback={
+                                <h2 class="pip-tab-title text-xl flex flex-col">
+                                    <span class={"text-xs/2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
+                                    <span>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
+                                </h2>
+                            }
+                            when={location.pathname.includes("dashboard")}>
+                            <></>
+                        </Show>
+
                     </div>
 
+                    <Show when={props.menuItems?.length > 0}>
                     <div class={"absolute right-[5.8%] sm:right-[8%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
-
                         <HeaderMenu menus={props.menuItems}/>
-
                     </div>
+                    </Show>
                     <div id="frame" class="frame">
 
                         <div class="piece output container">

@@ -7,6 +7,7 @@ import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
 import BaseDrawer from "~/components/ui/drawer";
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
+import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
 
 
 type PROPS = {}
@@ -55,7 +56,9 @@ const Dashboard: Component<RouteSectionProps> = props => {
     return (
         <>
             <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-
+                <PipBoy onClick={handleClick}  setComponent={setComponentName}>
+                    <ProfilePanel/>
+                </PipBoy>
             </ActivatedLayout>
 
         </>
