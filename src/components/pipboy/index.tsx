@@ -70,7 +70,7 @@ const PipBoy: Component<PROPS> = props => {
 
 
     return (
-        <>
+
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
 
                 <div class="bbody" style={props.display}>
@@ -123,7 +123,7 @@ const PipBoy: Component<PROPS> = props => {
                 <BottomPipboyRoutingMenu menuItems={menuItems}/>
 
             </ArkTabs.Root>
-        </>
+
     );
 };
 

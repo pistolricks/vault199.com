@@ -17,11 +17,9 @@ const ActivatedFooter: Component<PROPS> = props => {
     const value = () => props.value;
 
     return (
-        <div class="absolute bottom-0 inset-x-[6.5%] h-[10%] sm:h-[11.5%] w-[87%]">
-            <div
-                class="flex justify-center items-center sm:ring-2 sm:ring-green-700 bg-green-950 space-x-2 sm:h-[40%] rounded-b-[9px] sm:rounded-b-[40px] border-b border-green-950 sm:border-green-700 border-l border-r border-t">
-
-                <p class="progress-text">LEVEL<span class={"ml-1"}>{value()}</span></p>
+        <div class="fixed bottom-13 inset-x-[6.5%] w-[87%] h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 sm:ring">
+            <div class="flex justify-center items-center h-full w-full space-x-1.5">
+                <p class="progress-text">LVL<span class={"ml-0.5"}>{value()}</span></p>
                 <Progress.Root min={min()} max={max()} value={value()}>
                     <Progress.Track>
                         <Progress.Range/>
