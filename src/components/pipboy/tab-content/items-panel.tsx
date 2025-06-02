@@ -1,5 +1,5 @@
 import fullstack_vault_boy_gif from "~/static/gifs/fullstack_vault_boy.gif";
-import vaultboy_gif from "~/static/gifs/vaultboy.gif";
+import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 import teamplayer_gif from "~/static/gifs/teamplayer.gif";
 import handyman_gif from "~/static/gifs/handyman.gif";
 import nerd_gif from "~/static/gifs/nerd.gif";
@@ -19,7 +19,7 @@ const VaultBoyGif = () => (
         style={{
             margin: "0 auto",
             'margin-left': '120',
-            background: `url(${vaultboy_gif})`,
+            background: `url(${vaultBoyGif})`,
             'background-size': "contain",
             'background-repeat': "no-repeat",
         }}

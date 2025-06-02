@@ -1,6 +1,8 @@
 import {Tabs} from "@ark-ui/solid";
 import {Component, createSignal} from "solid-js";
 import {soundTypes} from "~/lib/sounds";
+import {classNames} from "~/components/navigation";
+import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 
 type PROPS = {}
 
@@ -210,21 +212,10 @@ const Crafted = (props: { data: any }) => {
 // --Crafted
 
 
-const ProfilePanel: Component<PROPS> = props => {
-
-    let title: HTMLElement;
-    let stimpack: HTMLDivElement;
+const StatsHeader: Component<{}> = props => {
 
     return (
-        <div
-            class="tab-pane fade"
-            role="tabpanel"
-            id="stats"
-            aria-labelledby="stats-tab"
-        >
-            {/*
-            <h3 class="pip-title">Stats</h3>
-            */}
+        <div>
             <ul class="pip-head">
                 <li>
                     <b>LVL</b> 11
@@ -239,12 +230,50 @@ const ProfilePanel: Component<PROPS> = props => {
                     <b>XP</b> 73.8%
                 </li>
             </ul>
-            <div class="pip-body mt-24 sm:mt-4">
-
-
-            </div>
         </div>
     );
 };
 
+const VaultBoy: Component<{
+    class?: string;
+}> = (props) => {
+    const className = () => props.class;
+    return (
+        <div
+            class={classNames(
+                "vboy",
+                className()
+            )}
+            style={{
+                margin: "0 auto",
+                background: `url(${vaultBoyGif})`,
+                'background-size': "contain",
+                'background-repeat': "no-repeat",
+            }}
+        ></div>
+    )
+};
+
+const ProfilePanel: Component<PROPS> = props => {
+
+    let title: HTMLElement;
+    let stimpack: HTMLDivElement;
+
+    return (
+
+
+
+            <div class={"relative w-full h-full"}>
+                <div class={"absolute inset-0 flex justify-center items-center"}>
+                    <VaultBoy class={"h-40 w-40"}/>
+                </div>
+
+            </div>
+
+
+    );
+};
+
 export default ProfilePanel;
+
+
