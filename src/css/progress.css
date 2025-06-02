@@ -7,15 +7,19 @@
 }
 
 [data-scope='progress'][data-part='track'] {
-    height: 15px;
+    height: 20px;
     background-color: #111;
     border: 1px solid var(--sap_bar-color, green);
     border-radius: 4px;
     overflow: hidden;
+    background-blend-mode: difference;
 }
 
 .progress-text {
     color: var(--sap_bar-color, green);
+    mix-blend-mode: difference;
+
+
 }
 
 [data-scope='progress'][data-part='range'] {

@@ -98,7 +98,7 @@ const PipBoy: Component<PROPS> = props => {
                     </Show>
                     <div id="frame" class="frame">
 
-                        <div class="piece output container">
+                        <div class="piece output container ">
                             <div class="pipboy">
 
 
@@ -109,6 +109,7 @@ const PipBoy: Component<PROPS> = props => {
                                 <div class="piece scanlines noclick"></div>
                             </div>
                         </div>
+
                         <div ref={cursor} class="cursor">
                             <img
                                 src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"

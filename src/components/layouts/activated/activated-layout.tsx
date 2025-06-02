@@ -77,7 +77,8 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
     return (
         <div>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
-
+                <div class={styles["interlaced"]}></div>
+                <div class={styles["glare"]}></div>
 
                 <div
                     style={{
@@ -88,8 +89,6 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
                     class={"fixed inset-0 w-full h-full z-0 flex flex-row overflow-hidden"}></div>
 
 
-                <div class={styles["interlaced"]}></div>
-                <div class={styles["glare"]}></div>
                 {children()}
             </div>
 
@@ -112,7 +111,7 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
 
 
             </DrawerContent>
-            <ActivatedFooter value={40}/>
+            <ActivatedFooter hp={'89/110'} ap={'110/110'} level={40}/>
         </div>
     );
 }
