@@ -8,7 +8,7 @@ import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png";
 import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import MapWrapper from "~/components/wrappers/map-wrapper";
-import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
+import {ActivatedLayoutRouteData} from "~/lib/types"
 import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 
 type PROPS = {

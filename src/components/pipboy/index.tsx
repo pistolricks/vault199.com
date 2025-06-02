@@ -10,8 +10,6 @@ import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-ro
 
 type PROPS = {
     display?: string;
-    setComponent: Setter<string>;
-    onClick?: (e) => any;
     menuItems?: MenuItem[];
     children?: JSXElement;
 }

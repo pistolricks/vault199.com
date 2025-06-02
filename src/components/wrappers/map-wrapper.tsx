@@ -8,8 +8,7 @@ import {useGeographic} from "ol/proj";
 import {Point} from "ol/geom";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
-import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
-
+import {ActivatedLayoutRouteData} from "~/lib/types";
 
 type PROPS = {
     data?: ActivatedLayoutRouteData

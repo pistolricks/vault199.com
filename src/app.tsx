@@ -1,8 +1,23 @@
-import {type Component, createEffect, onMount, Suspense} from 'solid-js';
-import {RouteSectionProps} from '@solidjs/router';
+import {type Component, createEffect, createMemo, createSignal, onMount, Suspense, ValidComponent} from 'solid-js';
+import {RouteSectionProps, useLocation} from '@solidjs/router';
 import Cookies from "cookies-ts";
 import {createBreakpoints} from "@solid-primitives/media";
-import BaseDrawer from './components/ui/drawer';
+import BaseDrawer, {DrawerContent} from './components/ui/drawer';
+import {classNames} from "~/components/navigation";
+import {Dynamic} from "solid-js/web";
+import chatBox from "~/static/pipboy/chatbox/chatbox.png";
+import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
+import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
+import AiCompanion from "~/components/ai-companion";
+import GalleryApp from "~/components/pipboy/apps/gallery-app";
+import MapApp from "~/components/pipboy/apps/map-app";
+import {ActivatedLayoutRouteData} from "~/lib/types";
+import ActivatedLayout from "~/components/layouts/activated/activated-layout";
+import {Contact} from "~/components/lists/contact-list";
+import {getGps} from "~/lib/geo";
+import PipBoy from "~/components/pipboy";
+import {collection} from "~/lib/menu";
+
 
 
 export const cookies = new Cookies()
@@ -43,28 +58,87 @@ const breakpoints = {
 };
 
 
-export const matches = createBreakpoints(breakpoints);
+const apps = {
+    aiCompanion: AiCompanion,
+    gallery: GalleryApp,
+    map: MapApp,
+}
 
-
+const pipboyTypes = {
+    aiCompanion: chatBox,
+    gallery: pbMonitor,
+    map: pbMonitor2000,
+}
 const App: Component<RouteSectionProps> = (props) => {
+    const location = useLocation();
 
-    createEffect(() => {
-        console.log(matches.sm); // true when screen width >= 640px
-        console.log(matches.md);
-        console.log(matches.lg); // true when screen width >= 1024px
-        console.log(matches.xl); // true when screen width >= 1280px
-        console.log(matches.xxl);
-    });
-
-    onMount(() => {
-
+    const menuItems = createMemo(() => {
+       let m = collection.items.filter(item => item.label === location.pathname) ?? undefined;
+        if(!m)return;
+        console.log("m", m, location.pathname)
+        return m?.[0]?.value;
     })
+
+    const [getData, setData] = createSignal<RouteSectionProps<any>>(props.data as RouteSectionProps<any>);
+    const data = createMemo(async () => {
+        setData(() => props.data as RouteSectionProps<any>)
+        return getData();
+    })
+
+
+    const [getComponentName, setComponentName] = createSignal<string>("map")
+    const [getCoords, setCoords] = createSignal(null)
+
+
+    const handleClick = async (e: any) => {
+        let coords = await getGps(setCoords);
+        let obj = {companion: e, component: e.component, coords: coords}
+        setComponentName(e.component)
+        setCoords(coords)
+
+        let data = getData();
+        let current = Object.assign(data, obj)
+
+        setData(current)
+    }
+
+
+
+    createEffect(async () => {
+        console.log("name", getComponentName())
+        console.log("data", await data())
+        console.log("coords", await getCoords())
+    })
+
 
     return (
         <>
             <BaseDrawer side={"bottom"} contextId={"activated-1"}>
                 <main class={'scrollbar-hide'}>
-                    <Suspense>{props.children}</Suspense>
+                    <ActivatedLayout {...props}>
+                        <PipBoy menuItems={menuItems()}>
+                            <Suspense>{props.children}</Suspense>
+                        </PipBoy>
+                    </ActivatedLayout>
+                    <DrawerContent
+                        side={"bottom"}
+                        contextId={"activated-1"}
+                        style={{
+                            'background-image': 'url(' + pipboyTypes[getComponentName()] + ')',
+                            'background-size': '100% 92%',
+                            'background-repeat': 'no-repeat',
+                            'background-position': 'top',
+                            'background-color': 'black',
+                        }}
+                        class={classNames(
+                            'w-screen sm:max-w-xs',
+                        )}
+                    >
+
+                        <Dynamic {...data()} component={apps[getComponentName()]}/>
+
+                    </DrawerContent>
+
                 </main>
             </BaseDrawer>
         </>

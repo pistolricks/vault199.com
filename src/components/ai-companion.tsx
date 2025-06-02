@@ -8,7 +8,8 @@ import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
-import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
+
+import {ActivatedLayoutRouteData} from "~/lib/types"
 import {Contact} from "~/components/lists/contact-list";
 import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 
