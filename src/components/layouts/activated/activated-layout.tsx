@@ -75,7 +75,7 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
     })
 
     return (
-        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+        <div>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col"}>
 
 
@@ -113,8 +113,7 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
 
             </DrawerContent>
             <ActivatedFooter value={40}/>
-        </BaseDrawer>
-
+        </div>
     );
 }
 

@@ -2,6 +2,7 @@ import {type Component, createEffect, onMount, Suspense} from 'solid-js';
 import {RouteSectionProps} from '@solidjs/router';
 import Cookies from "cookies-ts";
 import {createBreakpoints} from "@solid-primitives/media";
+import BaseDrawer from './components/ui/drawer';
 
 
 export const cookies = new Cookies()
@@ -61,10 +62,11 @@ const App: Component<RouteSectionProps> = (props) => {
 
     return (
         <>
-
-            <main class={'scrollbar-hide'}>
-                <Suspense>{props.children}</Suspense>
-            </main>
+            <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+                <main class={'scrollbar-hide'}>
+                    <Suspense>{props.children}</Suspense>
+                </main>
+            </BaseDrawer>
         </>
     );
 };
