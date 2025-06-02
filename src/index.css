@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import "ol/ol.css";
-
+@import "./css/progress.css";
 @plugin"tailwindcss-animate";
 @plugin"tailwind-scrollbar-hide";
 

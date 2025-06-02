@@ -6,6 +6,7 @@ import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
 import BaseDrawer from "~/components/ui/drawer";
+import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
 
 type PROPS = {}
@@ -17,7 +18,7 @@ const Dashboard: Component<RouteSectionProps> = props => {
     const [getData, setData] = createSignal<ActivatedLayoutRouteData>(null)
     const [getCoords, setCoords] = createSignal(null)
 
-    const handleClick = async(e: any) => {
+    const handleClick = async (e: any) => {
         console.log(e)
 
         let coords = await getGps(setCoords);
@@ -35,15 +36,15 @@ const Dashboard: Component<RouteSectionProps> = props => {
 
     const componentName = createMemo(() => getComponentName())
 
-    const data = createMemo(async() => {
+    const data = createMemo(async () => {
         setData({
             companion: getCompanion(),
             coords: await getCoords(),
         })
-       return getData()
+        return getData()
     })
 
-    createEffect(async() => {
+    createEffect(async () => {
         console.log("componentName", componentName())
         console.log("data", await data())
         console.log("coords", await getCoords())
@@ -51,13 +52,13 @@ const Dashboard: Component<RouteSectionProps> = props => {
     })
 
 
-
     return (
-        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
-        <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-            <PipBoy onClick={handleClick} setComponent={setComponentName} />
-        </ActivatedLayout>
-        </BaseDrawer>
+        <>
+            <ActivatedLayout data={data()} componentName={componentName()} {...props}>
+
+            </ActivatedLayout>
+
+        </>
     );
 };
 

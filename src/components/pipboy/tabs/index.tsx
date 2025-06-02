@@ -1,7 +1,7 @@
 import {Component, Setter} from "solid-js";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
 import RadioTab from "./radio-tab";
-import map from "~/static/app/icons/misc apps/30misc-apps-30.png"
+import map from "~/static/app/icons/misc_apps/30misc-apps-30.png"
 import Drawer from "@corvu/drawer";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import {classNames} from "~/components/navigation";

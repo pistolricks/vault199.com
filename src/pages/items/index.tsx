@@ -6,12 +6,15 @@ import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
 import ItemsPanel from "~/components/pipboy/tab-content/items-panel";
-import BaseDrawer from "~/components/ui/drawer";
-import {MenuItem} from "~/components/bottom-pipboy-menu";
-import items from "~/static/app/icons/fallout/shopping.png";
-import stats from "~/static/app/icons/apps/apple-app-19.png";
+import {
+    MenuItem
+} from "../../../../../../../Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-menu";
 import data from "~/static/app/icons/fallout/tasks-work.png";
-import armor from "~/static/app/icons/fallout/gym.png"
+
+import weapons from "~/static/app/icons/ui/weapons.png"
+import armor from "~/static/app/icons/ui/armor.png"
+import misc from "~/static/app/icons/ui/misc.png"
+
 const profiles = Object.freeze({
     vaultboy: "vaultboy",
     fullstack: "fullstack",
@@ -22,9 +25,9 @@ const profiles = Object.freeze({
 });
 
 const menuItems: MenuItem[] = [
-    {name: "weapons", href: '/items/weapons', icon: items},
+    {name: "weapons", href: '/items/weapons', icon: weapons},
     {name: "armor", href: '/items/armor', icon: armor},
-    {name: "misc", href: '/items/misc', icon: data}
+    {name: "misc", href: '/items/misc', icon: misc}
 ]
 
 type PROPS = {}
@@ -36,7 +39,7 @@ const ItemsSection: Component<RouteSectionProps> = props => {
     const [getData, setData] = createSignal<ActivatedLayoutRouteData>(null)
     const [getCoords, setCoords] = createSignal(null)
 
-    const handleClick = async(e: any) => {
+    const handleClick = async (e: any) => {
         console.log(e)
 
         let coords = await getGps(setCoords);
@@ -54,7 +57,7 @@ const ItemsSection: Component<RouteSectionProps> = props => {
 
     const componentName = createMemo(() => getComponentName())
 
-    const data = createMemo(async() => {
+    const data = createMemo(async () => {
         setData({
             companion: getCompanion(),
             coords: await getCoords(),
@@ -62,13 +65,12 @@ const ItemsSection: Component<RouteSectionProps> = props => {
         return getData()
     })
 
-    createEffect(async() => {
+    createEffect(async () => {
         console.log("componentName", componentName())
         console.log("data", await data())
         console.log("coords", await getCoords())
 
     })
-
 
 
     return (

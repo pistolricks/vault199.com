@@ -33,7 +33,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom:0;
     z-index: 1;
     pointer-events: none;
     animation: lines 0.06666666s linear infinite;

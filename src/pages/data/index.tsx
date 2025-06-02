@@ -6,16 +6,17 @@ import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
 import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
-import BaseDrawer from "~/components/ui/drawer";
-import {MenuItem} from "~/components/bottom-pipboy-menu";
-import items from "~/static/app/icons/fallout/shopping.png";
-import stats from "~/static/app/icons/apps/apple-app-19.png";
-import data from "~/static/app/icons/fallout/tasks-work.png";
+
+
+import contacts from "~/static/app/icons/ui/contacts.png"
+import map from "~/static/app/icons/ui/map.png"
+import media from "~/static/app/icons/ui/details.png"
+import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 
 const menuItems: MenuItem[] = [
-    {name: "map", href: '/data/map', icon: items},
-    {name: "events", href: '/data/events', icon: stats},
-    {name: "key", href: '/data/key', icon: data},
+    {name: "contacts", href: '/data/contacts', icon: contacts},
+    {name: "map", href: '/data/map', icon: map},
+    {name: "media", href: '/data/media', icon: media},
 ]
 
 type PROPS = {}
@@ -27,7 +28,7 @@ const DataSection: Component<RouteSectionProps> = props => {
     const [getData, setData] = createSignal<ActivatedLayoutRouteData>(null)
     const [getCoords, setCoords] = createSignal(null)
 
-    const handleClick = async(e: any) => {
+    const handleClick = async (e: any) => {
         console.log(e)
 
         let coords = await getGps(setCoords);
@@ -45,7 +46,7 @@ const DataSection: Component<RouteSectionProps> = props => {
 
     const componentName = createMemo(() => getComponentName())
 
-    const data = createMemo(async() => {
+    const data = createMemo(async () => {
         setData({
             companion: getCompanion(),
             coords: await getCoords(),
@@ -53,13 +54,12 @@ const DataSection: Component<RouteSectionProps> = props => {
         return getData()
     })
 
-    createEffect(async() => {
+    createEffect(async () => {
         console.log("componentName", componentName())
         console.log("data", await data())
         console.log("coords", await getCoords())
 
     })
-
 
 
     return (

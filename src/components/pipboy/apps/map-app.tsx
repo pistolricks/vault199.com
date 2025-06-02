@@ -1,7 +1,7 @@
 import {Component, createEffect, createMemo, createSignal} from "solid-js";
-import map3 from "~/static/pipboy/assets/map/map3.png"
+import map3 from "~/static/maps/map3.png"
 import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
-import BottomPipboyMenu, {MenuItem} from "~/components/bottom-pipboy-menu";
+
 import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
@@ -9,6 +9,7 @@ import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png";
 import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import MapWrapper from "~/components/wrappers/map-wrapper";
 import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
+import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 
 type PROPS = {
     data?: ActivatedLayoutRouteData

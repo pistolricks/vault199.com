@@ -5,10 +5,19 @@ import ActivatedLayout, {ActivatedLayoutRouteData} from "~/components/layouts/ac
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
-import BaseDrawer from "~/components/ui/drawer";
-import MapTabPanel from "~/components/pipboy/tab-content/map-tab-panel";
+import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
 
+
+import contacts from "~/static/app/icons/ui/contacts.png"
+import map from "~/static/app/icons/ui/map.png"
+import events from "~/static/app/icons/ui/events.png"
+import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
+
+const menuItems: MenuItem[] = [
+    {name: "contacts", href: '/data/contacts', icon: contacts},
+    {name: "map", href: '/data/map', icon: map},
+    {name: "media", href: '/data/media', icon: events},
+]
 
 type PROPS = {}
 
@@ -56,11 +65,10 @@ const MapSection: Component<RouteSectionProps> = props => {
     return (
 
         <ActivatedLayout data={data()} componentName={componentName()} {...props}>
-            <PipBoy onClick={handleClick} setComponent={setComponentName}>
-                <MapTabPanel/>
+            <PipBoy menuItems={menuItems} onClick={handleClick} setComponent={setComponentName}>
+                <DataTabPanel/>
             </PipBoy>
         </ActivatedLayout>
-
 
     );
 };

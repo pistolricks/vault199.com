@@ -12,6 +12,7 @@ import {classNames} from "~/components/navigation";
 import MapApp from "~/components/pipboy/apps/map-app";
 import AiCompanion from "~/components/ai-companion";
 import {Contact} from "~/components/lists/contact-list";
+import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
 const apps = {
     aiCompanion: AiCompanion,
@@ -90,9 +91,8 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
                 <div class={styles["interlaced"]}></div>
                 <div class={styles["glare"]}></div>
                 {children()}
-
-
             </div>
+
             <DrawerContent
                 side={"bottom"}
                 contextId={"activated-1"}
@@ -112,6 +112,7 @@ const ActivatedLayout: Component<RouteSectionProps & { componentName: string }> 
 
 
             </DrawerContent>
+            <ActivatedFooter value={40}/>
         </BaseDrawer>
 
     );

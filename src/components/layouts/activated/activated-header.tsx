@@ -2,7 +2,7 @@ import {Component, createEffect, createMemo, createSignal, Show} from "solid-js"
 import {A, RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import Logo from "~/static/logos/vault-tec.png"
-import top from "~/static/pipboy/Top_White/Fallout - Top (White)/Top.png"
+import top from "~/static/pipboy/Top_White/Top.png"
 import {cookies, currentUser} from "~/app";
 import Logout from "~/components/logout";
 

@@ -3,7 +3,6 @@ import {classNames} from "~/components/navigation";
 import chatBox from "~/static/pipboy/chatbox/chatbox_001.png"
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png"
-import BottomPipboyMenu, {MenuItem} from "~/components/bottom-pipboy-menu";
 import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
@@ -11,6 +10,7 @@ import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
 import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
 import {ActivatedLayoutRouteData} from "~/components/layouts/activated/activated-layout";
 import {Contact} from "~/components/lists/contact-list";
+import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 
 interface ChatItem {
     id: string;

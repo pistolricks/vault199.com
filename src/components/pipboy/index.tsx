@@ -1,16 +1,13 @@
 import {Component, createEffect, createMemo, createSignal, JSXElement, onCleanup, Setter} from "solid-js";
-import Tabs from "~/components/pipboy/tabs";
-import TabContent from "~/components/pipboy/tab-content";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
-import BottomPipboyTabs from "~/components/bottom-pipboy-tabs";
-import {MenuItem} from "~/components/bottom-pipboy-menu";
 import stats from "~/static/app/icons/apps/apple-app-19.png"
 import items from "~/static/app/icons/fallout/shopping.png"
 import data from "~/static/app/icons/fallout/tasks-work.png";
 import HeaderMenu from "~/components/pipboy/header/menu";
-import BottomPipboyRoutingMenu from "~/components/bottom-pipboy-routing-menu";
 import {useLocation} from "@solidjs/router";
-
+import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
+import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-routing-menu";
+import bgLines from "~/static/backgrounds/pipboyscanlines.png"
 type PROPS = {
     display?: string;
     setComponent: Setter<string>;
@@ -77,13 +74,16 @@ const PipBoy: Component<PROPS> = props => {
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
 
                 <div class="bbody" style={props.display}>
-                    <div class={"absolute left-[6.75%] h-[18%] object-bottom w-1/4 flex justify-start items-center"}>
-                        <h2 class="pip-tab-title text-2xl">
-                            {location.pathname.replace("/", "")}
+                    <div
+                        class={"absolute left-[6.75%] sm:left-[8%] md:left-10% h-[18%] object-bottom w-1/4 flex justify-start items-center"}>
+                        <h2
+                            class="pip-tab-title text-xl flex flex-col">
+                            <span class={"text-xs/2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
+                            <span>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
                         </h2>
                     </div>
 
-                    <div class={"absolute right-[4.5%] h-[15.5%] object-bottom w-1/4 flex justify-end items-center"}>
+                    <div class={"absolute right-[5.8%] sm:right-[8%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
 
                         <HeaderMenu menus={props.menuItems}/>
 
@@ -94,11 +94,7 @@ const PipBoy: Component<PROPS> = props => {
                             <div class="pipboy">
 
 
-
-
-
                                 {children()}
-
 
 
                                 <div class="piece glow noclick"></div>

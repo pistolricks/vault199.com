@@ -5,23 +5,195 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-menu-wrapper.tsx" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-menu.tsx" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-menu.tsx" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-routing-menu.tsx" afterDir="false" />
+      <change afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-tabs.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-routing-menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-routing-menu.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ai-companion.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ai-companion.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-menu-wrapper.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-menu.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-menu.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-routing-menu.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/bottom-pipboy-tabs.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-footer.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-footer.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-header.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-header.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-layout.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-layout.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/style.module.css" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/style.module.css" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/apps/communications/communications-app.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/apps/communications/communications-app.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/apps/map-app.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/apps/map-app.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/header/menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/header/menu.tsx" afterDir="false" />
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/contacts-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/items-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/media-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tab-content/stats-tab-panel.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/stats-tab.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/contacts.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/items.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/map.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/media.tsx" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/stats.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/tabs/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ui/progress.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/ui/progress.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/index.css" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/dashboard.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/dashboard.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data/map/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data/map/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/items/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/items/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/media/index.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/10misc-apps-10.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/11misc-apps-11.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/12misc-apps-12.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/13misc-apps-13.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/14misc-apps-14.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/15misc-apps-15.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/16misc-apps-16.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/17misc-apps-17.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/18misc-apps-18.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/19misc-apps-19.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/1misc-apps-1.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/20misc-apps-20.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/21misc-apps-21.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/22misc-apps-22.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/23misc-apps-23.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/24misc-apps-24.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/25misc-apps-25.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/26misc-apps-26.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/27misc-apps-27.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/28misc-apps-28.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/29misc-apps-29.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/2misc-apps-2.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/30misc-apps-30.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/31misc-apps-31.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/32misc-apps-32.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/33misc-apps-33.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/34misc-apps-34.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/35misc-apps-35.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/36misc-apps-36.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/37misc-apps-37.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/38misc-apps-38.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/39misc-apps-39.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/3misc-apps-3.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/40misc-apps-40.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/41misc-apps-41.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/42misc-apps-42.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/43misc-apps-43.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/44misc-apps-44.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/45misc-apps-45.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/46misc-apps-46.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/47misc-apps-47.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/48misc-apps-48.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/4misc-apps-4.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/5misc-apps-5.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/6misc-apps-6.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/7misc-apps-7.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/8misc-apps-8.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/icons/misc apps/9misc-apps-9.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Analog_Clock/Fallout - Analog Clock.uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Analog_Clock/Fallout - Analog Clock/Fallout - Analog Clock_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Analog_Clock/Fallout - Analog Clock/clock4.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Analog_Clock/Fallout - Analog Clock/hours.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Analog_Clock/Fallout - Analog Clock/minutes.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Bottom_White/Fallout - Bottom (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Bottom_White/Fallout - Bottom (White)/BATT.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Bottom_White/Fallout - Bottom (White)/Fallout - Bottom (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Bottom_White/Fallout - Bottom (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Corner_White/Fallout - Corner (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Corner_White/Fallout - Corner (White)/Fallout - Corner (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Corner_White/Fallout - Corner (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White)/AGENCYR.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White)/Bottom.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White)/Fallout - Main (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Main_White/Fallout - Main (White)/Top.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White)/BUILDING.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White)/Fallout - Map (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White)/HOME.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White)/Map (4).png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Map_White/Fallout - Map (White)/Map.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/NotifCenter_White/Fallout - NotifCenter (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/NotifCenter_White/Fallout - NotifCenter (White)/Fallout - NotifCenter (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/NotifCenter_White/Fallout - NotifCenter (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/NotifCenter_White/Fallout - NotifCenter (White)/Notification Large.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/NotifCenter_White/Fallout - NotifCenter (White)/Notification Small.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_White/Fallout - Time (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_White/Fallout - Time (White)/AGENCYR.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_White/Fallout - Time (White)/Fallout - Time (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_White/Fallout - Time (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/BebasNeue.otf" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/Fallout - Time and Weather (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/blowing snow.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/blustery.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/clear.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/cloudy.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/cold.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/default_weather_icon.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/drizzle.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/dunno.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/dust.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/fair.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/fog.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/freezing drizzle.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/freezing rain.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/hail.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/haze.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/heavy snow.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/hot.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/hurricane.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/isolated thundershowers.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/isolated thunderstorms.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/light rain.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/light snow flurries.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/light snow.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/mist.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/mixed rain and hail.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/mixed rain and sleet.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/mixed rain and snow.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/mostly cloudy.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Time_and_Weather_White/Fallout - Time and Weather (White)/White Weather/mostly sunny.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Top_White/Fallout - Top (White).uccw" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Top_White/Fallout - Top (White)/AGENCYR.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Top_White/Fallout - Top (White)/Fallout - Top (White)_thumb.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Top_White/Fallout - Top (White)/MONOFONT.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/Top_White/Fallout - Top (White)/Top.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/pipboy.app.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/css/swag.css" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/map/map cursor.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/map/map.html" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/map/map3.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/pages/data.html" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/pages/index.html" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/pages/inv.html" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/pages/map.html" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/pages/radio.html" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/agility.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/charisma.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/endurance.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/intelligence.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/luck.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/perception.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/special/strength.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ts/data.ts" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ts/inv.ts" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ts/map.ts" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ts/radio.ts" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ui/lolo-favicon.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ui/python_logo.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ui/spring_logo.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ui/vault_boy_walking.gif" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/assets/ui/web_application_logo.png" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/bottom/AGENCYR.TTF" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/pipboy/bottom/Fallout - Bottom.uccw" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +239,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/eriksmith/WebstormProjects/vault199/src/static/pipboy/2000N",
+    "last_opened_file_path": "/Users/eriksmith/WebstormProjects/vault199/src/static/app/icons/ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,18 +264,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/static/app/icons/ui" />
+      <recent name="$PROJECT_DIR$/src/static/app/wallpapers" />
+      <recent name="$PROJECT_DIR$/src/static/app/widgets" />
+      <recent name="$PROJECT_DIR$/src/static/app/icons/icons_2" />
       <recent name="$PROJECT_DIR$/src/static/pipboy/2000N" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/pipboy/tab-content" />
-      <recent name="$PROJECT_DIR$/src/static/pipboy/chatbox" />
-      <recent name="$PROJECT_DIR$/src/components/pipboy/tabs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages/data" />
       <recent name="$PROJECT_DIR$/src/pages/items" />
-      <recent name="$PROJECT_DIR$/src/pages/index" />
-      <recent name="$PROJECT_DIR$/src/pages/profile/contacts" />
-      <recent name="$PROJECT_DIR$/src/pages/profile/map" />
+      <recent name="$PROJECT_DIR$/src/static/app/icons/color" />
+      <recent name="$PROJECT_DIR$/src/static/app/wallpapers" />
+      <recent name="$PROJECT_DIR$/src/static/app/widgets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -225,7 +397,8 @@
       <workItem from="1748615335978" duration="27834000" />
       <workItem from="1748670221599" duration="50922000" />
       <workItem from="1748756171406" duration="3958000" />
-      <workItem from="1748760217916" duration="51184000" />
+      <workItem from="1748760217916" duration="52090000" />
+      <workItem from="1748856260797" duration="15889000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />
