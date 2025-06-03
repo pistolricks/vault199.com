@@ -6,6 +6,7 @@ import ProfilePanel from "~/components/pipboy/panels/profile-panel";
 import status from "~/static/app/icons/ui/status.png"
 import special from "~/static/app/icons/ui/special.png"
 import details from "~/static/app/icons/ui/details.png"
+import SpecialPanel from "~/components/pipboy/panels/special-panel";
 
 type PROPS = {}
 
@@ -19,7 +20,7 @@ const SpecialSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <ProfilePanel/>
+        <SpecialPanel/>
     );
 };
 
