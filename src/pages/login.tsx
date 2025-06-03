@@ -21,7 +21,7 @@ const Login: Component<RouteSectionProps> = (props) => {
 
     return (
         <TerminalLayout {...props}>
-            <form class={'flex flex-col gap-6'} action={loginUserHandler} method={'post'}>
+            <form class={'flex flex-col gap-6 p-10'} action={loginUserHandler} method={'post'}>
                 <div class={" flex flex-col sm:justify-start w-full"}>
                     <label>Username </label>
                     <input class="bg-gray-300/20 w-full sm:w-full" name="username" type="text"/>

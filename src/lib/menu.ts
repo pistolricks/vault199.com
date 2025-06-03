@@ -9,9 +9,28 @@ import misc from "~/static/app/icons/ui/misc.png"
 import status from "~/static/app/icons/ui/status.png";
 import special from "~/static/app/icons/ui/special.png";
 import details from "~/static/app/icons/ui/details.png";
+import stats from "~/static/app/icons/apps/apple-app-19.png"
+import items from "~/static/app/icons/fallout/shopping.png"
+import data from "~/static/app/icons/fallout/tasks-work.png";
 
 export const collection = createListCollection({
     items: [
+        /*DASHBOARD*/
+        {
+            label: '/dashboard', value: [
+                {name: "items", href: '/items', icon: items},
+                {name: "profile", href: '/profile', icon: stats},
+                {name: "data", href: '/data', icon: data},
+            ]
+        },
+        /*LOGIN*/
+        {
+            label: '/login', value: [
+                {name: "items", href: '/items', icon: items},
+                {name: "profile", href: '/profile', icon: stats},
+                {name: "data", href: '/data', icon: data},
+            ]
+        },
 
         /*DATA*/
 
