@@ -88,17 +88,12 @@ const PipBoy: Component<PROPS> = props => {
                                     class={"absolute z-50 top-0 h-11 sm:h-10 inset-x-0 object-bottom w-full flex justify-center items-center"}>
                                     <div
                                         class={"w-32 sm:w-28 h-full items-center border-r border-l border-b border-green-700/50  bg-black"}>
-                                        <Show
-                                            fallback={
-                                                <div class={'flex justify-center items-center w-full h-full'}>
-                                                    <Show when={props.menuItems?.length > 0}>
-                                                        <HeaderMenu menus={props.menuItems}/>
-                                                    </Show>
-                                                </div>
-                                            }
-                                            when={location.pathname.includes("dashboard")}>
-                                            <></>
-                                        </Show>
+                                        <div class={'flex justify-center items-center w-full h-full'}>
+                                            <Show when={props.menuItems?.length > 0}>
+                                                <HeaderMenu menus={props.menuItems}/>
+                                            </Show>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div

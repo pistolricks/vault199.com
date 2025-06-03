@@ -1,4 +1,4 @@
-import {type Component, createEffect, createMemo, createSignal, lazy, Suspense} from 'solid-js';
+import {type Component, createEffect, createMemo, createSignal, lazy, Show, Suspense} from 'solid-js';
 import {RouteSectionProps, useLocation} from '@solidjs/router';
 import BaseDrawer, {DrawerContent} from './components/ui/drawer';
 import {classNames} from "~/components/navigation";
@@ -113,30 +113,35 @@ const App: Component<RouteSectionProps> = (props) => {
         <>
             <BaseDrawer side={"bottom"} contextId={"activated-1"}>
                 <main class={'scrollbar-hide'}>
-                    <ActivatedLayout {...props}>
-                        <PipBoy menuItems={menuItems()}>
-                            <Suspense>{props.children}</Suspense>
-                        </PipBoy>
-                    </ActivatedLayout>
-                    <DrawerContent
-                        side={"bottom"}
-                        contextId={"activated-1"}
-                        style={{
-                            'background-image': 'url(' + pipboyTypes[getComponentName()] + ')',
-                            'background-size': '100% 92%',
-                            'background-repeat': 'no-repeat',
-                            'background-position': 'top',
-                            'background-color': 'black',
-                        }}
-                        class={classNames(
-                            'w-screen sm:max-w-xs',
-                        )}
-                    >
-
-                        <Dynamic {...data()} component={apps[getComponentName()]}/>
-
-                    </DrawerContent>
-
+                    <Show
+                        fallback={
+                            <>
+                                <ActivatedLayout {...props}>
+                                    <PipBoy menuItems={menuItems()}>
+                                        <Suspense>{props.children}</Suspense>
+                                    </PipBoy>
+                                </ActivatedLayout>
+                                <DrawerContent
+                                    side={"bottom"}
+                                    contextId={"activated-1"}
+                                    style={{
+                                        'background-image': 'url(' + pipboyTypes[getComponentName()] + ')',
+                                        'background-size': '100% 92%',
+                                        'background-repeat': 'no-repeat',
+                                        'background-position': 'top',
+                                        'background-color': 'black',
+                                    }}
+                                    class={classNames(
+                                        'w-screen sm:max-w-xs',
+                                    )}
+                                >
+                                    <Dynamic {...data()} component={apps[getComponentName()]}/>
+                                </DrawerContent>
+                            </>
+                        }
+                        when={location.pathname === "/"}>
+                        <Suspense>{props.children}</Suspense>
+                    </Show>
                 </main>
             </BaseDrawer>
         </>

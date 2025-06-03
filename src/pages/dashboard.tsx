@@ -16,15 +16,12 @@ type PROPS = {}
 const Dashboard: Component<RouteSectionProps> = props => {
 
 
-    createEffect(() => {
-        console.log(collection.items.filter(item => item.label === "profile"))
 
-    })
 
 
     return (
         <>
-            <ProfilePanel/>
+
         </>
     );
 };
