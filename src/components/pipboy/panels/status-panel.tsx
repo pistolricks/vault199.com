@@ -1,6 +1,6 @@
 import {Component, createEffect} from "solid-js";
 import {classNames} from "~/components/navigation";
-import vaultBoyGif from "~/static/gifs/vaultboy.gif";
+import vaultBoyGif from "~/static/pipboy/assets/pipboy_statusboy.png";
 import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
 
 type PROPS = {}
@@ -24,7 +24,7 @@ const StatusPanel: Component<PROPS> = props => {
         <div class={"relative w-full h-[90%]"}>
 
             <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
-                <VaultBoy class={"w-[30%] h-[60%]"}/>
+                <HealthBoy class={"w-[90%] h-[90%]"}/>
             </div>
             <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute bottom-0 px-1 w-full flex justify-center items-center"}/>
 
@@ -37,7 +37,7 @@ const StatusPanel: Component<PROPS> = props => {
 export default StatusPanel;
 
 
-const VaultBoy: Component<{
+const HealthBoy: Component<{
     class?: string;
 }> = (props) => {
     const className = () => props.class;
