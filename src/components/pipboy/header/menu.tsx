@@ -11,9 +11,6 @@ type PROPS = {
 
 const HeaderMenu: Component<PROPS> = props => {
     const location = useLocation();
-
-    const menus = () => props.menus;
-
     return (
         <div class={"flex justify-center items-center space-x-0.5"}>
             <A

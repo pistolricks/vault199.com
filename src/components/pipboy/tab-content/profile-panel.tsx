@@ -13,12 +13,12 @@ const ProfilePanel: Component<PROPS> = props => {
     return (
 
 
-        <div class={"relative w-full h-[80%]"}>
+        <div class={"relative w-full h-[90%]"}>
 
-            <div class={"absolute inset-0 w-full flex justify-center items-center"}>
+            <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
                 <VaultBoy class={"w-[30%] h-[60%]"}/>
             </div>
-            <StatsData class={"absolute bottom-0 w-full flex justify-center items-center"}/>
+            <StatsData class={"absolute bottom-0 px-1 w-full flex justify-center items-center"}/>
 
         </div>
 

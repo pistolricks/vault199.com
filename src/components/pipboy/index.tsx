@@ -102,7 +102,7 @@ const PipBoy: Component<PROPS> = props => {
                                     </div>
                                 </div>
                                 <div
-                                    class="absolute top-7 w-full px-1 grid grid-cols-7 place-items-center uppercase border-b border-[rgb(var(--main))]">
+                                    class="absolute top-11.5 w-full px-1 grid grid-cols-7 place-items-center uppercase border-t border-[rgb(var(--main))]">
                                     <span
                                         class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
                                     <span class={"col-span-3"}></span>
