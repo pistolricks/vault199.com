@@ -3,11 +3,15 @@ import {A, RouteSectionProps, useLocation} from "@solidjs/router";
 import styles from "./style.module.css"
 import {currentUser} from "~/app";
 import Logout from "~/components/logout";
+import contacts from "~/static/app/icons/ui/contacts.png";
+import map from "~/static/app/icons/ui/map.png";
+import media from "~/static/app/icons/ui/details.png";
 
 
 const TerminalNavigation: Component<RouteSectionProps> = props => {
 
     const location = useLocation();
+
 
 
     return (

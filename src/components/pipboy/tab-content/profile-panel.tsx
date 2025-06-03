@@ -78,7 +78,7 @@ const StatsData: Component<{
                         </span>
                         <span class="fade-b">
                         <b>
-                           jnk
+                           ammo
                         </b>
                             23
                         </span>

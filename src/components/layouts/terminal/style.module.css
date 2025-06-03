@@ -63,7 +63,7 @@
 }
 
 .terminal-body {
-    background: #383838;
+    background: #000;
     color: #00dd00;
     font-size: 64.5%;
     font-size: 1.4em;
@@ -132,7 +132,7 @@
 
 
 header.site {
-    margin: 0 0 40px 0;
+    margin: 40px 0 40px 0;
     text-transform: uppercase;
 
 }
