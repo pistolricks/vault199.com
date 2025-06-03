@@ -1,6 +1,6 @@
 import {Component} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
-import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
+import DataTabPanel from "~/components/pipboy/panels/data-tab-panel";
 
 
 import contacts from "~/static/app/icons/ui/contacts.png"

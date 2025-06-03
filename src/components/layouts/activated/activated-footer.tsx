@@ -1,6 +1,7 @@
 import {Component} from "solid-js";
 import BottomMenu from "~/components/pipboy/footer/bottom-menu";
 import {Progress} from "@ark-ui/solid";
+import {ICharacter} from "~/components/character/config";
 
 
 type PROPS = {
@@ -14,17 +15,13 @@ type PROPS = {
     level: number;
 }
 
-const ActivatedFooter: Component<PROPS> = props => {
+const ActivatedFooter: Component<ICharacter> = props => {
 
-    const min = () => props.min ?? 0;
-    const max = () => props.max ?? 100;
-    const level = () => props.level;
+    const level = () => props.stats?.level ?? 0;
+    const hp = () => props.stats?.healthPoints ?? 0;
+    const hpMax = () => props.stats?.maxHealthPoints ?? 10;
+    const ap = () => props.stats?.actionPoints ?? 0;
 
-    const hp = () => props.hp;
-    const hpMax = () => props.hpMax;
-
-    const ap = () => props.ap;
-    const apMax = () => props.apMax;
 
     return (
         <div class="absolute bottom-4 inset-x-0 w-full h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px]">
@@ -38,7 +35,7 @@ const ActivatedFooter: Component<PROPS> = props => {
 
                     <div class={"absolute inset-x-0 w-full h-full flex justify-center items-center progress-text tracking-wide"}>HP {hp()}</div>
                 </Progress.Root>
-                <Progress.Root class={"relative"} min={min()} max={max()} value={level()}>
+                <Progress.Root class={"relative"} min={0} max={100} value={level()}>
                     <Progress.Track>
 
                         <Progress.Range />
@@ -46,7 +43,7 @@ const ActivatedFooter: Component<PROPS> = props => {
 
                     <div class={"absolute inset-x-0 w-full h-full flex justify-center items-center progress-text tracking-wide"}>LEVEL {level()}</div>
                 </Progress.Root>
-                <Progress.Root class={"relative"} min={0} max={apMax()} value={ap()}>
+                <Progress.Root class={"relative"} min={0} max={6} value={ap()}>
                     <Progress.Track>
 
                         <Progress.Range />

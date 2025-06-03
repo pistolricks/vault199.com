@@ -5,7 +5,7 @@ import {ActivatedLayoutRouteData} from "~/lib/types"
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import ItemsPanel from "~/components/pipboy/tab-content/items-panel";
+import ItemsPanel from "~/components/pipboy/panels/items-panel";
 import {
     MenuItem
 } from "../../../../../../../Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-menu";

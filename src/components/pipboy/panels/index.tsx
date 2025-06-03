@@ -1,12 +1,12 @@
 import { Tabs } from "@ark-ui/solid";
 import {Component, createEffect} from "solid-js";
-import MiscTabPanel from "~/components/pipboy/tab-content/misc-tab-panel";
-import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
+import MiscTabPanel from "~/components/pipboy/panels/misc-tab-panel";
+import ProfilePanel from "~/components/pipboy/panels/profile-panel";
 import {createBreakpoints} from "@solid-primitives/media";
-import MediaPanel from "~/components/pipboy/tab-content/media-panel";
-import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
-import ItemsPanel from "~/components/pipboy/tab-content/items-panel";
-import ContactsPanel from "~/components/pipboy/tab-content/contacts-panel";
+import MediaPanel from "~/components/pipboy/panels/media-panel";
+import DataTabPanel from "~/components/pipboy/panels/data-tab-panel";
+import ItemsPanel from "~/components/pipboy/panels/items-panel";
+import ContactsPanel from "~/components/pipboy/panels/contacts-panel";
 
 
 type PROPS = {

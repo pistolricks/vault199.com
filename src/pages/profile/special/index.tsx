@@ -1,7 +1,7 @@
 import {Component} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
 import {MenuItem} from "~/lib/types";
-import ProfilePanel from "~/components/pipboy/tab-content/profile-panel";
+import ProfilePanel from "~/components/pipboy/panels/profile-panel";
 
 import status from "~/static/app/icons/ui/status.png"
 import special from "~/static/app/icons/ui/special.png"

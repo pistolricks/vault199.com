@@ -5,7 +5,7 @@ import {ActivatedLayoutRouteData} from "~/lib/types";
 import PipBoy from "~/components/pipboy";
 import {getGps} from "~/lib/geo";
 import {Contact} from "~/components/lists/contact-list";
-import DataTabPanel from "~/components/pipboy/tab-content/data-tab-panel";
+import DataTabPanel from "~/components/pipboy/panels/data-tab-panel";
 
 
 import contacts from "~/static/app/icons/ui/contacts.png"

@@ -110,6 +110,8 @@ const PipBoy: Component<PROPS> = props => {
                             </div>
                             <div class="piece glow noclick"></div>
                             <div class="piece scanlines noclick"></div>
+
+
                             <ActivatedFooter hp={8} hpMax={10} ap={4} apMax={10} level={40}/>
                         </div>
                     </div>
