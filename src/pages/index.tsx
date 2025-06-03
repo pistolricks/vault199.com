@@ -10,12 +10,12 @@ const Home: Component<RouteSectionProps> = (props) => {
 
     return (
         <>
-        <TerminalLayout {...props} >
 
 
 
 
-        </TerminalLayout>
+
+
 
             </>
     );

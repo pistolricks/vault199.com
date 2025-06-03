@@ -71,62 +71,68 @@ const PipBoy: Component<PROPS> = props => {
 
     return (
 
-            <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
+        <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
 
-                <div class="bbody" style={props.display}>
+            <div class="bbody" style={props.display}>
 
-                    <div id="frame" class="frame rounded-t-[35px] sm:rounded-[90px]">
+                <div id="frame" class="frame rounded-t-[35px] sm:rounded-[90px]">
 
-                        <div class="piece output container">
-                            <div class="pipboy">
+                    <div class="piece output container">
+                        <div class="pipboy">
 
-                                <div class={styles["glare"]}></div>
-                                <div class={styles["interlaced"]}></div>
-                                <div class={'w-full h-full pt-11 sm:pt-10 rounded-t-[30px] sm:rounded-[60px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 '}>
+                            <div class={styles["glare"]}></div>
+                            <div class={styles["interlaced"]}></div>
+                            <div
+                                class={'w-full h-full pt-11 sm:pt-10 rounded-t-[30px] sm:rounded-[60px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 '}>
+                                <div
+                                    class={"absolute z-50 top-0 h-11 sm:h-10 inset-x-0 object-bottom w-full flex justify-center items-center"}>
                                     <div
-                                        class={"absolute z-50 top-0 h-11 sm:h-10 inset-x-0 object-bottom w-full flex justify-center items-center"}>
-                                        <div class={"w-32 sm:w-28 h-full items-center border-r border-l border-b border-green-700/50  bg-black"}>
-                                            <Show
-                                                fallback={
-                                                    <div class={'flex justify-center items-center w-full h-full'}>
-
+                                        class={"w-32 sm:w-28 h-full items-center border-r border-l border-b border-green-700/50  bg-black"}>
+                                        <Show
+                                            fallback={
+                                                <div class={'flex justify-center items-center w-full h-full'}>
+                                                    <Show when={props.menuItems?.length > 0}>
                                                         <HeaderMenu menus={props.menuItems}/>
-                                                    </div>
-                                                }
-                                                when={location.pathname.includes("dashboard")}>
-                                                <></>
-                                            </Show>
-                                        </div>
+                                                    </Show>
+                                                </div>
+                                            }
+                                            when={location.pathname.includes("dashboard")}>
+                                            <></>
+                                        </Show>
                                     </div>
-                                    <div class="absolute top-7 w-full px-1 grid grid-cols-7 place-items-center uppercase border-b border-[rgb(var(--main))]">
-                                        <span class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
-                                        <span class={"col-span-3"}></span>
-                                        <span class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
-                                    </div>
+                                </div>
+                                <div
+                                    class="absolute top-7 w-full px-1 grid grid-cols-7 place-items-center uppercase border-b border-[rgb(var(--main))]">
+                                    <span
+                                        class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
+                                    <span class={"col-span-3"}></span>
+                                    <span
+                                        class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
+                                </div>
 
                                 {children()}
 
-                                </div>
-                                <div class="piece glow noclick"></div>
-                                <div class="piece scanlines noclick"></div>
-                                <ActivatedFooter hp={8} hpMax={10} ap={4} apMax={10} level={40}/>
                             </div>
+                            <div class="piece glow noclick"></div>
+                            <div class="piece scanlines noclick"></div>
+                            <ActivatedFooter hp={8} hpMax={10} ap={4} apMax={10} level={40}/>
                         </div>
+                    </div>
 
-                        <div ref={cursor} class="cursor">
-                            <img
-                                src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"
-                                alt="PipBoy Cursor" // Added alt attribute for accessibility
-                                height={28}
-                            />
-                        </div>
-
+                    <div ref={cursor} class="cursor">
+                        <img
+                            src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"
+                            alt="PipBoy Cursor" // Added alt attribute for accessibility
+                            height={28}
+                        />
                     </div>
 
                 </div>
-                <BottomPipboyRoutingMenu menuItems={menuItems}/>
 
-            </ArkTabs.Root>
+            </div>
+            <BottomPipboyRoutingMenu menuItems={menuItems}/>
+
+        </ArkTabs.Root>
 
     );
 };
