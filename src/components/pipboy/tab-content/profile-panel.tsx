@@ -59,12 +59,12 @@ const StatsData: Component<{
 
                 <ul class="info-table grid grid-cols-3 gap-1 uppercase">
                     <li class="clear">
-                        <b>melee</b>
+                        <b>att</b>
                             154
                     </li>
                     <li>
-                        <b>defs</b>
-                        300
+                        <b>def</b>
+                        1
                     </li>
                     <li>
                         <b>init</b> 29
@@ -72,15 +72,15 @@ const StatsData: Component<{
                     <li class="clear">
                         <span class="fade-a">
                         <b>
-                          melee
+                          wg
                         </b>
                             154
                         </span>
                         <span class="fade-b">
                         <b>
-                            defense
+                           jnk
                         </b>
-                            154
+                            23
                         </span>
                     </li>
                     <li>
@@ -89,7 +89,9 @@ const StatsData: Component<{
                          <span class="fill" style="width: 91%;"></span>
                        </span>
                     </li>
-                    <li class="vboy-wrap"></li>
+                    <li>
+                        <b>caps</b> 29
+                    </li>
                 </ul>
             </div>
         </div>
