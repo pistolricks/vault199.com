@@ -17,8 +17,8 @@ type PROPS = {
 }
 
 const menuItems: MenuItem[] = [
-    {name: "profile", href: '/profile', icon: stats},
     {name: "items", href: '/items', icon: items},
+    {name: "profile", href: '/profile', icon: stats},
     {name: "data", href: '/data', icon: data},
 ]
 

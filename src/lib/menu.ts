@@ -84,29 +84,29 @@ export const collection = createListCollection({
 
         {
             label: '/profile', value: [
-                {name: "status", href: '/profile/status', icon: status},
                 {name: "special", href: '/profile/special', icon: special},
+                {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
             ]
         },
         {
             label: '/profile/status', value: [
-                {name: "status", href: '/profile/status', icon: status},
                 {name: "special", href: '/profile/special', icon: special},
+                {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
             ]
         },
         {
             label: '/profile/special', value: [
-                {name: "status", href: '/profile/status', icon: status},
                 {name: "special", href: '/profile/special', icon: special},
+                {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
             ]
         },
         {
             label: '/profile/details', value: [
-                {name: "status", href: '/profile/status', icon: status},
                 {name: "special", href: '/profile/special', icon: special},
+                {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
             ]
         }
