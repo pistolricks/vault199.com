@@ -40,7 +40,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                          location?.pathname.includes(menuItems()[0].name) ? "brightness-[200%]" : "",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[0].name}/>
-                    <img src={cover} class={"transform rotate-0 absolute inset-0 size-full"} alt={"cover"}/>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
                 </A>
 
                 <A
@@ -50,7 +50,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                          location?.pathname.includes(menuItems()[1].name) ? "brightness-[200%]" : "",
                         "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                     )} alt={menuItems()[1].name}/>
-                    <img src={cover} class={"transform rotate-90 absolute inset-0 size-full"} alt={"cover"}/>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
                 </A>
 
                 <A
