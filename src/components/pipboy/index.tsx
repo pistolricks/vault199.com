@@ -73,36 +73,37 @@ const PipBoy: Component<PROPS> = props => {
             <ArkTabs.Root defaultValue={"stats"} class={"h-full w-full overflow-hidden"}>
 
                 <div class="bbody" style={props.display}>
-                    <div
-                        class={"absolute left-[6.75%] sm:left-[8%] md:left-10% h-[18%] object-bottom w-1/4 flex justify-start items-center"}>
-                        <Show
-                            fallback={
-                                <h2 class="pip-tab-title text-xl flex flex-col">
-                                    <span
-                                        class={"text-xs/2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
-                                    <span>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
-                                </h2>
-                            }
-                            when={location.pathname.includes("dashboard")}>
-                            <></>
-                        </Show>
 
-                    </div>
-
-                    <Show when={props.menuItems?.length > 0}>
-                        <div
-                            class={"absolute right-[5.8%] sm:right-[8%] h-[16%] object-bottom w-1/4 flex justify-end items-center"}>
-                            <HeaderMenu menus={props.menuItems}/>
-                        </div>
-                    </Show>
                     <div id="frame" class="frame rounded-t-[35px] sm:rounded-[90px]">
 
-                        <div class="piece output container ">
+                        <div class="piece output container">
                             <div class="pipboy">
+
                                 <div class={styles["glare"]}></div>
                                 <div class={styles["interlaced"]}></div>
+                                <div class={'w-full h-full pt-11 sm:pt-10 rounded-t-[30px] sm:rounded-[60px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 '}>
+                                    <div
+                                        class={"absolute z-50 top-0 h-11 sm:h-10 inset-x-0 object-bottom w-full flex justify-center items-center"}>
+                                        <div class={"w-32 sm:w-28 h-full items-center border-r border-l border-b border-green-700/50  bg-black"}>
+                                            <Show
+                                                fallback={
+                                                    <div class={'flex justify-center items-center w-full h-full'}>
 
-                                <div class={'w-full h-full rounded-t-[30px] sm:rounded-[60px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 sm:ring'}>
+                                                        <HeaderMenu menus={props.menuItems}/>
+                                                    </div>
+                                                }
+                                                when={location.pathname.includes("dashboard")}>
+                                                <></>
+                                            </Show>
+                                        </div>
+                                    </div>
+                                    <ul class="info-table w-full grid grid-cols-1 gap-1 uppercase">
+                                        <li class="clear">
+                                            <b>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</b>
+
+                                            {location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}
+                                        </li>
+                                    </ul>
 
                                 {children()}
 

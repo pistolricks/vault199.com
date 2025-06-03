@@ -43,11 +43,11 @@ const HeaderMenu: Component<PROPS> = props => {
                 class={classNames(
                     "bg-green-950 p-1.5",
                     "relative",
-                    "size-10 md:size-8 rounded-tr-xl",
+                    "size-10 md:size-8",
                     location?.pathname.includes(props.menus[2].href) ? "brightness-[200%]" : "",
                 )}
             >
-                <img src={props.menus[2].icon} class={"size-full rounded-tr-xl grayscale-100"} alt={props.menus[2].name}/>
+                <img src={props.menus[2].icon} class={"size-full grayscale-100"} alt={props.menus[2].name}/>
                 <img src={cover} class={"absolute inset-0 size-full"} alt={"cover"}/>
             </A>
         </div>
