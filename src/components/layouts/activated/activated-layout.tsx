@@ -25,7 +25,7 @@ const ActivatedLayout: Component<ParentProps> = props => {
             </div>
 
 
-            <ActivatedFooter hp={'89/110'} ap={'110/110'} level={40}/>
+
         </div>
     );
 }

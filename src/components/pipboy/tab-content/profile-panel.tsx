@@ -13,13 +13,13 @@ const ProfilePanel: Component<PROPS> = props => {
     return (
 
 
-        <div class={"relative w-full h-full"}>
-            <HeaderData class={"absolute top-0 w-full flex justify-center items-center"}/>
-            <div class={"absolute inset-0 flex justify-center items-center"}>
-                <VaultBoy class={"size-1/2"}/>
-            </div>
+        <div class={"relative w-full h-[80%]"}>
 
-            <FooterData class={"absolute bottom-0 w-full flex justify-center items-center"}/>
+            <div class={"absolute inset-0 w-full flex justify-center items-center"}>
+                <VaultBoy class={"w-[30%] h-[60%]"}/>
+            </div>
+            <StatsData class={"absolute bottom-0 w-full flex justify-center items-center"}/>
+
         </div>
 
 
@@ -48,14 +48,14 @@ const VaultBoy: Component<{
     )
 };
 
-const HeaderData: Component<{
+const StatsData: Component<{
     class?: string;
 }> = (props) => {
     const className = () => props.class;
 
     return (
         <div class={className()}>
-            <div class={"flex flex-col"}>
+            <div class={"w-full sm:w-3/5 flex flex-col"}>
 
                 <ul class="info-table grid grid-cols-3 gap-1 uppercase">
                     <li class="clear">
@@ -90,7 +90,6 @@ const HeaderData: Component<{
                        </span>
                     </li>
                     <li class="vboy-wrap"></li>
-                    <li class="span-2"></li>
                 </ul>
             </div>
         </div>
@@ -131,4 +130,4 @@ const FooterData: Component<{
 }
 
 
-export {VaultBoy, HeaderData, FooterData};
+export {VaultBoy, StatsData, FooterData};

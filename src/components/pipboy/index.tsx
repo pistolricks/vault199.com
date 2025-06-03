@@ -8,6 +8,7 @@ import {useLocation} from "@solidjs/router";
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-routing-menu";
 import styles from "~/components/layouts/activated/style.module.css";
+import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
 type PROPS = {
     display?: string;
@@ -97,19 +98,18 @@ const PipBoy: Component<PROPS> = props => {
                                             </Show>
                                         </div>
                                     </div>
-                                    <ul class="info-table w-full grid grid-cols-1 gap-1 uppercase">
-                                        <li class="clear">
-                                            <b>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</b>
-
-                                            {location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}
-                                        </li>
-                                    </ul>
+                                    <div class="absolute top-7 w-full px-1 grid grid-cols-7 place-items-center uppercase border-b border-[rgb(var(--main))]">
+                                        <span class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
+                                        <span class={"col-span-3"}></span>
+                                        <span class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
+                                    </div>
 
                                 {children()}
 
                                 </div>
                                 <div class="piece glow noclick"></div>
                                 <div class="piece scanlines noclick"></div>
+                                <ActivatedFooter hp={8} hpMax={10} ap={4} apMax={10} level={40}/>
                             </div>
                         </div>
 
