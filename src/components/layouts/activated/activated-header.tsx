@@ -1,81 +1,61 @@
-import {Component, createEffect, createMemo, createSignal, Show} from "solid-js";
-import {A, RouteSectionProps} from "@solidjs/router";
-import styles from "./style.module.css"
-import Logo from "~/static/logos/vault-tec.png"
-import top from "~/static/pipboy/Top_White/Top.png"
-import {cookies, currentUser} from "~/app";
-import Logout from "~/components/logout";
+import {Component} from "solid-js";
+import BottomMenu from "~/components/pipboy/footer/bottom-menu";
+import {Progress} from "@ark-ui/solid";
+import {ICharacter} from "~/components/character/config";
 
-import vaultTecLogo from "~/static/logos/vault.png";
-import Drawer from "@corvu/drawer";
-const ActivatedHeader: Component<RouteSectionProps> = props => {
 
-    const [getToken, setToken] = createSignal(cookies.get("token"))
+type PROPS = {
+    onClick?: (e: string) => any;
+    min?: number;
+    max?: number;
+    hp: number;
+    hpMax: number;
+    ap: number;
+    apMax: number;
+    level: number;
+}
 
-    const  token = createMemo(() => {
-        setToken(cookies.get("token"))
-        return getToken();
-    })
+const ActivatedFooter: Component<ICharacter> = props => {
 
-    const [getState, setState] = createSignal(false)
+    const level = () => props.stats?.level ?? 0;
+    const hp = () => props.stats?.healthPoints ?? 0;
+    const hpMax = () => props.stats?.maxHealthPoints ?? 10;
+    const ap = () => props.stats?.actionPoints ?? 0;
 
-    createEffect(() => {
-        console.log(token(), "token")
 
-        document.onclick = (e) => {
-            const target = e.target as Element;
-            if(!target.closest('.menu-btn')) setState(false)
-        }
-    })
     return (
+        <div class="absolute top-4 inset-x-0 w-full h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px]">
+            <div class="flex justify-between items-center h-full w-full space-x-1.5 px-2">
 
-        <div class={styles["background"] + "h-60 overflow-y-auto"}>
+                <Progress.Root class={"relative"} min={0} max={hpMax()} value={hp()}>
+                    <Progress.Track>
 
+                        <Progress.Range />
+                    </Progress.Track>
 
-        <header class={"fixed top-0 py-4 z-40 h-10 items-center"}>
+                    <div class={"absolute inset-x-0 w-full h-full flex justify-center items-center progress-text tracking-wide"}>HP {hp()}</div>
+                </Progress.Root>
+                <Progress.Root class={"relative"} min={0} max={100} value={level()}>
+                    <Progress.Track>
 
-            <nav class={`pb-5 md:text-sm flex justify-between items-center`}>
-                <div class="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
-                    <div class="flex items-center justify-between py-5 md:block">
+                        <Progress.Range />
+                    </Progress.Track>
 
+                    <div class={"absolute inset-x-0 w-full h-full flex justify-center items-center progress-text tracking-wide"}>LEVEL {level()}</div>
+                </Progress.Root>
+                <Progress.Root class={"relative"} min={0} max={6} value={ap()}>
+                    <Progress.Track>
 
-                    </div>
-                    <div class={`flex-1 items-center mt-8 md:mt-0 md:flex ${getState() ? 'block' : 'hidden'} `}>
-                        <ul class="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                       {/* MENU */}
-                        </ul>
-                        <div class="flex-1 gap-x-6 mr-2 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
+                        <Progress.Range />
+                    </Progress.Track>
 
-                            <div></div>
-
-                        </div>
-                    </div>
-                </div>
-                <Show when={token()}>
-                    <Drawer.Trigger as={"button"} contextId={"activated-1"} class="menu-btn h-10 w-8 text-gray-500 hover:text-gray-800"
-                            onClick={() => setState(!getState())}
-                    >
-                        {
-                            getState() ? (
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                            )
-                        }
-                    </Drawer.Trigger>
-
-                </Show>
-            </nav>
+                    <div class={"absolute inset-x-0 w-full h-full flex justify-center items-center progress-text tracking-wide"}>AP {ap()}</div>
+                </Progress.Root>
 
 
-
-        </header>
+            </div>
         </div>
     );
 };
 
-export default ActivatedHeader;
+export default ActivatedFooter;
