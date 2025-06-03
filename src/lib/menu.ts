@@ -9,7 +9,6 @@ import misc from "~/static/app/icons/ui/misc.png"
 import status from "~/static/app/icons/ui/status.png";
 import special from "~/static/app/icons/ui/special.png";
 import details from "~/static/app/icons/ui/details.png";
-import events from "~/static/app/icons/ui/events.png";
 
 export const collection = createListCollection({
     items: [
@@ -27,21 +26,21 @@ export const collection = createListCollection({
           label: '/data/contacts', value: [
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
-                {name: "media", href: '/data/media', icon: events},
+                {name: "media", href: '/data/media', icon: media},
             ]
         },
         {
             label: '/data/map', value: [
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
-                {name: "media", href: '/data/media', icon: events},
+                {name: "media", href: '/data/media', icon: media},
             ]
         },
         {
             label: '/data/media', value: [
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
-                {name: "media", href: '/data/media', icon: events},
+                {name: "media", href: '/data/media', icon: media},
             ]
         },
 
