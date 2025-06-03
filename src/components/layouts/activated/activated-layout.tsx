@@ -1,6 +1,6 @@
 import {Component, ParentProps} from "solid-js";
 import styles from "./style.module.css"
-import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000-monitor.png"
+import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000ND-monitor.png"
 import pbMonitor2000 from "~/static/pipboy/2000N/pbm_01.png"
 import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 
@@ -9,7 +9,7 @@ const ActivatedLayout: Component<ParentProps> = props => {
 
 
     return (
-        <div>
+        <div class={"bg-black"}>
             <div class={styles["background"] + "min-h-dvh h-dvh flex flex-col "}>
 
                 <div
