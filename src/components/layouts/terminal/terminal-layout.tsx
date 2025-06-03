@@ -12,8 +12,10 @@ const TerminalLayout: Component<RouteSectionProps> = props => {
     return (
 
         <div class={styles["terminal-body"]}>
+            {/*
             <div class={styles["overlay"]}></div>
             <div class={styles["scanline"]}></div>
+           */}
             <div class={styles["wrapper"]}>
                 <div class={`${styles.content} ${styles.clearfix} w-full`}>
 
