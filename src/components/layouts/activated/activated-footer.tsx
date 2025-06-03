@@ -22,7 +22,7 @@ const ActivatedFooter: Component<PROPS> = props => {
     const ap = () => props.ap;
 
     return (
-        <div class="fixed bottom-13 inset-x-[6.5%] w-[87%] h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 sm:ring">
+        <div class="fixed bottom-13 inset-x-[6.5%] w-[87%] h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px]">
             <div class="flex justify-between items-center h-full w-full space-x-1.5 px-2">
                 <p class="progress-text">HP<span class={"ml-0.5"}>{hp()}</span></p>
                 <Progress.Root class={"relative"} min={min()} max={max()} value={level()}>

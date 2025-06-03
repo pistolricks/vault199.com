@@ -7,6 +7,7 @@ import HeaderMenu from "~/components/pipboy/header/menu";
 import {useLocation} from "@solidjs/router";
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-routing-menu";
+import styles from "~/components/layouts/activated/style.module.css";
 
 type PROPS = {
     display?: string;
@@ -94,15 +95,18 @@ const PipBoy: Component<PROPS> = props => {
                             <HeaderMenu menus={props.menuItems}/>
                         </div>
                     </Show>
-                    <div id="frame" class="frame">
+                    <div id="frame" class="frame rounded-t-[35px] sm:rounded-[90px]">
 
                         <div class="piece output container ">
                             <div class="pipboy">
+                                <div class={styles["glare"]}></div>
+                                <div class={styles["interlaced"]}></div>
 
+                                <div class={'w-full h-full rounded-t-[30px] sm:rounded-[60px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 sm:ring'}>
 
                                 {children()}
 
-
+                                </div>
                                 <div class="piece glow noclick"></div>
                                 <div class="piece scanlines noclick"></div>
                             </div>
