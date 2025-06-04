@@ -9,7 +9,7 @@ import {
 	onCleanup,
 	onMount, ParentComponent,
 } from "solid-js";
-
+import vaultBoy from "~/static/gifs/vault_boy_walking.gif"
 export interface AnimatedBeamProps {
 	class?: string;
 	containerRef: HTMLElement;
@@ -30,7 +30,7 @@ export interface AnimatedBeamProps {
 	endYOffset?: number;
 }
 
-const vaultBoy = "src/static/pipboy/assets/ui/vault_boy_walking.gif"
+
 
 export const AnimatedBeam: Component<AnimatedBeamProps> = (props) => {
 	const localProps = mergeProps(
@@ -235,7 +235,9 @@ export default function AnimatedBeamComponent() {
 					<Circle ref={div2Ref}>
 
 					</Circle>
-					<Circle ref={div4Ref}>
+					<Circle
+						class={"h-[300px] w-[300px]"}
+						ref={div4Ref}>
 						<img src={vaultBoy} class="w-full h-full" alt={"vault boy"} />
 					</Circle>
 					<Circle ref={div6Ref}>

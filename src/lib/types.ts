@@ -3,6 +3,7 @@ import {Contact} from "~/components/lists/contact-list";
 export type MenuItem = {
     name: string;
     icon: string;
+    class?: string;
     href?: string;
 }
 

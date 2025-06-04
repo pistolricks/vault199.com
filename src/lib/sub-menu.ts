@@ -25,25 +25,25 @@ export const subCollection = createListCollection({
         /*DASHBOARD*/
         {
             label: '/dashboard', value: [
-                {name: "dashboard", href: '/dashboard', icon: cover},
-                {name: "dashboard", href: '/dashboard', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
                 {name: "items", href: '/items', icon: items},
                 {name: "profile", href: '/profile', icon: stats},
                 {name: "data", href: '/data', icon: data},
-                {name: "dashboard", href: '/dashboard', icon: cover},
-                {name: "dashboard", href: '/dashboard', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
             ]
         },
         /*LOGIN*/
         {
             label: '/login', value: [
-                {name: "login", href: '/login', icon: cover},
-                {name: "login", href: '/login', icon: cover},
+                {name: "login", href: '#', icon: cover},
+                {name: "login", href: '#', icon: cover},
                 {name: "items", href: '/items', icon: items},
                 {name: "profile", href: '/profile', icon: stats},
                 {name: "data", href: '/data', icon: data},
-                {name: "login", href: '/login', icon: cover},
-                {name: "login", href: '/login', icon: cover},
+                {name: "login", href: '#', icon: cover},
+                {name: "login", href: '#', icon: cover},
             ]
         },
 
@@ -51,46 +51,46 @@ export const subCollection = createListCollection({
 
         {
             label: '/data', value: [
-                {name: "data", href: '/data', icon: cover},
-                {name: "data", href: '/data', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
                 {name: "media", href: '/data/media', icon: media},
-                {name: "data", href: '/data', icon: cover},
-                {name: "data", href: '/data', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
             ]
         },
         {
           label: '/data/contacts', value: [
-                {name: "data", href: '/data/contacts', icon: cover},
-                {name: "data", href: '/data/contacts', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
                 {name: "media", href: '/data/media', icon: media},
-                {name: "data", href: '/data/contacts', icon: cover},
-                {name: "data", href: '/data/contacts', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
             ]
         },
         {
             label: '/data/map', value: [
-                {name: "data", href: '/data/map', icon: cover},
-                {name: "data", href: '/data/map', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
                 {name: "media", href: '/data/media', icon: media},
-                {name: "data", href: '/data/map', icon: cover},
-                {name: "data", href: '/data/map', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
             ]
         },
         {
             label: '/data/media', value: [
-                {name: "data", href: '/data/media', icon: cover},
-                {name: "data", href: '/data/media', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
                 {name: "map", href: '/data/map', icon: map},
                 {name: "media", href: '/data/media', icon: media},
-                {name: "data", href: '/data/media', icon: cover},
-                {name: "data", href: '/data/media', icon: cover},
+                {name: "data", href: '#', icon: cover},
+                {name: "data", href: '#', icon: cover},
             ]
         },
 
@@ -100,46 +100,46 @@ export const subCollection = createListCollection({
 
         {
             label: '/items', value: [
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
                 {name: "weapons", href: '/items/weapons', icon: weapons},
                 {name: "armor", href: '/items/armor', icon: armor},
                 {name: "misc", href: '/items/misc', icon: misc},
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
             ]
         },
         {
             label: '/items/weapons', value: [
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
                 {name: "weapons", href: '/items/weapons', icon: weapons},
                 {name: "armor", href: '/items/armor', icon: armor},
                 {name: "misc", href: '/items/misc', icon: misc},
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
             ]
         },
         {
             label: '/items/armor', value: [
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
                 {name: "weapons", href: '/items/weapons', icon: weapons},
                 {name: "armor", href: '/items/armor', icon: armor},
                 {name: "misc", href: '/items/misc', icon: misc},
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
             ]
         },
         {
             label: '/items/misc', value: [
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
                 {name: "weapons", href: '/items/weapons', icon: weapons},
                 {name: "armor", href: '/items/armor', icon: armor},
                 {name: "misc", href: '/items/misc', icon: misc},
-                {name: "items", href: '/items', icon: cover},
-                {name: "items", href: '/items', icon: cover},
+                {name: "items", href: '#', icon: cover},
+                {name: "items", href: '#', icon: cover},
             ]
         },
 
@@ -149,24 +149,24 @@ export const subCollection = createListCollection({
 
         {
             label: '/profile', value: [
-                {name: "profile", href: '/profile', icon: cover},
-                {name: "profile", href: '/profile', icon: cover},
+                {name: "profile", href: '#', icon: cover},
+                {name: "profile", href: '#', icon: cover},
                 {name: "special", href: '/profile/special', icon: special},
                 {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
-                {name: "profile", href: '/profile', icon: cover},
-                {name: "profile", href: '/profile', icon: cover},
+                {name: "profile", href: '#', icon: cover},
+                {name: "profile", href: '#', icon: cover},
             ]
         },
         {
             label: '/profile/status', value: [
-                {name: "profile", href: '/profile', icon: cover},
-                {name: "profile", href: '/profile', icon: cover},
+                {name: "profile", href: '#', icon: cover},
+                {name: "profile", href: '#', icon: cover},
                 {name: "special", href: '/profile/special', icon: special},
                 {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
-                {name: "profile", href: '/profile', icon: cover},
-                {name: "profile", href: '/profile', icon: cover},
+                {name: "profile", href: '#', icon: cover},
+                {name: "profile", href: '#', icon: cover},
             ]
         },
         {
@@ -182,13 +182,13 @@ export const subCollection = createListCollection({
         },
         {
             label: '/profile/details', value: [
-                {name: "dashboard", href: '/dashboard', icon: cover},
-                {name: "dashboard", href: '/dashboard', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
                 {name: "special", href: '/profile/special', icon: special},
                 {name: "status", href: '/profile/status', icon: status},
                 {name: "details", href: '/profile/details', icon: details},
-                {name: "dashboard", href: '/dashboard', icon: cover},
-                {name: "dashboard", href: '/dashboard', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
+                {name: "dashboard", href: '#', icon: cover},
             ]
         }
     ],
