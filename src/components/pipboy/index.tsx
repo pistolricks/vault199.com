@@ -130,7 +130,7 @@ const PipBoy: Component<PROPS> = props => {
                 </div>
 
             </div>
-            <BottomPipboyRoutingMenu menuItems={menuItems}/>
+            <BottomPipboyRoutingMenu menuItems={menuItems} subMenuItems={props.menuItems}/>
 
         </ArkTabs.Root>
 

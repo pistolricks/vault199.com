@@ -13,18 +13,7 @@ const FooterMenu: Component<PROPS> = props => {
     const location = useLocation();
     return (
         <div class={"flex justify-center items-center space-x-0.5"}>
-            <A
-                href={props.menus?.[0].href}
-                class={classNames(
-                    "bg-green-950 p-1",
-                    "relative",
-                    "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
-                )}
-            >
-                <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
-                <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
-            </A>
+
             <A
                 href={props.menus?.[0].href}
                 class={classNames(
