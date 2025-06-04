@@ -1,10 +1,10 @@
-import {Component, Show} from "solid-js";
+import {Component, createEffect, Show} from "solid-js";
 import bottomMenuAlt from "~/static/pipboy/2000N/pb2000_blank.png"
 
 import {classNames} from "~/components/navigation";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import {A, useLocation} from "@solidjs/router";
-import HeaderMenu from "~/components/pipboy/header/menu";
+
 import FooterMenu from "~/components/pipboy/footer/menu";
 
 export type MenuItem = {
@@ -22,6 +22,10 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     const location = useLocation();
     const menuItems = () => props.menuItems;
 
+    const subMenuItems = () => props.subMenuItems;
+
+    createEffect(() => console.log("subMenuItems", subMenuItems()))
+
     return (
         <>
 
@@ -34,8 +38,8 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                     <div
                         class={" h-full items-center  border-t border-green-700/50 sm:border-l sm:border-r w-[18.65rem] sm:w-[15.25rem] bg-black"}>
                         <div class={'flex justify-center items-center w-full h-full'}>
-                            <Show when={props.menuItems?.length > 0}>
-                                <FooterMenu menus={props.subMenuItems}/>
+                            <Show when={props.subMenuItems?.length > 0}>
+                                <FooterMenu menus={subMenuItems()}/>
                             </Show>
                         </div>
 

@@ -12,6 +12,7 @@ import {collection} from "~/lib/menu";
 import chatBox from "~/static/pipboy/chatbox/chatbox.png";
 import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
 import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
+import {subCollection} from "~/lib/sub-menu";
 
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
@@ -78,6 +79,13 @@ const App: Component<RouteSectionProps> = (props) => {
         return m?.[0]?.value;
     })
 
+    const subMenuItems = createMemo(() => {
+        let m = subCollection.items.filter(item => item.label === location.pathname) ?? undefined;
+        if (!m) return;
+        console.log("m", m, location.pathname)
+        return m?.[0]?.value;
+    })
+
     const [getData, setData] = createSignal<RouteSectionProps<any>>(props.data as RouteSectionProps<any>);
     const data = createMemo(async () => {
         setData(() => props.data as RouteSectionProps<any>)
@@ -117,7 +125,7 @@ const App: Component<RouteSectionProps> = (props) => {
                         fallback={
                             <>
                                 <ActivatedLayout {...props}>
-                                    <PipBoy menuItems={menuItems()}>
+                                    <PipBoy menuItems={menuItems()} subMenuItems={subMenuItems()}>
                                         <Suspense>{props.children}</Suspense>
                                     </PipBoy>
                                 </ActivatedLayout>

@@ -16,6 +16,7 @@ import FooterMenu from "~/components/pipboy/footer/menu";
 type PROPS = {
     display?: string;
     menuItems?: MenuItem[];
+    subMenuItems?: MenuItem[];
     children?: JSXElement;
 }
 
@@ -130,7 +131,7 @@ const PipBoy: Component<PROPS> = props => {
                 </div>
 
             </div>
-            <BottomPipboyRoutingMenu menuItems={menuItems} subMenuItems={props.menuItems}/>
+            <BottomPipboyRoutingMenu menuItems={menuItems} subMenuItems={props.subMenuItems}/>
 
         </ArkTabs.Root>
 
