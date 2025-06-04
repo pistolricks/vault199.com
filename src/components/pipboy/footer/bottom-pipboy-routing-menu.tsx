@@ -30,9 +30,9 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                 class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] bottom-0 w-full flex justify-center items-center sm:max-w-xs"}>
 
                 <div
-                    class={"absolute z-30 bottom-[3.4rem] md:bottom-[2.65rem] h-12 sm:h-10 inset-x-0 object-center   flex justify-center items-center"}>
+                    class={"absolute z-30 bottom-[3rem] md:bottom-[2.65rem] h-12 sm:h-10 inset-x-0 object-center   flex justify-center items-center"}>
                     <div
-                        class={" h-full items-center  border-t border-green-700/50 w-[79%] sm:w-[17.2rem] bg-black"}>
+                        class={" h-full items-center  border-t border-green-700/50 w-[18.65rem] sm:w-[15.25rem] bg-black"}>
                         <div class={'flex justify-center items-center w-full h-full'}>
                             <Show when={props.menuItems?.length > 0}>
                                 <FooterMenu menus={props.subMenuItems}/>
