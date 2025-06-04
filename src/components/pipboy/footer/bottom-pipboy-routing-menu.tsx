@@ -1,9 +1,11 @@
-import {Component} from "solid-js";
+import {Component, Show} from "solid-js";
 import bottomMenuAlt from "~/static/pipboy/2000N/pb2000_blank.png"
 
 import {classNames} from "~/components/navigation";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import {A, useLocation} from "@solidjs/router";
+import HeaderMenu from "~/components/pipboy/header/menu";
+import FooterMenu from "~/components/pipboy/footer/menu";
 
 export type MenuItem = {
     name: string;
@@ -22,8 +24,24 @@ const BottomPipboyMenu: Component<PROPS> = props => {
     return (
         <>
 
+
             <div
-                class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] -bottom-2 h-16 sm:h-12 w-full flex justify-center items-center sm:max-w-xs"}>
+                class={"fixed z-40 left-0 sm:left-[15%] right-0 sm:right-[15%] bottom-0 w-full flex justify-center items-center sm:max-w-xs"}>
+
+                <div
+                    class={"absolute z-30 bottom-[3.4rem] md:bottom-[2.65rem] h-12 sm:h-10 inset-x-0 object-center   flex justify-center items-center"}>
+                    <div
+                        class={" h-full items-center  border-t border-green-700/50 w-[90.5%] sm:w-[17.2rem] bg-black"}>
+                        <div class={'flex justify-center items-center w-full h-full'}>
+                            <Show when={props.menuItems?.length > 0}>
+                                <FooterMenu menus={props.menuItems}/>
+                            </Show>
+                        </div>
+
+                    </div>
+                </div>
+
+
                 <div
                     style={{
                         'background-image': `url(${bottomMenuAlt})`,
@@ -32,7 +50,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         'background-position': 'center',
                         'background-color': 'transparent'
                     }}
-                    class={"absolute w-full h-full sm:max-w-xs z-20 animate-in slide-in-from-bottom animate duration-700 transition-all -translate-y-[10px]"}>
+                    class={"absolute w-full sm:max-w-xs bottom-0 z-30 h-16 sm:h-12"}>
 
                     <A
                         class={"absolute z-30 rounded-full shadow-2xl shadow-gray-700  left-[20.5%] sm:left-[20.2%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}

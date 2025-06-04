@@ -25,6 +25,54 @@ const FooterMenu: Component<PROPS> = props => {
                 <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
                 <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
             </A>
+            <A
+                href={props.menus?.[0].href}
+                class={classNames(
+                    "bg-green-950 p-1",
+                    "relative",
+                    "size-10 md:size-8",
+                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
+                )}
+            >
+                <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
+                <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+            </A>
+            <A
+                href={props.menus?.[0].href}
+                class={classNames(
+                    "bg-green-950 p-1",
+                    "relative",
+                    "size-10 md:size-8",
+                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
+                )}
+            >
+                <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
+                <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+            </A>
+            <A
+                href={props.menus?.[0].href}
+                class={classNames(
+                    "bg-green-950 p-1",
+                    "relative",
+                    "size-10 md:size-8",
+                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
+                )}
+            >
+                <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
+                <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+            </A>
+            <A
+                href={props.menus?.[0].href}
+                class={classNames(
+                    "bg-green-950 p-1",
+                    "relative",
+                    "size-10 md:size-8",
+                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
+                )}
+            >
+                <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
+                <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+            </A>
 
             <A
                 href={props.menus?.[1].href}
@@ -49,6 +97,18 @@ const FooterMenu: Component<PROPS> = props => {
             >
                 <img src={props.menus?.[2].icon} class={"size-full grayscale-100"} alt={props.menus?.[2].name}/>
                 <img src={cover} class={"rotate-45 absolute inset-0 w-1/2 h-full"} alt={"cover"}/>
+            </A>
+            <A
+                href={props.menus?.[0].href}
+                class={classNames(
+                    "bg-green-950 p-1",
+                    "relative",
+                    "size-10 md:size-8",
+                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
+                )}
+            >
+                <img src={props.menus?.[0].icon} class={"size-full grayscale-100"} alt={props.menus?.[0].name}/>
+                <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
             </A>
         </div>
     );

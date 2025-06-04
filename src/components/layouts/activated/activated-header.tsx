@@ -24,7 +24,7 @@ const ActivatedFooter: Component<ICharacter> = props => {
 
 
     return (
-        <div class="absolute top-4 inset-x-0 w-full h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px]">
+        <div class="absolute top-12 sm:top-10 inset-x-0 w-full h-8 sm:h-10 rounded-b-[5px] sm:rounded-b-[45px]">
             <div class="flex justify-between items-center h-full w-full space-x-1.5 px-2">
 
                 <Progress.Root class={"relative"} min={0} max={hpMax()} value={hp()}>

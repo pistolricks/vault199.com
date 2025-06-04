@@ -85,7 +85,7 @@ const PipBoy: Component<PROPS> = props => {
 
                             <div class={styles["glare"]}></div>
                             <div class={styles["interlaced"]}></div>
-                            <ActivatedHeader {...getInitialCharacter()}/>
+
                             <div
                                 class={'w-full h-full pt-11 sm:pt-10 rounded-t-[30px] sm:rounded-[60px] sm:ring-green-700 bg-green-950 border border-green-950 sm:border-green-700/50 '}>
                                 <div
@@ -100,13 +100,14 @@ const PipBoy: Component<PROPS> = props => {
 
                                     </div>
                                 </div>
+                                <ActivatedHeader {...getInitialCharacter()}/>
                                 <div
-                                    class="absolute top-11.5 w-full px-1 grid grid-cols-7 place-items-center uppercase border-t  border-[rgb(var(--main))]">
+                                    class="absolute top-7 sm:top-9 w-full px-1 grid grid-cols-7 place-items-center uppercase border-b  border-[rgb(var(--main))]">
                                     <span
-                                        class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : ""}</span>
+                                        class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[1].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
                                     <span class={"col-span-3"}></span>
                                     <span
-                                        class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : location.pathname.replaceAll("/", "")}</span>
+                                        class={"col-span-2"}>{location.pathname.split("/")[2] ? location.pathname.split("/")[2].replaceAll("/", "") : ""}</span>
                                 </div>
 
                                 {children()}
@@ -127,17 +128,7 @@ const PipBoy: Component<PROPS> = props => {
                     </div>
 
                 </div>
-                <div
-                    class={"absolute z-50 bottom-14 h-11 sm:h-10 left-0 sm:left-[22.5%] right-0 sm:right-[58.5%] w-full sm:w-auto object-bottom  flex justify-center items-center"}>
-                    <div
-                        class={"w-32 sm:w-28 h-full items-center border-r border-l border-b border-green-700/50  bg-black"}>
-                        <div class={'flex justify-center items-center w-full h-full'}>
-                            <Show when={props.menuItems?.length > 0}>
-                                <FooterMenu menus={props.menuItems}/>
-                            </Show>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <BottomPipboyRoutingMenu menuItems={menuItems}/>
 
