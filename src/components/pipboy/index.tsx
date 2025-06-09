@@ -1,4 +1,4 @@
-import {Component, createEffect, createMemo, createSignal, JSXElement, onCleanup, Setter, Show} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, JSXElement, onCleanup, Show} from "solid-js";
 import {Tabs as ArkTabs} from "@ark-ui/solid";
 import stats from "~/static/app/icons/apps/apple-app-19.png"
 import items from "~/static/app/icons/fallout/shopping.png"
@@ -8,15 +8,15 @@ import {useLocation} from "@solidjs/router";
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-routing-menu";
 import styles from "~/components/layouts/activated/style.module.css";
-import ActivatedFooter from "~/components/layouts/activated/activated-footer";
 import {getInitialCharacter} from "~/components/character/config";
 import ActivatedHeader from "~/components/layouts/activated/activated-header";
-import FooterMenu from "~/components/pipboy/footer/menu";
 
 type PROPS = {
     display?: string;
     menuItems?: MenuItem[];
     subMenuItems?: MenuItem[];
+    componentName?: string;
+    handleFooter?: (e?: any) => any;
     children?: JSXElement;
 }
 
@@ -131,7 +131,7 @@ const PipBoy: Component<PROPS> = props => {
                 </div>
 
             </div>
-            <BottomPipboyRoutingMenu menuItems={menuItems} subMenuItems={props.subMenuItems}/>
+            <BottomPipboyRoutingMenu menuItems={menuItems} subMenuItems={props.subMenuItems} componentName={props.componentName} handleFooter={props.handleFooter} />
 
         </ArkTabs.Root>
 

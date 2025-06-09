@@ -1,6 +1,7 @@
 import {createListCollection} from '@ark-ui/solid/collection'
 import contacts from "~/static/app/icons/ui/contacts.png";
-import map from "~/static/app/icons/ui/map.png";
+import map from "~/static/app/icons/fallout/map.png";
+
 import media from "~/static/app/icons/ui/details.png";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import weapons from "~/static/app/icons/ui/weapons.png"
@@ -54,7 +55,7 @@ export const subCollection = createListCollection({
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
-                {name: "map", href: '/data/map', icon: map},
+                {name: "map", href: 'map', icon: map, isAlt: true},
                 {name: "media", href: '/data/media', icon: media},
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
@@ -65,7 +66,7 @@ export const subCollection = createListCollection({
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
-                {name: "map", href: '/data/map', icon: map},
+                {name: "map", href: 'map', icon: map, isAlt: true},
                 {name: "media", href: '/data/media', icon: media},
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
@@ -75,9 +76,9 @@ export const subCollection = createListCollection({
             label: '/data/map', value: [
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
-                {name: "contacts", href: '/data/contacts', icon: contacts},
-                {name: "map", href: '/data/map', icon: map},
-                {name: "media", href: '/data/media', icon: media},
+                {name: "contacts", href: 'contacts', icon: contacts},
+                {name: "map", href: 'map', icon: map, isAlt: true},
+                {name: "media", href: 'media', icon: media},
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
             ]
@@ -87,7 +88,7 @@ export const subCollection = createListCollection({
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},
                 {name: "contacts", href: '/data/contacts', icon: contacts},
-                {name: "map", href: '/data/map', icon: map},
+                {name: "map", href: 'map', icon: map, isAlt: true},
                 {name: "media", href: '/data/media', icon: media},
                 {name: "data", href: '#', icon: cover},
                 {name: "data", href: '#', icon: cover},

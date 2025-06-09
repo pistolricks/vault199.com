@@ -5,6 +5,7 @@ export type MenuItem = {
     icon: string;
     class?: string;
     href?: string;
+    isAlt?: boolean;
 }
 
 export interface ActivatedLayoutRouteData {

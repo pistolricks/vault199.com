@@ -8,7 +8,9 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "types": [
-      "vite/client"
+      "vite/client",
+      "vite-plugin-solid-svg/types",
+      "vite-plugin-solid-svg/types-component-solid"
     ],
     "lib": [
       "ESNext",

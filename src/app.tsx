@@ -5,7 +5,7 @@ import {classNames} from "~/components/navigation";
 import {Dynamic} from "solid-js/web";
 import Cookies from "cookies-ts";
 
-import {getGps} from "~/lib/geo";
+import {getGps, start} from "~/lib/geo";
 import PipBoy from "~/components/pipboy";
 import {collection} from "~/lib/menu";
 
@@ -86,28 +86,16 @@ const App: Component<RouteSectionProps> = (props) => {
         return m?.[0]?.value;
     })
 
-    const [getData, setData] = createSignal<RouteSectionProps<any>>(props.data as RouteSectionProps<any>);
-    const data = createMemo(async () => {
-        setData(() => props.data as RouteSectionProps<any>)
-        return getData();
-    })
+    const [getData, setData] = createSignal<any>(props.data );
 
 
+
+    const [getCompanion, setCompanion] = createSignal<any>();
     const [getComponentName, setComponentName] = createSignal<string>("map")
     const [getCoords, setCoords] = createSignal(null)
 
 
-    const handleClick = async (e: any) => {
-        let coords = await getGps(setCoords);
-        let obj = {companion: e, component: e.component, coords: coords}
-        setComponentName(e.component)
-        setCoords(coords)
 
-        let data = getData();
-        let current = Object.assign(data, obj)
-
-        setData(current)
-    }
 
 
     createEffect(async () => {
@@ -116,6 +104,27 @@ const App: Component<RouteSectionProps> = (props) => {
         console.log("coords", await getCoords())
     })
 
+    const handleClick = async (e: any) => {
+        start();
+        await getGps(setCoords);
+
+        console.log("handleClick", e)
+        let obj = {companion: e, component: e.component, coords: await getCoords()}
+        setComponentName(e.component)
+
+
+        console.log("obj", obj)
+        let data = getData();
+        setData({ data: {...data, obj}})
+
+    }
+
+    const coords = createMemo(() => getCoords())
+
+    const data = createMemo(async () => {
+        setData(() => props.data as any)
+        return getData();
+    })
 
     return (
         <>
@@ -125,7 +134,7 @@ const App: Component<RouteSectionProps> = (props) => {
                         fallback={
                             <>
                                 <ActivatedLayout {...props}>
-                                    <PipBoy menuItems={menuItems()} subMenuItems={subMenuItems()}>
+                                    <PipBoy menuItems={menuItems()} subMenuItems={subMenuItems()} componentName={getComponentName()} handleFooter={handleClick}>
                                         <Suspense>{props.children}</Suspense>
                                     </PipBoy>
                                 </ActivatedLayout>
@@ -143,7 +152,9 @@ const App: Component<RouteSectionProps> = (props) => {
                                         'w-screen sm:max-w-xs',
                                     )}
                                 >
-                                    <Dynamic {...data()} component={apps[getComponentName()]}/>
+                                    <Dynamic data={{
+                                        coords: coords()
+                                    }} component={apps[getComponentName()]}/>
                                 </DrawerContent>
                             </>
                         }

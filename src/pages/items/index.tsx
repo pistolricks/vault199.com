@@ -1,15 +1,9 @@
-import {Component, createEffect, createMemo, createSignal} from "solid-js";
+import {Component} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
-import ActivatedLayout from "~/components/layouts/activated/activated-layout";
-import {ActivatedLayoutRouteData} from "~/lib/types"
-import PipBoy from "~/components/pipboy";
-import {getGps} from "~/lib/geo";
-import {Contact} from "~/components/lists/contact-list";
 import ItemsPanel from "~/components/pipboy/panels/items-panel";
 import {
     MenuItem
 } from "../../../../../../../Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-menu";
-import data from "~/static/app/icons/fallout/tasks-work.png";
 
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"

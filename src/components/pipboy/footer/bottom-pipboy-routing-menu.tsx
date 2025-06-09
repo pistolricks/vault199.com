@@ -16,6 +16,8 @@ export type MenuItem = {
 type PROPS = {
     menuItems: MenuItem[];
     subMenuItems: MenuItem[];
+    componentName?: string;
+    handleFooter: (e?: any) => any;
 }
 
 const BottomPipboyMenu: Component<PROPS> = props => {
@@ -39,7 +41,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         class={" h-full items-center  border-t border-green-700/50 sm:border-l sm:border-r w-[18.65rem] sm:w-[15.25rem] bg-black"}>
                         <div class={'flex justify-center items-center w-full h-full'}>
                             <Show when={props.subMenuItems?.length > 0}>
-                                <FooterMenu menus={subMenuItems()}/>
+                                <FooterMenu menus={subMenuItems()} componentName={props.componentName} onClick={props.handleFooter} />
                             </Show>
                         </div>
 

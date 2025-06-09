@@ -23,10 +23,10 @@ const ProfilePanel: Component<PROPS> = props => {
 
         <div class={"relative w-full h-[90%]"}>
 
-            <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
-                <VaultBoy class={"w-[30%] h-[60%]"}/>
+            <div class={"absolute top-10 sm:top-0 h-full w-full flex justify-center items-center"}>
+                <VaultBoy class={"w-[30%] sm:w-[20%] h-[60%]"}/>
             </div>
-            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute bottom-0 px-1 w-full flex justify-center items-center"}/>
+            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute bottom-0 sm:bottom-8 px-1 w-full flex justify-center items-center"}/>
 
         </div>
 

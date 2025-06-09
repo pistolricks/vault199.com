@@ -15,7 +15,7 @@ type PROPS = {
     level: number;
 }
 
-const ActivatedFooter: Component<ICharacter> = props => {
+const ActivatedHeader: Component<ICharacter> = props => {
 
     const level = () => props.stats?.level ?? 0;
     const hp = () => props.stats?.healthPoints ?? 0;
@@ -58,4 +58,4 @@ const ActivatedFooter: Component<ICharacter> = props => {
     );
 };
 
-export default ActivatedFooter;
+export default ActivatedHeader;

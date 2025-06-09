@@ -19,7 +19,7 @@ type PROPS = {}
 const ContactsSection: Component<RouteSectionProps> = props => {
 
     return (
-        <DataTabPanel/>
+      <></>
     );
 };
 

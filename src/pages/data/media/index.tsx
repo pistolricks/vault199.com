@@ -25,7 +25,7 @@ const MediaSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <DataTabPanel/>
+      <></>
     );
 };
 

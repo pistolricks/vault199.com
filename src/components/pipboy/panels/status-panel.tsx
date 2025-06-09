@@ -1,8 +1,8 @@
 import {Component, createEffect} from "solid-js";
 import {classNames} from "~/components/navigation";
-import vaultBoyGif from "~/static/pipboy/assets/pipboy_statusboy.png";
 import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
-import AnimatedBeamComponent from "~/components/ui/animated-beam";
+import HealthyBody from '~/static/app/svgs/health/body/1.svg?component-solid';
+import HealthyHead from '~/static/app/svgs/health/head/1.svg?component-solid';
 
 type PROPS = {}
 
@@ -24,11 +24,12 @@ const StatusPanel: Component<PROPS> = props => {
 
         <div class={"relative w-full h-[90%]"}>
 
-            <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
-                <AnimatedBeamComponent/>
-                <HealthBoy class={"w-[90%] h-[90%]"}/>
+            <div class={"absolute top-10 sm:top-0 h-full w-full flex justify-center items-center"}>
+
+                <HealthBoy class={""}/>
             </div>
-            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute bottom-0 px-1 w-full flex justify-center items-center"}/>
+            <StatsData init={2} cnd={4} {...getInitialCharacter()}
+                       class={"absolute bottom-0 sm:bottom-8 px-1 w-full flex justify-center items-center"}/>
 
         </div>
 
@@ -44,17 +45,19 @@ const HealthBoy: Component<{
 }> = (props) => {
     const className = () => props.class;
     return (
-        <div
-            class={classNames(
-                "vboy",
-                className()
-            )}
-            style={{
-                background: `url(${vaultBoyGif})`,
-                'background-size': "contain",
-                'background-repeat': "no-repeat",
-            }}
-        ></div>
+        <div class={classNames(
+            "flex flex-col items-center justify-center",
+            className()
+        )}>
+            <div class={"w-full flex justify-center items-center"}>
+                <HealthyHead fill={'white'} width={125} height={125}/>
+            </div>
+            <div class={"w-full flex justify-center items-center"}>
+                <HealthyBody style={{
+                    'margin-top': -35 + 'px'
+                }} width={"150"}/>
+            </div>
+        </div>
     )
 };
 
@@ -68,7 +71,6 @@ const StatsData: Component<ICharacter & { class?: string, init: number, cnd: num
     const inv = () => props.inventory;
     const cnd = () => props.cnd;
     const exp = () => props.stats?.exp ?? 0;
-
 
 
     return (

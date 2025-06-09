@@ -38,7 +38,7 @@ const MapApp: Component<PROPS> = props => {
 
 
     createEffect(() => {
-
+        console.log("data", props.data?.coords, "comm", communications())
     })
 
     return (

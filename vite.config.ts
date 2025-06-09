@@ -4,11 +4,13 @@ import Pages from 'vite-plugin-pages';
 import {VitePWA} from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
+import solidSvg from 'vite-plugin-solid-svg'
 
 export default defineConfig({
     plugins: [
         tailwindcss(),
         solidPlugin(),
+        solidSvg(),
         Pages({
             dirs: ['src/pages'],
         }),

@@ -22,8 +22,7 @@ const DataTabPanel: Component<PROPS> = props => {
 
 
     return (
-        <Tabs.Content
-            value={"data"}
+        <div
             class="tab-pane fade"
             role="tabpanel"
             id="data"
@@ -76,7 +75,7 @@ const DataTabPanel: Component<PROPS> = props => {
                 </div>
                 </Tabs.Root>
             </div>
-        </Tabs.Content>
+        </div>
     );
 };
 

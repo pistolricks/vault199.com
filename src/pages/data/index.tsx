@@ -20,7 +20,7 @@ const DataSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <DataTabPanel/>
+        <></>
     );
 };
 
