@@ -9,7 +9,6 @@ import {Point} from "ol/geom";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
 import {ActivatedLayoutRouteData} from "~/lib/types";
-import {z} from "@vite-pwa/assets-generator/dist/shared/assets-generator.CtXVyBkH";
 
 type PROPS = {
     data?: ActivatedLayoutRouteData;
