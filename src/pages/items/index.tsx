@@ -29,7 +29,7 @@ type PROPS = {}
 const ItemsSection: Component<RouteSectionProps> = props => {
 
     return (
-        <ItemsPanel profiles={profiles}/>
+        <></>
     );
 };
 

@@ -8,6 +8,7 @@ import PipBoy from "~/components/pipboy";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000ND-monitor.png";
 import contacts from "~/static/app/icons/ui/contacts.png";
 import login from "~/static/app/icons/fallout/tech.png";
+import cover from "~/static/pipboy/2000N/app_cover.png";
 
 const TerminalLayout: Component<RouteSectionProps> = props => {
 
@@ -17,6 +18,16 @@ const isRouting = useIsRouting();
         {name: "contacts", href: '/login', icon: login},
         {name: "login", href: '/', icon: login},
         {name: "media", href: '/dashboard', icon: login},
+    ]
+
+    const subMenu = [
+        {name: "home", href: '#', icon: cover},
+        {name: "home", href: '#', icon: cover},
+        {name: "home", href: '#', icon: cover},
+        {name: "home", href: '#', icon: cover},
+        {name: "home", href: '#', icon: cover},
+        {name: "home", href: '#', icon: cover},
+        {name: "home", href: '#', icon: cover},
     ]
 
     return (
@@ -45,7 +56,7 @@ const isRouting = useIsRouting();
                             </div>
                         }
                         when={!isRouting()}>
-                        <PipBoy menuItems={menu}>
+                        <PipBoy menuItems={menu} subMenuItems={subMenu}>
                         <TerminalHeader {...props}/>
 
                         {props.children}
