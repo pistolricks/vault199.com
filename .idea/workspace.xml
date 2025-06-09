@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-layout.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/activated/activated-layout.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/status-panel.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/status-panel.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/1.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/1.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/1.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/1.svg" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/app.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/app.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/geo.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/geo.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +217,7 @@
       <workItem from="1748993498976" duration="1253000" />
       <workItem from="1748995901026" duration="7801000" />
       <workItem from="1749015129142" duration="1776000" />
-      <workItem from="1749451985391" duration="26633000" />
+      <workItem from="1749451985391" duration="28118000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />

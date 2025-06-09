@@ -102,6 +102,9 @@ const App: Component<RouteSectionProps> = (props) => {
         console.log("name", getComponentName())
         console.log("data", await data())
         console.log("coords", await getCoords())
+
+       // let op = document.querySelector("output");
+        await getGps(setCoords);
     })
 
     const handleClick = async (e: any) => {
@@ -109,7 +112,7 @@ const App: Component<RouteSectionProps> = (props) => {
             start();
         }
 
-        await getGps(setCoords);
+
         console.log("handleClick", e)
         let obj = {companion: e, component: e.component, coords: await getCoords()}
         setComponentName(e.component)
