@@ -105,9 +105,11 @@ const App: Component<RouteSectionProps> = (props) => {
     })
 
     const handleClick = async (e: any) => {
-        start();
-        await getGps(setCoords);
+        if(!await getCoords()) {
+            start();
+        }
 
+        await getGps(setCoords);
         console.log("handleClick", e)
         let obj = {companion: e, component: e.component, coords: await getCoords()}
         setComponentName(e.component)
