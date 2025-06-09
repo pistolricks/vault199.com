@@ -13,7 +13,7 @@ import chatBox from "~/static/pipboy/chatbox/chatbox.png";
 import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
 import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
 import {subCollection} from "~/lib/sub-menu";
-
+// const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
 const MapApp = lazy(() => import("~/components/pipboy/apps/map-app"));

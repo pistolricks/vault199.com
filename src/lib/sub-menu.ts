@@ -2,7 +2,7 @@ import {createListCollection} from '@ark-ui/solid/collection'
 import contacts from "~/static/app/icons/ui/contacts.png";
 import map from "~/static/app/icons/fallout/map.png";
 
-import media from "~/static/app/icons/ui/details.png";
+import media from "~/static/app/icons/fallout/radio.png";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
@@ -100,7 +100,7 @@ export const subCollection = createListCollection({
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
-                {name: "media", href: '#', icon: cover},
+                {name: "media", href: 'media', icon: media, isAlt: true},
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
