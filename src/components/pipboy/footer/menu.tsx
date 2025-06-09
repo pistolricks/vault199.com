@@ -134,7 +134,7 @@ const FooterMenu: Component<PROPS> = props => {
                 })
                 }
                 class={classNames(
-                    "bg-green-950 p-1.5",
+                    "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
                     location?.pathname.includes(props.menus?.[5].href) ? "brightness-[150%]" : "",
