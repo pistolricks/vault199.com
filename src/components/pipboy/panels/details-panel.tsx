@@ -22,12 +22,10 @@ const DetailsPanel: Component<PROPS> = props => {
 
 
         <div class={"relative w-full h-[90%]"}>
-
+            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
                 <VaultBoy class={"w-[30%] h-[60%]"}/>
             </div>
-            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute bottom-0 px-1 w-full flex justify-center items-center"}/>
-
         </div>
 
 
@@ -71,7 +69,7 @@ const StatsData: Component<ICharacter & { class?: string, init: number, cnd: num
 
     return (
         <div class={className()}>
-            <div class={"w-full sm:w-3/5 flex flex-col"}>
+            <div class={"w-full flex flex-col"}>
 
                 <ul class="info-table grid grid-cols-3 gap-1 uppercase">
                     <li class="clear">
