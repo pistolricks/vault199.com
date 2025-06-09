@@ -3,6 +3,7 @@ import {A, useLocation, useNavigate} from "@solidjs/router";
 import {classNames} from "~/components/navigation";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import {MenuItem} from "~/lib/types";
+import {start} from "~/lib/geo";
 
 
 type PROPS = {
@@ -29,12 +30,12 @@ const HeaderMenu: Component<PROPS> = props => {
             <A
                 href={props.menus?.[1].href}
                 class={classNames(
-                    "bg-green-950 p-1",
+                    "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
                     location?.pathname.includes(props.menus?.[1].href) ? "brightness-[200%]" : "",
                 )}>
-                <img src={props.menus?.[1].icon} class={"size-full grayscale-100"} alt={props.menus?.[1].name}/>
+                <img src={props.menus?.[1].icon} class={"size-full"} alt={props.menus?.[1].name}/>
                 <img src={cover} class={"rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
             </A>
 

@@ -18,24 +18,27 @@ type PROPS = {
 const MapApp: Component<PROPS> = props => {
 
     const [getComm, setComm] = createSignal("")
-
+    const [getZoom, setZoom] = createSignal(8)
 
     const menuItems: MenuItem[] = [
-        {name: "right", icon: right},
+        {name: "left", icon: left},
         {name: "mail", icon: mail},
         {name: "contacts", icon: contacts},
         {name: "call", icon: call},
-        {name: "left", icon: left},
+        {name: "right", icon: right},
     ]
 
 
     const handleCommunications = (app: string) => {
         console.log(app)
         setComm(app)
+        if(app === 'left')setZoom(() => 8)
+        if(app === 'right')setZoom(() => 16)
     }
 
     const communications = createMemo(() => getComm())
 
+    const zoom = createMemo(() => getZoom())
 
     createEffect(() => {
         console.log("data", props.data?.coords, "comm", communications())
@@ -53,7 +56,7 @@ const MapApp: Component<PROPS> = props => {
                 }}
                 class={" absolute left-5 right-5 top-8 bottom-20"}>
 
-                <MapWrapper data={props.data}/>
+                <MapWrapper data={props.data} zoom={zoom()} />
 
 
             </div>

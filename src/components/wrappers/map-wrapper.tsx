@@ -9,9 +9,11 @@ import {Point} from "ol/geom";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
 import {ActivatedLayoutRouteData} from "~/lib/types";
+import {z} from "@vite-pwa/assets-generator/dist/shared/assets-generator.CtXVyBkH";
 
 type PROPS = {
-    data?: ActivatedLayoutRouteData
+    data?: ActivatedLayoutRouteData;
+    zoom: number;
 
 }
 
@@ -23,6 +25,8 @@ const MapWrapper: Component<PROPS> = props => {
     //
 
     useGeographic();
+
+    const zoom = () => props.zoom;
 
     const [getCoords, setCoords] = createSignal<GeolocationCoordinates | undefined>(props.data?.coords);
 
@@ -57,7 +61,7 @@ const MapWrapper: Component<PROPS> = props => {
             target: mapElement()!,
             view: new View({
                 center: getPoint(),
-                zoom: 8
+                zoom: 14
             }),
             layers: [
                 new MapboxVectorLayer({

@@ -96,25 +96,31 @@ const App: Component<RouteSectionProps> = (props) => {
 
 
 
-
+    const coords = createMemo(() => getCoords())
 
     createEffect(async () => {
         console.log("name", getComponentName())
         console.log("data", await data())
-        console.log("coords", await getCoords())
+        console.log("getCoords", await getCoords())
+        console.log("coords", await coords())
 
        // let op = document.querySelector("output");
-        await getGps(setCoords);
+       if(await getCoords()) {
+           await getGps(setCoords);
+       }
+
     })
 
+
+
     const handleClick = async (e: any) => {
-        if(!await getCoords()) {
+        if(!await getCoords()?.latitude) {
             start();
         }
 
-
+        await getGps(setCoords);
         console.log("handleClick", e)
-        let obj = {companion: e, component: e.component, coords: await getCoords()}
+        let obj = {companion: e, component: e.component, coords: await coords()}
         setComponentName(e.component)
 
 
@@ -124,7 +130,7 @@ const App: Component<RouteSectionProps> = (props) => {
 
     }
 
-    const coords = createMemo(() => getCoords())
+
 
     const data = createMemo(async () => {
         setData(() => props.data as any)
