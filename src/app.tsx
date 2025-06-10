@@ -15,6 +15,7 @@ import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
 import {subCollection} from "~/lib/sub-menu";
 import {ICharacter} from "~/components/character/config";
 import char from "~/lib/character.json";
+import SpecialDetails from "~/components/character/special-details";
 // const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
@@ -64,6 +65,13 @@ const apps = {
     aiCompanion: AiCompanion,
     gallery: GalleryApp,
     map: MapApp,
+    strength: SpecialDetails,
+    perception: SpecialDetails,
+    endurance: SpecialDetails,
+    charisma: SpecialDetails,
+    intelligence: SpecialDetails,
+    agility: SpecialDetails,
+    luck: SpecialDetails,
 }
 
 const pipboyTypes = {
@@ -96,7 +104,7 @@ const App: Component<RouteSectionProps> = (props) => {
         return m?.[0]?.value;
     })
 
-    const [getData, setData] = createSignal<any>(props.data );
+    const [getData, setData] = createSignal<any>(props.data);
 
 
 
@@ -174,7 +182,9 @@ const App: Component<RouteSectionProps> = (props) => {
                                     )}
                                 >
                                     <Dynamic data={{
-                                        coords: coords()
+                                        coords: coords(),
+                                        character: character(),
+                                        name: getComponentName(),
                                     }} component={apps[getComponentName()]}/>
                                 </DrawerContent>
                             </>
