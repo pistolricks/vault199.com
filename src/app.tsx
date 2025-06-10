@@ -13,6 +13,8 @@ import chatBox from "~/static/pipboy/chatbox/chatbox.png";
 import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
 import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
 import {subCollection} from "~/lib/sub-menu";
+import {ICharacter} from "~/components/character/config";
+import char from "~/lib/character.json";
 // const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
@@ -78,6 +80,7 @@ const pipboyTypes = {
 }
 const App: Component<RouteSectionProps> = (props) => {
     const location = useLocation();
+    const character = () => props.data?.['character'] as ICharacter ?? char as ICharacter;
 
     const menuItems = createMemo(() => {
         let m = collection.items.filter(item => item.label === location.pathname) ?? undefined;
@@ -152,7 +155,7 @@ const App: Component<RouteSectionProps> = (props) => {
                         fallback={
                             <>
                                 <ActivatedLayout {...props}>
-                                    <PipBoy menuItems={menuItems()} subMenuItems={subMenuItems()} componentName={getComponentName()} handleFooter={handleClick}>
+                                    <PipBoy character={character()} menuItems={menuItems()} subMenuItems={subMenuItems()} componentName={getComponentName()} handleFooter={handleClick}>
                                         <Suspense>{props.children}</Suspense>
                                     </PipBoy>
                                 </ActivatedLayout>

@@ -3,6 +3,7 @@ import {classNames} from "~/components/navigation";
 import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 import {ICharacter} from "~/components/character/config";
 import CharacterStats from "~/components/character/character-stats";
+import Profile from "~/components/character/profile";
 
 type PROPS = {
     character: ICharacter
@@ -21,11 +22,11 @@ const DetailsPanel: Component<PROPS> = (props) => {
     return (
 
 
-        <div class={"relative w-full h-[90%]"}>
+        <div class={"relative w-full h-[90dvh]"}>
             <CharacterStats init={2} cnd={4} {...character()}
                             class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
-            <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
-                <VaultBoy class={"w-[30%] h-[60%]"}/>
+            <div class={"absolute bottom-0 h-full w-full flex justify-center items-center"}>
+                <Profile {...character()}/>
             </div>
         </div>
 

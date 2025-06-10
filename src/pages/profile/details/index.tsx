@@ -1,12 +1,13 @@
 import {Component} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
 import {MenuItem} from "~/lib/types";
-import ProfilePanel from "~/components/pipboy/panels/profile-panel";
 
 import status from "~/static/app/icons/ui/status.png"
 import special from "~/static/app/icons/ui/special.png"
 import details from "~/static/app/icons/ui/details.png"
 import DetailsPanel from "~/components/pipboy/panels/details-panel";
+import {ICharacter} from "~/components/character/config";
+import char from "~/lib/character.json";
 
 type PROPS = {}
 
@@ -18,9 +19,10 @@ const menuItems: MenuItem[] = [
 
 const DetailsSection: Component<RouteSectionProps> = props => {
 
+    const character = () => props.data?.['character'] as ICharacter ?? char as ICharacter;
 
     return (
-        <DetailsPanel/>
+        <DetailsPanel character={character()}/>
     );
 };
 

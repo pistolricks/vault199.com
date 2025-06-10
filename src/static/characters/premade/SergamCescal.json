@@ -8,6 +8,7 @@
     "isNPC": false,
     "origin": "Survivor",
     "traits": "Gifted",
+    "bio": "",
     "equipmentPack": "",
     "attributes": {
         "STR": 4,

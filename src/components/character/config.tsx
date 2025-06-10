@@ -1,5 +1,5 @@
 interface IPerk {
-    id: number;
+    id: string;
     label: string;
     description: string;
 }
@@ -8,13 +8,17 @@ export type ItemType = 'weapon' | 'usable' | 'wearable' | 'junk' | 'ammo' | 'not
 
 export interface IInventoryItem {
     id: string;
-    time: number;
+    weight: number;
     type: ItemType;
     amount: number;
 }
 
 export interface IInventory {
     [key: string]: IInventoryItem;
+}
+
+export interface IQuickInv {
+    [key: string]: number;
 }
 
 export interface IField {
@@ -44,12 +48,22 @@ export interface IStats {
     criticalChance: number;
     skillPoints: number;
     spentSkillPoints: number;
+    defense: number;
+    initiative: number;
+    maxHealth: number;
+    meleeBonus: number;
 }
 
 export interface ICharacteristic {
     change: number;
     base: number;
     total: number;
+}
+
+export interface ISkill {
+    attribute: "STR" | "PER" | "END" | "CHA" | "INT" | "AGI" | "LCK",
+    rank: number;
+    isTag: boolean;
 }
 
 export type TLimb = 'crippled' | 'fine';
@@ -66,7 +80,19 @@ export interface ILimbs {
 export type TGifts = string[];
 
 export interface ICharacter {
-    uid: string;
+    name: string;
+    user_id: string;
+    difficulty: number;
+    level: number;
+    ap: number;
+    xp: number;
+    initiative: number;
+    health: number;
+    isRobot: boolean;
+    isNPC: boolean;
+    origin: string;
+    occupation: string;
+    traits: string[],
     special: {
         strength: ICharacteristic;
         perception: ICharacteristic;
@@ -77,36 +103,67 @@ export interface ICharacter {
         luck: ICharacteristic;
     };
     skills: {
-        smallGuns: ICharacteristic;
-        bigGuns: ICharacteristic;
-        energyGuns: ICharacteristic;
-        unarmed: ICharacteristic;
-        meleeWeapons: ICharacteristic;
-        medicine: ICharacteristic;
-        sneak: ICharacteristic;
-        lockpick: ICharacteristic;
-        steal: ICharacteristic;
-        traps: ICharacteristic;
-        science: ICharacteristic;
-        repair: ICharacteristic;
-        speech: ICharacteristic;
-        barter: ICharacteristic;
-        survival: ICharacteristic;
+        athletics: ISkill;
+        barter: ISkill;
+        bigGuns: ISkill;
+        energyWeapons: ISkill;
+        explosives: ISkill;
+        lockpick: ISkill;
+        medicine: ISkill;
+        meleeWeapons: ISkill;
+        pilot: ISkill;
+        repair: ISkill;
+        science: ISkill;
+        smallGuns: ISkill;
+        sneak: ISkill;
+        speech: ISkill;
+        survival: ISkill;
+        throwing: ISkill;
+        unarmed: ISkill;
     };
     gifts: TGifts;
     limbs: ILimbs;
     stats: IStats;
     bio: string;
-    inventory: IInventory,
+    inventory: {
+        currency: {
+            caps: number,
+            preWar: number,
+            gold: number,
+            newMoney: number,
+            scrip: number
+        },
+        total: IInventory,
+        gear: {
+            ammo: IQuickInv,
+            "armor": IQuickInv,
+            "clothing": IQuickInv,
+            "foodAndDrink": IQuickInv,
+            "chems": IQuickInv,
+            "otherConsumables": IQuickInv,
+            "weapons": IQuickInv,
+            "booksAndMags": IQuickInv,
+            "other": IQuickInv
+        },
+        mods: {
+            armor: IQuickInv,
+            clothing: IQuickInv,
+            weapon: IQuickInv,
+            robot: IQuickInv
+
+        },
+
+        static?: boolean;
+    },
     perks: IPerk[],
-    static?: boolean;
     notes: string;
 }
 
+
 export const initialCharacteristic = {
     change: 0,
-    base: 5,
-    total: 5,
+    base: 0,
+    total: 0,
 };
 
 
@@ -120,6 +177,19 @@ export const defaultLimbs: ILimbs = {
 };
 export const getInitialCharacter: (() => ICharacter) = () => ({
     uid: '',
+    name: '',
+    user_id: '',
+    difficulty: 0,
+    level: 0,
+    ap: 0,
+    xp: 0,
+    initiative: 0,
+    health: 0,
+    isRobot: false,
+    isNPC: false,
+    origin: '',
+    occupation: '',
+    traits: [],
     special: {
         strength: initialCharacteristic,
         perception: initialCharacteristic,
@@ -130,21 +200,91 @@ export const getInitialCharacter: (() => ICharacter) = () => ({
         luck: initialCharacteristic,
     },
     skills: {
-        smallGuns: initialCharacteristic,
-        bigGuns: initialCharacteristic,
-        energyGuns: initialCharacteristic,
-        unarmed: initialCharacteristic,
-        meleeWeapons: initialCharacteristic,
-        medicine: initialCharacteristic,
-        sneak: initialCharacteristic,
-        lockpick: initialCharacteristic,
-        steal: initialCharacteristic,
-        traps: initialCharacteristic,
-        science: initialCharacteristic,
-        repair: initialCharacteristic,
-        speech: initialCharacteristic,
-        barter: initialCharacteristic,
-        survival: initialCharacteristic,
+        athletics: {
+            attribute: "STR",
+            rank: 2,
+            isTag: false
+        },
+        barter: {
+            attribute: "CHA",
+            rank: 0,
+            isTag: false
+        },
+        bigGuns: {
+            attribute: "END",
+            rank: 4,
+            isTag: false
+        },
+        energyWeapons: {
+            attribute: "PER",
+            rank: 2,
+            isTag: false
+        },
+        explosives: {
+            attribute: "PER",
+            rank: 2,
+            isTag: false
+        },
+        lockpick: {
+            attribute: "PER",
+            rank: 2,
+            isTag: true
+        },
+        medicine: {
+            attribute: "INT",
+            rank: 2,
+            isTag: false
+        },
+        meleeWeapons: {
+            attribute: "STR",
+            rank: 0,
+            isTag: false
+        },
+        pilot: {
+            attribute: "PER",
+            rank: 0,
+            isTag: false
+        },
+        repair: {
+            attribute: "INT",
+            rank: 0,
+            isTag: false
+        },
+        science: {
+            attribute: "INT",
+            rank: 2,
+            isTag: true
+        },
+        smallGuns: {
+            attribute: "AGI",
+            rank: 0,
+            isTag: false
+        },
+        sneak: {
+            attribute: "AGI",
+            rank: 4,
+            isTag: false
+        },
+        speech: {
+            attribute: "CHA",
+            rank: 2,
+            isTag: true
+        },
+        survival: {
+            attribute: "END",
+            rank: 0,
+            isTag: false
+        },
+        throwing: {
+            attribute: "AGI",
+            rank: 0,
+            isTag: false
+        },
+        unarmed: {
+            attribute: "STR",
+            rank: 0,
+            isTag: false
+        }
     },
     stats: {
         level: 0,
@@ -152,7 +292,6 @@ export const getInitialCharacter: (() => ICharacter) = () => ({
         exp: 0,
         carryWeight: 0,
         wounds: '',
-
         maxHealthPoints: 0,
         healthPoints: 0,
         armorClass: initialCharacteristic,
@@ -164,11 +303,58 @@ export const getInitialCharacter: (() => ICharacter) = () => ({
         criticalChance: 0,
         skillPoints: 0,
         spentSkillPoints: 0,
+        defense: 0,
+        initiative: 0,
+        maxHealth: 0,
+        meleeBonus: 0,
     },
     gifts: [],
     limbs: defaultLimbs,
     bio: '',
-    inventory: {},
+    inventory: {
+        currency: {
+            caps: 10,
+            preWar: 0,
+            gold: 0,
+            newMoney: 0,
+            scrip: 0
+        },
+        total: {},
+        gear: {
+            "ammo": {["10mm"]: 9, ["12mm"]: 10},
+            "armor": {["pipboy"]: 1},
+            "clothing": {
+                ["vault_tec_jumpsuit"]: 1,
+                ["vault_tec_canteen"]: 1,
+                ["casual_clothing"]: 1,
+                ["labcoat"]: 1,
+                ["formal_hat"]: 1,
+                ["formal_clothing"]: 1,
+            },
+            "foodAndDrink": {["purified_water"]: 1},
+            "chems": {
+                ["buffout"]: 1,
+                ["mentats"]: 1,
+            },
+            "otherConsumables": {
+                ["stimpak"]: 2,
+            },
+            "weapons": {
+                ["switchblade"]: 1,
+                ["pistol_10mm"]: 1,
+            },
+            "booksAndMags": {},
+            "other": {
+                ["bobbypins"]: 6,
+            },
+        },
+        "mods": {
+            "armor": {},
+            "clothing": {},
+            "weapon": {},
+            "robot": {}
+        }
+    },
     perks: [],
     notes: '',
 });
@@ -333,6 +519,12 @@ export const stats: IField[] = [
         getBase: (s) => 3 + Math.floor(s.en / 2),
     },
     {
+        label: 'IN',
+        full: 'Initiative',
+        field: 'initiative',
+        getBase: (s) => s.pe + s.ag,
+    },
+    {
         label: 'Experience',
         full: 'Experience',
         field: 'exp',
@@ -343,20 +535,20 @@ export const stats: IField[] = [
         field: 'nextLevel',
         getBase: (_, stats) => {
             const lvl = stats.level + 1;
-            return (lvl*(lvl-1)/2) * 1000
+            return (lvl * (lvl - 1) / 2) * 1000
         }
     },
-    // {
-    //   label: 'Carry Weight',
-    //   full: 'Carry Weight',
-    //   field: 'carryWeight',
-    //   getBase: (s) => 25 + (25 * s.st),
-    // },
-    // {
-    //   label: 'Wounds',
-    //   full: 'Wounds',
-    //   field: 'wounds',
-    // },
+    {
+        label: 'Carry Weight',
+        full: 'Carry Weight',
+        field: 'carryWeight',
+        getBase: (s) => 25 + (25 * s.st),
+    },
+    {
+        label: 'Wounds',
+        full: 'Wounds',
+        field: 'wounds',
+    },
 ];
 
 export const subStats: IField[] = [
@@ -384,8 +576,8 @@ export const subStats: IField[] = [
         getBase: (s) => Math.floor(s.en / 3),
     },
     {
-        label: 'СП',
-        full: 'СоПротивление',
+        label: 'R',
+        full: 'Resistance',
         field: 'resistance',
         getBase: (s) => 5 * s.en,
     },
@@ -462,5 +654,5 @@ export const limb: IField[] = [
 ];
 
 export const getConfigByField = (findField: string): IField | undefined => {
-    return [...special, ...skills, ...stats, ...subStats, ...limb].find(({ field }) => field === findField);
+    return [...special, ...skills, ...stats, ...subStats, ...limb].find(({field}) => field === findField);
 };

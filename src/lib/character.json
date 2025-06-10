@@ -1,112 +1,192 @@
 {
-  "name": "",
+  "name": "Chosen One",
+  "user_id": "123e4567-e89b-12d3-a456-426614174000",
+  "difficulty": 1,
   "level": 1,
   "ap": 0,
   "xp": 0,
-  "health": 0,
+  "initiative": 12,
+  "health": 12,
   "isRobot": false,
   "isNPC": false,
-  "origin": "",
-  "traits": "",
+  "origin": "Vault",
+  "occupation": "Resident",
+  "bio": "When the bombs were falling, you or your predecessors were lucky enough to be safely secured in one of the one hundred and twenty-two Vault-Tec facilities, deep underground protected by thick blast doors and layers of rock and concrete. Your family either had enough money to buy their space or were randomly selectedd to enter the vault to be saved from the nuclear devastation above---perhaps only to be condemned to immoral experiments run by Vault-Tec on unwitting participants.",
+  "traits": [
+    "vault-kid",
+    "vats"
+  ],
   "equipmentPack": "",
+  "limbs": {
+    "handL": "fine",
+    "handR": "fine",
+    "head": "fine",
+    "legL": "fine",
+    "legR": "fine",
+    "torso": "fine"
+  },
+  "gifts": [],
+  "notes": "additional tag skill from Vault-Kid trait",
+  "special": {
+    "strength": {
+      "change": 0,
+      "base": 5,
+      "total": 5
+    },
+    "perception": {
+      "change": 0,
+      "base": 6,
+      "total": 6
+    },
+    "endurance": {
+      "change": 0,
+      "base": 6,
+      "total": 6
+    },
+    "charisma": {
+      "change": 0,
+      "base": 5,
+      "total": 5
+    },
+    "intelligence": {
+      "change": 0,
+      "base": 6,
+      "total": 6
+    },
+    "agility": {
+      "change": 0,
+      "base": 6,
+      "total": 6
+    },
+    "luck": {
+      "change": 0,
+      "base": 6,
+      "total": 6
+    }
+  },
   "attributes": {
     "STR": 5,
-    "PER": 5,
-    "END": 5,
+    "PER": 6,
+    "END": 6,
     "CHA": 5,
-    "INT": 5,
-    "AGI": 5,
-    "LCK": 5
+    "INT": 6,
+    "AGI": 6,
+    "LCK": 6
   },
   "skills": {
-    "Athletics": {
+    "athletics": {
       "attribute": "STR",
-      "rank": 0,
-      "isTag": false
+      "rank": 4,
+      "isTag": true
     },
-    "Barter": {
+    "barter": {
       "attribute": "CHA",
       "rank": 0,
       "isTag": false
     },
-    "Big Guns": {
+    "bigGuns": {
       "attribute": "END",
-      "rank": 0,
+      "rank": 4,
       "isTag": false
     },
-    "EnergyWeapons": {
+    "energyWeapons": {
       "attribute": "PER",
-      "rank": 0,
+      "rank": 2,
       "isTag": false
     },
-    "Explosives": {
+    "explosives": {
       "attribute": "PER",
-      "rank": 0,
+      "rank": 2,
       "isTag": false
     },
-    "Lockpick": {
+    "lockpick": {
       "attribute": "PER",
-      "rank": 0,
-      "isTag": false
+      "rank": 2,
+      "isTag": true
     },
-    "Medicine": {
+    "medicine": {
       "attribute": "INT",
-      "rank": 0,
+      "rank": 2,
       "isTag": false
     },
-    "MeleeWeapons": {
+    "meleeWeapons": {
       "attribute": "STR",
       "rank": 0,
       "isTag": false
     },
-    "Pilot": {
+    "pilot": {
       "attribute": "PER",
       "rank": 0,
       "isTag": false
     },
-    "Repair": {
+    "repair": {
       "attribute": "INT",
       "rank": 0,
       "isTag": false
     },
-    "Science": {
+    "science": {
       "attribute": "INT",
-      "rank": 0,
-      "isTag": false
+      "rank": 2,
+      "isTag": true
     },
-    "SmallGuns": {
+    "smallGuns": {
       "attribute": "AGI",
       "rank": 0,
       "isTag": false
     },
-    "Sneak": {
+    "sneak": {
       "attribute": "AGI",
-      "rank": 0,
+      "rank": 4,
       "isTag": false
     },
-    "Speech": {
+    "speech": {
       "attribute": "CHA",
-      "rank": 0,
-      "isTag": false
+      "rank": 2,
+      "isTag": true
     },
-    "Surivival": {
+    "survival": {
       "attribute": "END",
       "rank": 0,
       "isTag": false
     },
-    "Throwing": {
+    "throwing": {
       "attribute": "AGI",
       "rank": 0,
       "isTag": false
     },
-    "Unarmed": {
+    "unarmed": {
       "attribute": "STR",
       "rank": 0,
       "isTag": false
     }
   },
-  "perks": {},
+  "perks": [
+    {
+      "id": "dogmeat",
+      "label": "Dogmeat",
+      "description": "Keen Senses, Attack Dog, Companion"
+    }
+  ],
   "stats": {
+    "level": 1,
+    "hpPerLevel": 0,
+    "exp": 0,
+    "wounds": "",
+    "maxHealthPoints": 12,
+    "healthPoints": 12,
+    "armorClass": {
+      "change": 0,
+      "base": 0,
+      "total": 0
+    },
+    "healingRate": 0,
+    "resistance": 0,
+    "actionPoints": 0,
+    "sequence": 0,
+    "meleeDamage": 0,
+    "criticalChance": 0,
+    "skillPoints": 24,
+    "spentSkillPoints": 24,
     "carryWeight": 200,
     "damageResist": {
       "physical": 0,
@@ -115,28 +195,150 @@
       "poison": 0
     },
     "defense": 1,
-    "initiative": 10,
-    "maxHealth": 10,
+    "initiative": 12,
+    "maxHealth": 12,
     "meleeBonus": 0
   },
   "inventory": {
     "currency": {
-      "caps": 0,
-      "pre-war": 0,
+      "caps": 10,
+      "preWar": 0,
       "gold": 0,
       "newMoney": 0,
       "scrip": 0
     },
+    "total": {
+      "formal_hat": {
+        "id": "formalHat",
+        "type": "wearable",
+        "weight": 1,
+        "amount": 1
+      },
+      "formal_clothing": {
+        "id": "formalClothing",
+        "type": "wearable",
+        "weight": 2,
+        "amount": 1
+      },
+      "casual_clothing": {
+        "id": "casualClothing",
+        "type": "wearable",
+        "weight": 2,
+        "amount": 1
+      },
+      "labcoat": {
+        "id": "labcoat",
+        "type": "wearable",
+        "weight": 2,
+        "amount": 1
+      },
+      "vault_tec_jumpsuit": {
+        "id": "vtJumpsuit",
+        "type": "wearable",
+        "weight": 2,
+        "amount": 1
+      },
+      "vault_tec_canteen": {
+        "id": "vtCanteen",
+        "type": "usable",
+        "weight": 1,
+        "amount": 1
+      },
+      "pipboy": {
+        "id": "pip-boy",
+        "type": "wearable",
+        "weight": 0,
+        "amount": 1
+      },
+      "switchblade": {
+        "id": "switchblade",
+        "type": "weapon",
+        "weight": 1,
+        "amount": 1
+      },
+      "pistol_10mm": {
+        "id": "Pistol10mm",
+        "type": "weapon",
+        "weight": 4,
+        "amount": 1
+      },
+      "ammo_10mm": {
+        "id": "Ammo10mm",
+        "type": "ammo",
+        "weight": 0,
+        "amount": 9
+      },
+      "stimpak": {
+        "id": "stimpak",
+        "type": "usable",
+        "weight": 0,
+        "amount": 2
+      },
+      "purified_water": {
+        "id": "purifiedWater",
+        "type": "usable",
+        "weight": 0,
+        "amount": 1
+      },
+      "buffout": {
+        "id": "buffout",
+        "type": "usable",
+        "weight": 0,
+        "amount": 1
+      },
+      "mentats": {
+        "id": "mentats",
+        "type": "usable",
+        "weight": 0,
+        "amount": 1
+      },
+      "bobbypins": {
+        "id": "bobbypins",
+        "type": "misc",
+        "weight": 0,
+        "amount": 6
+      },
+      "caps": {
+        "id": "caps",
+        "type": "usable",
+        "weight": 0,
+        "amount": 10
+      }
+    },
     "gear": {
-      "ammo": {},
-      "armor": {},
-      "clothing": {},
-      "foodAndDrink": {},
-      "chems": {},
-      "otherConsumables": {},
-      "weapons": {},
+      "ammo": {
+        "10mm": 9,
+        "12mm": 10
+      },
+      "armor": {
+        "pipboy": 1
+      },
+      "clothing": {
+        "vault_tec_jumpsuit": 1,
+        "vault_tec_canteen": 1,
+        "casual_clothing": 1,
+        "labcoat": 1,
+        "formal_hat": 1,
+        "formal_clothing": 1
+      },
+      "foodAndDrink": {
+        "purified_water": 1
+      },
+      "chems": {
+        "buffout": 1,
+        "mentats": 1
+      },
+      "otherConsumables": {
+        "stimpak": 2
+      },
+      "weapons": {
+        "switchblade": 1,
+        "pistol_10mm": 1
+      },
       "booksAndMags": {},
-      "other": {}
+      "other": {
+        "bobbypins": 6
+      }
     },
     "mods": {
       "armor": {},

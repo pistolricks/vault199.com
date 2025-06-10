@@ -5,8 +5,8 @@ const CharacterStats: Component<ICharacter & { class?: string, init: number, cnd
     const className = () => props.class;
 
     const att = () => props.stats?.meleeDamage ?? 0;
-    const def = () => props.stats?.healthPoints ?? 0;
-    const init = () => props.init ?? 0;
+    const def = () => props.stats?.defense ?? 0;
+    const init = () => props.stats?.initiative ?? 0;
     const wg = () => props.stats?.carryWeight ?? 0;
     const inv = () => props.inventory;
     const cnd = () => props.cnd;
@@ -19,11 +19,11 @@ const CharacterStats: Component<ICharacter & { class?: string, init: number, cnd
             <div class={"w-full  flex flex-col"}>
                 <ul class="info-table grid grid-cols-3 gap-1 uppercase">
                     <li class="clear">
-                        <b>att</b>
+                        <b>melee</b>
                         {att()}
                     </li>
                     <li>
-                        <b>def</b>
+                        <b>defense</b>
                         {def()}
                     </li>
                     <li>

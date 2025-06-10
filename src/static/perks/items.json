@@ -2,7 +2,7 @@
   {
     "name": "Armorer",
     "img": "Img/Core - Perks/Armorer.webp",
-    "description": "<p><span class=\"fontstyle0\">Możesz modyfikować pancerz za pomocą modów pancerza.<br /></span></p>\n<p><span class=\"fontstyle0\">Każda ranga tego profitu odblokowuje dodatkową rangę modów: ranga 1 odblokowuje mody rangi 1, ranga 2 odblokowuje mody rangi 2 itd. Za każdym razem, gdy korzystasz z tego profitu, wymagany poziom wzrasta o 4. </span><br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
+    "description": "<p><span class=\"fontstyle0\"><br /></span></p>\n<p><span class=\"fontstyle0\"></span><br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /><br /></p>",
     "rank": {
       "max": 4,
       "levelStart": 1

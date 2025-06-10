@@ -8,10 +8,11 @@ import {useLocation} from "@solidjs/router";
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-routing-menu";
 import styles from "~/components/layouts/activated/style.module.css";
-import {getInitialCharacter} from "~/components/character/config";
+import {getInitialCharacter, ICharacter} from "~/components/character/config";
 import ActivatedHeader from "~/components/layouts/activated/activated-header";
 
 type PROPS = {
+    character?: ICharacter;
     display?: string;
     menuItems?: MenuItem[];
     subMenuItems?: MenuItem[];
@@ -30,6 +31,8 @@ const PipBoy: Component<PROPS> = props => {
     let cursor!: HTMLDivElement;
 
     const location = useLocation();
+
+    const character = () => props.character;
 
     const children = () => props.children;
 
@@ -101,7 +104,7 @@ const PipBoy: Component<PROPS> = props => {
 
                                     </div>
                                 </div>
-                                <ActivatedHeader {...getInitialCharacter()}/>
+                                <ActivatedHeader {...character()}/>
                                 <div
                                     class="absolute top-7 sm:top-9 w-full px-1 grid grid-cols-7 place-items-center uppercase border-b  border-[rgb(var(--main))]">
                                     <span

@@ -5,6 +5,7 @@ import ProfilePanel from "~/components/pipboy/panels/profile-panel";
 import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 import {classNames} from "~/components/navigation";
 import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
+import char from "~/lib/character.json";
 
 
 type PROPS = {}
@@ -15,10 +16,10 @@ type PROPS = {}
 const ProfileSection: Component<RouteSectionProps> = props => {
 
 
-    const character = () => props.data?.['character'] as ICharacter ?? getInitialCharacter();
+    const character = () => props.data?.['character'] as ICharacter ?? char as ICharacter;
 
     createEffect(() => {
-        console.log("initial", getInitialCharacter());
+        console.log("initial", char);
         console.log("field", getConfigByField("endurance"));
     })
 
