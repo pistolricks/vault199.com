@@ -3,6 +3,7 @@ import {RouteSectionProps} from "@solidjs/router";
 import {MenuItem} from "~/lib/types";
 import ProfilePanel from "~/components/pipboy/panels/profile-panel";
 
+
 import status from "~/static/app/icons/ui/status.png"
 import special from "~/static/app/icons/ui/special.png"
 import details from "~/static/app/icons/ui/details.png"

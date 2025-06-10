@@ -1,28 +1,29 @@
-import {Component, createEffect} from "solid-js";
+import {Component} from "solid-js";
 import {classNames} from "~/components/navigation";
 import vaultBoyGif from "~/static/gifs/vaultboy.gif";
-import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
+import {ICharacter} from "~/components/character/config";
+import CharacterStats from "~/components/character/character-stats";
 
-type PROPS = {}
+type PROPS = {
+    character: ICharacter
+}
 
 
-const DetailsPanel: Component<PROPS> = props => {
+const DetailsPanel: Component<PROPS> = (props) => {
 
     let title: HTMLElement;
     let stimpack: HTMLDivElement;
 
 
-    createEffect(() => {
-        console.log("initial", getInitialCharacter());
-        console.log("field", getConfigByField("endurance"));
-    })
+    const character = () => props.character;
 
 
     return (
 
 
         <div class={"relative w-full h-[90%]"}>
-            <CharacterStats init={2} cnd={4} { ...getInitialCharacter()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
+            <CharacterStats init={2} cnd={4} {...character()}
+                            class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
                 <VaultBoy class={"w-[30%] h-[60%]"}/>
             </div>
@@ -64,7 +65,6 @@ const StatsData: Component<ICharacter & { class?: string, init: number, cnd: num
     const inv = () => props.inventory;
     const cnd = () => props.cnd;
     const exp = () => props.stats?.exp ?? 0;
-
 
 
     return (

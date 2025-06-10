@@ -9,6 +9,7 @@ import misc from "~/static/app/icons/ui/misc.png"
 // import status from "~/static/app/icons/ui/status.png";
 import status from "~/static/app/icons/color/vb-health.png"
 import special from "~/static/app/icons/ui/special.png";
+
 import details from "~/static/app/icons/ui/details.png";
 import stats from "~/static/app/icons/apps/apple-app-19.png"
 import items from "~/static/app/icons/fallout/shopping.png"

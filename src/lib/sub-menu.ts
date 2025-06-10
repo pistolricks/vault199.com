@@ -6,7 +6,7 @@ import camera from "~/static/app/icons/color/Camera.png";
 import media from "~/static/app/icons/color/News.png";
 import gallery from "~/static/app/icons/color/Instagram.png";
 import cover from "~/static/pipboy/2000N/app_cover.png";
-
+import bio from "~/static/app/icons/color/Notes.png"
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
 import misc from "~/static/app/icons/ui/misc.png"
