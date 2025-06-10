@@ -12,7 +12,10 @@ import agility from "~/static/special/agility.webp"
 import luck from "~/static/special/luck.webp"
 
 
-type PROPS = {}
+type PROPS = {
+    character: ICharacter
+}
+
 
 
 const SpecialPanel: Component<PROPS> = props => {
@@ -21,17 +24,14 @@ const SpecialPanel: Component<PROPS> = props => {
     let stimpack: HTMLDivElement;
 
 
-    createEffect(() => {
-        console.log("initial", getInitialCharacter());
-        console.log("field", getConfigByField("endurance"));
-    })
+    const character = () => props.character;
 
 
     return (
 
 
         <div class={"relative w-full h-[90%]"}>
-            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
+            <StatsData init={2} cnd={4} { ...character()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
 
             </div>

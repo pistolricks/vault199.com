@@ -2,30 +2,29 @@ import {Component, createEffect} from "solid-js";
 import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
 import HealthBoy from "~/components/vaultboy/health-boy";
 
-type PROPS = {}
-
+type PROPS = {
+    character: ICharacter
+}
 
 const StatusPanel: Component<PROPS> = props => {
 
     let title: HTMLElement;
     let stimpack: HTMLDivElement;
 
+    const character = () => props.character;
+
 
     createEffect(() => {
-        console.log("initial", getInitialCharacter());
-        console.log("field", getConfigByField("endurance"));
+        console.log("character", character())
     })
 
-
     return (
-
-
         <div class={"relative w-full h-[90%]"}>
-            <StatsData init={2} cnd={4} {...getInitialCharacter()}
+            <StatsData init={2} cnd={4} {...character()}
                        class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"absolute top-10 sm:top-0 h-full w-full flex justify-center items-center"}>
 
-                <HealthBoy class={"fill-[rgb(var(--main))]"}/>
+                <HealthBoy limbs={character()?.limbs} class={"fill-[rgb(var(--main))]"}/>
             </div>
         </div>
 

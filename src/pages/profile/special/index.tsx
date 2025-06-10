@@ -1,4 +1,4 @@
-import {Component} from "solid-js";
+import {Component, createEffect} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
 import {MenuItem} from "~/lib/types";
 import ProfilePanel from "~/components/pipboy/panels/profile-panel";
@@ -7,6 +7,7 @@ import status from "~/static/app/icons/ui/status.png"
 import special from "~/static/app/icons/ui/special.png"
 import details from "~/static/app/icons/ui/details.png"
 import SpecialPanel from "~/components/pipboy/panels/special-panel";
+import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
 
 type PROPS = {}
 
@@ -18,9 +19,15 @@ const menuItems: MenuItem[] = [
 
 const SpecialSection: Component<RouteSectionProps> = props => {
 
+    const character = () => props.data?.['character'] as ICharacter ?? getInitialCharacter();
+
+    createEffect(() => {
+        console.log("initial", getInitialCharacter());
+        console.log("field", getConfigByField("endurance"));
+    })
 
     return (
-        <SpecialPanel/>
+        <SpecialPanel character={character()}/>
     );
 };
 

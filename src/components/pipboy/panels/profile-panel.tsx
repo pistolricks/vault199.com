@@ -3,7 +3,9 @@ import {classNames} from "~/components/navigation";
 import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
 
-type PROPS = {}
+type PROPS = {
+    character: ICharacter
+}
 
 
 const ProfilePanel: Component<PROPS> = props => {
@@ -12,17 +14,14 @@ const ProfilePanel: Component<PROPS> = props => {
     let stimpack: HTMLDivElement;
 
 
-    createEffect(() => {
-        console.log("initial", getInitialCharacter());
-        console.log("field", getConfigByField("endurance"));
-    })
+    const character = () => props.character;
 
 
     return (
 
 
         <div class={"relative w-full h-[90%]"}>
-            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
+            <StatsData init={2} cnd={4} { ...character()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"absolute top-10 sm:top-0 h-full w-full flex justify-center items-center"}>
                 <VaultBoy class={"w-[30%] sm:w-[20%] h-[60%]"}/>
             </div>
