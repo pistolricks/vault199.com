@@ -36,7 +36,7 @@ const SpecialDetails: Component<PROPS> = props => {
     })
 
     return (
-        <div class={"border-b border-[rgb(var(--main))] text-[rgb(var(--main))] p-4"}>
+        <div class={"text-[rgb(var(--main))] p-4"}>
 
 
             <img src={gifs[name()]} class={"w-full"} alt={""}/>
