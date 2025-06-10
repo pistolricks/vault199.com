@@ -44,7 +44,7 @@ const SpecialPanel: Component<PROPS> = props => {
             <CharacterStats init={2} cnd={4} {...character()}
                             class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"relative top-10 bottom-10 h-full w-full flex justify-between sm:justify-center sm:gap-x-10 items-center"}>
-                <div class={"relative flex flex-col items-center gap-0.5"}>
+                <div class={"relative flex flex-col items-center gap-0.5 px-2"}>
                     <div class={"relative w-9 h-9"}>
                         <div
                             style={{
