@@ -6,35 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/profile-panel.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/profile-panel.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/special-panel.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/special-panel.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/status-panel.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/panels/status-panel.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/vaultboy/health-boy.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/vaultboy/health-boy.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/special/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/special/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/status/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/status/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/1.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/1.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/10.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/10.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/11.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/11.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/12.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/12.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/13.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/13.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/14.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/14.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/15.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/15.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/16.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/16.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/2.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/2.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/3.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/3.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/4.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/4.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/5.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/5.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/6.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/6.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/7.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/7.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/8.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/8.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/9.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/body/9.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/2.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/2.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/3.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/3.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/4.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/4.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/5.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/5.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/6.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/6.svg" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/7.svg" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/static/app/svgs/health/head/7.svg" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/header/menu.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/header/menu.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/menu.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/menu.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +217,7 @@
       <workItem from="1748993498976" duration="1253000" />
       <workItem from="1748995901026" duration="7801000" />
       <workItem from="1749015129142" duration="1776000" />
-      <workItem from="1749451985391" duration="36837000" />
+      <workItem from="1749451985391" duration="40177000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />

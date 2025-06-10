@@ -17,7 +17,7 @@ const HeaderMenu: Component<PROPS> = props => {
             <A
                 href={props.menus?.[0].href}
                 class={classNames(
-                    "bg-green-950 p-1",
+                    "bg-green-950 p-1.5",
                     "relative",
                     "size-10 md:size-8",
                     location?.pathname.includes(props.menus?.[0].href) ? "brightness-[200%]" : "",
@@ -30,7 +30,7 @@ const HeaderMenu: Component<PROPS> = props => {
             <A
                 href={props.menus?.[1].href}
                 class={classNames(
-                    "bg-green-950",
+                    "bg-green-950 p-1",
                     "relative",
                     "size-10 md:size-8",
                     location?.pathname.includes(props.menus?.[1].href) ? "brightness-[200%]" : "",
@@ -42,7 +42,7 @@ const HeaderMenu: Component<PROPS> = props => {
             <A
                 href={props.menus?.[2].href}
                 class={classNames(
-                    "bg-green-950 p-1.5",
+                    "bg-green-950 p-2",
                     "relative",
                     "size-10 md:size-8",
                     location?.pathname.includes(props.menus?.[2].href) ? "brightness-[200%]" : "",
