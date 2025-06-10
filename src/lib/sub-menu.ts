@@ -1,9 +1,12 @@
 import {createListCollection} from '@ark-ui/solid/collection'
 import contacts from "~/static/app/icons/ui/contacts.png";
+import video from "~/static/app/icons/color/TV.png"
 import map from "~/static/app/icons/fallout/map.png";
-
-import media from "~/static/app/icons/fallout/radio.png";
+import camera from "~/static/app/icons/color/Camera.png";
+import media from "~/static/app/icons/color/News.png";
+import gallery from "~/static/app/icons/color/Instagram.png";
 import cover from "~/static/pipboy/2000N/app_cover.png";
+
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
 import misc from "~/static/app/icons/ui/misc.png"
@@ -101,9 +104,10 @@ export const subCollection = createListCollection({
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: 'media', icon: media, isAlt: true},
-                {name: "media", href: '#', icon: cover},
-                {name: "media", href: '#', icon: cover},
-                {name: "media", href: '#', icon: cover},
+                {name: "camera", href: '#', icon: camera, isAlt: true},
+                {name: "gallery", href: '#', icon: gallery, isAlt: true},
+                {name: "video", href: '#', icon: video, isAlt: true},
+
             ]
         },
 

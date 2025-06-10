@@ -22,7 +22,7 @@ const DetailsPanel: Component<PROPS> = props => {
 
 
         <div class={"relative w-full h-[90%]"}>
-            <StatsData init={2} cnd={4} { ...getInitialCharacter()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
+            <CharacterStats init={2} cnd={4} { ...getInitialCharacter()} class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
             <div class={"absolute top-10 bottom-0 h-full w-full flex justify-center items-center"}>
                 <VaultBoy class={"w-[30%] h-[60%]"}/>
             </div>

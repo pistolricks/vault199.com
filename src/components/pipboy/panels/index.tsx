@@ -44,12 +44,7 @@ const TabContent: Component<PROPS> = props => {
 
     return (
         <div class={"tab-content"}>
-            <ItemsPanel profiles={profiles}/>
-            <ProfilePanel/>
-            <DataTabPanel/>
-            <MiscTabPanel matches={matches} />
-            <MediaPanel/>
-            <ContactsPanel onClick={props.onClick} />
+
         </div>
     );
 };
