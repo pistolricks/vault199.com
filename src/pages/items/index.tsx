@@ -3,7 +3,7 @@ import {RouteSectionProps} from "@solidjs/router";
 import ItemsPanel from "~/components/pipboy/panels/items-panel";
 import {
     MenuItem
-} from "../../../../../../../Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-menu";
+} from "~/components/pipboy/footer/bottom-pipboy-menu";
 
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"

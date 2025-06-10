@@ -4,7 +4,7 @@ import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png"
 import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png"
 import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png"
 import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png"
-import BottomPipboyMenu, {MenuItem} from "../../../../../../../../../Volumes/ssd/home/WebstormProjects/vault199/src/components/pipboy/footer/bottom-pipboy-menu";
+import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import butchAvatar from "~/static/companions/butch/butch.webp"
 import charonAvatar from "~/static/companions/charon/charon.webp"
 import crossAvatar from "~/static/companions/cross/cross.webp"

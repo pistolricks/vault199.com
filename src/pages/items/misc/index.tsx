@@ -34,7 +34,7 @@ const MiscSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <ItemsPanel profiles={profiles}/>
+        <></>
     );
 };
 

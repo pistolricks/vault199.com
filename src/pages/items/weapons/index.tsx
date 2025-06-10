@@ -36,7 +36,7 @@ const WeaponsSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <ItemsPanel profiles={profiles}/>
+      <></>
     );
 };
 

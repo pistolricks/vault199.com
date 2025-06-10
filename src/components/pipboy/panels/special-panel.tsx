@@ -303,49 +303,49 @@ const SpecialPanel: Component<PROPS> = props => {
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-20deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.strength?.change}
+                            {special()?.strength?.change}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.perception?.change}
+                            {special()?.perception?.change}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.endurance?.change}
+                            {special()?.endurance?.change}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.charisma?.change}
+                            {special()?.charisma?.change}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.intelligence?.change}
+                            {special()?.intelligence?.change}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.agility?.change}
+                            {special()?.agility?.change}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
                             class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            +{special()?.luck?.change}
+                            {special()?.luck?.change}
                         </div>
                     </div>
 
