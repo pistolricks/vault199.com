@@ -68,6 +68,13 @@ const pipboyTypes = {
     aiCompanion: chatBox,
     gallery: pbMonitor,
     map: pbMonitor2000,
+    strength: pbMonitor2000,
+    perception: pbMonitor2000,
+    endurance: pbMonitor2000,
+    charisma: pbMonitor2000,
+    intelligence: pbMonitor2000,
+    agility: pbMonitor2000,
+    luck: pbMonitor2000,
 }
 const App: Component<RouteSectionProps> = (props) => {
     const location = useLocation();

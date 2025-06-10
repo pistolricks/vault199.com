@@ -93,7 +93,6 @@ const SpecialPanel: Component<PROPS> = props => {
                                 'background-repeat': "no-repeat",
                                 'background-position': "center",
                                 'background-color': "transparent",
-
                             }}
                             class={"absolute inset-1 z-30 rounded-full flex justify-center items-center"}/>
                         <Cog class={"absolute inset-0 z-30 fill-white stroke-black rotate-[-10deg] size-9"}/>

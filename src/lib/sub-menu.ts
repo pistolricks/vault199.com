@@ -188,13 +188,13 @@ export const subCollection = createListCollection({
         },
         {
             label: '/profile/special', value: [
-                {name: "strength", href: 'strength', icon: strength},
-                {name: "perception", href: 'perception', icon: perception},
-                {name: "endurance", href: 'endurance', icon: endurance},
-                {name: "charisma", href: '/profile/special', icon: charisma},
-                {name: "intelligence", href: 'intelligence', icon: intelligence},
-                {name: "agility", href: 'agility', icon: agility},
-                {name: "luck", href: 'luck', icon: luck},
+                {name: "strength", href: 'strength', icon: strength, isAlt: true},
+                {name: "perception", href: 'perception', icon: perception, isAlt: true},
+                {name: "endurance", href: 'endurance', icon: endurance, isAlt: true},
+                {name: "charisma", href: 'charisma', icon: charisma, isAlt: true},
+                {name: "intelligence", href: 'intelligence', icon: intelligence, isAlt: true},
+                {name: "agility", href: 'agility', icon: agility, isAlt: true},
+                {name: "luck", href: 'luck', icon: luck, isAlt: true},
             ]
         },
         {

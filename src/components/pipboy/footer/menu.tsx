@@ -21,7 +21,8 @@ const FooterMenu: Component<PROPS> = props => {
 
     return (
         <div class={"flex justify-center items-center space-x-0.5"}>
-
+            <Show
+                fallback={
             <button
                 type={"button"}
                 onClick={() => props.onClick({
@@ -32,12 +33,34 @@ const FooterMenu: Component<PROPS> = props => {
                     "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[0].href) ? "brightness-[150%]" : "",
+                   "data-open:brightness-[150%]",
                 )}
             >
                 <img src={props.menus?.[0].icon} class={"size-full "} alt={props.menus?.[0].name}/>
                 <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
             </button>
+                }  when={props.menus?.[0]?.isAlt}>
+
+                <Drawer.Trigger
+                    contextId={"activated-1"}
+                    type={"button"}
+                    onClick={() => props.onClick({
+                        component: props.menus?.[0].href
+                    })
+                    }
+                    class={classNames(
+                        "bg-green-950",
+                        "relative",
+                        "size-10 md:size-8",
+                        "data-open:brightness-[150%]",
+                    )}
+                >
+                    <img src={props.menus?.[0].icon} class={"size-full "} alt={props.menus?.[0].name}/>
+                    <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+                </Drawer.Trigger>
+            </Show>
+            <Show
+                fallback={
             <button
                 type={"button"}
                    onClick={() => props.onClick({
@@ -48,12 +71,34 @@ const FooterMenu: Component<PROPS> = props => {
                     "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[1].href) ? "brightness-[150%]" : "",
+                   "data-open:brightness-[150%]",
                 )}
             >
                 <img src={props.menus?.[1].icon} class={"size-full "} alt={props.menus?.[1].name}/>
                 <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
             </button>
+                }  when={props.menus?.[1]?.isAlt}>
+
+                <Drawer.Trigger
+                    contextId={"activated-1"}
+                    type={"button"}
+                    onClick={() => props.onClick({
+                        component: props.menus?.[1].href
+                    })
+                    }
+                    class={classNames(
+                        "bg-green-950",
+                        "relative",
+                        "size-10 md:size-8",
+                        "data-open:brightness-[150%]",
+                    )}
+                >
+                    <img src={props.menus?.[1].icon} class={"size-full "} alt={props.menus?.[1].name}/>
+                    <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+                </Drawer.Trigger>
+            </Show>
+            <Show
+                fallback={
             <button
                 type={"button"}
                    onClick={() => props.onClick({
@@ -64,12 +109,32 @@ const FooterMenu: Component<PROPS> = props => {
                     "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[2].href) ? "brightness-[150%]" : "",
+                   "data-open:brightness-[150%]",
                 )}
             >
                 <img src={props.menus?.[2].icon} class={"size-full "} alt={props.menus?.[2].name}/>
                 <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
             </button>
+                }  when={props.menus?.[2]?.isAlt}>
+
+                <Drawer.Trigger
+                    contextId={"activated-1"}
+                    type={"button"}
+                    onClick={() => props.onClick({
+                        component: props.menus?.[2].href
+                    })
+                    }
+                    class={classNames(
+                        "bg-green-950",
+                        "relative",
+                        "size-10 md:size-8",
+                        "data-open:brightness-[150%]",
+                    )}
+                >
+                    <img src={props.menus?.[2].icon} class={"size-full "} alt={props.menus?.[2].name}/>
+                    <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+                </Drawer.Trigger>
+            </Show>
             <Show
                 fallback={
                     <button
@@ -82,15 +147,14 @@ const FooterMenu: Component<PROPS> = props => {
                             "bg-green-950",
                             "relative",
                             "size-10 md:size-8",
-                            location?.pathname.includes(props.menus?.[3].href) ? "brightness-[150%]" : "",
+                           "data-open:brightness-[150%]",
                         )}
                     >
                         <img src={props.menus?.[3].icon} class={"size-full "} alt={props.menus?.[3].name}/>
                         <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
                     </button>
 
-                }
-                when={props.menus?.[3]?.isAlt}>
+                } when={props.menus?.[3]?.isAlt}>
                 <Drawer.Trigger
                     contextId={"activated-1"}
                     type={"button"}
@@ -110,7 +174,8 @@ const FooterMenu: Component<PROPS> = props => {
                 </Drawer.Trigger>
 
             </Show>
-
+            <Show
+                fallback={
             <button
                 type={"button"}
                    onClick={() => props.onClick({
@@ -121,12 +186,32 @@ const FooterMenu: Component<PROPS> = props => {
                     "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[4].href) ? "brightness-[150%]" : "",
+                   "data-open:brightness-[150%]",
                 )}>
                 <img src={props.menus?.[4].icon} class={"size-full "} alt={props.menus?.[4].name}/>
                 <img src={cover} class={"rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
             </button>
+                } when={props.menus?.[4]?.isAlt}>
+                <Drawer.Trigger
+                    contextId={"activated-1"}
+                    type={"button"}
+                    onClick={() => props.onClick({
+                        component: props.menus?.[4].href
+                    })
+                    }
+                    class={classNames(
+                        "bg-green-950",
+                        "relative",
+                        "size-10 md:size-8",
+                        "data-open:brightness-[150%]",
+                    )}
+                >
+                    <img src={props.menus?.[4].icon} class={"size-full "} alt={props.menus?.[4].name}/>
+                    <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+                </Drawer.Trigger>
 
+            </Show>
+            <Show fallback={
             <button
                 type={"button"}
                    onClick={() => props.onClick({
@@ -137,12 +222,32 @@ const FooterMenu: Component<PROPS> = props => {
                     "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[5].href) ? "brightness-[150%]" : "",
+                   "data-open:brightness-[150%]",
                 )}
             >
                 <img src={props.menus?.[5].icon} class={"size-full "} alt={props.menus?.[5].name}/>
                 <img src={cover} class={"rotate-45 absolute inset-0 w-1/2 h-full"} alt={"cover"}/>
             </button>
+            } when={props.menus?.[5]?.isAlt}>
+                <Drawer.Trigger
+                    contextId={"activated-1"}
+                    type={"button"}
+                    onClick={() => props.onClick({
+                        component: props.menus?.[5].href
+                    })
+                    }
+                    class={classNames(
+                        "bg-green-950",
+                        "relative",
+                        "size-10 md:size-8",
+                        "data-open:brightness-[150%]",
+                    )}
+                >
+                    <img src={props.menus?.[5].icon} class={"size-full "} alt={props.menus?.[5].name}/>
+                    <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+                </Drawer.Trigger>
+            </Show>
+            <Show fallback={
             <button
                 type={"button"}
                 onClick={() => props.onClick({
@@ -153,12 +258,32 @@ const FooterMenu: Component<PROPS> = props => {
                     "bg-green-950",
                     "relative",
                     "size-10 md:size-8",
-                    location?.pathname.includes(props.menus?.[6].href) ? "brightness-[150%]" : "",
+                   "data-open:brightness-[150%]",
                 )}
             >
                 <img src={props.menus?.[6].icon} class={"size-full "} alt={props.menus?.[6].name}/>
                 <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
             </button>
+            } when={props.menus?.[6]?.isAlt}>
+                <Drawer.Trigger
+                    contextId={"activated-1"}
+                    type={"button"}
+                    onClick={() => props.onClick({
+                        component: props.menus?.[6].href
+                    })
+                    }
+                    class={classNames(
+                        "bg-green-950",
+                        "relative",
+                        "size-10 md:size-8",
+                        "data-open:brightness-[150%]",
+                    )}
+                >
+                    <img src={props.menus?.[6].icon} class={"size-full "} alt={props.menus?.[6].name}/>
+                    <img src={cover} class={"rotate-45 absolute top-0 right-0 w-2/3 h-full"} alt={"cover"}/>
+                </Drawer.Trigger>
+
+            </Show>
         </div>
     );
 };
