@@ -217,7 +217,7 @@
       <workItem from="1748995901026" duration="7801000" />
       <workItem from="1749015129142" duration="1776000" />
       <workItem from="1749451985391" duration="42027000" />
-      <workItem from="1749528692980" duration="25420000" />
+      <workItem from="1749528692980" duration="26708000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />

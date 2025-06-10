@@ -7,6 +7,12 @@ import intelligenceGif from "~/static/gifs/special/intelligence.gif"
 import luckGif from "~/static/gifs/special/luck.gif"
 import perceptionGif from "~/static/gifs/special/perception.gif"
 import strengthGif from "~/static/gifs/special/strength.gif"
+import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
+import left from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
+import mail from "~/static/app/icons/bottom_bar/apple-app-alt-28.png";
+import contacts from "~/static/app/icons/bottom_bar/apple-app-alt-25.png";
+import call from "~/static/app/icons/bottom_bar/apple-app-alt-3.png";
+import right from "~/static/app/icons/bottom_bar/apple-app-alt-26.png";
 
 type PROPS = {
     data: {
@@ -15,20 +21,38 @@ type PROPS = {
     }
 };
 
+const menuItems: MenuItem[] = [
+    {name: "left", icon: left},
+    {name: "mail", icon: mail},
+    {name: "center", icon: contacts},
+    {name: "call", icon: call},
+    {name: "right", icon: right},
+]
+
+const gifs = {
+    agility: agilityGif,
+    charisma: charismaGif,
+    endurance: enduranceGif,
+    intelligence: intelligenceGif,
+    luck: luckGif,
+    perception: perceptionGif,
+    strength: strengthGif,
+}
+
 const SpecialDetails: Component<PROPS> = props => {
 
     const name = () => props.data.name;
     const character = () => props.data.character;
 
-    const gifs = {
-        agility: agilityGif,
-        charisma: charismaGif,
-        endurance: enduranceGif,
-        intelligence: intelligenceGif,
-        luck: luckGif,
-        perception: perceptionGif,
-        strength: strengthGif,
+
+
+
+    const handleCommunications = (app: string) => {
+        console.log(app)
+
     }
+
+
 
     createEffect(() => {
         console.log(character(), "character")
@@ -50,10 +74,8 @@ const SpecialDetails: Component<PROPS> = props => {
                     </li>
 
                     <li>
-                        <b>CND</b>{" "}
-                        <span class="condition">
-          <span class="fill" style="width: 88%;"></span>
-        </span>
+                        <b>RANK</b>
+                        {character().special?.[name()]?.total}
                     </li>
                 </ul>
                 <p class="extra"
@@ -61,7 +83,7 @@ const SpecialDetails: Component<PROPS> = props => {
 
                 </p>
             </div>
-
+            <BottomPipboyMenu menuItems={menuItems} onClick={handleCommunications} appName={""}/>
         </div>
 
     );
