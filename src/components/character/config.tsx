@@ -105,8 +105,8 @@ export interface ICharacter {
 
 export const initialCharacteristic = {
     change: 0,
-    base: 0,
-    total: 0,
+    base: 5,
+    total: 5,
 };
 
 
