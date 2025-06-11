@@ -85,7 +85,7 @@ const MapWrapper: Component<PROPS> = props => {
         <div ref={setMapElement}
              class={"border-2 border-black"}
              style={{
-                 height: "85.58dvh"
+                 height: '100%'
              }} id="map"></div>
     );
 };
