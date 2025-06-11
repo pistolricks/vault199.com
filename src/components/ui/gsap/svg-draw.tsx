@@ -6,6 +6,8 @@ import {DrawSVGPlugin} from "gsap/DrawSVGPlugin";
 
 
 type PROPS = {
+    width?: string,
+    height?: string,
     class?: string;
     children?: JSX.Element[] | JSX.Element;
 }
@@ -37,6 +39,8 @@ const SvgDraw: Component<PROPS> = (props) => {
     })
 
     const className = () => props.class;
+    const width = () => props.width ?? '100%';
+    const height = () => props.height ?? '100%';
 
     return (
         <>
@@ -46,7 +50,7 @@ const SvgDraw: Component<PROPS> = (props) => {
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px"
                 class={`fill-transparent ${className()}`}
-                viewBox="0 0 575.43 720" style="">
+                viewBox="0 0 575.43 720" width={width()} height={height()}>
 
                 {children()}
 

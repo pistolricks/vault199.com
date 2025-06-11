@@ -1,6 +1,6 @@
-import {Component, createMemo, createSignal, For} from "solid-js";
+import {Component, createEffect, createMemo, createSignal, For, Setter} from "solid-js";
 import AudioPlayer from 'solid-audio-player'
-import {createListCollection} from "@ark-ui/solid";
+import {createListCollection, ListCollection} from "@ark-ui/solid";
 import track1 from "~/static/sounds/radio/songs/A Kiss to Build a Dream On - Louis Armstrong.mp3"
 import track2 from "~/static/sounds/radio/songs/A Wonderful Guy - Diamond City Radio - Fallout 4.mp3"
 import track3 from "~/static/sounds/radio/songs/Accentuate the Positive - Bing Crosby - Fallout 4.mp3"
@@ -24,8 +24,13 @@ import play from "~/static/sounds/icons/play_button.png"
 import previous from "~/static/sounds/icons/previous_song.png"
 import next from "~/static/sounds/icons/next_song.png"
 import pause from "~/static/sounds/icons/pause_button.png"
+import {classNames} from "~/components/navigation";
 
-type PROPS = {}
+type PROPS = {
+    playlist?: ListCollection<any>;
+    setPlayer?: Setter<HTMLAudioElement>
+    class?: string;
+}
 
 const customIcons = {
     play: play,
@@ -38,8 +43,9 @@ const customIcons = {
 
 const FalloutAudioPlayer: Component<PROPS> = props => {
 
-    let ref!: HTMLAudioElement;
+    let player!: HTMLAudioElement;
 
+    const className = () => props.class;
 
     const collection = createListCollection({
         items: [
@@ -79,53 +85,72 @@ const FalloutAudioPlayer: Component<PROPS> = props => {
 
     const track = createMemo(() => getTrack())
 
+
+    createEffect(() => {
+        if(props.setPlayer)props.setPlayer(player)
+    })
+
     return (
-        <div style={{
-            "--sap_theme-color": '#ffd52c',
-            "--sap_background-color": 'rgba(var(--main), 0.25)',
-            "--sap_bar-color": '#00dd00',
-            "--sap_time-color": '#ffd52c',
-            "--sap_font-family": 'inherit',
-        }}>
+        <div class={className()}>
+            <div style={{
+                "--sap_theme-color": '#ffd52c',
+                "--sap_background-color": 'rgba(var(--main), 0.25)',
+                "--sap_bar-color": '#00dd00',
+                "--sap_time-color": '#ffd52c',
+                "--sap_font-family": 'inherit',
+            }}
+                 class={"relative w-full px-2 h-full"}
+            >
 
 
-            <AudioPlayer
-                ref={ref}
-                className={"rounded-lg"}
-                showSkipControls
-                showJumpControls={false}
-                customAdditionalControls={[]}
+                <AudioPlayer
+                    ref={player}
+                    className={classNames(
+                        "flex justify-center items-center w-full",
+                        "rounded-lg")}
+                    showSkipControls
+                    showFilledVolume={false}
+                    showFilledProgress={false}
+                    showJumpControls={false}
+                    customControlsSection={['MAIN_CONTROLS']}
+                    customAdditionalControls={[]}
 
-                src={track()}
-                onEnded={handleNext}
-                onPlay={e => console.log('onPlay')}
-                onClickNext={handleNext}
-                onClickPrevious={handlePrev}
-                layout={"horizontal-reverse"}
-            />
-            <div class="pip-body mt-12 sm:mt-4">
-                <ul class="options h-[40dvh] overflow-y-auto">
-                    <For each={collection.items}>
-                        {(item, i) => (
+                    src={track()}
+                    onEnded={handleNext}
+                    onPlay={e => console.log('onPlay')}
+                    onClickNext={handleNext}
+                    onClickPrevious={handlePrev}
+                    customProgressBarSection={[]}
+                    layout={"horizontal-reverse"}
+                />
 
-                            <li>
-                                <input
-                                    type="radio"
-                                    id={`audio-${i()}`}
-                                    name="audio-tape"
-                                    value={item.value}
-                                    onClick={() => handleNewTrack(item)}
-                                    checked={track() === item.value}
-                                />
+                {/*
+                <div
+                    class="pip-body mt-4">
+                    <ul class="options w-full h-[40dvh] overflow-y-auto">
+                        <For each={collection.items}>
+                            {(item, i) => (
 
-                                <label for={`audio-${i()}`} class={" w-full"}>{item.label}</label>
+                                <li>
+                                    <input
+                                        type="radio"
+                                        id={`audio-${i()}`}
+                                        name="audio-tape"
+                                        value={item.value}
+                                        onClick={() => handleNewTrack(item)}
+                                        checked={track() === item.value}
+                                    />
 
-                            </li>
+                                    <label for={`audio-${i()}`} class={" w-full"}>{item.label}</label>
 
-                        )}
-                    </For>
+                                </li>
 
-                </ul>
+                            )}
+                        </For>
+
+                    </ul>
+                </div>
+                */}
             </div>
         </div>
     );

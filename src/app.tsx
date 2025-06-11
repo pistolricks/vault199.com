@@ -16,6 +16,8 @@ import {subCollection} from "~/lib/sub-menu";
 import {ICharacter} from "~/components/character/config";
 import char from "~/lib/character.json";
 import SpecialDetails from "~/components/character/special-details";
+import {MenuItem} from "~/lib/types";
+import FalloutAudioPlayer from "~/components/ui/audio";
 // const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
@@ -76,7 +78,7 @@ const apps = {
 
 const pipboyTypes = {
     aiCompanion: chatBox,
-    gallery: pbMonitor,
+    gallery: pbMonitor2000,
     map: pbMonitor2000,
     strength: pbMonitor2000,
     perception: pbMonitor2000,
@@ -89,6 +91,8 @@ const pipboyTypes = {
 const App: Component<RouteSectionProps> = (props) => {
     const location = useLocation();
     const character = () => props.data?.['character'] as ICharacter ?? char as ICharacter;
+
+    const [getIsAlt, setIsAlt] = createSignal<boolean>(undefined)
 
     const menuItems = createMemo(() => {
         let m = collection.items.filter(item => item.label === location.pathname) ?? undefined;
@@ -106,18 +110,16 @@ const App: Component<RouteSectionProps> = (props) => {
 
     const [getData, setData] = createSignal<any>(props.data);
 
-
-
     const [getCompanion, setCompanion] = createSignal<any>();
-    const [getComponentName, setComponentName] = createSignal<string>("map")
+    const [getComponent, setComponent] = createSignal<string>("")
+    const [getDrawerComponent, setDrawerComponent] = createSignal<string>("map")
     const [getCoords, setCoords] = createSignal(null)
-
-
 
     const coords = createMemo(() => getCoords())
 
     createEffect(async () => {
-        console.log("name", getComponentName())
+        console.log("getDrawerComponent", getDrawerComponent())
+        console.log("getComponent", getComponent())
         console.log("data", await data())
         console.log("getCoords", await getCoords())
         console.log("coords", await coords())
@@ -128,20 +130,20 @@ const App: Component<RouteSectionProps> = (props) => {
        if(await getCoords()) {
            await getGps(setCoords);
        }
-
     })
 
 
 
-    const handleClick = async (e: any) => {
+    const handleClick = async (e: MenuItem) => {
         if(!await getCoords()?.latitude) {
             start();
         }
 
         await getGps(setCoords);
         console.log("handleClick", e)
-        let obj = {companion: e, component: e.component, coords: await coords()}
-        setComponentName(e.component)
+        let obj = {companion: e, component: e.href, coords: await coords()}
+
+        e.isAlt ?  setDrawerComponent(e.href) : setComponent(e.href)
 
 
         console.log("obj", obj)
@@ -165,15 +167,17 @@ const App: Component<RouteSectionProps> = (props) => {
                         fallback={
                             <>
                                 <ActivatedLayout {...props}>
-                                    <PipBoy character={character()} menuItems={menuItems()} subMenuItems={subMenuItems()} componentName={getComponentName()} handleFooter={handleClick}>
+                                    <PipBoy character={character()} menuItems={menuItems()} subMenuItems={subMenuItems()} componentName={getDrawerComponent()} handleFooter={handleClick}>
+                                        <FalloutAudioPlayer class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
                                         <Suspense>{props.children}</Suspense>
+
                                     </PipBoy>
                                 </ActivatedLayout>
                                 <DrawerContent
                                     side={"bottom"}
                                     contextId={"activated-1"}
                                     style={{
-                                        'background-image': 'url(' + pipboyTypes[getComponentName()] + ')',
+                                        'background-image': 'url(' + pipboyTypes[getDrawerComponent()] + ')',
                                         'background-size': '100% 92%',
                                         'background-repeat': 'no-repeat',
                                         'background-position': 'top',
@@ -186,8 +190,8 @@ const App: Component<RouteSectionProps> = (props) => {
                                     <Dynamic data={{
                                         coords: coords(),
                                         character: character(),
-                                        name: getComponentName(),
-                                    }} component={apps[getComponentName()]}/>
+                                        name: getDrawerComponent(),
+                                    }} component={apps[getDrawerComponent()]}/>
                                 </DrawerContent>
                             </>
                         }

@@ -103,10 +103,10 @@ export const subCollection = createListCollection({
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
                 {name: "media", href: '#', icon: cover},
-                {name: "media", href: 'media', icon: media, isAlt: true},
-                {name: "camera", href: '#', icon: camera, isAlt: true},
-                {name: "gallery", href: '#', icon: gallery, isAlt: true},
-                {name: "video", href: '#', icon: video, isAlt: true},
+                {name: "audio", href: 'audio', icon: media, isAlt: false},
+                {name: "camera", href: 'camera', icon: camera, isAlt: false},
+                {name: "gallery", href: 'gallery', icon: gallery, isAlt: true},
+                {name: "video", href: 'video', icon: video, isAlt: true},
 
             ]
         },

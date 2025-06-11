@@ -43,8 +43,8 @@ const SpecialPanel: Component<PROPS> = props => {
         <div class={"relative w-full h-[90%]"}>
             <CharacterStats init={2} cnd={4} {...character()}
                             class={"absolute top-9 px-1 w-full flex justify-center items-center"}/>
-            <div class={"relative top-10 bottom-10 h-full w-full flex justify-between sm:justify-center sm:gap-x-10 items-center"}>
-                <div class={"relative flex flex-col items-center gap-0.5 px-2"}>
+            <div class={"relative top-10 bottom-10 h-full w-full px-2 flex justify-between sm:justify-center sm:gap-x-10 items-center"}>
+                <div class={"relative flex flex-col items-center p-2 gap-0.5 border-l border-b border-t border-green-500"}>
                     <div class={"relative w-9 h-9"}>
                         <div
                             style={{
@@ -141,7 +141,7 @@ const SpecialPanel: Component<PROPS> = props => {
 
                     </div>
                 </div>
-                <div class={"relative -mt-[6px] sm:-mt-[20px] flex flex-col items-center gap-0.5"}>
+                <div class={"relative flex flex-col p-2 items-center gap-0.5 border-t border-b border-green-500"}>
 
                     <div
                         style={{
@@ -247,111 +247,9 @@ const SpecialPanel: Component<PROPS> = props => {
                         </div>
                     </div>
                 </div>
-                <div class={"relative -mt-[6px] sm:-mt-[20px] flex flex-col items-center gap-0.5"}>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-20deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.strength?.base}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.perception?.base}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.endurance?.base}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.charisma?.base}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.intelligence?.base}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.agility?.base}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.luck?.base}
-                        </div>
-                    </div>
-                </div>
-                <div class={"relative -mt-[6px] sm:-mt-[20px] flex flex-col items-center gap-0.5"}>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-20deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.strength?.change}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.perception?.change}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.endurance?.change}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.charisma?.change}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.intelligence?.change}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.agility?.change}
-                        </div>
-                    </div>
-                    <div class={"relative w-9 h-9"}>
-                        <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
-                        <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
-                            {special()?.luck?.change}
-                        </div>
-                    </div>
 
-                </div>
-                <div class={"relative -mt-[6px] sm:-mt-[20px] flex flex-col items-center gap-0.5"}>
 
+                <div class={"relative flex flex-col items-center p-2 gap-0.5 border-t border-b border-r border-green-500"}>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-20deg] size-9"}/>
                         <div
