@@ -101,9 +101,7 @@ const PipBoy: Component<PROPS> = props => {
 
             </div>
             <BottomPipboyRoutingMenu menuItems={menuItems} subMenuItems={props.subMenuItems} componentName={props.componentName} handleFooter={props.handleFooter} />
-
         </ArkTabs.Root>
-
     );
 };
 
