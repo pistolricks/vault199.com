@@ -62,9 +62,9 @@ const SpecialDetails: Component<PROPS> = props => {
     return (
         <div class={"text-[rgb(var(--main))] p-4"}>
 
-
-            <img src={gifs[name()]} class={"w-full"} alt={""}/>
-
+            <div class={"flex justify-center items-center"}>
+            <img src={gifs[name()]} class={"size-1/2 aspect-square"} alt={""}/>
+            </div>
             <div>
                 <ul class="info-table">
                     <li class="vboy-wrap"></li>
