@@ -17,8 +17,10 @@ import {ICharacter} from "~/components/character/config";
 import char from "~/lib/character.json";
 import SpecialDetails from "~/components/character/special-details";
 import {MenuItem} from "~/lib/types";
-import FalloutAudioPlayer from "~/components/ui/audio";
-// const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
+import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
+import {Contact} from "~/components/lists/contact-list";
+
+const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
 const MapApp = lazy(() => import("~/components/pipboy/apps/map-app"));
@@ -67,6 +69,8 @@ const apps = {
     aiCompanion: AiCompanion,
     gallery: GalleryApp,
     map: MapApp,
+    audio: FalloutAudioPlayer,
+    contacts: CommunicationsApp,
     strength: SpecialDetails,
     perception: SpecialDetails,
     endurance: SpecialDetails,
@@ -78,6 +82,7 @@ const apps = {
 
 const pipboyTypes = {
     aiCompanion: chatBox,
+    contacts: pbMonitor2000,
     gallery: pbMonitor2000,
     map: pbMonitor2000,
     strength: pbMonitor2000,
@@ -124,34 +129,36 @@ const App: Component<RouteSectionProps> = (props) => {
         console.log("getCoords", await getCoords())
         console.log("coords", await coords())
 
-       // let el = document.querySelector("output");
-       //  console.log("op", JSON.stringify(el))
+        // let el = document.querySelector("output");
+        //  console.log("op", JSON.stringify(el))
 
-       if(await getCoords()) {
-           await getGps(setCoords);
-       }
+        if (await getCoords()) {
+            await getGps(setCoords);
+        }
     })
 
 
-
     const handleClick = async (e: MenuItem) => {
-        if(!await getCoords()?.latitude) {
+        if (!await getCoords()?.latitude) {
             start();
         }
 
         await getGps(setCoords);
         console.log("handleClick", e)
-        let obj = {companion: e, component: e.href, coords: await coords()}
+        let obj = {companion: e?.data, component: e.href, coords: await coords()}
 
-        e.isAlt ?  setDrawerComponent(e.href) : setComponent(e.href)
+        e.isAlt ? setDrawerComponent(e.href) : setComponent(e.href)
 
 
         console.log("obj", obj)
         let data = getData();
-        setData({ data: {...data, obj}})
+        setData({data: {...data, obj}})
 
     }
 
+    const handleContactClick = (e: Contact) => {
+
+    }
 
 
     const data = createMemo(async () => {
@@ -167,8 +174,12 @@ const App: Component<RouteSectionProps> = (props) => {
                         fallback={
                             <>
                                 <ActivatedLayout {...props}>
-                                    <PipBoy character={character()} menuItems={menuItems()} subMenuItems={subMenuItems()} componentName={getDrawerComponent()} handleFooter={handleClick}>
+                                    <PipBoy character={character()} menuItems={menuItems()}
+                                            subMenuItems={subMenuItems()} componentName={getDrawerComponent()}
+                                            handleFooter={handleClick}>
                                         <FalloutAudioPlayer class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
+
+
                                         <Suspense>{props.children}</Suspense>
 
                                     </PipBoy>
@@ -187,11 +198,15 @@ const App: Component<RouteSectionProps> = (props) => {
                                         'w-screen sm:max-w-xs',
                                     )}
                                 >
-                                    <Dynamic data={{
-                                        coords: coords(),
-                                        character: character(),
-                                        name: getDrawerComponent(),
-                                    }} component={apps[getDrawerComponent()]}/>
+                                    <Dynamic
+                                        data={{
+                                            coords: coords(),
+                                            character: character(),
+                                            name: getDrawerComponent(),
+                                        }}
+                                        onClick={handleClick}
+                                        component={apps[getDrawerComponent()]}
+                                    />
                                 </DrawerContent>
                             </>
                         }

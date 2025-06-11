@@ -121,7 +121,7 @@ export const companions: Contact[] = [
 const CommunicationsApp: Component<PROPS> = props => {
 
 
-    const [getComm, setComm] = createSignal("")
+    const [getComm, setComm] = createSignal("contacts")
 
 
     const menuItems: MenuItem[] = [
@@ -147,11 +147,11 @@ const CommunicationsApp: Component<PROPS> = props => {
 
 
             <Show when={getComm() === "contacts"}>
-                <div class={"flex flex-col justify-center items-center overflow-y-auto h-[80dvh] w-[80%]"}>
+                <div class={"flex flex-col justify-center items-center h-[80dvh] w-[80%]"}>
 
-                    <ScreenLayout height={"76dvh"}>
+                    <ScreenLayout height={"78dvh"}>
 
-                        <ContactList onClick={props.onClick} height={"76dvh"} list={companions}/>
+                        <ContactList onClick={props.onClick} height={"78dvh"} list={companions}/>
 
                     </ScreenLayout>
                 </div>

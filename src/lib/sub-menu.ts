@@ -81,7 +81,7 @@ export const subCollection = createListCollection({
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
-                {name: "contacts", href: '#', icon: cover},
+                {name: "contacts", href: 'contacts', icon: contacts, isAlt: true},
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
