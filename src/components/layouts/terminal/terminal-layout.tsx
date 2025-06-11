@@ -1,23 +1,21 @@
 import {Component, Show} from "solid-js";
 import {RouteSectionProps, useIsRouting} from "@solidjs/router";
 import TerminalHeader from "~/components/layouts/terminal/terminal-header";
-import TerminalNavigation from "~/components/layouts/terminal/terminal-navigation";
 import styles from "./style.module.css"
 import PleaseStandBy from "~/static/banners/please-stand-by.jpg"
 import PipBoy from "~/components/pipboy";
 import pbMonitor3000 from "~/static/pipboy/3000N/pipboy-3000ND-monitor.png";
-import contacts from "~/static/app/icons/ui/contacts.png";
 import login from "~/static/app/icons/fallout/tech.png";
-import cover from "~/static/pipboy/2000N/app_cover.png";
+import cover from "~/static/app/icons/apps/blank.png";
 
 const TerminalLayout: Component<RouteSectionProps> = props => {
 
-const isRouting = useIsRouting();
+    const isRouting = useIsRouting();
 
     const menu = [
-        {name: "contacts", href: '/login', icon: login},
-        {name: "login", href: '/', icon: login},
-        {name: "media", href: '/dashboard', icon: login},
+        {name: "contacts", href: '/login', icon: login, class: 'p-1'},
+        {name: "login", href: '/', icon: login, class: 'p-1'},
+        {name: "media", href: '/dashboard', icon: login, class: 'p-1'},
     ]
 
     const subMenu = [
@@ -57,9 +55,9 @@ const isRouting = useIsRouting();
                         }
                         when={!isRouting()}>
                         <PipBoy menuItems={menu} subMenuItems={subMenu}>
-                        <TerminalHeader {...props}/>
+                            <TerminalHeader {...props}/>
 
-                        {props.children}
+                            {props.children}
                         </PipBoy>
                     </Show>
                 </div>

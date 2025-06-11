@@ -98,7 +98,7 @@
     width: 100%;
     height: 100%;
     font-size: 15px;
-    cursor: none;
+
 }
 
 h1,
@@ -168,7 +168,6 @@ strong {
 }
 
 .frame * {
-    cursor: none !important;
     font-weight: normal;
 }
 
@@ -777,43 +776,6 @@ a:hover {
     font-size: 14px;
 }
 
-.cursor {
-    position: fixed;
-    margin-top: -20px;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.cursor::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.cursor.cursor-hidden::before {
-    background-image: unset;
-}
-
-.cursor.cursor-default::before {
-    background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png");
-    -webkit-filter: brightness(0.8);
-    filter: brightness(0.8);
-}
-
-.cursor.cursor-input::before {
-    background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953792/nv-cur-text_jidfto.png");
-    -webkit-filter: brightness(0.8);
-    filter: brightness(0.8);
-}
-
-.cursor.cursor-active::before {
-    background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png");
-    -webkit-filter: brightness(1.15) saturate(1.15);
-    filter: brightness(1.15) saturate(1.15);
-}
 
 .fade-a {
     animation: fade-swap 8s infinite;
@@ -905,9 +867,7 @@ a:hover {
 @media only screen and (max-width: 767px) {
 
 
-    .cursor {
-        display: none;
-    }
+
 
     .pipboy > .tab-content > .tab-pane {
         padding-left: 0;
@@ -1036,11 +996,7 @@ a:hover {
         bottom: 16px;
     }
 
-    .cursor.cursor-active::before {
-        background-image: url("https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png");
-        -webkit-filter: brightness(1);
-        filter: brightness(1);
-    }
+
 
 
 }

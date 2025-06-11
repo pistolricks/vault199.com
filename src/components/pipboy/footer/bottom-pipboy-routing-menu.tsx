@@ -68,7 +68,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         class={"absolute z-30 rounded-full shadow-2xl shadow-gray-700  left-[20.5%] sm:left-[20.2%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                         href={menuItems()[0].href}>
                         <img src={menuItems()[0].icon} class={classNames(
-                            location?.pathname.includes(menuItems()[0].name) ? "brightness-[200%]" : "",
+                            location?.pathname.includes(menuItems()[0].name) ? "brightness-[200%]" : "brightness-[50%]",
                             "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                         )} alt={menuItems()[0].name}/>
                         <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
@@ -78,7 +78,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         class={"absolute  z-30 rounded-full shadow-2xl shadow-gray-700 left-[45.8%] sm:left-[45.5%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                         href={menuItems()[1].href}>
                         <img src={menuItems()[1].icon} class={classNames(
-                            location?.pathname.includes(menuItems()[1].name) ? "brightness-[200%]" : "",
+                            location?.pathname.includes(menuItems()[1].name) ? "brightness-[200%]" : "brightness-[50%]",
                             "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                         )} alt={menuItems()[1].name}/>
                         <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
@@ -88,7 +88,7 @@ const BottomPipboyMenu: Component<PROPS> = props => {
                         class={"absolute  z-30 rounded-full right-[20%] sm:right-[19.6%] bottom-[16%] sm:bottom-[16%] h-[1.6rem] w-[1.6rem]"}
                         href={menuItems()[2].href}>
                         <img src={menuItems()[2].icon} class={classNames(
-                            location?.pathname.includes(menuItems()[2].name) ? "brightness-[200%]" : "",
+                            location?.pathname.includes(menuItems()[2].name) ? "brightness-[200%]" : "brightness-[50%]",
                             "absolute rounded-full ring-2 ring-gray-950 inset-0 h-[1.7rem] w-[1.7rem]"
                         )} alt={menuItems()[2].name}/>
                         <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>

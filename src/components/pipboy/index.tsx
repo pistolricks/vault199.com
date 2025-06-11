@@ -43,46 +43,7 @@ const PipBoy: Component<PROPS> = props => {
 
     const [getSubMenu, setSubMenu] = createSignal(props.subMenuItems!);
 
-    const addCursor = () => {
-        if (cursor) {
-            cursor.classList.remove("cursor-default");
-            cursor.classList.add("cursor-active");
-        }
-    };
 
-    const removeCursor = () => {
-        if (cursor) {
-            cursor.classList.remove("cursor-active");
-            cursor.classList.add("cursor-default");
-        }
-    };
-
-    const subMenu = createMemo(() => {
-        if(location.pathname === `/data/contacts/${getContact()?.title}`) {
-
-        }
-    })
-
-    createEffect(() => {
-        const handleMouseMove = (event: MouseEvent) => {
-            if (cursor) {
-                cursor.style.left = event.pageX + "px";
-                cursor.style.top = event.pageY + "px";
-            }
-        };
-
-        // Add event listeners
-        window.addEventListener("mouseenter", addCursor);
-        window.addEventListener("mouseleave", removeCursor);
-        window.addEventListener("mousemove", handleMouseMove);
-
-        // Cleanup: remove event listeners when the effect is disposed
-        onCleanup(() => {
-            window.removeEventListener("mouseenter", addCursor);
-            window.removeEventListener("mouseleave", removeCursor);
-            window.removeEventListener("mousemove", handleMouseMove);
-        });
-    });
 
     const title = createMemo(() => getTitle())
 
@@ -134,13 +95,7 @@ const PipBoy: Component<PROPS> = props => {
 
                     </div>
 
-                    <div ref={cursor} class="cursor">
-                        <img
-                            src="https://res.cloudinary.com/kibibyte/image/upload/v1656953740/nv-cursor_ha9i6j.png"
-                            alt="PipBoy Cursor" // Added alt attribute for accessibility
-                            height={28}
-                        />
-                    </div>
+
 
                 </div>
 

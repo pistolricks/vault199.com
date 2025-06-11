@@ -1,8 +1,8 @@
 import {createListCollection} from '@ark-ui/solid/collection'
 import contacts from "~/static/app/icons/ui/contacts.png";
-import map from "~/static/app/icons/ui/map.png";
-import media from "~/static/app/icons/ui/media.png";
+import map from "~/static/app/icons/misc_apps/30misc-apps-30.png";
 
+import radio from "~/static/app/icons/fallout/radio.png";
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
 import misc from "~/static/app/icons/ui/misc.png"
@@ -38,30 +38,30 @@ export const collection = createListCollection({
 
         {
             label: '/data', value: [
-                {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-100'},
+                {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-75'},
                 {name: "contacts", href: '/data/contacts', icon: contacts, class: 'p-2 grayscale-50'},
-                {name: "media", href: '/data/media', icon: media, class: 'p-3 grayscale-50'},
+                {name: "media", href: '/data/media', icon: radio, class: 'p-2 grayscale-50'},
             ]
         },
         {
             label: '/data/contacts', value: [
-                {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-100'},
+                {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-75'},
                 {name: "contacts", href: '/data/contacts', icon: contacts, class: 'p-2 grayscale-50'},
-                {name: "media", href: '/data/media', icon: media, class: 'p-3 grayscale-50'},
+                {name: "media", href: '/data/media', icon: radio, class: 'p-2 grayscale-50'},
             ]
         },
         {
             label: '/data/map', value: [
-                {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-100'},
+                {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-75'},
                 {name: "contacts", href: '/data/contacts', icon: contacts, class: 'p-2 grayscale-50'},
-                {name: "media", href: '/data/media', icon: media, class: 'p-3 grayscale-50'},
+                {name: "media", href: '/data/media', icon: radio, class: 'p-2 grayscale-50'},
             ]
         },
         {
             label: '/data/media', value: [
                 {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-100'},
                 {name: "contacts", href: '/data/contacts', icon: contacts, class: 'p-2 grayscale-50'},
-                {name: "media", href: '/data/media', icon: media, class: 'p-3 grayscale-50'},
+                {name: "media", href: '/data/media', icon: radio, class: 'p-2 grayscale-50'},
             ]
         },
 

@@ -2,22 +2,18 @@ import {createListCollection} from '@ark-ui/solid/collection'
 import contacts from "~/static/app/icons/ui/contacts.png";
 import video from "~/static/app/icons/apps/apple-app-2.png"
 import mapPosition from "~/static/app/icons/fallout/map.png";
-import map from "~/static/app/icons/ui/map.png";
+import map from "~/static/app/icons/misc_apps/30misc-apps-30.png";
 import camera from "~/static/app/icons/apps/apple-app-27.png";
-import radio from "~/static/app/icons/fallout/radio.png";
+import radio from "~/static/app/icons/apps/apple-app-8.png";
 import gallery from "~/static/app/icons/apps/apple-app-31.png";
-import cover from "~/static/pipboy/2000N/app_cover.png";
+import cover from "~/static/app/icons/apps/blank.png";
 import contactList from "~/static/app/icons/fallout/tech.png"
-import bio from "~/static/app/icons/color/Notes.png"
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
 import misc from "~/static/app/icons/ui/misc.png"
 import special from "~/static/app/icons/fallout/social.png";
 import status from "~/static/app/icons/color/vb-health.png"
 import details from "~/static/app/icons/fallout/details.png";
-import stats from "~/static/app/icons/apps/apple-app-19.png"
-import items from "~/static/app/icons/fallout/shopping.png"
-import data from "~/static/app/icons/fallout/tasks-work.png";
 import strength from "~/static/special/strength.webp"
 import perception from "~/static/special/perception.webp"
 import endurance from "~/static/special/endurance.png"
@@ -80,11 +76,11 @@ export const subCollection = createListCollection({
             ]
         },
         {
-          label: '/data/contacts', value: [
+            label: '/data/contacts', value: [
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
-                {name: "contacts", href: 'contacts', icon: contactList,  class: 'p-1 grayscale-50', isAlt: true},
+                {name: "contacts", href: 'contacts', icon: contactList, class: 'p-1 grayscale-50', isAlt: true},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
@@ -95,7 +91,7 @@ export const subCollection = createListCollection({
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
-                {name: "map", href: 'map', icon: mapPosition,  class: 'p-1 grayscale-50', isAlt: true},
+                {name: "map", href: 'map', icon: mapPosition, class: 'p-1 grayscale-50', isAlt: true},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
@@ -106,16 +102,16 @@ export const subCollection = createListCollection({
                 {name: "media", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "media", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "media", href: '#', icon: cover, class: 'opacity-60'},
-                {name: "audio", href: 'audio', icon: radio, class: 'p-1 grayscale-50', isAlt: false},
+                {name: "audio", href: 'audio', icon: radio, class: 'p-1.5 grayscale-50', isAlt: false},
                 {name: "camera", href: 'camera', icon: camera, class: 'p-1 grayscale-50', isAlt: false},
                 {name: "video", href: 'video', icon: video, class: 'p-1 grayscale-50', isAlt: true},
-                {name: "gallery", href: 'gallery', icon: gallery, class: 'p-1 grayscale-50', isAlt: true},
+                {name: "gallery", href: 'gallery', icon: gallery, class: 'p-1.5 grayscale-50', isAlt: true},
 
             ]
         },
 
 
-       /*ITEMS*/
+        /*ITEMS*/
 
 
         {
