@@ -35,6 +35,7 @@ const FooterMenu: Component<PROPS> = props => {
                                     "bg-green-950",
                                     "relative",
                                     "size-10 md:size-8",
+                                    props.menus?.[i()]?.class,
                                 )}
                             >
                                 <img src={props.menus?.[i()].icon} class={"size-full "} alt={props.menus?.[i()].name}/>
@@ -52,6 +53,7 @@ const FooterMenu: Component<PROPS> = props => {
                                     "relative",
                                     "size-10 md:size-8",
                                     componentName() === props.menus?.[i()]?.href ? "data-open:brightness-[200%]" : "",
+                                    props.menus?.[i()]?.class
                                 )}
                             >
                                 <img src={props.menus?.[i()].icon} class={"size-full "} alt={props.menus?.[i()].name}/>
@@ -64,6 +66,7 @@ const FooterMenu: Component<PROPS> = props => {
                                     "bg-green-950",
                                     "relative",
                                     "size-10 md:size-8",
+                                    props.menus?.[i()]?.class
                                 )}
                                 href={props.menus?.[i()].href}>
                                 <img src={props.menus?.[i()].icon} class={classNames(
