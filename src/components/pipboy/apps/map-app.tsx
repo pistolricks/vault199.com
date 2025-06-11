@@ -54,7 +54,7 @@ const MapApp: Component<PROPS> = props => {
                     'background-position': 'center',
                     'background-size': 'cover',
                 }}
-                class={" absolute left-5 right-5 top-8 bottom-20"}>
+                class={" absolute left-5 right-5 top-8 bottom-20 rounded-lg"}>
 
                 <MapWrapper data={props.data} zoom={zoom()} />
 

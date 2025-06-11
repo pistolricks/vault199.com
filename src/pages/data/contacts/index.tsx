@@ -7,7 +7,9 @@ import contacts from "~/static/app/icons/ui/contacts.png"
 import map from "~/static/app/icons/ui/map.png"
 import events from "~/static/app/icons/ui/events.png"
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
-import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
+import CommunicationsApp, {companions} from "~/components/pipboy/apps/communications/communications-app";
+import ScreenLayout from "~/components/layouts/screen/screen-layout";
+import {ContactList} from "~/components/lists/contact-list";
 
 const menuItems: MenuItem[] = [
     {name: "contacts", href: '/data/contacts', icon: contacts},
@@ -19,10 +21,18 @@ type PROPS = {}
 
 const ContactsSection: Component<RouteSectionProps> = props => {
 
-    return (
-      <div class={'relative h-full w-full'}>
+    const handleClick = () => {
 
-      </div>
+    }
+
+    return (
+        <div class={"flex justify-center items-center h-full w-full"}>
+
+
+            <ContactList onClick={handleClick} height={"70dvh"} list={companions}/>
+
+
+        </div>
     );
 };
 

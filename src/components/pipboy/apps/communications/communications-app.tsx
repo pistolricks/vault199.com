@@ -24,7 +24,7 @@ type PROPS = {
     onClick?: (data: any) => any
 }
 
-const companions: Contact[] = [
+export const companions: Contact[] = [
     {
         id: 301,
         name: "Cross",
