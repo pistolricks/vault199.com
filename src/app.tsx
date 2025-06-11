@@ -23,8 +23,10 @@ import {companions} from "~/lib/companions";
 import {AppProvider} from "~/context/app-provider";
 import cover from "~/static/pipboy/2000N/app_cover.png";
 import contacts from "~/static/app/icons/ui/contacts.png";
+import contactList from "~/static/app/icons/fallout/tech.png"
+import chat from "~/static/app/icons/apps/apple-app-29.png"
 import phone from "~/static/app/icons/apps/apple-app-30.png"
-
+import email from "~/static/app/icons/apps/24apple_24.png"
 const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
@@ -86,6 +88,7 @@ const apps = {
 }
 
 const pipboyTypes = {
+    chat: pbMonitor2000,
     call: chatBox,
     contacts: pbMonitor2000,
     gallery: pbMonitor2000,
@@ -125,10 +128,10 @@ const App: Component<RouteSectionProps> = (props) => {
         console.log("m",m)
         if (!m?.[0] && companion()?.title) {
                 let sm = [
-                    {name: "contacts", href: '#', icon: cover},
-                    {name: "contacts", href: '#', icon: cover},
-                    {name: `${companion()?.title}`, href: 'call', icon: phone, isAlt: true},
-                    {name: "contacts", href: 'contacts', icon: contacts, isAlt: true},
+                    {name: "email", href: 'email', icon: email, isAlt: true},
+                    {name: "chat", href: 'chat', icon: chat, isAlt: true},
+                    {name: "call", href: 'call', icon: phone, isAlt: true},
+                    {name: "contacts", href: 'contacts', icon: contactList, isAlt: true},
                     {name: "contacts", href: '#', icon: cover},
                     {name: "contacts", href: '#', icon: cover},
                     {name: "contacts", href: '#', icon: cover},

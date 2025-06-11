@@ -6,6 +6,7 @@ import camera from "~/static/app/icons/color/Camera.png";
 import media from "~/static/app/icons/color/News.png";
 import gallery from "~/static/app/icons/color/Instagram.png";
 import cover from "~/static/pipboy/2000N/app_cover.png";
+import contactList from "~/static/app/icons/fallout/tech.png"
 import bio from "~/static/app/icons/color/Notes.png"
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
@@ -81,7 +82,7 @@ export const subCollection = createListCollection({
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
-                {name: "contacts", href: 'contacts', icon: contacts, isAlt: true},
+                {name: "contacts", href: 'contacts', icon: contactList, isAlt: true},
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
                 {name: "contacts", href: '#', icon: cover},
