@@ -7,6 +7,7 @@ import contacts from "~/static/app/icons/ui/contacts.png"
 import map from "~/static/app/icons/ui/map.png"
 import media from "~/static/app/icons/ui/details.png"
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
+import SwiperWrapper from "~/components/wrappers/swiper-wrapper";
 
 const menuItems: MenuItem[] = [
     {name: "contacts", href: '/data/contacts', icon: contacts},
@@ -20,7 +21,9 @@ const DataSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <></>
+        <>
+
+        </>
     );
 };
 

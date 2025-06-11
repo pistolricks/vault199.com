@@ -35,6 +35,7 @@ const SwiperWrapper: ParentComponent<{
             enabled: enabled(),
             // Optional parameters
             direction: direction(),
+            history: true,
             loop: loop(),
             allowSlideNext: allowSlideNext(),
             allowSlidePrev: allowSlidePrev(),

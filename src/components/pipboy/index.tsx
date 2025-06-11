@@ -10,6 +10,7 @@ import BottomPipboyRoutingMenu from "~/components/pipboy/footer/bottom-pipboy-ro
 import styles from "~/components/layouts/activated/style.module.css";
 import {getInitialCharacter, ICharacter} from "~/components/character/config";
 import ActivatedHeader from "~/components/layouts/activated/activated-header";
+import {useAppContext} from "~/context/app-provider";
 
 type PROPS = {
     character?: ICharacter;
@@ -30,6 +31,8 @@ const menuItems: MenuItem[] = [
 const PipBoy: Component<PROPS> = props => {
     let cursor!: HTMLDivElement;
 
+    const {getContact} = useAppContext();
+
     const location = useLocation();
 
     const character = () => props.character;
@@ -37,6 +40,8 @@ const PipBoy: Component<PROPS> = props => {
     const children = () => props.children;
 
     const [getTitle, setTitle] = createSignal("stats")
+
+    const [getSubMenu, setSubMenu] = createSignal(props.subMenuItems!);
 
     const addCursor = () => {
         if (cursor) {
@@ -51,6 +56,12 @@ const PipBoy: Component<PROPS> = props => {
             cursor.classList.add("cursor-default");
         }
     };
+
+    const subMenu = createMemo(() => {
+        if(location.pathname === `/data/contacts/${getContact()?.title}`) {
+
+        }
+    })
 
     createEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {

@@ -253,49 +253,49 @@ const SpecialPanel: Component<PROPS> = props => {
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-20deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.strength?.total}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.perception?.total}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.endurance?.total}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.charisma?.total}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.intelligence?.total}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.agility?.total}
                         </div>
                     </div>
                     <div class={"relative w-9 h-9"}>
                         <CogSolid class={"absolute inset-0 fill-black stroke-black rotate-[-10deg] size-9"}/>
                         <div
-                            class={"absolute inset-0 flex justify-center items-center text-sm"}>
+                            class={"absolute inset-0 flex justify-center items-center text-sm size-9"}>
                            {special()?.luck?.total}
                         </div>
                     </div>

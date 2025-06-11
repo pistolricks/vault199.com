@@ -19,6 +19,11 @@ import SpecialDetails from "~/components/character/special-details";
 import {MenuItem} from "~/lib/types";
 import CommunicationsApp from "~/components/pipboy/apps/communications/communications-app";
 import {Contact} from "~/components/lists/contact-list";
+import {companions} from "~/lib/companions";
+import {AppProvider} from "~/context/app-provider";
+import cover from "~/static/pipboy/2000N/app_cover.png";
+import contacts from "~/static/app/icons/ui/contacts.png";
+import phone from "~/static/app/icons/apps/apple-app-30.png"
 
 const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
@@ -66,7 +71,7 @@ const breakpoints = {
 
 
 const apps = {
-    aiCompanion: AiCompanion,
+    call: AiCompanion,
     gallery: GalleryApp,
     map: MapApp,
     audio: FalloutAudioPlayer,
@@ -81,7 +86,7 @@ const apps = {
 }
 
 const pipboyTypes = {
-    aiCompanion: chatBox,
+    call: chatBox,
     contacts: pbMonitor2000,
     gallery: pbMonitor2000,
     map: pbMonitor2000,
@@ -99,8 +104,17 @@ const App: Component<RouteSectionProps> = (props) => {
 
     const [getIsAlt, setIsAlt] = createSignal<boolean>(undefined)
 
+    const [getCompanion, setCompanion] = createSignal<any>();
+
+    const companion = createMemo(() => {
+        const companion = companions.find((companion) => location.pathname.includes(companion.title))
+        console.log("companion", companion)
+        return companion ?? undefined;
+    })
+
     const menuItems = createMemo(() => {
-        let m = collection.items.filter(item => item.label === location.pathname) ?? undefined;
+        const companion = companions.find((companion) => location.pathname.includes(companion.title))
+        let m = collection.items.filter(item => item.label === location.pathname || item.label === location.pathname.replace(`/${companion?.title}`, "")) ?? undefined;
         if (!m) return;
         console.log("m", m, location.pathname)
         return m?.[0]?.value;
@@ -108,14 +122,27 @@ const App: Component<RouteSectionProps> = (props) => {
 
     const subMenuItems = createMemo(() => {
         let m = subCollection.items.filter(item => item.label === location.pathname) ?? undefined;
-        if (!m) return;
-        console.log("m", m, location.pathname)
-        return m?.[0]?.value;
+        console.log("m",m)
+        if (!m?.[0] && companion()?.title) {
+                let sm = [
+                    {name: "contacts", href: '#', icon: cover},
+                    {name: "contacts", href: '#', icon: cover},
+                    {name: `${companion()?.title}`, href: 'call', icon: phone, isAlt: true},
+                    {name: "contacts", href: 'contacts', icon: contacts, isAlt: true},
+                    {name: "contacts", href: '#', icon: cover},
+                    {name: "contacts", href: '#', icon: cover},
+                    {name: "contacts", href: '#', icon: cover},
+                ]
+            return sm;
+
+        } else {
+            return m?.[0]?.value;
+        }
     })
 
     const [getData, setData] = createSignal<any>(props.data);
 
-    const [getCompanion, setCompanion] = createSignal<any>();
+
     const [getComponent, setComponent] = createSignal<string>("")
     const [getDrawerComponent, setDrawerComponent] = createSignal<string>("map")
     const [getCoords, setCoords] = createSignal(null)
@@ -135,6 +162,8 @@ const App: Component<RouteSectionProps> = (props) => {
         if (await getCoords()) {
             await getGps(setCoords);
         }
+
+        console.log("location", location)
     })
 
 
@@ -145,7 +174,7 @@ const App: Component<RouteSectionProps> = (props) => {
 
         await getGps(setCoords);
         console.log("handleClick", e)
-        let obj = {companion: e?.data, component: e.href, coords: await coords()}
+        let obj = {companion: companion(), component: e.href, coords: await coords()}
 
         e.isAlt ? setDrawerComponent(e.href) : setComponent(e.href)
 
@@ -168,16 +197,22 @@ const App: Component<RouteSectionProps> = (props) => {
 
     return (
         <>
+        <AppProvider>
             <BaseDrawer side={"bottom"} contextId={"activated-1"}>
                 <main class={'scrollbar-hide'}>
+
                     <Show
                         fallback={
                             <>
                                 <ActivatedLayout {...props}>
-                                    <PipBoy character={character()} menuItems={menuItems()}
-                                            subMenuItems={subMenuItems()} componentName={getDrawerComponent()}
-                                            handleFooter={handleClick}>
-                                        <FalloutAudioPlayer class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
+                                    <PipBoy
+                                        character={character()}
+                                        menuItems={menuItems()}
+                                        subMenuItems={subMenuItems()}
+                                        componentName={getDrawerComponent()}
+                                        handleFooter={handleClick}>
+                                        <FalloutAudioPlayer
+                                            class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
 
 
                                         <Suspense>{props.children}</Suspense>
@@ -200,6 +235,7 @@ const App: Component<RouteSectionProps> = (props) => {
                                 >
                                     <Dynamic
                                         data={{
+                                            companion: companion(),
                                             coords: coords(),
                                             character: character(),
                                             name: getDrawerComponent(),
@@ -215,6 +251,7 @@ const App: Component<RouteSectionProps> = (props) => {
                     </Show>
                 </main>
             </BaseDrawer>
+        </AppProvider>
         </>
     );
 };

@@ -440,7 +440,7 @@ label {
 }
 
 .options .active a {
-    outline: 0px solid transparent;
+    outline: 0 solid transparent;
 }
 
 .frame label:hover,
@@ -514,8 +514,11 @@ label {
 }
 
 a:focus {
+    /*
     outline: 1px solid;
     outline-offset: -1px;
+
+     */
 }
 
 a,

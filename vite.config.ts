@@ -12,7 +12,12 @@ export default defineConfig({
         solidPlugin(),
         solidSvg(),
         Pages({
-            dirs: ['src/pages'],
+            dirs: [
+                {dir: 'src/pages', baseRoute: ''},
+                { dir: 'src/pages/data/contacts/**', baseRoute: 'contacts' },
+
+            ],
+
         }),
 
         VitePWA({

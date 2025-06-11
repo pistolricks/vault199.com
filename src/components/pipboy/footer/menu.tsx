@@ -1,4 +1,4 @@
-import {Component, For, Match, Show, Switch} from "solid-js";
+import {Component, For, Match, Switch} from "solid-js";
 import {A, useLocation} from "@solidjs/router";
 import {classNames} from "~/components/navigation";
 import cover from "~/static/pipboy/2000N/app_cover.png";
@@ -21,7 +21,7 @@ const FooterMenu: Component<PROPS> = props => {
     const componentName = () => props.componentName;
 
     return (
-        <div class={"flex justify-center items-center space-x-0.5"}>
+        <div class={"swiper-slide flex justify-center items-center space-x-0.5"}>
             <For each={menus()}>
                 {(item, i) => (
                     <Switch>
@@ -64,7 +64,6 @@ const FooterMenu: Component<PROPS> = props => {
                                     "bg-green-950",
                                     "relative",
                                     "size-10 md:size-8",
-
                                 )}
                                 href={props.menus?.[i()].href}>
                                 <img src={props.menus?.[i()].icon} class={classNames(
@@ -78,7 +77,7 @@ const FooterMenu: Component<PROPS> = props => {
                 )}
             </For>
 
-       </div>
+        </div>
     );
 };
 
