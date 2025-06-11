@@ -21,7 +21,7 @@ const ContactsSection: Component<RouteSectionProps> = props => {
 
     return (
       <div class={'relative h-full w-full'}>
-          <CommunicationsApp {...props}/>
+
       </div>
     );
 };
