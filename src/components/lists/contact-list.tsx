@@ -57,7 +57,7 @@ const ContactList: Component<{
                 }>
                 <Show
                     fallback={
-                        <ul role="list" class="divide-y divide-[rgb(var(--main))]/40 overflow-y-auto h-full">
+                        <ul role="list" class="divide-y divide-[rgb(var(--main))]/25 overflow-y-auto h-full">
 
                             <For each={list()}>
                                 {(contact) => (
@@ -93,13 +93,13 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
 
     return (
 
-        <Drawer.Trigger
+        <Drawer.Close
             as={'li'}
             onClick={props.onClick}
             contextId={"activated-1"}
-            class={classNames("")}
+            class={classNames("w-full")}
         >
-            <A href={`/data/contacts/${props.title}`} class={"text-5xl flex justify-start gap-x-4 items-center focus:outline-none"}>
+            <A href={`/data/contacts/${props.title}`} class={"text-5xl flex justify-start gap-x-4 items-center focus:outline-none w-full"}>
                 <img alt="" src={props.avatar} class="size-9 flex-none rounded-sm bg-gray-50"/>
                 <div class="min-w-0 flex-auto">
                     <div
@@ -108,7 +108,7 @@ const ContactItem: Component<Contact & { onClick: (e: any) => any }> = props => 
                     </div>
                 </div>
             </A>
-        </Drawer.Trigger>
+        </Drawer.Close>
 
 
     );

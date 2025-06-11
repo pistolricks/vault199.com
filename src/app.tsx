@@ -10,7 +10,6 @@ import PipBoy from "~/components/pipboy";
 import {collection} from "~/lib/menu";
 
 import chatBox from "~/static/pipboy/chatbox/chatbox.png";
-import pbMonitor from "~/static/pipboy/2000N/pb2000-monitor.png";
 import pbMonitor2000 from "~/static/pipboy/2000N/pb2000_monitor_alt.png";
 import {subCollection} from "~/lib/sub-menu";
 import {ICharacter} from "~/components/character/config";
@@ -22,11 +21,11 @@ import {Contact} from "~/components/lists/contact-list";
 import {companions} from "~/lib/companions";
 import {AppProvider} from "~/context/app-provider";
 import cover from "~/static/pipboy/2000N/app_cover.png";
-import contacts from "~/static/app/icons/ui/contacts.png";
 import contactList from "~/static/app/icons/fallout/tech.png"
 import chat from "~/static/app/icons/apps/apple-app-29.png"
 import phone from "~/static/app/icons/apps/apple-app-30.png"
 import email from "~/static/app/icons/apps/24apple_24.png"
+
 const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
 const GalleryApp = lazy(() => import("~/components/pipboy/apps/gallery-app"));
@@ -125,17 +124,17 @@ const App: Component<RouteSectionProps> = (props) => {
 
     const subMenuItems = createMemo(() => {
         let m = subCollection.items.filter(item => item.label === location.pathname) ?? undefined;
-        console.log("m",m)
+        console.log("m", m)
         if (!m?.[0] && companion()?.title) {
-                let sm = [
-                    {name: "email", href: 'email', icon: email, isAlt: true},
-                    {name: "chat", href: 'chat', icon: chat, isAlt: true},
-                    {name: "call", href: 'call', icon: phone, isAlt: true},
-                    {name: "contacts", href: 'contacts', icon: contactList, isAlt: true},
-                    {name: "contacts", href: '#', icon: cover},
-                    {name: "contacts", href: '#', icon: cover},
-                    {name: "contacts", href: '#', icon: cover},
-                ]
+            let sm = [
+                {name: "email", href: 'email', icon: email, isAlt: true},
+                {name: "chat", href: 'chat', icon: chat, isAlt: true},
+                {name: "call", href: 'call', icon: phone, isAlt: true},
+                {name: "contacts", href: 'contacts', icon: contactList, isAlt: true},
+                {name: "contacts", href: '#', icon: cover},
+                {name: "contacts", href: '#', icon: cover},
+                {name: "contacts", href: '#', icon: cover},
+            ]
             return sm;
 
         } else {
@@ -200,61 +199,61 @@ const App: Component<RouteSectionProps> = (props) => {
 
     return (
         <>
-        <AppProvider>
-            <BaseDrawer side={"bottom"} contextId={"activated-1"}>
-                <main class={'scrollbar-hide'}>
+            <AppProvider>
+                <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+                    <main class={'scrollbar-hide'}>
 
-                    <Show
-                        fallback={
-                            <>
-                                <ActivatedLayout {...props}>
-                                    <PipBoy
-                                        character={character()}
-                                        menuItems={menuItems()}
-                                        subMenuItems={subMenuItems()}
-                                        componentName={getDrawerComponent()}
-                                        handleFooter={handleClick}>
-                                        <FalloutAudioPlayer
-                                            class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
+                        <Show
+                            fallback={
+                                <>
+                                    <ActivatedLayout {...props}>
+                                        <PipBoy
+                                            character={character()}
+                                            menuItems={menuItems()}
+                                            subMenuItems={subMenuItems()}
+                                            componentName={getDrawerComponent()}
+                                            handleFooter={handleClick}>
+                                            <FalloutAudioPlayer
+                                                class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
 
 
-                                        <Suspense>{props.children}</Suspense>
+                                            <Suspense>{props.children}</Suspense>
 
-                                    </PipBoy>
-                                </ActivatedLayout>
-                                <DrawerContent
-                                    side={"bottom"}
-                                    contextId={"activated-1"}
-                                    style={{
-                                        'background-image': 'url(' + pipboyTypes[getDrawerComponent()] + ')',
-                                        'background-size': '100% 92%',
-                                        'background-repeat': 'no-repeat',
-                                        'background-position': 'top',
-                                        'background-color': 'black',
-                                    }}
-                                    class={classNames(
-                                        'w-screen sm:max-w-xs',
-                                    )}
-                                >
-                                    <Dynamic
-                                        data={{
-                                            companion: companion(),
-                                            coords: coords(),
-                                            character: character(),
-                                            name: getDrawerComponent(),
+                                        </PipBoy>
+                                    </ActivatedLayout>
+                                    <DrawerContent
+                                        side={"bottom"}
+                                        contextId={"activated-1"}
+                                        style={{
+                                            'background-image': 'url(' + pipboyTypes[getDrawerComponent()] + ')',
+                                            'background-size': '100% 92%',
+                                            'background-repeat': 'no-repeat',
+                                            'background-position': 'top',
+                                            'background-color': 'black',
                                         }}
-                                        onClick={handleClick}
-                                        component={apps[getDrawerComponent()]}
-                                    />
-                                </DrawerContent>
-                            </>
-                        }
-                        when={location.pathname === "/"}>
-                        <Suspense>{props.children}</Suspense>
-                    </Show>
-                </main>
-            </BaseDrawer>
-        </AppProvider>
+                                        class={classNames(
+                                            'w-screen sm:max-w-xs',
+                                        )}
+                                    >
+                                        <Dynamic
+                                            data={{
+                                                companion: companion(),
+                                                coords: coords(),
+                                                character: character(),
+                                                name: getDrawerComponent(),
+                                            }}
+                                            onClick={handleClick}
+                                            component={apps[getDrawerComponent()]}
+                                        />
+                                    </DrawerContent>
+                                </>
+                            }
+                            when={location.pathname === "/"}>
+                            <Suspense>{props.children}</Suspense>
+                        </Show>
+                    </main>
+                </BaseDrawer>
+            </AppProvider>
         </>
     );
 };
