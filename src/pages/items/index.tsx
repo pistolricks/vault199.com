@@ -1,6 +1,5 @@
 import {Component} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
-import ItemsPanel from "~/components/pipboy/panels/items-panel";
 import {
     MenuItem
 } from "~/components/pipboy/footer/bottom-pipboy-menu";

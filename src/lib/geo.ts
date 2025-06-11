@@ -8,7 +8,7 @@ export function start() {
         navigator.geolocation.watchPosition(
             position => {
                 console.log(position);
-                document.querySelector("output").textContent = `${position.coords}`;
+                document.querySelector("output").textContent = `${position.coords.toJSON()}`;
 
                 coords = position;
             },

@@ -122,7 +122,9 @@ const App: Component<RouteSectionProps> = (props) => {
         console.log("getCoords", await getCoords())
         console.log("coords", await coords())
 
-       // let op = document.querySelector("output");
+       // let el = document.querySelector("output");
+       //  console.log("op", JSON.stringify(el))
+
        if(await getCoords()) {
            await getGps(setCoords);
        }
