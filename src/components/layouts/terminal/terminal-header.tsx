@@ -1,18 +1,16 @@
-import {Component, createEffect, createMemo, createSignal, Show} from "solid-js";
+import {Component, createEffect, createMemo, Show} from "solid-js";
 import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import Logo from "~/static/logos/vault-tec.png"
-import {cookies} from "~/app";
 import Logout from "~/components/logout";
 
 
 const TerminalHeader: Component<RouteSectionProps> = props => {
 
-    const [getToken, setToken] = createSignal(cookies.get("token"))
 
     const  token = createMemo(() => {
-        setToken(cookies.get("token"))
-        return getToken();
+
+        return "";
     })
 
     createEffect(() => {

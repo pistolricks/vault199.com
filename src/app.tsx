@@ -3,7 +3,6 @@ import {RouteSectionProps, useLocation} from '@solidjs/router';
 import BaseDrawer, {DrawerContent} from './components/ui/drawer';
 import {classNames} from "~/components/navigation";
 import {Dynamic} from "solid-js/web";
-import Cookies from "cookies-ts";
 
 import {getGps, start} from "~/lib/geo";
 import PipBoy from "~/components/pipboy";
@@ -25,6 +24,8 @@ import contactList from "~/static/app/icons/fallout/tech.png"
 import chat from "~/static/app/icons/apps/apple-app-29.png"
 import phone from "~/static/app/icons/apps/apple-app-30.png"
 import email from "~/static/app/icons/apps/24apple_24.png"
+import {WebSocketContextProvider} from './context/WebsocketContextProvider';
+import {AuthContextProvider} from './context/AuthContextProvider';
 
 const FalloutAudioPlayer = lazy(() => import ("~/components/ui/audio"));
 const AiCompanion = lazy(() => import("~/components/ai-companion"));
@@ -33,32 +34,12 @@ const MapApp = lazy(() => import("~/components/pipboy/apps/map-app"));
 const ActivatedLayout = lazy(() => import("~/components/layouts/activated/activated-layout"));
 
 
-export const cookies = new Cookies()
-cookies.config({expires: "30d"})
-
 
 export const currentUser = () => {
-    const id = () => cookies.get('id');
-    const name = () => cookies.get('name');
-    const username = () => cookies.get('username');
-    const email = () => cookies.get('email');
-    const bio = () => cookies.get('bio');
-    const active = () => Boolean(cookies.get('active'));
-    const created_at = () => cookies.get('created_at');
-    const updated_at = () => cookies.get('updated_at');
-    const token = () => cookies.get('token');
 
 
     return {
-        id,
-        name,
-        username,
-        email,
-        bio,
-        active,
-        created_at,
-        updated_at,
-        token
+
     }
 }
 
@@ -199,61 +180,65 @@ const App: Component<RouteSectionProps> = (props) => {
 
     return (
         <>
-            <AppProvider>
-                <BaseDrawer side={"bottom"} contextId={"activated-1"}>
-                    <main class={'scrollbar-hide'}>
+            <AuthContextProvider>
+                <WebSocketContextProvider>
+                    <AppProvider>
+                        <BaseDrawer side={"bottom"} contextId={"activated-1"}>
+                            <main class={'scrollbar-hide'}>
 
-                        <Show
-                            fallback={
-                                <>
-                                    <ActivatedLayout {...props}>
-                                        <PipBoy
-                                            character={character()}
-                                            menuItems={menuItems()}
-                                            subMenuItems={subMenuItems()}
-                                            componentName={getDrawerComponent()}
-                                            handleFooter={handleClick}>
-                                            <FalloutAudioPlayer
-                                                class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
+                                <Show
+                                    fallback={
+                                        <>
+                                            <ActivatedLayout {...props}>
+                                                <PipBoy
+                                                    character={character()}
+                                                    menuItems={menuItems()}
+                                                    subMenuItems={subMenuItems()}
+                                                    componentName={getDrawerComponent()}
+                                                    handleFooter={handleClick}>
+                                                    <FalloutAudioPlayer
+                                                        class={getComponent() === 'audio' && location.pathname === '/data/media' ? "mt-10" : "hidden"}/>
 
 
-                                            <Suspense>{props.children}</Suspense>
+                                                    <Suspense>{props.children}</Suspense>
 
-                                        </PipBoy>
-                                    </ActivatedLayout>
-                                    <DrawerContent
-                                        side={"bottom"}
-                                        contextId={"activated-1"}
-                                        style={{
-                                            'background-image': 'url(' + pipboyTypes[getDrawerComponent()] + ')',
-                                            'background-size': '100% 92%',
-                                            'background-repeat': 'no-repeat',
-                                            'background-position': 'top',
-                                            'background-color': 'black',
-                                        }}
-                                        class={classNames(
-                                            'w-screen sm:max-w-xs',
-                                        )}
-                                    >
-                                        <Dynamic
-                                            data={{
-                                                companion: companion(),
-                                                coords: coords(),
-                                                character: character(),
-                                                name: getDrawerComponent(),
-                                            }}
-                                            onClick={handleClick}
-                                            component={apps[getDrawerComponent()]}
-                                        />
-                                    </DrawerContent>
-                                </>
-                            }
-                            when={location.pathname === "/"}>
-                            <Suspense>{props.children}</Suspense>
-                        </Show>
-                    </main>
-                </BaseDrawer>
-            </AppProvider>
+                                                </PipBoy>
+                                            </ActivatedLayout>
+                                            <DrawerContent
+                                                side={"bottom"}
+                                                contextId={"activated-1"}
+                                                style={{
+                                                    'background-image': 'url(' + pipboyTypes[getDrawerComponent()] + ')',
+                                                    'background-size': '100% 92%',
+                                                    'background-repeat': 'no-repeat',
+                                                    'background-position': 'top',
+                                                    'background-color': 'black',
+                                                }}
+                                                class={classNames(
+                                                    'w-screen sm:max-w-xs',
+                                                )}
+                                            >
+                                                <Dynamic
+                                                    data={{
+                                                        companion: companion(),
+                                                        coords: coords(),
+                                                        character: character(),
+                                                        name: getDrawerComponent(),
+                                                    }}
+                                                    onClick={handleClick}
+                                                    component={apps[getDrawerComponent()]}
+                                                />
+                                            </DrawerContent>
+                                        </>
+                                    }
+                                    when={location.pathname === "/"}>
+                                    <Suspense>{props.children}</Suspense>
+                                </Show>
+                            </main>
+                        </BaseDrawer>
+                    </AppProvider>
+                </WebSocketContextProvider>
+            </AuthContextProvider>
         </>
     );
 };

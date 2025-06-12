@@ -6,9 +6,6 @@ import contacts from "~/static/app/icons/ui/contacts.png"
 import map from "~/static/app/icons/ui/map.png"
 import events from "~/static/app/icons/ui/events.png"
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
-import {companions} from "~/components/pipboy/apps/communications/communications-app";
-import ScreenLayout from "~/components/layouts/screen/screen-layout";
-import {ContactList} from "~/components/lists/contact-list";
 
 const menuItems: MenuItem[] = [
     {name: "contacts", href: '/data/contacts', icon: contacts},

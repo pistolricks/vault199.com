@@ -1,10 +1,8 @@
 import {Component, createEffect, createMemo} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
-import {A, RouteSectionProps, useSubmission} from "@solidjs/router";
-import styles from "~/components/layouts/terminal/style.module.css"
+import {RouteSectionProps, useSubmission} from "@solidjs/router";
 import {registerUserHandler} from "~/lib/users";
-import Check from "~/static/app/svgs/ui/check.svg?component-solid"
-import XMark from "~/static/app/svgs/ui/x-mark.svg?component-solid"
+import LoginCard from "~/components/auth/login-card";
 
 const Register: Component<RouteSectionProps> = (props) => {
     const submission = useSubmission(registerUserHandler);
@@ -23,7 +21,8 @@ const Register: Component<RouteSectionProps> = (props) => {
 
     return (
         <TerminalLayout {...props}>
-
+            <LoginCard isLogin={false} />
+            {/*
             <form action={registerUserHandler} method={"post"} class={'absolute top-1/8 z-50 h-full w-full  flex flex-col gap-3 p-10'}>
                 <div class={"flex flex-col sm:justify-start w-full"}>
                     <label>FIRST NAME</label>
@@ -59,7 +58,7 @@ const Register: Component<RouteSectionProps> = (props) => {
                     </button>
                 </div>
             </form>
-
+*/}
 
         </TerminalLayout>
 
