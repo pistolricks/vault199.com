@@ -13,6 +13,7 @@ import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
 import {ActivatedLayoutRouteData} from "~/lib/types"
 import {Contact} from "~/components/lists/contact-list";
 import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
+// @ts-ignore
 import Drawer from '@corvu/drawer'
 
 interface ChatItem {
