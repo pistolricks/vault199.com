@@ -25,6 +25,7 @@ export default defineConfig({
             injectRegister: "auto",
             includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png', 'icon-1024.png', 'icon-maskable.png', 'screenshot.png'],
             workbox: {
+                sourcemap: true,
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
                 // runtimeCaching is optional, you can configure it as needed
                 runtimeCaching: [
@@ -39,6 +40,12 @@ export default defineConfig({
                             },
                             cacheableResponse: {
                                 statuses: [0, 200]
+                            },
+                            backgroundSync: {
+                                name: 'bg-queue',
+                                options: {
+                                    maxRetentionTime: 24 * 60
+                                }
                             }
                         }
                     },
@@ -118,6 +125,12 @@ export default defineConfig({
                     }
                 ]
             },
+            devOptions: {
+                enabled: true,
+                type: 'module',
+
+                /* other options */
+            }
         }),
         tsconfigPaths(),
     ],

@@ -30,13 +30,19 @@ export interface IField {
 
 }
 
+export interface IDamageResistance {
+    physical: number;
+    energy: number;
+    radiation: number;
+    poison: number;
+}
+
 export interface IStats {
     level: number;
     hpPerLevel: number;
     exp: number;
     carryWeight: number;
     wounds: string;
-
     healthPoints: number;
     maxHealthPoints: number;
     armorClass: ICharacteristic;
@@ -52,6 +58,7 @@ export interface IStats {
     initiative: number;
     maxHealth: number;
     meleeBonus: number;
+    damageResistance: IDamageResistance;
 }
 
 export interface ICharacteristic {
@@ -294,6 +301,12 @@ export const getInitialCharacter: (() => ICharacter) = () => ({
         wounds: '',
         maxHealthPoints: 0,
         healthPoints: 0,
+        damageResistance: {
+            physical: 0,
+            energy: 0,
+            radiation: 0,
+            poison: 0,
+        },
         armorClass: initialCharacteristic,
         healingRate: 0,
         resistance: 0,

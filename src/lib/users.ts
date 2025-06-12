@@ -103,7 +103,7 @@ export const resendActivateEmailHandler = action(async (data: FormData) => {
 
 export const loginUserHandler = action(async (data: FormData) => {
     const userInput = {
-        username: String(data.get("username")),
+        email: String(data.get("email")),
         password: String(data.get("password")),
     }
 

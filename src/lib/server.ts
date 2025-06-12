@@ -32,7 +32,7 @@ export async function resendActivateEmail(resendInput: { email: string }) {
     else return res;
 }
 
-export async function login(userInput: { username: string, password: string }) {
+export async function login(userInput: { email: string, password: string }) {
     const res = await db.user.login({where: {userInput}});
     console.log('login-res', res)
     await updateSessionUser(res.user, res.auth_token)

@@ -1,5 +1,6 @@
 import {createSignal, onMount, createEffect, ParentComponent, createMemo, onCleanup, Component, For, Show} from "solid-js";
 import { format } from 'timeago.js';
+import { cookies } from "~/lib/cookies";
 
 // Custom event for PWA updates
 declare global {
@@ -38,7 +39,8 @@ const WsWrapper: ParentComponent<{
             ws.close();
         }
 
-        ws = new WebSocket(`ws://localhost:4000/ws`);
+        const token = cookies.get('token');
+        ws = new WebSocket(`${import.meta.env.VITE_API_WS}/api/v1/ws/chat?token=${token}`);
 
         ws.onopen = function () {
             console.log("Connected to WebSocket server");

@@ -102,7 +102,7 @@ const pipboyTypes = {
 }
 const App: Component<RouteSectionProps> = (props) => {
     const location = useLocation();
-    const character = () => props.data?.['character'] as ICharacter ?? char as ICharacter;
+    const character = () => props.data?.['character'] as ICharacter ?? char as unknown as ICharacter;
 
     const [getIsAlt, setIsAlt] = createSignal<boolean>(undefined)
 

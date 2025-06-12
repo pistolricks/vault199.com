@@ -67,13 +67,10 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-f6195dc0'], (function (workbox) { 'use strict';
+define(['./workbox-b553ebd7'], (function (workbox) { 'use strict';
 
-  self.addEventListener('message', event => {
-    if (event.data && event.data.type === 'SKIP_WAITING') {
-      self.skipWaiting();
-    }
-  });
+  self.skipWaiting();
+  workbox.clientsClaim();
 
   /**
    * The precacheAndRoute() method efficiently caches and responds to
@@ -82,7 +79,7 @@ define(['./workbox-f6195dc0'], (function (workbox) { 'use strict';
    */
   workbox.precacheAndRoute([{
     "url": "index.html",
-    "revision": "0.m89qp51r058"
+    "revision": "0.tct4jjtqn8o"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html"), {
@@ -95,6 +92,8 @@ define(['./workbox-f6195dc0'], (function (workbox) { 'use strict';
       maxAgeSeconds: 31536000
     }), new workbox.CacheableResponsePlugin({
       statuses: [0, 200]
+    }), new workbox.BackgroundSyncPlugin("bg-queue", {
+      maxRetentionTime: 1440
     })]
   }), 'GET');
   workbox.registerRoute(/^https:\/\/fonts\.gstatic\.com\/.*/i, new workbox.CacheFirst({
@@ -115,3 +114,4 @@ define(['./workbox-f6195dc0'], (function (workbox) { 'use strict';
   }), 'GET');
 
 }));
+//# sourceMappingURL=sw.js.map

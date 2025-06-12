@@ -20,7 +20,7 @@ const fetchRegister = async (userInput: { name: string, username: string, email:
     (await fetch(`${baseApi}/users`, {
             method: "POST",
             headers: {
-                "origin": import.meta.env.VITE_API_URL,
+ //               "origin": import.meta.env.VITE_API_URL,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(userInput),
@@ -52,7 +52,7 @@ const fetchResendActivateEmail = async (resendInput: { email: string }) =>
         })
     ).json()
 
-const fetchLogin = async (userInput: { username: string, password: string }) =>
+const fetchLogin = async (userInput: { email: string, password: string }) =>
     (await fetch(`${baseApi}/tokens/authentication`, {
             method: "POST",
             body: JSON.stringify(userInput),
@@ -98,7 +98,7 @@ export const db = {
         async resendActivateEmail({where: {resendInput}}: { where: { resendInput: { email: string }; } }) {
             return await fetchResendActivateEmail(resendInput);
         },
-        async login({where: {userInput}}: { where: { userInput: { username: string; password: string } } }) {
+        async login({where: {userInput}}: { where: { userInput: { email: string; password: string } } }) {
             console.log("login", userInput)
             return await fetchLogin(userInput);
         },

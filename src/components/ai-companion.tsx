@@ -1,4 +1,5 @@
 import {Component, createEffect, createMemo, createSignal, For, onCleanup, onMount, Show} from 'solid-js';
+
 import {classNames} from "~/components/navigation";
 import chatBox from "~/static/pipboy/chatbox/chatbox_001.png"
 import cover from "~/static/pipboy/2000N/app_cover.png";
@@ -12,6 +13,8 @@ import pleaseStandBy from "~/static/gifs/please_stand_by.gif";
 import {ActivatedLayoutRouteData} from "~/lib/types"
 import {Contact} from "~/components/lists/contact-list";
 import BottomPipboyMenu, {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
+import {cookies} from "~/app";
+import Drawer from '@corvu/drawer';
 
 interface ChatItem {
     id: string;
@@ -190,8 +193,9 @@ const AiCompanion: Component<{
         }
     };
 
+    const token = cookies.get('token');
+    // const wsUrl = (`${import.meta.env.VITE_API_WS}/api/v1/ai/${name()}?token=${token}`)
     const wsUrl = (`${import.meta.env.VITE_API_WS}/api/v1/ai/${name()}`)
-
 
     // Placeholder, adjust as needed
 
@@ -423,37 +427,45 @@ const AiCompanion: Component<{
                 <img src={chatBox} class={"fixed inset-0 w-full h-[92dvh]"} alt={"chatbox"}/>
                 <button
                     class={classNames(
-                        "absolute z-50  rounded-full top-[69%] left-[6.3%] h-[2.2rem] w-[2.2rem]"
+                        "absolute z-50  rounded-full top-[69%] left-[6.3%] p-1 h-[2.2rem] w-[2.2rem]"
                     )}
                     type={"button"} onClick={handleRecordToggle}>
                     <Show
                         fallback={
+                        <>
                             <img src={call} class={classNames(
                                 isRecording() ? "rotate-90" : "",
                                 isRecording() ? "brightness-150" : "brightness-80",
-                                "absolute z-50 rounded-full ring ring-gray-950 inset-0 h-[2.2rem] w-[2.2rem]"
+                                "absolute  rounded-full  ring ring-gray-950 inset-0 h-[2rem] w-[2rem]"
                             )} alt={"call"}/>
+                            <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2rem] rounded-full"} alt={"cover"}/>
+                            </>
                         }
                         when={isRecording()}>
+                        <>
                         <PhoneIcon class={classNames(
-                            "rotate-90 p-1",
-                            "bg-red-800",
-                            "absolute z-50 rounded-full ring ring-gray-950 inset-0 h-[2.2rem] w-[2.2rem]"
+                            "rotate-90",
+                            "bg-red-900",
+                            "absolute  rounded-full stroke-red-800 ring ring-gray-950 inset-0 size-[2rem]"
                         )}/>
+                            <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2rem] rounded-full"} alt={"cover"}/>
+                            </>
                     </Show>
 
-                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
+
                 </button>
-                <button
+                <Drawer.Close
+                    contextId={"activated-1"}
+                    as={"button"}
                     disabled={isRecording()}
                     class={classNames(
-                        isRecording() ? "brightness-50 bg-gray-400/80" : "brightness-150 bg-red-700/80",
-                        "absolute z-50 rounded-full top-[75.7%] left-[6.6%] h-[2.2rem] w-[2.2rem]")}
+                        isRecording() ? "brightness-50 bg-gray-400/80" : "brightness-150 bg-red-950/80",
+                        "absolute z-50 rounded-full top-[75.7%] left-[6.3%] h-[2rem] w-[2rem]")}
                     type={"button"} onClick={handleCloseConnection}>
                     <PowerButton/>
 
-                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-full"} alt={"cover"}/>
-                </button>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2rem] rounded-full"} alt={"cover"}/>
+                </Drawer.Close>
 
 
             </div>
@@ -468,7 +480,7 @@ export default AiCompanion;
 const PowerButton = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5}
                                stroke="currentColor"
                                class={classNames(
-                                   "absolute z-50 rounded-full ring ring-gray-950 inset-0 h-[2.2rem] w-[2.2rem]"
+                                   "absolute rounded-full ring ring-gray-950 inset-0 h-[2rem] w-[2rem]"
                                )}
 >
     <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9"/>
@@ -478,10 +490,9 @@ const PowerButton = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" vi
 const PhoneIcon: Component<{
     class?: string;
 }> = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1} stroke="currentColor"
          class={props.class}
     >
         <path stroke-linecap="round" stroke-linejoin="round"
               d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
     </svg>)
-

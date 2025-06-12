@@ -23,8 +23,8 @@ const Login: Component<RouteSectionProps> = (props) => {
         <TerminalLayout {...props}>
             <form class={'flex flex-col gap-6 p-10'} action={loginUserHandler} method={'post'}>
                 <div class={" flex flex-col sm:justify-start w-full"}>
-                    <label>Username </label>
-                    <input class="bg-gray-300/20 w-full sm:w-full" name="username" type="text"/>
+                    <label>Email </label>
+                    <input class="bg-gray-300/20 w-full sm:w-full" name="email" type="email"/>
                 </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
                     <label>PASSWORD </label><input class="bg-gray-300/20 w-full sm:w-full" name="password"
