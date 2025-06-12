@@ -427,7 +427,7 @@ const AiCompanion: Component<{
                 <img src={chatBox} class={"fixed inset-0 w-full h-[92dvh]"} alt={"chatbox"}/>
                 <button
                     class={classNames(
-                        "absolute z-50  rounded-full top-[69%] left-[6.3%] p-1 h-[2.2rem] w-[2.2rem]"
+                        "absolute z-50  rounded-full top-[69%] left-[6.2%] p-1 h-[2.4rem] w-[2.4rem]"
                     )}
                     type={"button"} onClick={handleRecordToggle}>
                     <Show
@@ -436,9 +436,9 @@ const AiCompanion: Component<{
                             <img src={call} class={classNames(
                                 isRecording() ? "rotate-90" : "",
                                 isRecording() ? "brightness-150" : "brightness-80",
-                                "absolute  rounded-full  ring ring-gray-950 inset-0 h-[2rem] w-[2rem]"
+                                "absolute  rounded-full  ring ring-gray-950 inset-0 h-[2.4rem] w-[2.4rem]"
                             )} alt={"call"}/>
-                            <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2rem] rounded-full"} alt={"cover"}/>
+                            <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2.4rem] rounded-full"} alt={"cover"}/>
                             </>
                         }
                         when={isRecording()}>
@@ -446,9 +446,9 @@ const AiCompanion: Component<{
                         <PhoneIcon class={classNames(
                             "rotate-90",
                             "bg-red-900",
-                            "absolute  rounded-full stroke-red-800 ring ring-gray-950 inset-0 size-[2rem]"
+                            "absolute  rounded-full stroke-red-800 ring ring-gray-950 inset-0 size-[2.4rem]"
                         )}/>
-                            <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2rem] rounded-full"} alt={"cover"}/>
+                            <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2.4rem] rounded-full"} alt={"cover"}/>
                             </>
                     </Show>
 
@@ -460,11 +460,11 @@ const AiCompanion: Component<{
                     disabled={isRecording()}
                     class={classNames(
                         isRecording() ? "brightness-50 bg-gray-400/80" : "brightness-150 bg-red-950/80",
-                        "absolute z-50 rounded-full top-[75.7%] left-[6.3%] h-[2rem] w-[2rem]")}
+                        "absolute z-50 rounded-full top-[75.7%] left-[6.3%] h-[2.4rem] w-[2.4rem]")}
                     type={"button"} onClick={handleCloseConnection}>
                     <PowerButton/>
 
-                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2rem] rounded-full"} alt={"cover"}/>
+                    <img src={cover} class={"transform rotate-45 absolute inset-0 size-[2.4rem] rounded-full"} alt={"cover"}/>
                 </Drawer.Close>
 
 
@@ -480,7 +480,7 @@ export default AiCompanion;
 const PowerButton = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5}
                                stroke="currentColor"
                                class={classNames(
-                                   "absolute rounded-full ring ring-gray-950 inset-0 h-[2rem] w-[2rem]"
+                                   "absolute rounded-full ring ring-gray-950 inset-0 h-[2.4rem] w-[2.4rem]"
                                )}
 >
     <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9"/>
