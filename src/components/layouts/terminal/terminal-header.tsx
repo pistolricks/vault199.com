@@ -2,7 +2,7 @@ import {Component, createEffect, createMemo, createSignal, Show} from "solid-js"
 import {RouteSectionProps} from "@solidjs/router";
 import styles from "./style.module.css"
 import Logo from "~/static/logos/vault-tec.png"
-import {cookies, currentUser} from "~/app";
+import {cookies} from "~/app";
 import Logout from "~/components/logout";
 
 
@@ -26,9 +26,7 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
                     <Logout token={token()}/>
                 </div>
             </Show>
-            <div class="sm:hidden flex justify-center items-start">
-                <img src={Logo} alt="Vault-Tec"  class={"object-contain max-w-[150px]"}/>
-            </div>
+            
             <div class="hidden sm:flex justify-center items-start gap-2">
                 <div class={styles["col-one"]}>
                     <img src={Logo} alt="Vault-Tec"  class={"object-contain w-[200px] sm:w-[220px] md:w-[250px] lg:w-[300px]"}/>

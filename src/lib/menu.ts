@@ -33,7 +33,14 @@ export const collection = createListCollection({
                 {name: "data", href: '/data', icon: data},
             ]
         },
-
+        /*REGISTER*/
+        {
+            label: '/register', value: [
+                {name: "items", href: '/items', icon: items},
+                {name: "profile", href: '/profile', icon: stats},
+                {name: "data", href: '/data', icon: data},
+            ]
+        },
         /*DATA*/
 
         {

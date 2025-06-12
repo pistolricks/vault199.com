@@ -61,7 +61,18 @@ export const subCollection = createListCollection({
                 {name: "login", href: '#', icon: cover, class: 'opacity-60'},
             ]
         },
-
+        /*REGISTER*/
+        {
+            label: '/register', value: [
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "login", href: '#', icon: cover, class: 'opacity-60'},
+            ]
+        },
         /*DATA*/
 
         {

@@ -1,9 +1,10 @@
-import {Component, createEffect, createMemo, createSignal} from 'solid-js';
+import {Component, createEffect, createMemo} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
 import {A, RouteSectionProps, useSubmission} from "@solidjs/router";
-import PleaseStandBy from "~/static/banners/please-stand-by.jpg";
 import styles from "~/components/layouts/terminal/style.module.css"
 import {registerUserHandler} from "~/lib/users";
+import Check from "~/static/app/svgs/ui/check.svg?component-solid"
+import XMark from "~/static/app/svgs/ui/x-mark.svg?component-solid"
 
 const Register: Component<RouteSectionProps> = (props) => {
     const submission = useSubmission(registerUserHandler);
@@ -22,30 +23,40 @@ const Register: Component<RouteSectionProps> = (props) => {
 
     return (
         <TerminalLayout {...props}>
-            <form action={registerUserHandler} method={"post"} class={'flex flex-col gap-6'}>
+
+            <form action={registerUserHandler} method={"post"} class={'absolute top-1/8 z-50 h-full w-full  flex flex-col gap-3 p-10'}>
                 <div class={"flex flex-col sm:justify-start w-full"}>
+                    <label>FIRST NAME</label>
                     <input class={'px-1 bg-gray-300/20 w-full'} type="text" required name="firstName"
-                           placeholder="First Name"/>
+                           placeholder="Erik"/>
                 </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
+                    <label>LAST NAME</label>
                     <input class={'px-1 bg-gray-300/20 w-full '} type="text" required name="lastName"
-                           placeholder="Last Name"/>
+                           placeholder="Smith"/>
                 </div>
                 <div class={"flex flex-col sm:justify-start w-full"}>
+                    <label>USERNAME</label>
                     <input class={'px-1 bg-gray-300/20 w-full'} type="text" required name="username"
-                           placeholder="Username"/>
+                           placeholder="darthSmooth"/>
                 </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
-                    <input class="px-1 bg-gray-300/20 w-full" required type="email" name="email" placeholder="Email"/>
+                    <label>EMAIL</label>
+                    <input class="px-1 bg-gray-300/20 w-full" required type="email" name="email" placeholder="erik@dsmooth.com"/>
                 </div>
                 <div class={" flex flex-col sm:justify-start w-full"}>
+                    <label>PASSWORD</label>
                     <input class="px-1 bg-gray-300/20 w-full" required type="password" name="password"
-                           placeholder="Password"/>
+                           placeholder="*******"/>
                 </div>
 
                 <div class={"w-full flex gap-x-1 justify-end"}>
-                    <A class={styles.button} href="/">Cancel</A>
-                    <button class={styles.button} type="submit">Submit</button>
+                    <A class={styles.button} href="/">
+                        <XMark/>
+                    </A>
+                    <button class={styles.button} type="submit">
+                        <Check class={"size-6 mx-2"}/>
+                    </button>
                 </div>
             </form>
 
