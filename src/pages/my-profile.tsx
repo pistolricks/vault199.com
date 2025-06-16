@@ -5,7 +5,7 @@ import {useNavigate} from '@solidjs/router';
 import FetchProfileAvatarImage from '~/utils/ProfileAvatar';
 import {AuthContext} from '~/context/AuthContextProvider';
 
-export default function Profile(): JSXElement {
+export default function MyProfile(): JSXElement {
     const navigate = useNavigate();
     const [username, setUsername] = createSignal<string>();
     const [createdAt, setCreatedAt] = createSignal<string>();

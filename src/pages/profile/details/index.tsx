@@ -22,7 +22,9 @@ const DetailsSection: Component<RouteSectionProps> = props => {
     const character = () => props.data?.['character'] as ICharacter ?? char as ICharacter;
 
     return (
-        <DetailsPanel character={character()}/>
+        <>
+            <DetailsPanel character={character()}/>
+        </>
     );
 };
 

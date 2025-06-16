@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a5f22453-be89-4315-98e2-8bfecdcc7618" name="Changes" comment="Add user update functionality and dynamic PipBoy updating UI&#10;&#10;Introduced `updateUser` and `updateUserHandler` for modifying user data. Enhanced the `Updating` page with a reusable and dynamic `PipBoyUpdating` component for updating visual states. Updated session management and UI elements to support the new features seamlessly.">
       <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/dev-dist/sw.js" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/dev-dist/sw.js" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/dev-dist/sw.js.map" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/dev-dist/sw.js.map" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/dev-dist/workbox-f6195dc0.js" beforeDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/auth/login-card.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/auth/login-card.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/terminal/terminal-header.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/components/layouts/terminal/terminal-header.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/character.json" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/character.json" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/about.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/about.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/activate.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/activate.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/dashboard.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/dashboard.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/data/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/items/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/items/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/index.tsx" afterDir="false" />
-      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/register.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/register.tsx" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/sub-menu.ts" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/lib/sub-menu.ts" afterDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile.tsx" beforeDir="false" />
+      <change beforePath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/details/index.tsx" beforeDir="false" afterPath="/Volumes/ssd/home/WebstormProjects/vault199/src/pages/profile/details/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +222,7 @@
       <workItem from="1749528692980" duration="27922000" />
       <workItem from="1749569355505" duration="55542000" />
       <workItem from="1750053767819" duration="188000" />
-      <workItem from="1750056171741" duration="2673000" />
+      <workItem from="1750056171741" duration="3985000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor terminal layout and update PWA assets.&#10;&#10;Reorganized terminal layout components with scoped styles and modular paths. Simplified PWA assets, replacing unused icons while refining manifest configurations. Removed redundant CSS and optimized file structure for improved maintainability.">
       <option name="closed" value="true" />

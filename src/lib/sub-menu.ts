@@ -22,7 +22,7 @@ import intelligence from "~/static/special/intelligence.webp"
 import agility from "~/static/special/agility.webp"
 import luck from "~/static/special/luck.webp"
 import media from "~/static/app/icons/ui/media.png";
-
+import home from "~/static/app/icons/fallout/home-v1.png"
 export const subCollection = createListCollection({
     items: [
         /*Index*/
@@ -77,7 +77,7 @@ export const subCollection = createListCollection({
 
         {
             label: '/data', value: [
-                {name: "data", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "data", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: '/data/map', icon: map, class: 'p-2 grayscale-75'},
                 {name: "contacts", href: '/data/contacts', icon: contacts, class: 'p-2 grayscale-50'},
@@ -88,7 +88,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/data/contacts', value: [
-                {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "contacts", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "contacts", href: 'contacts', icon: contactList, class: 'p-1 grayscale-50', isAlt: true},
@@ -99,7 +99,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/data/map', value: [
-                {name: "map", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "map", href: 'map', icon: mapPosition, class: 'p-1 grayscale-50', isAlt: true},
@@ -110,7 +110,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/data/media', value: [
-                {name: "media", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "media", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "media", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "audio", href: 'audio', icon: radio, class: 'p-1.5 grayscale-50', isAlt: false},
@@ -127,7 +127,7 @@ export const subCollection = createListCollection({
 
         {
             label: '/items', value: [
-                {name: "items", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "items", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "weapons", href: '/items/weapons', icon: weapons, class: 'p-2 grayscale-100'},
                 {name: "armor", href: '/items/armor', icon: armor, class: 'p-2 grayscale-100'},
@@ -138,7 +138,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/items/weapons', value: [
-                {name: "weapons", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "weapons", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "weapons", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "weapons", href: '#', icon: cover, class: 'opacity-60'},
@@ -149,7 +149,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/items/armor', value: [
-                {name: "armor", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "armor", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "armor", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "armor", href: '#', icon: cover, class: 'opacity-60'},
@@ -160,7 +160,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/items/misc', value: [
-                {name: "misc", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "misc", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "misc", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "misc", href: '#', icon: cover, class: 'opacity-60'},
@@ -176,7 +176,7 @@ export const subCollection = createListCollection({
 
         {
             label: '/profile', value: [
-                {name: "profile", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "profile", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "special", href: '/profile/special', icon: special, class: 'p-1 grayscale-50'},
                 {name: "status", href: '/profile/status', icon: status, class: 'p-0.5 grayscale-50'},
@@ -187,7 +187,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/profile/status', value: [
-                {name: "status", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "status", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "status", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "status", href: '#', icon: cover, class: 'opacity-60'},
@@ -209,7 +209,7 @@ export const subCollection = createListCollection({
         },
         {
             label: '/profile/details', value: [
-                {name: "details", href: '#', icon: cover, class: 'opacity-60'},
+                {name: "data", href: '/dashboard', icon: home, class: 'opacity-60'},
                 {name: "details", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "details", href: '#', icon: cover, class: 'opacity-60'},
                 {name: "details", href: '#', icon: cover, class: 'opacity-60'},
