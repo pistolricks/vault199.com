@@ -188,7 +188,7 @@
     "skillPoints": 24,
     "spentSkillPoints": 24,
     "carryWeight": 200,
-    "damageResist": {
+    "damageResistance": {
       "physical": 0,
       "energy": 0,
       "radiation": 0,

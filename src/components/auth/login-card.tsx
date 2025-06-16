@@ -72,8 +72,8 @@ export default function LoginCard({ isLogin }: LoginCardProps): JSXElement {
   };
 
   return (
-    <div class='flex items-start justify-center absolute top-24 w-full'>
-      <div class='min-w-[90%] sm:min-w-96 flex-col border bg-transparent px-6 py-4 shadow-md rounded-3xl '>
+    <div class='flex items-start justify-center absolute top-24 w-full px-2'>
+      <div class='min-w-[90%] sm:min-w-96 flex-col border bg-transparent px-6 py-4 shadow-md rounded-3xl'>
         <div class='mb-8 flex flex-col items-center justify-center'>
           <img
             class='w-48 mb-2'

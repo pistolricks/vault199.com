@@ -7,6 +7,7 @@ import {
 import weapons from "~/static/app/icons/ui/weapons.png"
 import armor from "~/static/app/icons/ui/armor.png"
 import misc from "~/static/app/icons/ui/misc.png"
+import AuthLayout from "~/components/layouts/auth/auth-layout";
 
 const profiles = Object.freeze({
     vaultboy: "vaultboy",
@@ -28,7 +29,9 @@ type PROPS = {}
 const ItemsSection: Component<RouteSectionProps> = props => {
 
     return (
-        <></>
+        <AuthLayout>
+
+        </AuthLayout>
     );
 };
 

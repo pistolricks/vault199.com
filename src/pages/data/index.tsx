@@ -8,6 +8,7 @@ import map from "~/static/app/icons/ui/map.png"
 import media from "~/static/app/icons/ui/details.png"
 import {MenuItem} from "~/components/pipboy/footer/bottom-pipboy-menu";
 import SwiperWrapper from "~/components/wrappers/swiper-wrapper";
+import AuthLayout from "~/components/layouts/auth/auth-layout";
 
 const menuItems: MenuItem[] = [
     {name: "contacts", href: '/data/contacts', icon: contacts},
@@ -21,9 +22,9 @@ const DataSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <>
+        <AuthLayout>
 
-        </>
+        </AuthLayout>
     );
 };
 

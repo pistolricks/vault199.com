@@ -2,7 +2,7 @@ import {Component, createEffect, createMemo, createSignal, JSX} from 'solid-js';
 import TerminalLayout from "~/components/layouts/terminal/terminal-layout";
 import {A, RouteSectionProps, useNavigate, useSubmission} from "@solidjs/router";
 import PleaseStandBy from "~/static/banners/please-stand-by.jpg";
-import {activateUserHandler, loginUserHandler} from "~/lib/users";
+
 
 const Activate: Component<RouteSectionProps> = (props) => {
     const [getToken, setToken] = createSignal("")
@@ -23,8 +23,8 @@ const Activate: Component<RouteSectionProps> = (props) => {
 
     const handleSubmit = async (e: SubmitEvent) => {
         e.preventDefault()
-        let res = await activateUserHandler(token())
-        setResponse(await res)
+        // let res = await activateUserHandler(token())
+        // setResponse(await res)
 
         console.log("activate-response", getResponse())
         if (getResponse()?.user?.activated) {

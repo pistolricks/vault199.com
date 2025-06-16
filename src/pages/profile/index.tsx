@@ -6,11 +6,10 @@ import vaultBoyGif from "~/static/gifs/vaultboy.gif";
 import {classNames} from "~/components/navigation";
 import {getConfigByField, getInitialCharacter, ICharacter} from "~/components/character/config";
 import char from "~/lib/character.json";
+import AuthLayout from "~/components/layouts/auth/auth-layout";
 
 
 type PROPS = {}
-
-
 
 
 const ProfileSection: Component<RouteSectionProps> = props => {
@@ -25,7 +24,9 @@ const ProfileSection: Component<RouteSectionProps> = props => {
 
 
     return (
-        <ProfilePanel character={character()}/>
+        <AuthLayout>
+            <ProfilePanel character={character()}/>
+        </AuthLayout>
     );
 };
 

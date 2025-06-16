@@ -26,6 +26,7 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
             </Show>
             
             <div class="hidden sm:flex justify-center items-start gap-2">
+                {/*
                 <div class={styles["col-one"]}>
                     <img src={Logo} alt="Vault-Tec"  class={"object-contain w-[200px] sm:w-[220px] md:w-[250px] lg:w-[300px]"}/>
                 </div>
@@ -37,6 +38,7 @@ const TerminalHeader: Component<RouteSectionProps> = props => {
                         <p class={"text-sm"}>(c)2075 - 2077 ROBCO INDUSTRIES</p>
                     </div>
                 </div>
+                */}
             </div>
 
         </header>

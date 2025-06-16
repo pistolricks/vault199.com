@@ -7,6 +7,7 @@ import ValidateRoomName from '~/utils/RoomnameValidator';
 import {CreateRoom, FetchRooms, RoomResponse} from '~/utils/FetchRooms';
 import {CredentialError} from '~/utils/CredentialValidator';
 import {AuthContext} from '~/context/AuthContextProvider';
+import AuthLayout from "~/components/layouts/auth/auth-layout";
 
 
 type PROPS = {}
@@ -71,7 +72,7 @@ const Dashboard: Component<RouteSectionProps> = props => {
 
 
     return (
-        <>
+        <AuthLayout>
             <div>
                 <Navbar />
                 <CreateRoomCard
@@ -87,7 +88,7 @@ const Dashboard: Component<RouteSectionProps> = props => {
                     </For>
                 </div>
             </div>
-        </>
+        </AuthLayout>
     );
 };
 
